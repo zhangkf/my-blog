@@ -1,7 +1,7 @@
 ---
 title: 'Forth post'
 description: '测试一下'
-pubDate: ''
+pubDate: 'Jan 17 2026'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 
 ---
