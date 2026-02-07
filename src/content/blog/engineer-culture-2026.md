@@ -1,6 +1,6 @@
 ---
-title: '在2026年，工程师文化还应该有什么内涵？'
-description: '工程师文化首先是一种精神，而非一种职业。在AI时代，它更应该是每一位具有匠人精神的人去追求和践行的坐标。'
+title: 'AI无法替代工程师的三样东西'
+description: '在AI时代，工程师精神的核心价值是什么？同理心、第一性原理、工匠精神，这三样东西是AI无法替代的。'
 pubDate: 'Feb 07 2026'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
