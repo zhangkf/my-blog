@@ -2,7 +2,7 @@
 title: 'Naval Ravikant 2025年最新洞见：范式转变、边界与自学'
 description: '从Naval Ravikant的最新推文中，我们看到了关于范式转变、边界意识、科技与政治、财富真相以及自学力量的深刻思考。'
 pubDate: 'Feb 07 2026'
-heroImage: '/assets/blog-cover-naval.jpg'
+heroImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop'
 ---
 
 Naval Ravikant，这位硅谷知名的天使投资人、哲学家，在2025年依然持续输出着令人深思的洞见。通过 browser-use 技术，我们获取了他最近几条推文，其中蕴含着对时代变革、个人成长和社会趋势的深刻观察。
