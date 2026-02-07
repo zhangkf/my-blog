@@ -2,7 +2,7 @@
 title: '终极目标不是「被看见」，而是「被记住」'
 description: '在流量焦虑的时代，曝光不等于价值，真正稀缺的是记忆。优秀的内容创作者应该是「记忆建筑师」而非「流量猎手」。'
 pubDate: 'Feb 07 2026'
-heroImage: '/assets/blog-cover-memory.jpg'
+heroImage: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&h=600&fit=crop'
 ---
 
 我觉得现在比以前更可以肆意去写了，因为无论如何，都不会被看到，可以称之为流量的东西，自有人在控制。
