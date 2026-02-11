@@ -1,6 +1,6 @@
 ---
-title: '市场价值不是由成本决定的，而是由需求决定的'
-description: 'B面折叠：当AI成为默认工具时，你的价值来自外界需求，而不是你的努力成本。'
+title: "Market value is demand-driven, not cost-based"
+description: "In the AI-default era, your value is set by market demand and the ability to define, verify, and own outcomes—not by effort alone."
 pubDate: 'Feb 11 2026'
 heroImage: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=600&fit=crop'
 ---
