@@ -1,7 +1,7 @@
 ---
 title: '知世故而不被困'
 description: '看过《血色将至》后的思考：人到中年，看懂规则不等于只用规则，警惕不等于活成警惕。'
-pubDate: 'Feb 08 2026'
+pubDate: '2026-02-08'
 heroImage: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&h=600&fit=crop'
 ---
 

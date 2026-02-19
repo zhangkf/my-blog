@@ -1,7 +1,7 @@
 ---
 title: "Market value is demand-driven, not cost-based"
 description: "In the AI-default era, your value is set by market demand and the ability to define, verify, and own outcomes—not by effort alone."
-pubDate: 'Feb 11 2026'
+pubDate: '2026-02-11'
 heroImage: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=600&fit=crop'
 ---
 

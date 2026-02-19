@@ -1,7 +1,7 @@
 ---
 title: 'AI无法替代工程师的三样东西'
 description: '在AI时代，工程师精神的核心价值是什么？同理心、第一性原理、工匠精神，这三样东西是AI无法替代的。'
-pubDate: 'Feb 07 2026'
+pubDate: '2026-02-07'
 heroImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop'
 ---
 
@@ -41,4 +41,3 @@ heroImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&
 
 这，或许就是2026年我们最应该铭记的工程师精神。
 
-<!-- 更新于 2026-02-07 -->

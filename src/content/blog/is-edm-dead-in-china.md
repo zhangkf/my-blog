@@ -1,7 +1,7 @@
 ---
 title: 'EDM 在中国失效了吗？'
 description: '探讨电子邮件营销在中国市场的真实处境，用数据揭示11亿网民注意力流向的深层逻辑'
-pubDate: 'Feb 09 2026'
+pubDate: '2026-02-09'
 heroImage: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=1200&h=600&fit=crop'
 ---
 

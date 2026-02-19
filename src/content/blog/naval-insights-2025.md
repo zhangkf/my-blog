@@ -1,7 +1,7 @@
 ---
 title: 'Naval Ravikant 2025年最新洞见：范式转变、边界与自学'
 description: '从Naval Ravikant的最新推文中，我们看到了关于范式转变、边界意识、科技与政治、财富真相以及自学力量的深刻思考。'
-pubDate: 'Feb 07 2026'
+pubDate: '2026-02-07'
 heroImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop'
 ---
 
@@ -117,4 +117,3 @@ Naval 这五条推文，横跨2025年的9个月，涉及范式转变、边界意
 
 ---
 
-*本文基于 Naval Ravikant 2025年最新 Twitter 推文整理，使用 browser-use 技术获取。成本：$0.01*
