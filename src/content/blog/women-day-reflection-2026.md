@@ -1,8 +1,8 @@
 ---
-title: '关于三八妇女节的几点思考'
-description: '儿子和我聊起今天的节日，谈到女性被特殊化标签化的现象。也许真的平等，是不再需要庆祝这个节日的那一天。'
+title: '为女性设立节日的思考'
+description: '关于节日、特殊化与平等的一些思考。'
 pubDate: '2026-03-09'
-heroImage: 'https://images.unsplash.com/photo-1573167507391-4d72eea4c444?w=1200&h=600&fit=crop'
+heroImage: 'https://images.pexels.com/photos/3770033/pexels-photo-3770033.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop'
 ---
 
 早上儿子和我聊天，谈到今天的节日，说到他的政治老师给他们讲，为女性特别设立这样一个节日，某种程度上也是一种把女性的存在特殊化的表现。大意如此。
