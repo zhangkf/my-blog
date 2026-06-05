@@ -25,55 +25,53 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 const { Content } = await render(post);
 ---
 
-<html lang="en">
+<html lang="zh-CN">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
 			.prose {
-				width: 720px;
+				width: 680px;
 				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
 				color: rgb(var(--gray-dark));
 			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
+			.article-header {
+				margin-bottom: 2em;
+				padding-bottom: 1.5em;
+				border-bottom: 1px solid rgb(var(--gray-light));
 			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
+			.article-header h1 {
+				font-size: 1.8em;
+				line-height: 1.4;
+				margin: 0.3em 0 0.5em 0;
 			}
-			.date {
-				margin-bottom: 0.5em;
+			.article-meta {
 				color: rgb(var(--gray));
+				font-size: 0.9em;
+				display: flex;
+				align-items: center;
+				gap: 0.8em;
+				flex-wrap: wrap;
 			}
 			.category-tag {
 				display: inline-block;
-				padding: 0.2em 0.6em;
-				background: rgb(var(--accent));
+				padding: 0.15em 0.6em;
+				background: var(--accent);
 				color: white;
-				border-radius: 4px;
-				font-size: 0.8rem;
-				margin-bottom: 0.5em;
+				border-radius: 3px;
+				font-size: 0.8em;
+				text-decoration: none;
+				font-style: normal;
 			}
-			.last-updated-on {
-				font-style: italic;
+			.category-tag:hover {
+				background: var(--accent-dark);
+				color: white;
+			}
+			@media (max-width: 720px) {
+				.article-header h1 {
+					font-size: 1.4em;
+				}
 			}
 		</style>
 	</head>
@@ -82,28 +80,13 @@ const { Content } = await render(post);
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && (
-						typeof heroImage === 'string'
-							? <img width={1020} height={510} src={heroImage} alt="" />
-							: <img width={1020} height={510} src={heroImage.src} alt="" />
-					)}
-				</div>
 				<div class="prose">
-					<div class="title">
-						<a href={`/${categorySlug}/`} class="category-tag">{categoryDir}</a>
-						<div class="date">
+					<div class="article-header">
+						<div class="article-meta">
+							<a href={`/${categorySlug}/`} class="category-tag">{categoryDir}</a>
 							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
 						</div>
 						<h1>{title}</h1>
-						<hr />
 					</div>
 					<Content />
 				</div>

@@ -8,48 +8,71 @@ import categories from '../notion-categories.json';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/">首页</HeaderLink>
 			{categories.map(({ dir, slug }: { dir: string; slug: string }) => (
 				<HeaderLink href={`/${slug}`}>{dir}</HeaderLink>
 			))}
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/about">关于</HeaderLink>
 		</div>
 	</nav>
 </header>
 <style>
 	header {
 		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		padding: 0 1.5em;
+		background: var(--bg-card);
+		border-bottom: 1px solid rgb(var(--gray-light));
 	}
 	h2 {
 		margin: 0;
-		font-size: 1em;
+		font-size: 1.15em;
+		font-weight: 700;
 	}
-
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+		color: rgb(var(--black));
 	}
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		max-width: 960px;
+		margin: auto;
 	}
 	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
+		padding: 1em 0.6em;
+		color: rgb(var(--gray-dark));
+		border-bottom: 2px solid transparent;
 		text-decoration: none;
+		font-size: 0.95em;
+		transition: color 0.2s, border-color 0.2s;
+	}
+	nav a:hover {
+		color: var(--accent);
 	}
 	nav a.active {
 		text-decoration: none;
+		color: var(--accent);
 		border-bottom-color: var(--accent);
 	}
 	@media (max-width: 720px) {
+		header {
+			padding: 0 0.8em;
+		}
 		nav {
 			flex-wrap: wrap;
+			justify-content: center;
+			gap: 0;
+		}
+		h2 {
+			width: 100%;
+			text-align: center;
+			padding: 0.6em 0 0;
+		}
+		nav a {
+			padding: 0.6em 0.5em;
+			font-size: 0.9em;
 		}
 	}
 </style>
