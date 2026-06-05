@@ -6,7 +6,7 @@ heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_261S.jpg'
 source: notion
 notion_id: '36245fd1-9f92-80d9-9026-f54d1cfc315e'
 notion_parent: 'Garry Tan Articles'
-last_synced: '2026-06-05T09:39:25.657Z'
+last_synced: '2026-06-05T10:00:17.646Z'
 ---
 
 **翻译：Garry Tan 的这篇长帖**

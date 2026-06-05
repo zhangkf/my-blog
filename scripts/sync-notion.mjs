@@ -385,6 +385,49 @@ async function syncPage(childBlock, parentTitle) {
   return { pageId, filename, changed: true };
 }
 
+/** Check if a page's children are articles or sub-categories. */
+async function isCategory(pageId) {
+  const blocks = await fetchAllBlocks(pageId);
+  const childPages = blocks.filter((b) => b.type === "child_page");
+  if (childPages.length === 0) return false;
+  // If child pages themselves have child pages, this is a category hub
+  // Otherwise, the child pages are articles (leaf pages)
+  // Heuristic: check the first child page
+  const firstChild = childPages[0];
+  const firstChildBlocks = await fetchAllBlocks(firstChild.id);
+  const hasNestedPages = firstChildBlocks.some((b) => b.type === "child_page");
+  return hasNestedPages;
+}
+
+/**
+ * Recursively discover category → articles structure.
+ * Returns array of { parentTitle, childPages[] }
+ */
+async function discoverArticles(pageId, parentTitle) {
+  const blocks = await fetchAllBlocks(pageId);
+  const childPages = blocks.filter((b) => b.type === "child_page");
+
+  if (childPages.length === 0) return [];
+
+  // Check if children are sub-categories or leaf articles
+  const firstChildBlocks = await fetchAllBlocks(childPages[0].id);
+  const childrenAreCategories = firstChildBlocks.some((b) => b.type === "child_page");
+
+  if (childrenAreCategories) {
+    // Children are sub-categories – recurse into each
+    const results = [];
+    for (const child of childPages) {
+      const subTitle = child.child_page.title;
+      const subResults = await discoverArticles(child.id, subTitle);
+      results.push(...subResults);
+    }
+    return results;
+  } else {
+    // Children are leaf articles
+    return [{ parentTitle, childPages }];
+  }
+}
+
 async function main() {
   console.log("🚀 Starting Notion → Blog sync...\n");
 
@@ -399,7 +442,6 @@ async function main() {
       filter: { value: "page", property: "object" },
       page_size: 100,
     });
-    // Only pick top-level workspace pages (these are the "category directories")
     parentPageIds = searchResp.results
       .filter((p) => p.parent?.type === "workspace" && !p.in_trash)
       .map((p) => p.id);
@@ -414,22 +456,24 @@ async function main() {
   const allSyncedFiles = [];
 
   for (const parentId of parentPageIds) {
-    // Get parent page title
     const parentPage = await notion.pages.retrieve({ page_id: parentId });
-    const parentTitle =
+    const topTitle =
       parentPage.properties.title?.title?.map((t) => t.plain_text).join("") ||
       "Untitled";
-    console.log(`📂 Parent: ${parentTitle} (${parentId})`);
+    console.log(`📂 Root: ${topTitle} (${parentId})`);
 
-    const childPages = await fetchChildPages(parentId);
-    console.log(`   Found ${childPages.length} articles\n`);
+    // Discover nested structure (supports both flat and nested layouts)
+    const groups = await discoverArticles(parentId, topTitle);
 
-    for (const child of childPages) {
-      try {
-        const result = await syncPage(child, parentTitle);
-        allSyncedFiles.push(result);
-      } catch (err) {
-        console.error(`   ❌ Failed to sync "${child.child_page.title}": ${err.message}`);
+    for (const { parentTitle, childPages } of groups) {
+      console.log(`\n  📁 Category: ${parentTitle} (${childPages.length} articles)`);
+      for (const child of childPages) {
+        try {
+          const result = await syncPage(child, parentTitle);
+          allSyncedFiles.push(result);
+        } catch (err) {
+          console.error(`   ❌ Failed to sync "${child.child_page.title}": ${err.message}`);
+        }
       }
     }
     console.log("");

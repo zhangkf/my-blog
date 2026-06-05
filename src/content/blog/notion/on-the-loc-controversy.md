@@ -6,7 +6,7 @@ heroImage: 'https://app.notion.com/images/page-cover/texturelabs_fabric_169S.jpg
 source: notion
 notion_id: '36345fd1-9f92-80ca-b4aa-c339b5cf5367'
 notion_parent: 'Garry Tan Articles'
-last_synced: '2026-06-05T09:38:29.739Z'
+last_synced: '2026-06-05T10:00:20.135Z'
 ---
 
 以下是这篇文章（Garry Tan 在 X 上的长帖）的完整中文翻译。我已尽量保持原文的结构、语气和专业性，便于阅读：
