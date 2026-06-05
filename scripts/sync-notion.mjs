@@ -308,7 +308,7 @@ async function blocksToMarkdown(blocks, pageId, indent = "") {
 
 // ── Main Sync Logic ────────────────────────────────────────────────
 
-async function syncPage(childBlock, parentTitle) {
+async function syncPage(childBlock, parentTitle, categoryDir) {
   const pageId = childBlock.id;
   const title = childBlock.child_page.title;
 
@@ -353,6 +353,7 @@ async function syncPage(childBlock, parentTitle) {
     `description: ${escapeYaml(description)}`,
     `pubDate: '${createdTime}'`,
     heroImage ? `heroImage: ${escapeYaml(heroImage)}` : null,
+    `category: ${escapeYaml(parentTitle)}`,
     `source: notion`,
     `notion_id: '${pageId}'`,
     `notion_parent: ${escapeYaml(parentTitle)}`,
@@ -364,25 +365,28 @@ async function syncPage(childBlock, parentTitle) {
 
   const content = `${frontmatter}\n\n${markdown.trim()}\n`;
 
-  // Write file
+  // Write file to category subdirectory
+  const outputDir = path.join(OUTPUT_DIR, categoryDir);
+  fs.mkdirSync(outputDir, { recursive: true });
+
   const slug = slugify(cleanTitle);
   const filename = `${slug}.md`;
-  const filePath = path.join(OUTPUT_DIR, filename);
+  const relPath = path.join(categoryDir, filename);
+  const filePath = path.join(outputDir, filename);
 
   // Only write if content changed
   if (fs.existsSync(filePath)) {
     const existing = fs.readFileSync(filePath, "utf-8");
-    // Compare without last_synced line (it changes every run)
     const normalize = (s) => s.replace(/last_synced:.*\n/, "");
     if (normalize(existing) === normalize(content)) {
       console.log(`    ⏭️  No changes`);
-      return { pageId, filename, changed: false };
+      return { pageId, relPath, changed: false };
     }
   }
 
   fs.writeFileSync(filePath, content, "utf-8");
-  console.log(`    ✅ Written: ${filename}`);
-  return { pageId, filename, changed: true };
+  console.log(`    ✅ Written: ${relPath}`);
+  return { pageId, relPath, changed: true };
 }
 
 /** Check if a page's children are articles or sub-categories. */
@@ -454,6 +458,7 @@ async function main() {
   }
 
   const allSyncedFiles = [];
+  const activeCategoryDirs = new Set();
 
   for (const parentId of parentPageIds) {
     const parentPage = await notion.pages.retrieve({ page_id: parentId });
@@ -466,10 +471,12 @@ async function main() {
     const groups = await discoverArticles(parentId, topTitle);
 
     for (const { parentTitle, childPages } of groups) {
-      console.log(`\n  📁 Category: ${parentTitle} (${childPages.length} articles)`);
+      const categoryDir = parentTitle; // Use Notion subcategory name as directory name
+      console.log(`\n  📁 Category: ${parentTitle} → notion/${categoryDir}/ (${childPages.length} articles)`);
+      activeCategoryDirs.add(categoryDir);
       for (const child of childPages) {
         try {
-          const result = await syncPage(child, parentTitle);
+          const result = await syncPage(child, parentTitle, categoryDir);
           allSyncedFiles.push(result);
         } catch (err) {
           console.error(`   ❌ Failed to sync "${child.child_page.title}": ${err.message}`);
@@ -479,17 +486,45 @@ async function main() {
     console.log("");
   }
 
-  // Clean up: remove notion-generated files that no longer exist in Notion
-  const syncedFilenames = new Set(allSyncedFiles.map((f) => f.filename));
-  const existingFiles = fs.readdirSync(OUTPUT_DIR).filter((f) => f.endsWith(".md"));
+  // Clean up: remove files/dirs that no longer exist in Notion
+  const syncedRelPaths = new Set(allSyncedFiles.map((f) => f.relPath));
 
-  for (const file of existingFiles) {
-    if (!syncedFilenames.has(file)) {
-      // Verify it's a notion-generated file before deleting
+  // Clean up orphaned files within active category dirs
+  for (const catDir of activeCategoryDirs) {
+    const catPath = path.join(OUTPUT_DIR, catDir);
+    if (!fs.existsSync(catPath)) continue;
+    const files = fs.readdirSync(catPath).filter((f) => f.endsWith(".md"));
+    for (const file of files) {
+      const relPath = path.join(catDir, file);
+      if (!syncedRelPaths.has(relPath)) {
+        const content = fs.readFileSync(path.join(catPath, file), "utf-8");
+        if (content.includes("source: notion")) {
+          fs.unlinkSync(path.join(catPath, file));
+          console.log(`🗑️  Removed orphaned file: ${relPath}`);
+        }
+      }
+    }
+  }
+
+  // Remove category directories that no longer exist in Notion
+  if (fs.existsSync(OUTPUT_DIR)) {
+    const existingDirs = fs.readdirSync(OUTPUT_DIR, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name);
+    for (const dir of existingDirs) {
+      if (!activeCategoryDirs.has(dir)) {
+        fs.rmSync(path.join(OUTPUT_DIR, dir), { recursive: true });
+        console.log(`🗑️  Removed old category directory: ${dir}/`);
+      }
+    }
+
+    // Also clean up any flat .md files from the old structure
+    const flatFiles = fs.readdirSync(OUTPUT_DIR).filter((f) => f.endsWith(".md"));
+    for (const file of flatFiles) {
       const content = fs.readFileSync(path.join(OUTPUT_DIR, file), "utf-8");
       if (content.includes("source: notion")) {
         fs.unlinkSync(path.join(OUTPUT_DIR, file));
-        console.log(`🗑️  Removed orphaned file: ${file}`);
+        console.log(`🗑️  Migrated flat file to category structure: ${file}`);
       }
     }
   }

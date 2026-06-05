@@ -14,6 +14,7 @@ const blog = defineCollection({
 			updatedDate: z.coerce.date().optional(),
 			heroImage: image().or(z.string().url()).optional(),
 			// Notion sync metadata
+			category: z.string().optional(),
 			source: z.string().optional(),
 			notion_id: z.string().optional(),
 			notion_parent: z.string().optional(),

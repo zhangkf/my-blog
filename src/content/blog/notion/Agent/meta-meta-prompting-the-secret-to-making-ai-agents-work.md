@@ -2,10 +2,11 @@
 title: 'Meta-Meta-Prompting: The Secret to Making AI Agents Work'
 description: '以下是该 X 帖子（Garry Tan 的文章）的完整中文翻译。我力求翻译准确、流畅，并保留了原文的技术术语和结构，以便读者理解：'
 pubDate: '2026-05-17'
+category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-805a-b531-ecb0dc1c909a'
-notion_parent: 'Garry Tan Articles'
-last_synced: '2026-06-05T10:00:25.624Z'
+notion_parent: 'Agent'
+last_synced: '2026-06-05T11:34:59.534Z'
 ---
 
 以下是该 X 帖子（Garry Tan 的文章）的完整中文翻译。我力求翻译准确、流畅，并保留了原文的技术术语和结构，以便读者理解：

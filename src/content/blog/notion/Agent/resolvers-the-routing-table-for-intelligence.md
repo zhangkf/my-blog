@@ -3,10 +3,11 @@ title: 'Resolvers: The Routing Table for Intelligence'
 description: '翻译：Garry Tan 的这篇长帖'
 pubDate: '2026-05-16'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_261S.jpg'
+category: 'Agent'
 source: notion
 notion_id: '36245fd1-9f92-80d9-9026-f54d1cfc315e'
-notion_parent: 'Garry Tan Articles'
-last_synced: '2026-06-05T10:00:17.646Z'
+notion_parent: 'Agent'
+last_synced: '2026-06-05T11:34:53.737Z'
 ---
 
 **翻译：Garry Tan 的这篇长帖**

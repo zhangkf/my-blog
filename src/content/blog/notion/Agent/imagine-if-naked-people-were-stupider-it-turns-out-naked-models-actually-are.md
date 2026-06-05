@@ -3,10 +3,11 @@ title: 'Imagine if naked people were stupider. It turns out, naked models actual
 description: '以下是这篇 Garry Tan 在 X 上的长帖（回复 Kyle Kingsbury 文章）的完整中文翻译。我已尽量保留原文的结构、语气、专业性和幽默感，便于阅读：'
 pubDate: '2026-05-17'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_285S.jpg'
+category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-80a1-82e1-f245382c7c04'
-notion_parent: 'Garry Tan Articles'
-last_synced: '2026-06-05T10:00:21.478Z'
+notion_parent: 'Agent'
+last_synced: '2026-06-05T11:34:56.693Z'
 ---
 
 以下是这篇 Garry Tan 在 X 上的长帖（回复 Kyle Kingsbury 文章）的**完整中文翻译**。我已尽量保留原文的结构、语气、专业性和幽默感，便于阅读：
