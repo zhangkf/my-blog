@@ -1,5 +1,5 @@
 ---
-title: 'Thin Harness, Fat Skills'
+title: '1. Thin Harness, Fat Skills'
 description: '翻译：Garry Tan 的这篇长帖'
 pubDate: '2026-05-16'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_126S.jpg'
@@ -7,7 +7,7 @@ category: 'Agent'
 source: notion
 notion_id: '36245fd1-9f92-800d-9078-d2aa9e2a54cf'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:40:10.041Z'
+last_synced: '2026-06-05T11:51:24.925Z'
 ---
 
 **翻译：Garry Tan 的这篇长帖**

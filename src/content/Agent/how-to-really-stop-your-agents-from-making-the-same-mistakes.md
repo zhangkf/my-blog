@@ -1,12 +1,13 @@
 ---
-title: 'How to really stop your agents from making the same mistakes'
+title: '5. How to really stop your agents from making the same mistakes'
 description: '以下是该 X 帖子（Garry Tan 的文章）的完整中文翻译。我力求翻译准确、流畅，并保留了原文的技术术语和结构，以便读者理解：'
 pubDate: '2026-05-17'
+heroImage: 'https://app.notion.com/images/page-cover/usda_pear.png'
 category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-8004-a645-d6917eeddf0f'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:40:15.590Z'
+last_synced: '2026-06-05T11:51:31.821Z'
 ---
 
 以下是该 X 帖子（Garry Tan 的文章）的完整中文翻译。我力求翻译准确、流畅，并保留了原文的技术术语和结构，以便读者理解：

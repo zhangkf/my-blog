@@ -344,8 +344,8 @@ async function syncPage(childBlock, parentTitle, categoryDir) {
         .substring(0, 200)
     : "";
 
-  // Clean title (strip leading "N. " numbering)
-  const cleanTitle = title.replace(/^\d+\.\s*/, "");
+  // Use original title as-is (preserve numbering for series articles)
+  const cleanTitle = title;
 
   // Build frontmatter
   const frontmatter = [

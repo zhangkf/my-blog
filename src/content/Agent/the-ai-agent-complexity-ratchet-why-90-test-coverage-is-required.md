@@ -1,12 +1,13 @@
 ---
-title: 'The AI Agent Complexity Ratchet: Why 90% Test Coverage Is Required'
+title: '7. The AI Agent Complexity Ratchet: Why 90% Test Coverage Is Required'
 description: '以下是您提供的 X 帖子（Garry Tan 的长文《The Agent Complexity Ratchet》）的完整中文翻译。我尽量保持原文的结构、语气和专业性，便于阅读：'
 pubDate: '2026-05-17'
+heroImage: 'https://app.notion.com/images/page-cover/nasa_the_blue_marble.jpg'
 category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-80b0-877a-d51a83d92c1b'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:40:18.925Z'
+last_synced: '2026-06-05T11:51:33.674Z'
 ---
 
 以下是您提供的 X 帖子（Garry Tan 的长文《The Agent Complexity Ratchet》）的完整中文翻译。我尽量保持原文的结构、语气和专业性，便于阅读：
