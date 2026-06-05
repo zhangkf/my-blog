@@ -1,63 +1,122 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={`关于 | ${SITE_TITLE}`} description="关于好读 — 高品质中文阅读产品" />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 2em 1em;
+			}
+			h1 {
+				text-align: center;
+				margin-bottom: 1.5em;
+			}
+			section {
+				margin-bottom: 2em;
+			}
+			section h2 {
+				border-bottom: 2px solid rgb(var(--accent));
+				padding-bottom: 0.3em;
+			}
+			.values {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.5em;
+				margin: 1.5em 0;
+			}
+			.value-card {
+				padding: 1.2em;
+				border-left: 4px solid rgb(var(--accent));
+				background: rgba(var(--gray-light), 0.15);
+				border-radius: 0 8px 8px 0;
+			}
+			.value-card h3 {
+				margin: 0 0 0.3em 0;
+			}
+			.value-card p {
+				margin: 0;
+				color: rgb(var(--gray-dark));
+				font-size: 0.95rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>关于好读</h1>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+			<section>
+				<h2>为什么做好读？</h2>
+				<p>
+					我们每天被海量信息包围，但真正值得深度阅读的内容却越来越难找到。
+					很多全球最好的思考、最前沿的实践，散落在英文世界的各个角落——个人博客、长推文、Newsletter。
+					中文读者很难系统性地接触到这些内容。
+				</p>
+				<p>
+					<strong>好读</strong>想解决的就是这个问题：把全球最好的思想，用中文呈现给你。
+					不是机器翻译的粗糙搬运，而是经过理解、消化后的高质量呈现。
+				</p>
+			</section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<section>
+				<h2>我们关注什么？</h2>
+				<div class="values">
+					<div class="value-card">
+						<h3>🤖 AI & Agent</h3>
+						<p>从 AI 架构设计到 Agent 工程实践，关注真正在一线构建 AI 系统的人和他们的方法论。</p>
+					</div>
+					<div class="value-card">
+						<h3>🏢 一人公司 (OPC)</h3>
+						<p>一个人 + AI 就是一家公司。探索个人如何借助 AI 工具，独立创造商业价值。</p>
+					</div>
+					<div class="value-card">
+						<h3>🧠 认知思维</h3>
+						<p>如何更好地思考、决策、学习。第一性原理、心智模型、系统思维。</p>
+					</div>
+					<div class="value-card">
+						<h3>💪 健康</h3>
+						<p>高效能的前提是可持续的身心健康。精力管理、运动科学、心理韧性。</p>
+					</div>
+				</div>
+			</section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+			<section>
+				<h2>内容是怎么来的？</h2>
+				<p>
+					好读的内容来自创始人的日常阅读和研究。发现好文章后，翻译整理后发布到这里。
+					分类会随着内容的积累和读者的需求动态调整——你在导航栏看到的每一个分类，
+					都对应着一个正在持续更新的主题领域。
+				</p>
+				<p>
+					整个发布流程是自动化的：内容在 Notion 中整理完成后，自动同步到网站。
+					这让我们可以把精力完全放在内容质量上，而不是技术运维上。
+				</p>
+			</section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+			<section>
+				<h2>关于定价</h2>
+				<p>
+					好读目前完全<strong>免费</strong>。
+					我们相信好的内容应该先被更多人看到。未来如果推出高级功能，基础阅读体验将始终免费。
+				</p>
+			</section>
+
+			<section>
+				<h2>联系</h2>
+				<p>
+					如果你有好的文章推荐，或者任何建议反馈，欢迎联系。
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
