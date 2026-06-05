@@ -17,25 +17,6 @@ const notionSchema = ({ image }: { image: Function }) =>
 		last_synced: z.string().optional(),
 	});
 
-const blog = defineCollection({
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
-	schema: notionSchema,
-});
-
-const readings = defineCollection({
-	loader: glob({ base: './src/content/readings', pattern: '**/*.{md,mdx}' }),
-	schema: ({ image }) =>
-		z.object({
-			title: z.string(),
-			description: z.string(),
-			pubDate: z.coerce.date(),
-			updatedDate: z.coerce.date().optional(),
-			heroImage: image().or(z.string().url()).optional(),
-			source: z.string().optional(),
-			translator: z.string().optional(),
-		}),
-});
-
 // Dynamically register Notion category collections
 const notionCategories: Record<string, ReturnType<typeof defineCollection>> = {};
 try {
@@ -52,4 +33,4 @@ try {
 	// No manifest yet – skip
 }
 
-export const collections = { blog, readings, ...notionCategories };
+export const collections = { ...notionCategories };
