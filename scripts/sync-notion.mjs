@@ -24,17 +24,14 @@ const ASSETS_DIR = path.join(REPO_ROOT, "public", "notion-assets");
 
 // ── Config ──────────────────────────────────────────────────────────
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
-const PARENT_PAGE_IDS = (process.env.NOTION_PARENT_PAGE_IDS || "")
+// Optional: if not set, auto-discover all pages shared with the Integration
+const PARENT_PAGE_IDS_ENV = (process.env.NOTION_PARENT_PAGE_IDS || "")
   .split(",")
   .map((id) => id.trim())
   .filter(Boolean);
 
 if (!NOTION_API_KEY) {
   console.error("❌ NOTION_API_KEY is required");
-  process.exit(1);
-}
-if (PARENT_PAGE_IDS.length === 0) {
-  console.error("❌ NOTION_PARENT_PAGE_IDS is required");
   process.exit(1);
 }
 
@@ -394,9 +391,29 @@ async function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   fs.mkdirSync(ASSETS_DIR, { recursive: true });
 
+  // Auto-discover parent pages if not explicitly configured
+  let parentPageIds = PARENT_PAGE_IDS_ENV;
+  if (parentPageIds.length === 0) {
+    console.log("🔍 No NOTION_PARENT_PAGE_IDS set, auto-discovering pages...\n");
+    const searchResp = await notion.search({
+      filter: { value: "page", property: "object" },
+      page_size: 100,
+    });
+    // Only pick top-level workspace pages (these are the "category directories")
+    parentPageIds = searchResp.results
+      .filter((p) => p.parent?.type === "workspace" && !p.in_trash)
+      .map((p) => p.id);
+    console.log(`   Found ${parentPageIds.length} top-level page(s)\n`);
+  }
+
+  if (parentPageIds.length === 0) {
+    console.log("⚠️ No pages found. Make sure pages are shared with the Integration.");
+    return;
+  }
+
   const allSyncedFiles = [];
 
-  for (const parentId of PARENT_PAGE_IDS) {
+  for (const parentId of parentPageIds) {
     // Get parent page title
     const parentPage = await notion.pages.retrieve({ page_id: parentId });
     const parentTitle =

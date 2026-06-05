@@ -12,7 +12,12 @@ const blog = defineCollection({
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
-			heroImage: image().optional(),
+			heroImage: image().or(z.string().url()).optional(),
+			// Notion sync metadata
+			source: z.string().optional(),
+			notion_id: z.string().optional(),
+			notion_parent: z.string().optional(),
+			last_synced: z.string().optional(),
 		}),
 });
 

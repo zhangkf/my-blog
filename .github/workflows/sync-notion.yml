@@ -28,6 +28,7 @@ jobs:
       - name: Sync Notion content
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          # Optional: auto-discovers all shared pages if not set
           NOTION_PARENT_PAGE_IDS: ${{ secrets.NOTION_PARENT_PAGE_IDS }}
         run: node scripts/sync-notion.mjs
 
