@@ -1,8 +1,21 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import categories from '../notion-categories.json';
+
+// Aggregate all articles from all categories
+const allPosts: { post: any; categorySlug: string; categoryDir: string }[] = [];
+for (const { dir, slug } of categories) {
+	const posts = await getCollection(slug as any);
+	for (const post of posts) {
+		allPosts.push({ post, categorySlug: slug, categoryDir: dir });
+	}
+}
+allPosts.sort((a, b) => b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf());
 ---
 
 <!doctype html>
@@ -10,125 +23,98 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
-			main {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 2em 1em;
-			}
-			.hero {
+			.page-header {
 				text-align: center;
-				margin-bottom: 3em;
+				margin-bottom: 2em;
 			}
-			.hero h1 {
-				font-size: 3rem;
-				margin-bottom: 0.2em;
+			.page-header h1 {
+				font-size: 2em;
+				margin-bottom: 0.1em;
 			}
-			.hero .tagline {
+			.page-header p {
 				color: rgb(var(--gray));
-				font-size: 1.2rem;
-				margin-bottom: 1.5em;
+				font-size: 0.95em;
 			}
-			.hero .badge {
-				display: inline-block;
-				padding: 0.3em 1em;
-				background: rgb(var(--accent));
-				color: white;
-				border-radius: 20px;
-				font-size: 0.85rem;
-				font-weight: 600;
-			}
-			.topics {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-				gap: 1.5em;
-				margin: 2em 0;
-			}
-			.topic-card {
-				padding: 1.5em;
-				border: 1px solid rgba(var(--gray-light), 0.5);
-				border-radius: 12px;
-				text-align: center;
-			}
-			.topic-card .icon {
-				font-size: 2rem;
-				margin-bottom: 0.5em;
-			}
-			.topic-card h3 {
-				margin: 0 0 0.3em 0;
-				font-size: 1.1rem;
-			}
-			.topic-card p {
+			.article-list {
+				list-style: none;
 				margin: 0;
+				padding: 0;
+			}
+			.article-list li {
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.article-list li:last-child {
+				border-bottom: none;
+			}
+			.article-list a {
+				display: block;
+				padding: 1.3em 0;
+				text-decoration: none;
+				transition: background 0.2s;
+			}
+			.article-list a:hover {
+				background: rgba(var(--gray-light), 0.3);
+				margin: 0 -1em;
+				padding: 1.3em 1em;
+				border-radius: 8px;
+			}
+			.article-title {
+				margin: 0 0 0.3em 0;
+				color: rgb(var(--black));
+				font-size: 1.15em;
+				line-height: 1.4;
+			}
+			.article-meta {
 				color: rgb(var(--gray));
-				font-size: 0.9rem;
+				font-size: 0.83em;
+				display: flex;
+				align-items: center;
+				gap: 0.6em;
 			}
-			section {
-				margin-bottom: 2.5em;
+			.cat-label {
+				padding: 0.1em 0.5em;
+				background: var(--accent);
+				color: white;
+				border-radius: 3px;
+				font-size: 0.85em;
 			}
-			section h2 {
-				border-bottom: 2px solid rgb(var(--accent));
-				padding-bottom: 0.3em;
+			.article-desc {
+				color: rgb(var(--gray-dark));
+				font-size: 0.9em;
+				margin-top: 0.3em;
+				line-height: 1.6;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<div class="hero">
+			<div class="page-header">
 				<h1>好读</h1>
-				<p class="tagline">在信息过载的时代，只读值得读的</p>
-				<span class="badge">🆓 免费阅读</span>
+				<p>全部 {allPosts.length} 篇 · 在信息过载的时代，只读值得读的</p>
 			</div>
-
-			<section>
-				<h2>这是什么？</h2>
-				<p>
-					<strong>好读</strong>是一个高品质中文阅读产品。我们精选全球优质文章，翻译、整理、分类，
-					让中文读者无障碍地获取最前沿的思想和知识。
-				</p>
-				<p>
-					内容来源于全球顶尖的创作者、思考者和实践者。每一篇都经过精心筛选，
-					确保你花的每一分钟阅读时间都有回报。
-				</p>
-			</section>
-
-			<section>
-				<h2>内容方向</h2>
-				<div class="topics">
-					<div class="topic-card">
-						<div class="icon">🤖</div>
-						<h3>AI & Agent</h3>
-						<p>AI 代理、提示工程、架构设计、前沿实践</p>
-					</div>
-					<div class="topic-card">
-						<div class="icon">🏢</div>
-						<h3>一人公司 (OPC)</h3>
-						<p>一个人 + AI = 一家公司的新范式</p>
-					</div>
-					<div class="topic-card">
-						<div class="icon">🧠</div>
-						<h3>认知思维</h3>
-						<p>第一性原理、心智模型、决策框架</p>
-					</div>
-					<div class="topic-card">
-						<div class="icon">💪</div>
-						<h3>健康</h3>
-						<p>身心健康、精力管理、可持续的高效能</p>
-					</div>
-				</div>
-			</section>
-
-			<section>
-				<h2>如何运作？</h2>
-				<p>
-					分类会随着内容的积累而动态更新。你可以在导航栏看到当前所有分类，
-					点击进入即可浏览该主题下的所有文章。
-				</p>
-				<p>
-					好读目前完全免费。我们相信好的内容应该被更多人看到。
-				</p>
-			</section>
+			<ul class="article-list">
+				{
+					allPosts.map(({ post, categorySlug, categoryDir }) => (
+						<li>
+							<a href={`/${categorySlug}/${post.id}/`}>
+								<h3 class="article-title">{post.data.title}</h3>
+								<div class="article-meta">
+									<span class="cat-label">{categoryDir}</span>
+									<FormattedDate date={post.data.pubDate} />
+								</div>
+								{post.data.description && (
+									<p class="article-desc">{post.data.description}</p>
+								)}
+							</a>
+						</li>
+					))
+				}
+			</ul>
 		</main>
 		<Footer />
 	</body>

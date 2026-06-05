@@ -10,21 +10,35 @@ import { SITE_TITLE } from '../consts';
 	<head>
 		<BaseHead title={`关于 | ${SITE_TITLE}`} description="关于好读 — 高品质中文阅读产品" />
 		<style>
-			main {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 2em 1em;
-			}
-			h1 {
+			.hero {
 				text-align: center;
-				margin-bottom: 1.5em;
+				margin-bottom: 2.5em;
+				padding-bottom: 1.5em;
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.hero h1 {
+				font-size: 2.5em;
+				margin-bottom: 0.2em;
+			}
+			.hero .tagline {
+				color: rgb(var(--gray));
+				font-size: 1.15em;
+				margin-bottom: 1em;
+			}
+			.hero .badge {
+				display: inline-block;
+				padding: 0.3em 1em;
+				background: var(--accent);
+				color: white;
+				border-radius: 20px;
+				font-size: 0.85em;
+				font-weight: 600;
 			}
 			section {
 				margin-bottom: 2em;
 			}
 			section h2 {
-				border-bottom: 2px solid rgb(var(--accent));
+				border-bottom: 2px solid var(--accent);
 				padding-bottom: 0.3em;
 			}
 			.values {
@@ -35,7 +49,7 @@ import { SITE_TITLE } from '../consts';
 			}
 			.value-card {
 				padding: 1.2em;
-				border-left: 4px solid rgb(var(--accent));
+				border-left: 4px solid var(--accent);
 				background: rgba(var(--gray-light), 0.15);
 				border-radius: 0 8px 8px 0;
 			}
@@ -45,30 +59,40 @@ import { SITE_TITLE } from '../consts';
 			.value-card p {
 				margin: 0;
 				color: rgb(var(--gray-dark));
-				font-size: 0.95rem;
+				font-size: 0.95em;
+			}
+			@media (max-width: 720px) {
+				.hero h1 {
+					font-size: 2em;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>关于好读</h1>
+			<div class="hero">
+				<h1>好读</h1>
+				<p class="tagline">在信息过载的时代，只读值得读的</p>
+				<span class="badge">🆓 免费阅读</span>
+			</div>
 
 			<section>
-				<h2>为什么做好读？</h2>
+				<h2>好读是什么？</h2>
 				<p>
 					我们每天被海量信息包围，但真正值得深度阅读的内容却越来越难找到。
 					很多全球最好的思考、最前沿的实践，散落在英文世界的各个角落——个人博客、长推文、Newsletter。
 					中文读者很难系统性地接触到这些内容。
 				</p>
 				<p>
-					<strong>好读</strong>想解决的就是这个问题：把全球最好的思想，用中文呈现给你。
-					不是机器翻译的粗糙搬运，而是经过理解、消化后的高质量呈现。
+					<strong>好读</strong>想解决的就是这个问题：精选全球优质文章，翻译、整理、分类，
+					用中文呈现给你。不是机器翻译的粗糙搬运，而是经过理解、消化后的高质量呈现。
+					确保你花的每一分钟阅读时间都有回报。
 				</p>
 			</section>
 
 			<section>
-				<h2>我们关注什么？</h2>
+				<h2>内容方向</h2>
 				<div class="values">
 					<div class="value-card">
 						<h3>🤖 AI & Agent</h3>

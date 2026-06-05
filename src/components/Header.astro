@@ -8,7 +8,6 @@ import categories from '../notion-categories.json';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">首页</HeaderLink>
 			{categories.map(({ dir, slug }: { dir: string; slug: string }) => (
 				<HeaderLink href={`/${slug}`}>{dir}</HeaderLink>
 			))}
