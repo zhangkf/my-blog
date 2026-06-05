@@ -45,6 +45,9 @@ jobs:
           Automated sync by GitHub Actions
 
           Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
-            git pull --rebase origin main
-            git push
+            for attempt in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "Push attempt $attempt failed, retrying in 5s..."
+              sleep 5
+            done
           fi
