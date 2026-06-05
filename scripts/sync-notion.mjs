@@ -19,8 +19,9 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
-const OUTPUT_DIR = path.join(REPO_ROOT, "src", "content", "blog", "notion");
+const CONTENT_DIR = path.join(REPO_ROOT, "src", "content");
 const ASSETS_DIR = path.join(REPO_ROOT, "public", "notion-assets");
+const MANIFEST_PATH = path.join(REPO_ROOT, "src", "notion-categories.json");
 
 // ── Config ──────────────────────────────────────────────────────────
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
@@ -365,8 +366,8 @@ async function syncPage(childBlock, parentTitle, categoryDir) {
 
   const content = `${frontmatter}\n\n${markdown.trim()}\n`;
 
-  // Write file to category subdirectory
-  const outputDir = path.join(OUTPUT_DIR, categoryDir);
+  // Write file to category directory under src/content/
+  const outputDir = path.join(CONTENT_DIR, categoryDir);
   fs.mkdirSync(outputDir, { recursive: true });
 
   const slug = slugify(cleanTitle);
@@ -435,7 +436,6 @@ async function discoverArticles(pageId, parentTitle) {
 async function main() {
   console.log("🚀 Starting Notion → Blog sync...\n");
 
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   fs.mkdirSync(ASSETS_DIR, { recursive: true });
 
   // Auto-discover parent pages if not explicitly configured
@@ -489,9 +489,12 @@ async function main() {
   // Clean up: remove files/dirs that no longer exist in Notion
   const syncedRelPaths = new Set(allSyncedFiles.map((f) => f.relPath));
 
+  // Protected directories that should never be touched
+  const protectedDirs = new Set(["blog", "readings"]);
+
   // Clean up orphaned files within active category dirs
   for (const catDir of activeCategoryDirs) {
-    const catPath = path.join(OUTPUT_DIR, catDir);
+    const catPath = path.join(CONTENT_DIR, catDir);
     if (!fs.existsSync(catPath)) continue;
     const files = fs.readdirSync(catPath).filter((f) => f.endsWith(".md"));
     for (const file of files) {
@@ -506,28 +509,31 @@ async function main() {
     }
   }
 
-  // Remove category directories that no longer exist in Notion
-  if (fs.existsSync(OUTPUT_DIR)) {
-    const existingDirs = fs.readdirSync(OUTPUT_DIR, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name);
-    for (const dir of existingDirs) {
-      if (!activeCategoryDirs.has(dir)) {
-        fs.rmSync(path.join(OUTPUT_DIR, dir), { recursive: true });
+  // Remove Notion-created category directories that no longer exist
+  // Read previous manifest to know which dirs were created by this script
+  let previousCategories = [];
+  if (fs.existsSync(MANIFEST_PATH)) {
+    try {
+      previousCategories = JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf-8")).map((c) => c.dir);
+    } catch {}
+  }
+  for (const dir of previousCategories) {
+    if (!activeCategoryDirs.has(dir) && !protectedDirs.has(dir)) {
+      const dirPath = path.join(CONTENT_DIR, dir);
+      if (fs.existsSync(dirPath)) {
+        fs.rmSync(dirPath, { recursive: true });
         console.log(`🗑️  Removed old category directory: ${dir}/`);
       }
     }
-
-    // Also clean up any flat .md files from the old structure
-    const flatFiles = fs.readdirSync(OUTPUT_DIR).filter((f) => f.endsWith(".md"));
-    for (const file of flatFiles) {
-      const content = fs.readFileSync(path.join(OUTPUT_DIR, file), "utf-8");
-      if (content.includes("source: notion")) {
-        fs.unlinkSync(path.join(OUTPUT_DIR, file));
-        console.log(`🗑️  Migrated flat file to category structure: ${file}`);
-      }
-    }
   }
+
+  // Write categories manifest for Astro to consume
+  const categoriesManifest = [...activeCategoryDirs].map((dir) => ({
+    dir,
+    slug: dir.toLowerCase().replace(/\s+/g, "-"),
+  }));
+  fs.writeFileSync(MANIFEST_PATH, JSON.stringify(categoriesManifest, null, 2), "utf-8");
+  console.log(`\n📋 Categories manifest: ${categoriesManifest.map((c) => c.dir).join(", ")}`);
 
   const changedCount = allSyncedFiles.filter((f) => f.changed).length;
   console.log(`\n✨ Done! ${allSyncedFiles.length} articles synced, ${changedCount} changed.`);

@@ -1,25 +1,25 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import fs from 'node:fs';
+
+// Schema shared by all Notion-synced collections
+const notionSchema = ({ image }: { image: Function }) =>
+	z.object({
+		title: z.string(),
+		description: z.string(),
+		pubDate: z.coerce.date(),
+		updatedDate: z.coerce.date().optional(),
+		heroImage: image().or(z.string().url()).optional(),
+		category: z.string().optional(),
+		source: z.string().optional(),
+		notion_id: z.string().optional(),
+		notion_parent: z.string().optional(),
+		last_synced: z.string().optional(),
+	});
 
 const blog = defineCollection({
-	// Load Markdown and MDX files in the `src/content/blog/` directory.
 	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
-	// Type-check frontmatter using a schema
-	schema: ({ image }) =>
-		z.object({
-			title: z.string(),
-			description: z.string(),
-			// Transform string to Date object
-			pubDate: z.coerce.date(),
-			updatedDate: z.coerce.date().optional(),
-			heroImage: image().or(z.string().url()).optional(),
-			// Notion sync metadata
-			category: z.string().optional(),
-			source: z.string().optional(),
-			notion_id: z.string().optional(),
-			notion_parent: z.string().optional(),
-			last_synced: z.string().optional(),
-		}),
+	schema: notionSchema,
 });
 
 const readings = defineCollection({
@@ -36,4 +36,20 @@ const readings = defineCollection({
 		}),
 });
 
-export const collections = { blog, readings };
+// Dynamically register Notion category collections
+const notionCategories: Record<string, ReturnType<typeof defineCollection>> = {};
+try {
+	const manifest = JSON.parse(
+		fs.readFileSync('./src/notion-categories.json', 'utf-8')
+	) as { dir: string; slug: string }[];
+	for (const { dir, slug } of manifest) {
+		notionCategories[slug] = defineCollection({
+			loader: glob({ base: `./src/content/${dir}`, pattern: '**/*.{md,mdx}' }),
+			schema: notionSchema,
+		});
+	}
+} catch {
+	// No manifest yet – skip
+}
+
+export const collections = { blog, readings, ...notionCategories };

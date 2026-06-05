@@ -7,7 +7,7 @@ category: 'Agent'
 source: notion
 notion_id: '36245fd1-9f92-800d-9078-d2aa9e2a54cf'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:34:52.487Z'
+last_synced: '2026-06-05T11:40:10.041Z'
 ---
 
 **翻译：Garry Tan 的这篇长帖**

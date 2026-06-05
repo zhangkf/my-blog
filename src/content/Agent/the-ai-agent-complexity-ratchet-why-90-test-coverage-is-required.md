@@ -6,7 +6,7 @@ category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-80b0-877a-d51a83d92c1b'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:35:00.973Z'
+last_synced: '2026-06-05T11:40:18.925Z'
 ---
 
 以下是您提供的 X 帖子（Garry Tan 的长文《The Agent Complexity Ratchet》）的完整中文翻译。我尽量保持原文的结构、语气和专业性，便于阅读：

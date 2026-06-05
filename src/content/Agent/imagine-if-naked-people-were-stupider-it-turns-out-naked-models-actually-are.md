@@ -7,7 +7,7 @@ category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-80a1-82e1-f245382c7c04'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:34:56.693Z'
+last_synced: '2026-06-05T11:40:13.950Z'
 ---
 
 以下是这篇 Garry Tan 在 X 上的长帖（回复 Kyle Kingsbury 文章）的**完整中文翻译**。我已尽量保留原文的结构、语气、专业性和幽默感，便于阅读：

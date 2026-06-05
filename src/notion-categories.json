@@ -1,0 +1,10 @@
+[
+  {
+    "dir": "Agent",
+    "slug": "agent"
+  },
+  {
+    "dir": "Misc",
+    "slug": "misc"
+  }
+]
