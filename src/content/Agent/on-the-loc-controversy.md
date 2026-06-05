@@ -1,16 +1,14 @@
 ---
 title: '3. On the LOC controversy'
-description: '以下是这篇文章（Garry Tan 在 X 上的长帖）的完整中文翻译。我已尽量保持原文的结构、语气和专业性，便于阅读：'
+description: '或者：当我提到我最近出货了多少行代码，以及实际数字到底说明了什么时，发生了什么。'
 pubDate: '2026-05-17'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_fabric_169S.jpg'
 category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-80ca-b4aa-c339b5cf5367'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:51:27.372Z'
+last_synced: '2026-06-05T12:32:24.991Z'
 ---
-
-以下是这篇文章（Garry Tan 在 X 上的长帖）的完整中文翻译。我已尽量保持原文的结构、语气和专业性，便于阅读：
 
 **或者：当我提到我最近出货了多少行代码，以及实际数字到底说明了什么时，发生了什么。**
 
@@ -157,5 +155,3 @@ gstack 不是假设。它是一个有真实用户的产品：
 ——
 
 GStack 刚刚发布 v1。它是我使用 Claude Code 的方式。它是 MIT 开源且免费的。这里试用。
-
-翻译完毕。如果需要进一步解释某些部分、简化摘要，或翻译回复里的特定内容，请随时告诉我！

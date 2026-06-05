@@ -1,16 +1,14 @@
 ---
 title: '1. Thin Harness, Fat Skills'
-description: '翻译：Garry Tan 的这篇长帖'
+description: 'Steve Yegge 说，使用 AI 编码代理的人“比今天使用 Cursor 和聊天的人生产力高 10x 到 100x，大致相当于 2005 年 Googlers 的 1000x 生产力。”'
 pubDate: '2026-05-16'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_126S.jpg'
 category: 'Agent'
 source: notion
 notion_id: '36245fd1-9f92-800d-9078-d2aa9e2a54cf'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:51:24.925Z'
+last_synced: '2026-06-05T12:32:23.488Z'
 ---
-
-**翻译：Garry Tan 的这篇长帖**
 
 Steve Yegge 说，使用 AI 编码代理的人“比今天使用 Cursor 和聊天的人生产力高 10x 到 100x，大致相当于 2005 年 Googlers 的 1000x 生产力。”
 
@@ -141,5 +139,3 @@ ACTUALLY BUILDING: 80% commits 在 billing 模块。
 这就是你获得 Yegge 所说 100x 的方式。**不是更聪明的模型，而是胖 Skills + 薄 Harness + 把一切都固化下来的纪律**。
 
 这个系统会**复利增长**。一次构建，永远运行。0
-
-（翻译完。原文是一篇结构清晰、观点深刻的 AI 架构长文，如需进一步解释某些部分或调整翻译风格，请告诉我。）

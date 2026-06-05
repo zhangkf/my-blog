@@ -1,16 +1,14 @@
 ---
 title: 'Hermes Agent Masterclass'
-description: '以下是该 X 帖子的完整中文翻译（原帖作者：Akshay 🚀 @akshaypachaar，发布于 2026 年 5 月 13 日）：'
+description: '你需要了解和自定义 Hermes Agent 的一切'
 pubDate: '2026-05-18'
 heroImage: 'https://app.notion.com/images/page-cover/hudsonRiverSchool_theOxbow.jpg'
 category: 'Agent'
 source: notion
 notion_id: '36445fd1-9f92-80b9-abeb-e15c17180d56'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:51:35.178Z'
+last_synced: '2026-06-05T12:32:29.789Z'
 ---
-
-**以下是该 X 帖子的完整中文翻译**（原帖作者：Akshay 🚀 @akshay_pachaar，发布于 2026 年 5 月 13 日）：
 
 **你需要了解和自定义 Hermes Agent 的一切**
 
@@ -281,8 +279,6 @@ Hermes 内置调度器，你只需用英语描述任务，它会自动转换成 
 - 周期任务：/cron add "every 2h" "检查服务器状态"
 - 精确 cron 表达式
 - 技能挂载、任务链等高级用法
-**翻译结束**。
 
-这是一篇非常详尽的 Hermes Agent 深度教程，原帖配有大量插图（由代理 Pixel 绘制）。如果你需要某一部分的更详细解释、命令复制、或针对特定功能的补充说明，请随时告诉我！
 
 原帖链接：https://x.com/i/status/2054564519280804028

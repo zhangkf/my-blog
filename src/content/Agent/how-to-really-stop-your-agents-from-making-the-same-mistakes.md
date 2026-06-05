@@ -1,16 +1,14 @@
 ---
 title: '5. How to really stop your agents from making the same mistakes'
-description: '以下是该 X 帖子（Garry Tan 的文章）的完整中文翻译。我力求翻译准确、流畅，并保留了原文的技术术语和结构，以便读者理解：'
+description: 'LangChain 已经融资 1.6 亿美元。三年开发，估值十亿美元。他们的测试平台 LangSmith 确实非常成熟：轨迹评估、轨迹转数据集管道、LLM 作为评判者、回归测试套件、工具的单元测试框架。他们拥有这些组件。功劳归功于他们。'
 pubDate: '2026-05-17'
 heroImage: 'https://app.notion.com/images/page-cover/usda_pear.png'
 category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-8004-a645-d6917eeddf0f'
 notion_parent: 'Agent'
-last_synced: '2026-06-05T11:51:31.821Z'
+last_synced: '2026-06-05T12:32:27.319Z'
 ---
-
-以下是该 X 帖子（Garry Tan 的文章）的完整中文翻译。我力求翻译准确、流畅，并保留了原文的技术术语和结构，以便读者理解：
 
 LangChain 已经融资 1.6 亿美元。三年开发，估值十亿美元。他们的测试平台 LangSmith 确实非常成熟：轨迹评估、轨迹转数据集管道、LLM 作为评判者、回归测试套件、工具的单元测试框架。他们拥有这些组件。功劳归功于他们。
 
@@ -317,5 +315,3 @@ Nous Research 的 Hermes Agent 做了一件真正伟大的事：它有一个 ski
 GStack 加速 Claude Code：github.com/garrytan/gstack
 
 GBrain 在 OpenClaw/Hermes Agent 中构建你自己的 Jarvis：github.com/garrytan/gbrain
-
-翻译完成。如果需要我额外解释某些技术部分、翻译回复中的特定评论，或调整翻译风格，请随时告诉我！
