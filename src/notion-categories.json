@@ -6,5 +6,9 @@
   {
     "dir": "Misc",
     "slug": "misc"
+  },
+  {
+    "dir": "AI",
+    "slug": "ai"
   }
 ]
