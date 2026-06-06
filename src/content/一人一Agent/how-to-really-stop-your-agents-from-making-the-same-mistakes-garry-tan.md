@@ -1,5 +1,5 @@
 ---
-title: '5. How to really stop your agents from making the same mistakes'
+title: '5. How to really stop your agents from making the same mistakes | Garry Tan'
 description: 'LangChain 已经融资 1.6 亿美元。三年开发，估值十亿美元。他们的测试平台 LangSmith 确实非常成熟：轨迹评估、轨迹转数据集管道、LLM 作为评判者、回归测试套件、工具的单元测试框架。他们拥有这些组件。功劳归功于他们。'
 pubDate: '2026-05-17'
 heroImage: 'https://app.notion.com/images/page-cover/usda_pear.png'
@@ -7,7 +7,7 @@ category: '一人一Agent'
 source: notion
 notion_id: '36345fd1-9f92-8004-a645-d6917eeddf0f'
 notion_parent: '一人一Agent'
-last_synced: '2026-06-06T01:51:57.487Z'
+last_synced: '2026-06-06T03:17:52.919Z'
 ---
 
 LangChain 已经融资 1.6 亿美元。三年开发，估值十亿美元。他们的测试平台 LangSmith 确实非常成熟：轨迹评估、轨迹转数据集管道、LLM 作为评判者、回归测试套件、工具的单元测试框架。他们拥有这些组件。功劳归功于他们。
