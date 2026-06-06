@@ -1,21 +1,22 @@
 /*
-  好读 — 高品质中文阅读主题
-  衬线字体 · 移动端友好 · 中文优化
+  好读 — Kami 设计语言
+  暖纸底 · 墨蓝调 · 衬线体 · 编辑节奏
 */
 
 :root {
-	--accent: #b45309;
-	--accent-dark: #92400e;
-	--accent-light: #f59e0b;
-	--black: 28, 25, 23;
-	--gray: 120, 113, 108;
-	--gray-light: 231, 229, 228;
-	--gray-dark: 41, 37, 36;
-	--bg: #faf9f7;
-	--bg-card: #ffffff;
+	/* Kami Design System — warm parchment + ink blue */
+	--accent: #1B365D;
+	--accent-dark: #12243f;
+	--accent-light: #2d5a8e;
+	--black: 44, 36, 22;
+	--gray: 138, 126, 107;
+	--gray-light: 228, 224, 214;
+	--gray-dark: 92, 84, 67;
+	--bg: #f5f4ed;
+	--bg-card: #f5f4ed;
 	--gray-gradient: rgba(var(--gray-light), 50%), var(--bg);
 	--box-shadow:
-		0 2px 6px rgba(var(--gray), 15%), 0 8px 24px rgba(var(--gray), 15%);
+		0 2px 6px rgba(27, 54, 93, 0.08), 0 8px 24px rgba(27, 54, 93, 0.06);
 }
 
 body {
@@ -29,6 +30,7 @@ body {
 	color: rgb(var(--gray-dark));
 	font-size: 18px;
 	line-height: 1.9;
+	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -42,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 1.5em 0 0.6em 0;
 	color: rgb(var(--black));
 	line-height: 1.35;
-	font-weight: 700;
+	font-weight: 600;
 }
 h1 {
 	font-size: 2em;
@@ -122,7 +124,7 @@ pre > code {
 	font-size: 0.9em;
 }
 blockquote {
-	border-left: 3px solid var(--accent);
+	border-left: 2px solid rgba(27, 54, 93, 0.25);
 	padding: 0.2em 0 0.2em 1.2em;
 	margin: 1.5em 0;
 	color: rgb(var(--gray));
@@ -134,7 +136,7 @@ blockquote p:last-child {
 }
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	border-top: 1px solid rgba(27, 54, 93, 0.1);
 	margin: 2em 0;
 }
 ul, ol {

@@ -26,11 +26,12 @@ const posts = (await getCollection(slug as any)).sort(
 		<BaseHead title={`${dir} | ${SITE_TITLE}`} description={`${dir} 分类下的所有文章`} />
 		<style>
 			.page-title {
-				text-align: center;
+				text-align: left;
 				margin-bottom: 2em;
 			}
 			.page-title h1 {
 				margin: 0 0 0.2em 0;
+				color: var(--accent);
 			}
 			.page-title .count {
 				color: rgb(var(--gray));
@@ -42,28 +43,31 @@ const posts = (await getCollection(slug as any)).sort(
 				padding: 0;
 			}
 			.article-list li {
-				border-bottom: 1px solid rgb(var(--gray-light));
+				border-bottom: 1px solid rgba(27, 54, 93, 0.08);
 			}
 			.article-list li:last-child {
 				border-bottom: none;
 			}
 			.article-list a {
 				display: block;
-				padding: 1.5em 0;
+				padding: 1.5em 0.8em;
+				margin: 0 -0.8em;
 				text-decoration: none;
+				border-radius: 6px;
 				transition: background 0.2s;
 			}
 			.article-list a:hover {
-				background: rgba(var(--gray-light), 0.3);
-				margin: 0 -1em;
-				padding: 1.5em 1em;
-				border-radius: 8px;
+				background: rgba(27, 54, 93, 0.04);
 			}
 			.article-title {
 				margin: 0 0 0.3em 0;
 				color: rgb(var(--black));
-				font-size: 1.2em;
+				font-size: 1.15em;
+				font-weight: 500;
 				line-height: 1.4;
+			}
+			.article-list a:hover .article-title {
+				color: var(--accent);
 			}
 			.article-meta {
 				color: rgb(var(--gray));
@@ -73,7 +77,7 @@ const posts = (await getCollection(slug as any)).sort(
 				color: rgb(var(--gray-dark));
 				font-size: 0.92em;
 				margin-top: 0.4em;
-				line-height: 1.6;
+				line-height: 1.55;
 				display: -webkit-box;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;

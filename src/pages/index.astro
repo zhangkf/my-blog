@@ -7,13 +7,13 @@ import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import categories from '../notion-categories.json';
 
-// Category color palette — auto-cycles for new categories from Notion
+// Kami-palette category colors — warm tones that sit on parchment
 const CATEGORY_COLORS: Record<string, string> = {
-	'AI': '#2563eb',           // blue
-	'一人一Agent': '#0d9488',  // teal
-	'Misc': '#6b7280',         // gray
+	'AI': '#1B365D',           // ink blue (primary)
+	'一人一Agent': '#2d6a5a',  // pine green
+	'Misc': '#8a7e6b',         // warm gray
 };
-const COLOR_POOL = ['#7c3aed', '#db2777', '#ea580c', '#16a34a', '#0891b2', '#4f46e5'];
+const COLOR_POOL = ['#6b4c3b', '#4a5568', '#7c5e3c', '#3d6b5e', '#5b4a7a', '#8b5c34'];
 let colorIdx = 0;
 function getCategoryColor(dir: string): string {
 	if (CATEGORY_COLORS[dir]) return CATEGORY_COLORS[dir];
@@ -40,16 +40,17 @@ allPosts.sort((a, b) => b.post.data.pubDate.valueOf() - a.post.data.pubDate.valu
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			.page-header {
-				text-align: center;
-				margin-bottom: 2em;
+				text-align: left;
+				margin-bottom: 1.5em;
 			}
 			.page-header h1 {
 				font-size: 2em;
-				margin-bottom: 0.1em;
+				margin-bottom: 0.15em;
+				color: var(--accent);
 			}
 			.page-header p {
 				color: rgb(var(--gray));
-				font-size: 0.95em;
+				font-size: 0.92em;
 			}
 			.article-list {
 				list-style: none;
@@ -57,48 +58,53 @@ allPosts.sort((a, b) => b.post.data.pubDate.valueOf() - a.post.data.pubDate.valu
 				padding: 0;
 			}
 			.article-list li {
-				border-bottom: 1px solid rgb(var(--gray-light));
+				border-bottom: 1px solid rgba(27, 54, 93, 0.08);
 			}
 			.article-list li:last-child {
 				border-bottom: none;
 			}
 			.article-list a {
 				display: block;
-				padding: 1.3em 0;
+				padding: 1.5em 0.8em;
+				margin: 0 -0.8em;
 				text-decoration: none;
+				border-radius: 6px;
 				transition: background 0.2s;
 			}
 			.article-list a:hover {
-				background: rgba(var(--gray-light), 0.3);
-				margin: 0 -1em;
-				padding: 1.3em 1em;
-				border-radius: 8px;
+				background: rgba(27, 54, 93, 0.04);
 			}
 			.article-title {
-				margin: 0 0 0.3em 0;
+				margin: 0 0 0.4em 0;
 				color: rgb(var(--black));
 				font-size: 1.15em;
+				font-weight: 500;
 				line-height: 1.4;
+			}
+			.article-list a:hover .article-title {
+				color: var(--accent);
 			}
 			.article-meta {
 				color: rgb(var(--gray));
-				font-size: 0.83em;
+				font-size: 0.82em;
 				display: flex;
 				align-items: center;
-				gap: 0.6em;
+				gap: 0.7em;
 			}
 			.cat-label {
-				padding: 0.1em 0.5em;
-				background: var(--accent);
-				color: white;
+				display: inline-block;
+				padding: 0.1em 0.55em;
+				color: #f5f4ed;
 				border-radius: 3px;
-				font-size: 0.85em;
+				font-size: 0.82em;
+				font-weight: 500;
+				letter-spacing: 0.02em;
 			}
 			.article-desc {
 				color: rgb(var(--gray-dark));
 				font-size: 0.9em;
-				margin-top: 0.3em;
-				line-height: 1.6;
+				margin-top: 0.4em;
+				line-height: 1.55;
 				display: -webkit-box;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
