@@ -1,13 +1,13 @@
 ---
 title: '3. On the LOC controversy | Garry Tan'
 description: '或者：当我提到我最近出货了多少行代码，以及实际数字到底说明了什么时，发生了什么。'
-pubDate: '2026-05-17'
+pubDate: '2026-05-17T04:06'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_fabric_169S.jpg'
 category: '一人一Agent'
 source: notion
 notion_id: '36345fd1-9f92-80ca-b4aa-c339b5cf5367'
 notion_parent: '一人一Agent'
-last_synced: '2026-06-06T03:17:51.242Z'
+last_synced: '2026-06-06T06:16:50.433Z'
 ---
 
 **或者：当我提到我最近出货了多少行代码，以及实际数字到底说明了什么时，发生了什么。**
