@@ -3,11 +3,11 @@ title: '6. Meta-Meta-Prompting: The Secret to Making AI Agents Work'
 description: '大家一直问我，为什么我晚上还要熬夜 coding 到凌晨 2 点。我有一份正经工作，而且是份大工作——作为 Y Combinator 的 CEO，我们每年帮助数千名创业者实现梦想，打造真正有收入、快速增长的初创公司。'
 pubDate: '2026-05-17'
 heroImage: 'https://app.notion.com/images/page-cover/woodcuts_14.jpg'
-category: 'Agent'
+category: '一人一Agent'
 source: notion
 notion_id: '36345fd1-9f92-805a-b531-ecb0dc1c909a'
-notion_parent: 'Agent'
-last_synced: '2026-06-05T12:32:27.855Z'
+notion_parent: '一人一Agent'
+last_synced: '2026-06-06T01:51:57.839Z'
 ---
 
 大家一直问我，为什么我晚上还要熬夜 coding 到凌晨 2 点。我有一份正经工作，而且是份大工作——作为 Y Combinator 的 CEO，我们每年帮助数千名创业者实现梦想，打造真正有收入、快速增长的初创公司。

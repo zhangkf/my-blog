@@ -1,14 +1,14 @@
 [
   {
-    "dir": "Agent",
-    "slug": "agent"
+    "dir": "AI",
+    "slug": "ai"
+  },
+  {
+    "dir": "一人一Agent",
+    "slug": "一人一agent"
   },
   {
     "dir": "Misc",
     "slug": "misc"
-  },
-  {
-    "dir": "AI",
-    "slug": "ai"
   }
 ]

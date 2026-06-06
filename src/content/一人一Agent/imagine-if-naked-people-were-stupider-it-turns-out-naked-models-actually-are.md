@@ -3,11 +3,11 @@ title: '4. Imagine if naked people were stupider. It turns out, naked models act
 description: '抱歉，不是那种裸体模特。但你现在感受到的失望？那正是 Kyle Kingsbury 对 LLM 的感受。'
 pubDate: '2026-05-17'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_285S.jpg'
-category: 'Agent'
+category: '一人一Agent'
 source: notion
 notion_id: '36345fd1-9f92-80a1-82e1-f245382c7c04'
-notion_parent: 'Agent'
-last_synced: '2026-06-05T12:32:25.988Z'
+notion_parent: '一人一Agent'
+last_synced: '2026-06-06T01:51:56.689Z'
 ---
 
 **抱歉，不是那种裸体模特。但你现在感受到的失望？那正是 Kyle Kingsbury 对 LLM 的感受。**

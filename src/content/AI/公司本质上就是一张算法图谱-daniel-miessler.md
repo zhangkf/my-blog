@@ -2,11 +2,12 @@
 title: '公司本质上就是一张算法图谱 | Daniel Miessler'
 description: 'AI 即将把你的公司视为一系列可优化的组件'
 pubDate: '2026-06-05'
+heroImage: 'https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'AI'
 source: notion
 notion_id: '37645fd1-9f92-80a2-8c45-cc9d7d2be606'
 notion_parent: 'AI'
-last_synced: '2026-06-06T01:45:00.725Z'
+last_synced: '2026-06-06T01:51:52.151Z'
 ---
 
 **AI 即将把你的公司视为一系列可优化的组件**

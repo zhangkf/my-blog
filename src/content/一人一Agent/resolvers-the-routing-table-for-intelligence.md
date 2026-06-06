@@ -3,11 +3,11 @@ title: '2. Resolvers: The Routing Table for Intelligence'
 description: '在《薄 Harness，胖 Skills》中，我介绍了构建真正有效的 Agent 系统的五个核心定义。Skills 获得了最多的关注，人们收藏了“Skill-as-method-call”模式、Diarization 概念以及薄 Harness 架构。很好，这些确实很重要。'
 pubDate: '2026-05-16'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_261S.jpg'
-category: 'Agent'
+category: '一人一Agent'
 source: notion
 notion_id: '36245fd1-9f92-80d9-9026-f54d1cfc315e'
-notion_parent: 'Agent'
-last_synced: '2026-06-05T12:32:24.345Z'
+notion_parent: '一人一Agent'
+last_synced: '2026-06-06T01:51:54.545Z'
 ---
 
 在《薄 Harness，胖 Skills》中，我介绍了构建真正有效的 Agent 系统的五个核心定义。Skills 获得了最多的关注，人们收藏了“Skill-as-method-call”模式、Diarization 概念以及薄 Harness 架构。很好，这些确实很重要。
