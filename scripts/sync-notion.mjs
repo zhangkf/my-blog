@@ -317,7 +317,22 @@ async function syncPage(childBlock, parentTitle, categoryDir) {
 
   // Fetch page metadata for cover image and created_time
   const page = await notion.pages.retrieve({ page_id: pageId });
-  const createdTime = page.created_time.split("T")[0]; // YYYY-MM-DD
+  let createdTime = page.created_time.split("T")[0]; // YYYY-MM-DD
+
+  // ── Series ordering ──────────────────────────────────────────────
+  // Titles starting with "N. " (e.g. "1. Thin Harness" or "7. Complexity")
+  // are part of a numbered series. To display them in reverse order
+  // (latest number first), we add the sequence number as a minute offset
+  // to the creation timestamp. This way 7→newest, 1→oldest within the
+  // same base date, and normal time-descending sort produces 7,6,5…1.
+  const seqMatch = title.match(/^(\d+)\.\s/);
+  if (seqMatch) {
+    const seqNum = parseInt(seqMatch[1], 10);
+    // Add seqNum minutes so higher numbers sort later (= appear first in desc order)
+    const dt = new Date(page.created_time);
+    dt.setMinutes(dt.getMinutes() + seqNum);
+    createdTime = dt.toISOString().split("T")[0] + "T" + dt.toISOString().split("T")[1].slice(0, 5);
+  }
 
   // Cover image
   let heroImage = "";
