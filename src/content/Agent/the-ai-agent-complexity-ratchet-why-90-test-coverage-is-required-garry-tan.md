@@ -3,11 +3,11 @@ title: '7. The AI Agent Complexity Ratchet: Why 90% Test Coverage Is Required | 
 description: '过去一年，我一直在用 AI 进行编码。不只是简单提示（prompting）——而是真正构建软件。我有两个开源项目：GStack，它让 AI 编码代理变得更强大；GBrain，它能把你阅读和编写的一切内容转化为 AI 可搜索的知识库。两者加起来，大约有 97 万行代码和 665 个测试文件。几乎所有代码都是在我的指导下，由 Claude Code 和 Codex 完成的（大多数时候同时运行 15 个'
 pubDate: '2026-05-17T09:13'
 heroImage: 'https://app.notion.com/images/page-cover/nasa_the_blue_marble.jpg'
-category: '一人一Agent'
+category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-80b0-877a-d51a83d92c1b'
-notion_parent: '一人一Agent'
-last_synced: '2026-06-06T06:16:54.459Z'
+notion_parent: 'Agent'
+last_synced: '2026-06-07T09:35:04.449Z'
 ---
 
 过去一年，我一直在用 AI 进行编码。不只是简单提示（prompting）——而是真正构建软件。我有两个开源项目：GStack，它让 AI 编码代理变得更强大；GBrain，它能把你阅读和编写的一切内容转化为 AI 可搜索的知识库。两者加起来，大约有 97 万行代码和 665 个测试文件。几乎所有代码都是在我的指导下，由 Claude Code 和 Codex 完成的（大多数时候同时运行 15 个 Conductor 会话）。

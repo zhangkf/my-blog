@@ -3,11 +3,11 @@ title: 'Hermes Agent Masterclass'
 description: '你需要了解和自定义 Hermes Agent 的一切'
 pubDate: '2026-05-18'
 heroImage: 'https://app.notion.com/images/page-cover/hudsonRiverSchool_theOxbow.jpg'
-category: '一人一Agent'
+category: 'Agent'
 source: notion
 notion_id: '36445fd1-9f92-80b9-abeb-e15c17180d56'
-notion_parent: '一人一Agent'
-last_synced: '2026-06-06T01:51:59.229Z'
+notion_parent: 'Agent'
+last_synced: '2026-06-07T09:35:05.317Z'
 ---
 
 **你需要了解和自定义 Hermes Agent 的一切**
