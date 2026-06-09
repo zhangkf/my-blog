@@ -33,6 +33,9 @@ body {
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	/* Prevent Android Chrome font inflation (boosting) */
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 main {
 	width: 680px;
@@ -149,7 +152,17 @@ li {
 /* Mobile responsive */
 @media (max-width: 720px) {
 	body {
-		font-size: 17px;
+		/*
+		  Adaptive font size based on screen width.
+		  WCAG CJK guideline: ~18–22 chars per line on mobile.
+		  Formula: base 15px + 0.5vw — scales smoothly:
+		    360px screen → 16.8px (small Android)
+		    393px screen → 16.97px (iPhone 15)
+		    412px screen → 17.06px (OnePlus / most Android)
+		    430px screen → 17.15px (iPhone 15 Plus)
+		  Clamped between 16px min and 18px max.
+		*/
+		font-size: clamp(16px, calc(15px + 0.5vw), 18px);
 		line-height: 1.85;
 	}
 	main {
