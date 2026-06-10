@@ -17,6 +17,42 @@
 	--gray-gradient: rgba(var(--gray-light), 50%), var(--bg);
 	--box-shadow:
 		0 2px 6px rgba(27, 54, 93, 0.08), 0 8px 24px rgba(27, 54, 93, 0.06);
+	/* Semantic border/divider colors — used in place of hardcoded rgba(27,54,93,...) */
+	--border-strong: rgba(27, 54, 93, 0.25);
+	--border-mid: rgba(27, 54, 93, 0.12);
+	--border-light: rgba(27, 54, 93, 0.1);
+	--border-faint: rgba(27, 54, 93, 0.08);
+	--border-ghost: rgba(27, 54, 93, 0.06);
+	--surface-hover: rgba(27, 54, 93, 0.04);
+	--surface-accent: rgba(27, 54, 93, 0.03);
+	--overlay-hint: rgba(27, 54, 93, 0.75);
+}
+
+/* Kami Dark — warm dark theme for night reading (晚间模式) */
+/* Selector: html.dark-mode — JS adds class to <html> in <head> to avoid FOUC */
+html.dark-mode {
+	--accent: #8FAFD4;
+	--accent-dark: #A3C0DE;
+	--accent-light: #6B93BC;
+	--black: 232, 224, 208;
+	--gray: 160, 152, 136;
+	--gray-light: 58, 53, 48;
+	--gray-dark: 208, 200, 184;
+	--bg: #1a1816;
+	--bg-card: #252220;
+	--gray-gradient: rgba(var(--gray-light), 50%), var(--bg);
+	--box-shadow:
+		0 2px 6px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+	--border-strong: rgba(160, 152, 136, 0.3);
+	--border-mid: rgba(160, 152, 136, 0.15);
+	--border-light: rgba(160, 152, 136, 0.12);
+	--border-faint: rgba(160, 152, 136, 0.08);
+	--border-ghost: rgba(160, 152, 136, 0.06);
+	--surface-hover: rgba(160, 152, 136, 0.06);
+	--surface-accent: rgba(160, 152, 136, 0.04);
+	--overlay-hint: rgba(26, 24, 22, 0.85);
+	/* CJK: bump font weight for legibility on dark bg */
+	font-weight: 500;
 }
 
 body {
@@ -36,6 +72,8 @@ body {
 	/* Prevent Android Chrome font inflation (boosting) */
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
+	/* Smooth dark mode transition */
+	transition: background-color 0.4s ease, color 0.4s ease;
 }
 main {
 	width: 680px;
@@ -108,6 +146,14 @@ img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 6px;
+	transition: filter 0.4s ease;
+}
+/* Slightly desaturate images in dark mode to reduce glare */
+html.dark-mode img {
+	filter: brightness(0.88) saturate(0.85);
+}
+html.dark-mode img:hover {
+	filter: brightness(1) saturate(1);
 }
 code {
 	font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
@@ -127,7 +173,7 @@ pre > code {
 	font-size: 0.9em;
 }
 blockquote {
-	border-left: 2px solid rgba(27, 54, 93, 0.25);
+	border-left: 2px solid var(--border-strong);
 	padding: 0.2em 0 0.2em 1.2em;
 	margin: 1.5em 0;
 	color: rgb(var(--gray));
@@ -139,7 +185,7 @@ blockquote p:last-child {
 }
 hr {
 	border: none;
-	border-top: 1px solid rgba(27, 54, 93, 0.1);
+	border-top: 1px solid var(--border-light);
 	margin: 2em 0;
 }
 ul, ol {

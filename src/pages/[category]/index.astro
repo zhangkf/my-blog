@@ -43,7 +43,7 @@ const posts = (await getCollection(slug as any)).sort(
 				padding: 0;
 			}
 			.article-list li {
-				border-bottom: 1px solid rgba(27, 54, 93, 0.08);
+				border-bottom: 1px solid var(--border-faint);
 			}
 			.article-list li:last-child {
 				border-bottom: none;
@@ -57,7 +57,7 @@ const posts = (await getCollection(slug as any)).sort(
 				transition: background 0.2s;
 			}
 			.article-list a:hover {
-				background: rgba(27, 54, 93, 0.04);
+				background: var(--surface-hover);
 			}
 			.article-title {
 				margin: 0 0 0.3em 0;

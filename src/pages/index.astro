@@ -58,7 +58,7 @@ allPosts.sort((a, b) => b.post.data.pubDate.valueOf() - a.post.data.pubDate.valu
 				padding: 0;
 			}
 			.article-list li {
-				border-bottom: 1px solid rgba(27, 54, 93, 0.08);
+				border-bottom: 1px solid var(--border-faint);
 			}
 			.article-list li:last-child {
 				border-bottom: none;
@@ -72,7 +72,7 @@ allPosts.sort((a, b) => b.post.data.pubDate.valueOf() - a.post.data.pubDate.valu
 				transition: background 0.2s;
 			}
 			.article-list a:hover {
-				background: rgba(27, 54, 93, 0.04);
+				background: var(--surface-hover);
 			}
 			.article-title {
 				margin: 0 0 0.4em 0;
