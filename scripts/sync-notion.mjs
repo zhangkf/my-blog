@@ -41,13 +41,68 @@ const notion = new Client({ auth: NOTION_API_KEY });
 // ── Helpers ─────────────────────────────────────────────────────────
 
 function slugify(text) {
-  return text
-    .replace(/^\d+\.\s*/, "") // strip leading "1. "
+  // If text is pure ASCII (already English), use simple slugify
+  const hasNonAscii = /[^\x00-\x7F]/.test(text);
+  if (!hasNonAscii) {
+    return text
+      .replace(/^\d+\.\s*/, "") // strip leading "1. "
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .substring(0, 80);
+  }
+
+  // For Chinese/non-ASCII titles, look up from the slug map
+  const mapped = getSlugFromMap(text);
+  if (mapped) return mapped;
+
+  // Fallback: generate a slug from ASCII parts + hash
+  // This should rarely happen — the map should be pre-populated
+  const asciiPart = text
+    .replace(/^\d+\.\s*/, "")
     .toLowerCase()
-    .replace(/[^a-z0-9\u4e00-\u9fff]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .substring(0, 80);
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  if (asciiPart.length >= 3) return asciiPart.substring(0, 80);
+
+  // Last resort: use a content hash
+  const hash = text.split("").reduce((a, c) => ((a << 5) - a + c.charCodeAt(0)) | 0, 0);
+  return "article-" + Math.abs(hash).toString(36);
 }
+
+// ── Slug Map: Chinese title → English slug ──────────────────────────
+// Stored in scripts/slug-map.json. Each entry maps a Notion page title
+// (or its normalized form) to a short 3-5 word English slug.
+// New entries are added by running: node scripts/sync-notion.mjs --update-slugs
+const SLUG_MAP_PATH = path.join(__dirname, "slug-map.json");
+
+function loadSlugMap() {
+  try {
+    return JSON.parse(fs.readFileSync(SLUG_MAP_PATH, "utf-8"));
+  } catch {
+    return {};
+  }
+}
+
+function saveSlugMap(map) {
+  fs.writeFileSync(SLUG_MAP_PATH, JSON.stringify(map, null, 2) + "\n", "utf-8");
+}
+
+function getSlugFromMap(title) {
+  const map = loadSlugMap();
+  // Try exact match first, then normalized (trimmed, no leading numbers)
+  const normalized = title.replace(/^\d+\.\s*/, "").trim();
+  return map[title] || map[normalized] || null;
+}
+
+// ── Category Slug Map ───────────────────────────────────────────────
+// Maps Chinese category directory names to English URL slugs.
+const CATEGORY_SLUG_MAP = {
+  "健康": "health",
+  "AI": "ai",
+  "Agent": "agent",
+  // Add new categories here as they appear
+};
 
 function escapeYaml(str) {
   if (!str) return '""';
@@ -545,7 +600,7 @@ async function main() {
   // Write categories manifest for Astro to consume
   const categoriesManifest = [...activeCategoryDirs].map((dir) => ({
     dir,
-    slug: dir.toLowerCase().replace(/\s+/g, "-"),
+    slug: CATEGORY_SLUG_MAP[dir] || dir.toLowerCase().replace(/\s+/g, "-"),
   }));
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(categoriesManifest, null, 2), "utf-8");
   console.log(`\n📋 Categories manifest: ${categoriesManifest.map((c) => c.dir).join(", ")}`);
