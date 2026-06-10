@@ -421,10 +421,13 @@ const { Content } = await render(post);
 				active ? deactivate() : activate();
 			});
 
-			/* ---- Auto-activate from last preference ---- */
-			try {
-				if (localStorage.getItem(KEY) === '1') activate();
-			} catch (e) {}
+			/* ---- Auto-activate: default ON for mobile ---- */
+			/* Paged mode is the intended mobile experience.     */
+			/* Only stay off if user explicitly toggled it off.   */
+			/* Works even when localStorage is blocked (WeChat).  */
+			var shouldDeactivate = false;
+			try { shouldDeactivate = localStorage.getItem(KEY) === '0'; } catch (e) {}
+			if (!shouldDeactivate) activate();
 		})();
 		</script>
 	</body>
