@@ -264,7 +264,7 @@ const { Content } = await render(post);
 
 			if (!prose || !header || !toggle) return;
 
-			var page = 0, pages = 1, stride = 0, active = false;
+			var page = 0, pages = 1, stride = 0, maxScrollLeft = 0, active = false;
 
 			/* ---- Smooth scroll (requestAnimationFrame, works everywhere) ---- */
 			function smoothScroll(el, to, ms) {
@@ -300,9 +300,29 @@ const { Content } = await render(post);
 				/* Each page: half-gap | column | half-gap  → visually centered */
 				stride = cw;
 
-				/* Force reflow then count pages */
-				var sw = prose.scrollWidth;
-				pages = Math.max(1, Math.round(sw / stride));
+				/* Count pages robustly. iOS Safari/WebKit can mis-report
+				   scrollWidth for the final partial column in multi-column
+				   layouts, dropping the last page. We cross-check two signals:
+				   1. scrollWidth (ceil — a partial last page still counts).
+				   2. The PHYSICAL max scroll: assigning a huge scrollLeft makes
+				      the browser clamp to the true scrollable bound. That bound
+				      is real (content can actually scroll there), so deriving
+				      content width as maxScroll + clientWidth is reliable even
+				      when scrollWidth lies. Take the max of both → never under-
+				      count, so the final page is always reachable.             */
+				var savedLeft = prose.scrollLeft;
+				prose.scrollLeft = 1e7;                       // browser clamps to real max
+				var maxScroll = prose.scrollLeft;            // true scrollable distance
+				prose.scrollLeft = savedLeft;                // restore
+
+				var swContent  = prose.scrollWidth;          // may be under-reported on iOS
+				var probeContent = maxScroll + cw;           // physically-verified width
+				var contentW = Math.max(swContent, probeContent);
+
+				/* ceil with a 2px tolerance: any spillover past a page boundary
+				   counts as a new page (fixes the dropped final page).          */
+				pages = Math.max(1, Math.ceil((contentW - 2) / stride));
+				maxScrollLeft = Math.max(0, maxScroll);      // reliable scroll bound
 			}
 
 			function updateUI() {
@@ -313,7 +333,12 @@ const { Content } = await render(post);
 				n = Math.max(0, Math.min(n, pages - 1));
 				if (n === page && Math.abs(prose.scrollLeft - n * stride) < 2) return;
 				page = n;
-				smoothScroll(prose, n * stride);
+				/* Last page: scroll to the true max so a partial final column
+				   (under-reported by iOS scrollWidth) is fully revealed.       */
+				var target = (n === pages - 1)
+					? Math.max(n * stride, maxScrollLeft)
+					: n * stride;
+				smoothScroll(prose, target);
 				updateUI();
 			}
 
