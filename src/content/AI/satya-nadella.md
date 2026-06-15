@@ -2,11 +2,12 @@
 title: '没有生态的前沿公司不够稳定 | Satya Nadella'
 description: '我一直在思考企业在 AI 驱动的经济中的未来。'
 pubDate: '2026-06-15'
+heroImage: 'https://app.notion.com/images/page-cover/met_canaletto_1720.jpg'
 category: 'AI'
 source: notion
 notion_id: '38045fd1-9f92-804a-8931-d697bad2d70d'
 notion_parent: 'AI'
-last_synced: '2026-06-15T09:47:26.207Z'
+last_synced: '2026-06-15T15:42:14.793Z'
 ---
 
 我一直在思考企业在 AI 驱动的经济中的未来。
