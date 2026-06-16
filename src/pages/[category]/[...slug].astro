@@ -356,16 +356,18 @@ const { Content } = await render(post);
 				var swContent  = prose.scrollWidth;          // may be under-reported on iOS
 				var probeContent = maxScroll + cw;           // physically-verified width
 				var contentW = Math.max(swContent, probeContent);
+
+				/* ceil with a 2px tolerance: any spillover past a page boundary
+				   counts as a new page.                                         */
+				pages = Math.max(1, Math.ceil((contentW - 2) / stride));
+
 				var lastRect = getLastContentRect(prose);
 				if (lastRect) {
 					var proseRect = prose.getBoundingClientRect();
-					var textEnd = lastRect.right - proseRect.left + savedLeft;
-					contentW = Math.max(contentW, textEnd);
+					var textStart = lastRect.left - proseRect.left + savedLeft;
+					var lastTextPage = Math.floor(Math.max(0, textStart) / stride) + 1;
+					pages = Math.max(pages, lastTextPage);
 				}
-
-				/* ceil with a 2px tolerance: any spillover past a page boundary
-				   counts as a new page (fixes the dropped final page).          */
-				pages = Math.max(1, Math.ceil((contentW - 2) / stride));
 				/* WebKit may clamp the final partial column before a full page
 				   boundary. Extend the scrollable area without adding a page so
 				   the last page can align to the same left/right margins.       */
