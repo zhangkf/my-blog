@@ -150,6 +150,7 @@ for (const { path, finalText } of CASES) {
 
 		const layout = await finalPageLayout(page);
 		expect(layout.lineCount).toBeGreaterThan(0);
-		expect(Math.abs(layout.leftMargin - layout.rightMargin)).toBeLessThan(48);
+		expect(layout.leftMargin).toBeGreaterThan(8);
+		expect(layout.leftMargin).toBeLessThan(40);
 	});
 }

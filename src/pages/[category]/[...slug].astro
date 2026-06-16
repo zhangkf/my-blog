@@ -265,23 +265,25 @@ const { Content } = await render(post);
 			if (!prose || !header || !toggle) return;
 
 			var page = 0, pages = 1, stride = 0, active = false;
+			var pageTargets = [0];
 			var prosePosition = prose.style.position;
 			var endGuard = document.createElement('span');
 			endGuard.setAttribute('aria-hidden', 'true');
-			endGuard.style.cssText = 'display:none;width:1px;height:1px;margin:0;padding:0;border:0;opacity:0;pointer-events:none;break-inside:avoid;';
+			endGuard.style.cssText = 'position:absolute;top:0;left:0;width:0;height:1px;margin:0;padding:0;border:0;opacity:0;pointer-events:none;';
 
 			function resetEndGuard() {
-				endGuard.style.display = 'none';
+				endGuard.style.left = '0px';
+				endGuard.style.width = '0px';
 			}
 
-			function getContentPageCount(root, savedLeft) {
+			function getContentPagination(root, savedLeft, leftInset) {
 				var proseRect = root.getBoundingClientRect();
 				var walker = document.createTreeWalker(root, 4, {
 					acceptNode: function (node) {
 						return node.nodeValue && node.nodeValue.trim() ? 1 : 2;
 					}
 				});
-				var maxPage = 0, node;
+				var maxPage = 0, minLeftByPage = [], node;
 				while ((node = walker.nextNode())) {
 					var range = document.createRange();
 					range.selectNodeContents(node);
@@ -291,11 +293,24 @@ const { Content } = await render(post);
 						if (rect.width <= 0 || rect.height <= 0) continue;
 						var absLeft = rect.left - proseRect.left + savedLeft;
 						if (absLeft < -1) continue;
-						maxPage = Math.max(maxPage, Math.floor(Math.max(0, absLeft) / stride));
+						var pageIndex = Math.floor(Math.max(0, absLeft) / stride);
+						maxPage = Math.max(maxPage, pageIndex);
+						minLeftByPage[pageIndex] = Math.min(
+							minLeftByPage[pageIndex] || Infinity,
+							Math.max(0, absLeft)
+						);
 					}
 					if (range.detach) range.detach();
 				}
-				return maxPage + 1;
+				var count = maxPage + 1;
+				var targets = [];
+				for (var i = 0; i < count; i++) {
+					targets[i] = isFinite(minLeftByPage[i])
+						? Math.max(0, minLeftByPage[i] - leftInset)
+						: i * stride;
+				}
+				targets[0] = 0;
+				return { count: count, targets: targets };
 			}
 
 			/* ---- Smooth scroll (requestAnimationFrame, works everywhere) ---- */
@@ -341,11 +356,14 @@ const { Content } = await render(post);
 				   scrollWidth: Android can over-count an empty final page, while
 				   iOS Safari can under-count and hide the final text line.      */
 				var savedLeft = prose.scrollLeft;
-				pages = Math.max(1, getContentPageCount(prose, savedLeft));
-				/* WebKit may clamp before the final text column. Add a 1px
-				   in-flow guard after measuring text pages so the browser keeps
-				   enough scrollable width, without exposing a visible page.     */
-				endGuard.style.display = 'block';
+				var pagination = getContentPagination(prose, savedLeft, pl);
+				pages = Math.max(1, pagination.count);
+				pageTargets = pagination.targets;
+				/* WebKit may clamp before the final text column. Extend the
+				   scrollable area after text-page measurement so corrected page
+				   targets remain reachable without adding a visible page.       */
+				endGuard.style.left = Math.max(0, pages * stride - 1) + 'px';
+				endGuard.style.width = '1px';
 				prose.scrollLeft = 1e7;
 				prose.scrollLeft = savedLeft;
 			}
@@ -356,9 +374,10 @@ const { Content } = await render(post);
 
 			function go(n) {
 				n = Math.max(0, Math.min(n, pages - 1));
-				if (n === page && Math.abs(prose.scrollLeft - n * stride) < 2) return;
+				var target = pageTargets[n] !== undefined ? pageTargets[n] : n * stride;
+				if (n === page && Math.abs(prose.scrollLeft - target) < 2) return;
 				page = n;
-				smoothScroll(prose, n * stride);
+				smoothScroll(prose, target);
 				updateUI();
 			}
 
@@ -461,7 +480,7 @@ const { Content } = await render(post);
 					}
 					measure();
 					if (page >= pages) page = pages - 1;
-					prose.scrollLeft = page * stride;
+					prose.scrollLeft = pageTargets[page] !== undefined ? pageTargets[page] : page * stride;
 					updateUI();
 				}, 250);
 			});
