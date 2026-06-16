@@ -22,22 +22,50 @@ async function enablePagedModeIfNeeded(page: Page) {
 
 async function waitForPageCount(page: Page) {
 	await expect
-		.poll(async () =>
-			page.locator('#page-info').evaluate((element) => {
-				const match = element.textContent?.match(/(\d+)\s*\/\s*(\d+)/);
-				return match ? Number(match[2]) : 0;
-			}),
-		)
+		.poll(async () => pageCountFromText(await page.locator('#page-info').textContent()))
 		.toBeGreaterThan(1);
+}
+
+function pageCountFromText(text?: string | null) {
+	const match = text?.match(/(\d+)\s*\/\s*(\d+)/);
+	return match ? Number(match[2]) : 0;
+}
+
+async function indicatedPageCount(page: Page) {
+	return pageCountFromText(await page.locator('#page-info').textContent());
+}
+
+async function measuredContentPageCount(page: Page) {
+	return page.locator('.prose').evaluate((prose) => {
+		const proseRect = prose.getBoundingClientRect();
+		const stride = prose.clientWidth;
+		const savedLeft = prose.scrollLeft;
+		const walker = document.createTreeWalker(prose, NodeFilter.SHOW_TEXT, {
+			acceptNode(node) {
+				return node.nodeValue?.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+			},
+		});
+		let maxPage = 0;
+		let node: Node | null;
+		while ((node = walker.nextNode())) {
+			const range = document.createRange();
+			range.selectNodeContents(node);
+			for (const rect of Array.from(range.getClientRects())) {
+				if (rect.width <= 0 || rect.height <= 0) continue;
+				const absLeft = rect.left - proseRect.left + savedLeft;
+				if (absLeft < -1) continue;
+				maxPage = Math.max(maxPage, Math.floor(Math.max(0, absLeft) / stride));
+			}
+			(range as Range & { detach?: () => void }).detach?.();
+		}
+		return maxPage + 1;
+	});
 }
 
 async function goToLastPage(page: Page) {
 	await waitForPageCount(page);
 	const pageInfo = page.locator('#page-info');
-	const total = await pageInfo.evaluate((element) => {
-		const match = element.textContent?.match(/(\d+)\s*\/\s*(\d+)/);
-		return match ? Number(match[2]) : 1;
-	});
+	const total = await indicatedPageCount(page);
 	for (let i = 1; i < total; i++) {
 		await page.keyboard.press('ArrowRight');
 	}
@@ -115,6 +143,7 @@ for (const { path, finalText } of CASES) {
 	test(`mobile paged mode shows final text without blank or shifted last page: ${path}`, async ({ page }) => {
 		await page.goto(path);
 		await enablePagedModeIfNeeded(page);
+		await expect.poll(() => indicatedPageCount(page)).toBe(await measuredContentPageCount(page));
 		await goToLastPage(page);
 
 		await expect.poll(() => visibleTextSnapshot(page)).toContain(finalText.replace(/\s+/g, ''));

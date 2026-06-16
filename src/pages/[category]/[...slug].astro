@@ -268,35 +268,34 @@ const { Content } = await render(post);
 			var prosePosition = prose.style.position;
 			var endGuard = document.createElement('span');
 			endGuard.setAttribute('aria-hidden', 'true');
-			endGuard.style.cssText = 'position:absolute;top:0;left:0;width:0;height:1px;pointer-events:none;opacity:0;';
+			endGuard.style.cssText = 'display:none;width:1px;height:1px;margin:0;padding:0;border:0;opacity:0;pointer-events:none;break-inside:avoid;';
 
 			function resetEndGuard() {
-				endGuard.style.left = '0px';
-				endGuard.style.width = '0px';
+				endGuard.style.display = 'none';
 			}
 
-			function getLastContentRect(root) {
+			function getContentPageCount(root, savedLeft) {
+				var proseRect = root.getBoundingClientRect();
 				var walker = document.createTreeWalker(root, 4, {
 					acceptNode: function (node) {
 						return node.nodeValue && node.nodeValue.trim() ? 1 : 2;
 					}
 				});
-				var lastText = null, node;
-				while ((node = walker.nextNode())) lastText = node;
-				if (lastText) {
-					var text = lastText.nodeValue;
-					var i = text.length - 1;
-					while (i >= 0 && /\s/.test(text.charAt(i))) i--;
-					if (i >= 0) {
-						var range = document.createRange();
-						range.setStart(lastText, i);
-						range.setEnd(lastText, i + 1);
-						var rects = range.getClientRects();
-						if (range.detach) range.detach();
-						if (rects.length) return rects[rects.length - 1];
+				var maxPage = 0, node;
+				while ((node = walker.nextNode())) {
+					var range = document.createRange();
+					range.selectNodeContents(node);
+					var rects = range.getClientRects();
+					for (var i = 0; i < rects.length; i++) {
+						var rect = rects[i];
+						if (rect.width <= 0 || rect.height <= 0) continue;
+						var absLeft = rect.left - proseRect.left + savedLeft;
+						if (absLeft < -1) continue;
+						maxPage = Math.max(maxPage, Math.floor(Math.max(0, absLeft) / stride));
 					}
+					if (range.detach) range.detach();
 				}
-				return null;
+				return maxPage + 1;
 			}
 
 			/* ---- Smooth scroll (requestAnimationFrame, works everywhere) ---- */
@@ -337,42 +336,16 @@ const { Content } = await render(post);
 				/* Each page: half-gap | column | half-gap  → visually centered */
 				stride = cw;
 
-				/* Count pages robustly. iOS Safari/WebKit can mis-report
-				   scrollWidth for the final partial column in multi-column
-				   layouts, dropping the last page. We cross-check three signals:
-				   1. scrollWidth (ceil — a partial last page still counts).
-				   2. The PHYSICAL max scroll: assigning a huge scrollLeft makes
-				      the browser clamp to the true scrollable bound. That bound
-				      is real (content can actually scroll there), so deriving
-				      content width as maxScroll + clientWidth is reliable even
-				      when scrollWidth lies.
-				   3. The last real text rect, which catches WebKit cases where
-				      both scrollWidth and maxScroll stop before the final line. */
+				/* Count pages from real laid-out text line boxes instead of
+				   scrollWidth. Mobile engines disagree on multi-column
+				   scrollWidth: Android can over-count an empty final page, while
+				   iOS Safari can under-count and hide the final text line.      */
 				var savedLeft = prose.scrollLeft;
-				prose.scrollLeft = 1e7;                       // browser clamps to real max
-				var maxScroll = prose.scrollLeft;            // true scrollable distance
-				prose.scrollLeft = savedLeft;                // restore
-
-				var swContent  = prose.scrollWidth;          // may be under-reported on iOS
-				var probeContent = maxScroll + cw;           // physically-verified width
-				var contentW = Math.max(swContent, probeContent);
-
-				/* ceil with a 2px tolerance: any spillover past a page boundary
-				   counts as a new page.                                         */
-				pages = Math.max(1, Math.ceil((contentW - 2) / stride));
-
-				var lastRect = getLastContentRect(prose);
-				if (lastRect) {
-					var proseRect = prose.getBoundingClientRect();
-					var textStart = lastRect.left - proseRect.left + savedLeft;
-					var lastTextPage = Math.floor(Math.max(0, textStart) / stride) + 1;
-					pages = Math.max(pages, lastTextPage);
-				}
-				/* WebKit may clamp the final partial column before a full page
-				   boundary. Extend the scrollable area without adding a page so
-				   the last page can align to the same left/right margins.       */
-				endGuard.style.left = Math.max(0, pages * stride - 1) + 'px';
-				endGuard.style.width = '1px';
+				pages = Math.max(1, getContentPageCount(prose, savedLeft));
+				/* WebKit may clamp before the final text column. Add a 1px
+				   in-flow guard after measuring text pages so the browser keeps
+				   enough scrollable width, without exposing a visible page.     */
+				endGuard.style.display = 'block';
 				prose.scrollLeft = 1e7;
 				prose.scrollLeft = savedLeft;
 			}
