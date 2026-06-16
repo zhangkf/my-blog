@@ -13,9 +13,12 @@
 | `npm run build` | 生产构建到 `dist/` |
 | `npm run preview` | 本地预览构建产物 |
 | `npm run sync` | 运行 Notion → Markdown 同步，需要 `NOTION_API_KEY`，可选 `NOTION_PARENT_PAGE_IDS` |
+| `npm run test:e2e` | 运行 Playwright 移动端翻页回归测试，覆盖 Mobile Chrome、Mobile Safari/WebKit、WeChat WebView 近似 UA |
+| `npm run test:e2e -- --project "Mobile Safari" tests/e2e/paged-reading.spec.ts` | 只跑 WebKit/iOS Safari 近似环境的翻页测试 |
+| `npm run test:e2e -- --project "Mobile Chrome" tests/e2e/paged-reading.spec.ts` | 只跑 Android Chrome 近似环境的翻页测试 |
 | `npm run astro -- --help` | 查看 Astro CLI 命令 |
 
-当前 `package.json` 没有 test 或 lint 脚本，也没有单测框架配置；不要臆造 `npm test`、`npm run lint` 或单测命令。
+当前 `package.json` 没有 lint 脚本，也没有单元测试框架配置；不要臆造 `npm test` 或 `npm run lint`。
 
 ## Architecture
 
@@ -25,6 +28,7 @@
 - URL 结构：分类 URL 使用 manifest 里的英文 `slug`（例如 `健康` → `health`），文章 URL 使用 Markdown 文件名/collection id。中文标题的英文文章 slug 由 `scripts/slug-map.json` 提供，`scripts/sync-notion.mjs` 中的 `CATEGORY_SLUG_MAP` 维护分类映射。
 - 站点级元信息在 `src/consts.ts`；`src/components/BaseHead.astro` 引入全局样式、字体、canonical/RSS/OG metadata，并在 `<head>` 内用 inline script 根据北京时间 19:30-07:00 加 `html.dark-mode`，避免亮暗切换闪烁。
 - 移动阅读体验在文章页内实现：`[...slug].astro` 使用 vanilla JS + CSS multi-column 提供移动端默认开启的翻页模式，使用 `localStorage` 的 `haodu-paged` 仅记录用户显式关闭；实现要兼容 WeChat in-app browser。
+- 翻页模式有 Playwright 回归测试在 `tests/e2e/paged-reading.spec.ts`；修改分页测量、滚动、移动端 CSS 或文章页结构后，应至少跑对应的 Mobile Chrome 和 Mobile Safari 项目。
 
 ## Project-specific conventions
 
@@ -37,4 +41,5 @@
 - 设计系统是 Kami：暖纸底、墨蓝强调色、中文衬线阅读体验。新增样式优先使用 `src/styles/global.css` 中的 CSS 变量（如 `--accent`、`--border-*`、`--surface-*`），避免硬编码蓝色/边框色。
 - 中文排版和移动端优先级高于桌面端；`global.css` 已处理 CJK 字号、行高、Android font inflation 和暗色模式字重。
 - 交互功能保持 Astro + vanilla JS；当前项目没有 React/Vue/Svelte 等客户端框架。
+- Playwright 的 WeChat 项目只是 Android WebView/微信 UA 近似测试，不能替代真机微信 X5 WebView 冒烟测试。
 - GitHub Action 自动提交 Notion 同步内容，提交信息使用 `sync: update blog content from Notion` 并带 Copilot co-author trailer。
