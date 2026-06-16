@@ -275,6 +275,30 @@ const { Content } = await render(post);
 				endGuard.style.width = '0px';
 			}
 
+			function getLastContentRect(root) {
+				var walker = document.createTreeWalker(root, 4, {
+					acceptNode: function (node) {
+						return node.nodeValue && node.nodeValue.trim() ? 1 : 2;
+					}
+				});
+				var lastText = null, node;
+				while ((node = walker.nextNode())) lastText = node;
+				if (lastText) {
+					var text = lastText.nodeValue;
+					var i = text.length - 1;
+					while (i >= 0 && /\s/.test(text.charAt(i))) i--;
+					if (i >= 0) {
+						var range = document.createRange();
+						range.setStart(lastText, i);
+						range.setEnd(lastText, i + 1);
+						var rects = range.getClientRects();
+						if (range.detach) range.detach();
+						if (rects.length) return rects[rects.length - 1];
+					}
+				}
+				return null;
+			}
+
 			/* ---- Smooth scroll (requestAnimationFrame, works everywhere) ---- */
 			function smoothScroll(el, to, ms) {
 				var from = el.scrollLeft, diff = to - from, start = null;
@@ -315,14 +339,15 @@ const { Content } = await render(post);
 
 				/* Count pages robustly. iOS Safari/WebKit can mis-report
 				   scrollWidth for the final partial column in multi-column
-				   layouts, dropping the last page. We cross-check two signals:
+				   layouts, dropping the last page. We cross-check three signals:
 				   1. scrollWidth (ceil — a partial last page still counts).
 				   2. The PHYSICAL max scroll: assigning a huge scrollLeft makes
 				      the browser clamp to the true scrollable bound. That bound
 				      is real (content can actually scroll there), so deriving
 				      content width as maxScroll + clientWidth is reliable even
-				      when scrollWidth lies. Take the max of both → never under-
-				      count, so the final page is always reachable.             */
+				      when scrollWidth lies.
+				   3. The last real text rect, which catches WebKit cases where
+				      both scrollWidth and maxScroll stop before the final line. */
 				var savedLeft = prose.scrollLeft;
 				prose.scrollLeft = 1e7;                       // browser clamps to real max
 				var maxScroll = prose.scrollLeft;            // true scrollable distance
@@ -331,6 +356,12 @@ const { Content } = await render(post);
 				var swContent  = prose.scrollWidth;          // may be under-reported on iOS
 				var probeContent = maxScroll + cw;           // physically-verified width
 				var contentW = Math.max(swContent, probeContent);
+				var lastRect = getLastContentRect(prose);
+				if (lastRect) {
+					var proseRect = prose.getBoundingClientRect();
+					var textEnd = lastRect.right - proseRect.left + savedLeft;
+					contentW = Math.max(contentW, textEnd);
+				}
 
 				/* ceil with a 2px tolerance: any spillover past a page boundary
 				   counts as a new page (fixes the dropped final page).          */
