@@ -2,9 +2,15 @@
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 import categories from '../notion-categories.json';
+
+interface Props {
+	variant?: 'default' | 'article';
+}
+const { variant = 'default' } = Astro.props;
+const isArticle = variant === 'article';
 ---
 
-<header>
+<header class:list={[{ 'header--article': isArticle }]}>
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
@@ -14,6 +20,19 @@ import categories from '../notion-categories.json';
 			<HeaderLink href="/about">关于</HeaderLink>
 		</div>
 	</nav>
+	{isArticle && (
+		<button id="menu-toggle" class="menu-toggle" type="button" aria-label="菜单" aria-expanded="false" aria-controls="menu-panel">☰</button>
+	)}
+	{isArticle && (
+		<div id="menu-panel" class="menu-panel" data-open="false">
+			<a href="/" class="menu-brand">好读</a>
+			{categories.map(({ dir, slug }: { dir: string; slug: string }) => (
+				<a href={`/${slug}`} class="menu-link">{dir}</a>
+			))}
+			<span class="menu-divider"></span>
+			<a href="/about" class="menu-link">关于</a>
+		</div>
+	)}
 </header>
 <style>
 	header {
@@ -56,6 +75,83 @@ import categories from '../notion-categories.json';
 		color: var(--accent);
 		border-bottom-color: var(--accent);
 	}
+	/* ===== Article-page mobile menu (☰ in top-left) ===== */
+	/* Hidden on desktop and on non-article pages. Mirrors the paged-toggle's
+	   styling so both corners share the same Kami button language. */
+	.menu-toggle,
+	.menu-panel {
+		display: none;
+	}
+	.menu-toggle {
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		top: 0.6rem;
+		left: 0.6rem;
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+		border: 1px solid var(--border-mid);
+		background: var(--bg);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+		font-size: 1.25rem;
+		line-height: 1;
+		cursor: pointer;
+		padding: 0;
+		z-index: 200;
+		-webkit-tap-highlight-color: transparent;
+		transition: transform 0.15s;
+	}
+	.menu-toggle:active {
+		transform: scale(0.9);
+	}
+	.menu-panel {
+		position: fixed;
+		top: calc(0.6rem + 46px + 0.4rem);
+		left: 0.6rem;
+		min-width: 160px;
+		padding: 0.4rem 0;
+		background: var(--bg);
+		border: 1px solid var(--border-light);
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+		z-index: 250;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-6px);
+		transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+	}
+	.menu-panel[data-open='true'] {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+	.menu-brand,
+	.menu-link {
+		display: block;
+		padding: 0.55em 1.1em;
+		text-decoration: none;
+		color: rgb(var(--gray-dark));
+		font-size: 0.95em;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.menu-brand {
+		color: var(--accent);
+		font-weight: 700;
+		font-size: 1.05em;
+		letter-spacing: 0.05em;
+	}
+	.menu-link:hover {
+		background: var(--surface-hover);
+		color: var(--accent);
+	}
+	.menu-divider {
+		display: block;
+		height: 1px;
+		margin: 0.35em 0.6em;
+		background: var(--border-faint);
+	}
+
 	@media (max-width: 720px) {
 		header {
 			padding: 0 0.8em;
@@ -74,5 +170,57 @@ import categories from '../notion-categories.json';
 			padding: 0.6em 0.5em;
 			font-size: 0.9em;
 		}
+
+		/* Article page only: collapse the normal header, surface ☰ instead. */
+		.header--article nav {
+			display: none;
+		}
+		.header--article {
+			padding: 0;
+		}
+		.header--article .menu-toggle {
+			display: flex;
+		}
+		.header--article .menu-panel {
+			display: block;
+		}
 	}
 </style>
+
+<script is:inline>
+	(function () {
+		var toggle = document.getElementById('menu-toggle');
+		var panel = document.getElementById('menu-panel');
+		if (!toggle || !panel) return;            // non-article pages: no-op
+
+		var ICON_OPEN = '☰';
+		var ICON_CLOSE = '✕';
+
+		function setOpen(open) {
+			panel.dataset.open = open ? 'true' : 'false';
+			toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+			toggle.textContent = open ? ICON_CLOSE : ICON_OPEN;
+		}
+
+		toggle.addEventListener('click', function (e) {
+			e.stopPropagation();
+			setOpen(panel.dataset.open !== 'true');
+		});
+
+		/* Close when clicking anywhere outside the button/panel */
+		document.addEventListener('click', function (e) {
+			if (panel.dataset.open !== 'true') return;
+			if (e.target === toggle || toggle.contains(e.target)) return;
+			if (e.target === panel || panel.contains(e.target)) return;
+			setOpen(false);
+		});
+
+		/* Close on Esc */
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && panel.dataset.open === 'true') {
+				setOpen(false);
+				toggle.focus();
+			}
+		});
+	})();
+</script>
