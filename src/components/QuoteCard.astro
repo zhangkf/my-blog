@@ -1,0 +1,455 @@
+---
+/**
+ * QuoteCard — 划选分享金句卡片
+ *
+ * 读者在文章里划选几句话 → 选区附近弹「摘为金句卡」气泡 →
+ * 点开全屏预览（Canvas 实时绘制 1080×1350 卡片）→
+ *   · 系统浏览器：navigator.share({ files: [png] }) 一步分享
+ *   · 微信内：展示图片引导长按保存 + 复制文字 fallback
+ *
+ * 视觉方向 A：极简编辑卡（Kami 暖纸底 + 墨蓝 accent + Noto Serif SC）。
+ * 纯前端，无服务端依赖。仅文章页使用。
+ */
+
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+
+<div id="qc-bubble" class="qc-bubble" hidden>
+	<button type="button" id="qc-make" class="qc-bubble-btn">✂️ 摘为金句卡</button>
+</div>
+
+<div id="qc-overlay" class="qc-overlay" data-title={title} hidden>
+	<div class="qc-sheet" role="dialog" aria-modal="true" aria-label="金句卡片预览">
+		<div class="qc-preview">
+			<img id="qc-card-img" alt="金句卡片预览" />
+		</div>
+		<div class="qc-actions">
+			<button type="button" id="qc-share" class="qc-btn qc-btn-primary">分享…</button>
+			<button type="button" id="qc-save-hint" class="qc-btn qc-btn-secondary" hidden>长按图片保存</button>
+			<button type="button" id="qc-copy" class="qc-btn qc-btn-secondary">复制文字</button>
+			<button type="button" id="qc-close" class="qc-btn qc-btn-ghost">关闭</button>
+		</div>
+		<p class="qc-tip" id="qc-tip"></p>
+	</div>
+</div>
+
+<style>
+	/* ---- 划选气泡 ---- */
+	.qc-bubble {
+		position: fixed;
+		z-index: 400;
+		animation: qc-pop 0.14s ease-out;
+	}
+	.qc-bubble[hidden] {
+		display: none;
+	}
+	.qc-bubble-btn {
+		display: inline-block;
+		padding: 0.5em 1em;
+		background: var(--accent);
+		color: #fff;
+		border: none;
+		border-radius: 999px;
+		font-size: 0.9rem;
+		font-family: inherit;
+		line-height: 1;
+		white-space: nowrap;
+		cursor: pointer;
+		box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+		-webkit-tap-highlight-color: transparent;
+	}
+	.qc-bubble-btn:active {
+		transform: scale(0.95);
+	}
+	@keyframes qc-pop {
+		from {
+			opacity: 0;
+			transform: translateY(4px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* ---- 全屏预览 ---- */
+	.qc-overlay {
+		position: fixed;
+		inset: 0;
+		z-index: 500;
+		background: rgba(0, 0, 0, 0.55);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+		box-sizing: border-box;
+	}
+	.qc-overlay[hidden] {
+		display: none;
+	}
+	.qc-sheet {
+		width: 100%;
+		max-width: 420px;
+		max-height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.qc-preview {
+		flex: 1;
+		min-height: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.qc-preview img {
+		max-width: 100%;
+		max-height: 62vh;
+		border-radius: 10px;
+		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+		user-select: none;
+		-webkit-user-select: none;
+	}
+	.qc-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		justify-content: center;
+		margin-top: 0.9em;
+	}
+	.qc-btn {
+		padding: 0.6em 1.1em;
+		border-radius: 999px;
+		border: none;
+		font-size: 0.92rem;
+		font-family: inherit;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		transition: transform 0.12s;
+	}
+	.qc-btn:active {
+		transform: scale(0.96);
+	}
+	.qc-btn-primary {
+		background: var(--accent);
+		color: #fff;
+	}
+	.qc-btn-secondary {
+		background: rgba(255, 255, 255, 0.92);
+		color: var(--accent);
+	}
+	.qc-btn-ghost {
+		background: transparent;
+		color: rgba(255, 255, 255, 0.85);
+	}
+	.qc-btn[hidden] {
+		display: none;
+	}
+	.qc-tip {
+		margin: 0.6em 0 0;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 0.8rem;
+		min-height: 1.2em;
+	}
+</style>
+
+<script is:inline>
+(function () {
+	/* 仅文章页执行：以气泡 DOM 存在为守卫 */
+	var bubble = document.getElementById('qc-bubble');
+	var makeBtn = document.getElementById('qc-make');
+	var overlay = document.getElementById('qc-overlay');
+	var cardImg = document.getElementById('qc-card-img');
+	var shareBtn = document.getElementById('qc-share');
+	var saveHintBtn = document.getElementById('qc-save-hint');
+	var copyBtn = document.getElementById('qc-copy');
+	var closeBtn = document.getElementById('qc-close');
+	var tipEl = document.getElementById('qc-tip');
+	if (!bubble || !makeBtn || !overlay) return;
+
+	/* 文章标题：优先用组件 prop 传入的 data-title，DOM h1 作 fallback */
+	var overlayTitle = overlay.getAttribute('data-title');
+	var titleEl = document.querySelector('.prose .article-header h1');
+	var domTitle = titleEl && titleEl.textContent && titleEl.textContent.trim();
+	var ARTICLE_TITLE = (overlayTitle && overlayTitle.trim()) || domTitle || '好读';
+	var currentQuote = '';
+
+	/* ---- 卡片视觉常量（与 Kami 设计一致） ---- */
+	var W = 1080, H = 1350;                 /* 4:5 朋友圈/小红书比例 */
+	var BG = '#f5f4ed';                     /* 暖纸底 */
+	var INK = '#1B365D';                    /* 墨蓝 accent */
+	var TEXT_RGB = '92, 84, 67';            /* 正文 rgb（gray-dark） */
+	var MUTED_RGB = '138, 126, 107';        /* 落款 rgb（gray） */
+
+	/* ---- 字体加载守卫：Noto Serif SC 必须就绪才能绘制 ---- */
+	var fontReady = (document.fonts && document.fonts.ready) || Promise.resolve();
+
+	/* ---- 选区监听：划选后弹气泡 ---- */
+	function getSelectionText() {
+		var sel = window.getSelection();
+		if (!sel || sel.isCollapsed) return '';
+		return sel.toString().trim();
+	}
+
+	function placeBubble() {
+		var sel = window.getSelection();
+		if (!sel || sel.isCollapsed || sel.rangeCount === 0) {
+			bubble.hidden = true;
+			return;
+		}
+		var text = sel.toString().trim();
+		if (text.length < 2) { bubble.hidden = true; return; }
+		/* 选区必须在正文 .prose 内 */
+		var node = sel.anchorNode;
+		var prose = node && (node.nodeType === 1 ? node : node.parentElement);
+		if (!prose || !prose.closest || !prose.closest('.prose')) {
+			bubble.hidden = true;
+			return;
+		}
+		var rect = sel.getRangeAt(0).getBoundingClientRect();
+		bubble.hidden = false;
+		/* 气泡放在选区上方居中，越界则贴边 */
+		var bw = bubble.offsetWidth || 160;
+		var left = rect.left + rect.width / 2 - bw / 2;
+		left = Math.max(8, Math.min(left, window.innerWidth - bw - 8));
+		var top = rect.top - bubble.offsetHeight - 8;
+		if (top < 8) top = rect.bottom + 8;   /* 上方放不下就放下方 */
+		bubble.style.left = left + 'px';
+		bubble.style.top = top + 'px';
+	}
+
+	document.addEventListener('selectionchange', function () {
+		var sel = window.getSelection();
+		if (!sel || sel.isCollapsed) { bubble.hidden = true; return; }
+		/* 延迟一帧，确保移动端选区尺寸已更新 */
+		requestAnimationFrame(placeBubble);
+	});
+
+	document.addEventListener('scroll', function () { bubble.hidden = true; }, { passive: true });
+	window.addEventListener('resize', function () { bubble.hidden = true; });
+
+	/* ---- 中文/混合文本换行：逐字 measureText ---- */
+	function wrapText(ctx, text, maxWidth) {
+		var lines = [];
+		var current = '';
+		for (var i = 0; i < text.length; i++) {
+			var ch = text[i];
+			var test = current + ch;
+			if (ctx.measureText(test).width > maxWidth && current) {
+				lines.push(current);
+				/* 英文空格处可安全断行 */
+				if (/\s/.test(ch)) { current = ''; continue; }
+				current = ch;
+			} else {
+				current = test;
+			}
+		}
+		if (current) lines.push(current);
+		return lines;
+	}
+
+	/* ---- 绘制卡片到离屏 canvas，返回 dataURL ---- */
+	function drawCard(quote) {
+		var canvas = document.createElement('canvas');
+		canvas.width = W;
+		canvas.height = H;
+		var ctx = canvas.getContext('2d');
+
+		/* 背景 */
+		ctx.fillStyle = BG;
+		ctx.fillRect(0, 0, W, H);
+
+		/* 内容安全区 */
+		var padX = 130;
+		var contentW = W - padX * 2;
+
+		/* 顶部装饰大引号（淡墨蓝，不喧宾夺主） */
+		ctx.textAlign = 'center';
+		ctx.textBaseline = 'alphabetic';
+		ctx.font = 'italic 180px "Source Serif 4", Georgia, serif';
+		ctx.fillStyle = INK;
+		ctx.globalAlpha = 0.16;
+		ctx.fillText('\u201C', W / 2, 250);
+		ctx.globalAlpha = 1;
+
+		/* ---- 引文：字号自适应 + 自动换行 ---- */
+		var fontSize = pickFontSize(ctx, quote, contentW);
+		ctx.font = '500 ' + fontSize + 'px "Noto Serif SC", "Songti SC", serif';
+		ctx.fillStyle = 'rgb(' + TEXT_RGB + ')';
+		var lineHeight = fontSize * 1.62;
+		var lines = wrapText(ctx, quote, contentW);
+		var blockH = lines.length * lineHeight;
+
+		/* 垂直居中：引文块整体放在卡片中线偏上一点 */
+		var startY = H / 2 - blockH / 2 + fontSize * 0.4;
+		ctx.textAlign = 'left';
+		for (var i = 0; i < lines.length; i++) {
+			/* 中文居中排版更耐看 */
+			var lineW = ctx.measureText(lines[i]).width;
+			var x = (W - lineW) / 2;
+			ctx.fillText(lines[i], x, startY + i * lineHeight);
+		}
+
+		/* ---- 底部落款：文章标题 / 品牌 / 域名 ---- */
+		var footY = H - 200;
+		/* 顶上一条淡墨蓝细线，编辑感 */
+		ctx.strokeStyle = INK;
+		ctx.globalAlpha = 0.18;
+		ctx.lineWidth = 1.5;
+		ctx.beginPath();
+		ctx.moveTo(W / 2 - 40, footY);
+		ctx.lineTo(W / 2 + 40, footY);
+		ctx.stroke();
+		ctx.globalAlpha = 1;
+
+		ctx.textAlign = 'center';
+		/* 文章标题（限制一行，过长截断） */
+		ctx.font = '500 30px "Noto Serif SC", serif';
+		ctx.fillStyle = 'rgb(' + TEXT_RGB + ')';
+		var titleLine = ellipsis(ctx, ARTICLE_TITLE, contentW);
+		ctx.fillText(titleLine, W / 2, footY + 60);
+
+		/* 品牌「好读」用 accent 强调 */
+		ctx.font = '700 34px "Noto Serif SC", serif';
+		ctx.fillStyle = INK;
+		ctx.fillText('好读', W / 2, footY + 110);
+
+		/* 域名 */
+		ctx.font = '400 24px "Source Serif 4", Georgia, serif';
+		ctx.fillStyle = 'rgb(' + MUTED_RGB + ')';
+		ctx.fillText('kaifengzhang.com', W / 2, footY + 150);
+
+		return canvas.toDataURL('image/png');
+	}
+
+	function pickFontSize(ctx, quote, maxW) {
+		/* 安全区高度：顶部留给引号约 300，底部留给落款约 350 */
+		var availH = H - 650;
+		/* 字数越少字号越大 */
+		var len = quote.length;
+		var size;
+		if (len <= 16) size = 96;
+		else if (len <= 30) size = 80;
+		else if (len <= 50) size = 68;
+		else if (len <= 80) size = 56;
+		else if (len <= 120) size = 48;
+		else size = 42;
+		/* 用换行后实际行高收窄，确保整块不溢出安全区 */
+		ctx.font = '500 ' + size + 'px "Noto Serif SC", serif';
+		while (size > 34) {
+			var lh = size * 1.62;
+			var lines = wrapText(ctx, quote, maxW);
+			if (lines.length * lh <= availH) break;
+			size -= 4;
+			ctx.font = '500 ' + size + 'px "Noto Serif SC", serif';
+		}
+		return size;
+	}
+
+	function ellipsis(ctx, text, maxW) {
+		if (ctx.measureText(text).width <= maxW) return text;
+		var t = text;
+		while (t.length > 1 && ctx.measureText(t + '…').width > maxW) t = t.slice(0, -1);
+		return t + '…';
+	}
+
+	/* ---- 打开预览 ---- */
+	async function openCard(quote) {
+		currentQuote = quote;
+		setTip('正在生成卡片…');
+		cardImg.removeAttribute('src');
+		overlay.hidden = false;
+		document.body.style.overflow = 'hidden';
+		try {
+			await fontReady;
+		} catch (e) {}
+		/* 再读一次字体状态，确保 Noto Serif SC 真正可用 */
+		try {
+			if (document.fonts && document.fonts.check) {
+				await document.fonts.load('500 96px "Noto Serif SC"');
+			}
+		} catch (e) {}
+		var url = drawCard(quote);
+		cardImg.src = url;
+		setTip('');
+		/* 探测分享能力，决定按钮显隐 */
+		var canShareImg = !!(navigator.canShare && navigator.canShare({ files: [pngFile('card.png', url)] }));
+		shareBtn.hidden = !canShareImg;
+		saveHintBtn.hidden = canShareImg;
+		if (!canShareImg) setTip('长按图片保存到相册，再去聊天里发送');
+	}
+
+	function pngFile(name, dataURL) {
+		var b64 = dataURL.split(',')[1];
+		var bin = atob(b64);
+		var len = bin.length;
+		var arr = new Uint8Array(len);
+		for (var i = 0; i < len; i++) arr[i] = bin.charCodeAt(i);
+		return new File([arr], name, { type: 'image/png' });
+	}
+
+	function setTip(t) { if (tipEl) tipEl.textContent = t; }
+
+	/* ---- 事件绑定 ---- */
+	makeBtn.addEventListener('click', function (e) {
+		e.stopPropagation();
+		var text = getSelectionText();
+		if (!text) return;
+		/* 清除选区，避免气泡残留 */
+		try { window.getSelection().removeAllRanges(); } catch (err) {}
+		bubble.hidden = true;
+		openCard(text);
+	});
+
+	shareBtn.addEventListener('click', async function () {
+		if (!cardImg.src) return;
+		try {
+			var file = pngFile('好读金句.png', cardImg.src);
+			await navigator.share({ files: [file], title: '好读', text: currentQuote });
+		} catch (err) {
+			/* 用户取消分享会抛 AbortError，静默即可 */
+			if (err && err.name !== 'AbortError') setTip('分享未成功，可长按图片保存');
+		}
+	});
+
+	copyBtn.addEventListener('click', async function () {
+		var text = '"' + currentQuote + '"\n—— ' + ARTICLE_TITLE + ' · 好读';
+		try {
+			await navigator.clipboard.writeText(text);
+			setTip('已复制文字');
+		} catch (err) {
+			/* clipboard API 在非 https / 旧 WebView 下不可用，用 execCommand fallback */
+			var ta = document.createElement('textarea');
+			ta.value = text;
+			ta.style.position = 'fixed';
+			ta.style.opacity = '0';
+			document.body.appendChild(ta);
+			ta.select();
+			try { document.execCommand('copy'); setTip('已复制文字'); }
+			catch (e2) { setTip('复制失败，请手动复制'); }
+			document.body.removeChild(ta);
+		}
+	});
+
+	saveHintBtn.addEventListener('click', function () {
+		setTip('请长按上方图片 → 保存到相册');
+	});
+
+	function close() {
+		overlay.hidden = true;
+		document.body.style.overflow = '';
+		setTip('');
+	}
+	closeBtn.addEventListener('click', close);
+	overlay.addEventListener('click', function (e) {
+		if (e.target === overlay) close();
+	});
+	document.addEventListener('keydown', function (e) {
+		if (!overlay.hidden && e.key === 'Escape') close();
+	});
+})();
+</script>
