@@ -13,15 +13,16 @@
 
 interface Props {
 	title: string;
+	qrSrc?: string;
 }
-const { title } = Astro.props;
+const { title, qrSrc } = Astro.props;
 ---
 
 <div id="qc-bubble" class="qc-bubble" hidden>
 	<button type="button" id="qc-make" class="qc-bubble-btn">✂️ 摘为金句卡</button>
 </div>
 
-<div id="qc-overlay" class="qc-overlay" data-title={title} hidden>
+<div id="qc-overlay" class="qc-overlay" data-title={title} data-qr={qrSrc || ''} hidden>
 	<div class="qc-sheet" role="dialog" aria-modal="true" aria-label="金句卡片预览">
 		<div class="qc-preview">
 			<img id="qc-card-img" alt="金句卡片预览" />
@@ -179,6 +180,9 @@ const { title } = Astro.props;
 	var titleEl = document.querySelector('.prose .article-header h1');
 	var domTitle = titleEl && titleEl.textContent && titleEl.textContent.trim();
 	var ARTICLE_TITLE = (overlayTitle && overlayTitle.trim()) || domTitle || '好读';
+
+	/* 当前文章二维码路径（构建期预生成，data-qr 传入） */
+	var QR_SRC = overlay.getAttribute('data-qr') || '';
 	var currentQuote = '';
 
 	/* ---- 卡片视觉常量（与 Kami 设计一致） ---- */
@@ -266,8 +270,20 @@ const { title } = Astro.props;
 		return lines;
 	}
 
-	/* ---- 绘制卡片到离屏 canvas，返回 dataURL ---- */
-	function drawCard(quote) {
+	/* ---- 加载二维码图片，失败返回 null（卡片照常出，只是无码） ---- */
+	function loadQr(src) {
+		return new Promise(function (resolve) {
+			if (!src) return resolve(null);
+			var img = new Image();
+			img.onload = function () { resolve(img); };
+			img.onerror = function () { resolve(null); };
+			img.src = src;
+		});
+	}
+
+	/* ---- 绘制卡片到离屏 canvas，返回 dataURL（异步：需等 QR 图片加载） ---- */
+	async function drawCard(quote) {
+		var qrImg = await loadQr(QR_SRC);
 		var canvas = document.createElement('canvas');
 		canvas.width = W;
 		canvas.height = H;
@@ -281,16 +297,16 @@ const { title } = Astro.props;
 		var padX = 130;
 		var contentW = W - padX * 2;
 
-		/* 顶部装饰大引号（淡墨蓝，不喧宾夺主） */
-		ctx.textAlign = 'center';
+		/* 顶部装饰大引号（淡墨蓝，左对齐到内容左边沿） */
+		ctx.textAlign = 'left';
 		ctx.textBaseline = 'alphabetic';
 		ctx.font = 'italic 180px "Source Serif 4", Georgia, serif';
 		ctx.fillStyle = INK;
 		ctx.globalAlpha = 0.16;
-		ctx.fillText('\u201C', W / 2, 250);
+		ctx.fillText('\u201C', padX, 250);
 		ctx.globalAlpha = 1;
 
-		/* ---- 引文：字号自适应 + 自动换行 ---- */
+		/* ---- 引文：字号自适应 + 自动换行，左对齐 ---- */
 		var fontSize = pickFontSize(ctx, quote, contentW);
 		ctx.font = '500 ' + fontSize + 'px "Noto Serif SC", "Songti SC", serif';
 		ctx.fillStyle = 'rgb(' + TEXT_RGB + ')';
@@ -298,51 +314,73 @@ const { title } = Astro.props;
 		var lines = wrapText(ctx, quote, contentW);
 		var blockH = lines.length * lineHeight;
 
-		/* 垂直居中：引文块整体放在卡片中线偏上一点 */
-		var startY = H / 2 - blockH / 2 + fontSize * 0.4;
+		/* 垂直居中：引文块放在引号区(顶部~300)和底部区(footTop~H)之间的安全带中线。
+		   水平左对齐到 padX；contentW 左右留白对称，整块自然居中。 */
+		var safeTop = 320;                     /* 引号下方 */
+		var safeBottom = H - 320;              /* 底部落款/二维码区上方 */
+		var startY = (safeTop + safeBottom) / 2 - blockH / 2 + fontSize * 0.4;
 		ctx.textAlign = 'left';
 		for (var i = 0; i < lines.length; i++) {
-			/* 中文居中排版更耐看 */
-			var lineW = ctx.measureText(lines[i]).width;
-			var x = (W - lineW) / 2;
-			ctx.fillText(lines[i], x, startY + i * lineHeight);
+			ctx.fillText(lines[i], padX, startY + i * lineHeight);
 		}
 
-		/* ---- 底部落款：文章标题 / 品牌 / 域名 ---- */
-		var footY = H - 200;
-		/* 顶上一条淡墨蓝细线，编辑感 */
+		/* ---- 底部：左落款（标题+品牌）+ 右二维码（扫码读全文） ---- */
+		var qrSize = 200;                       /* 卡片上 QR 显示尺寸 */
+		var qrRight = W - padX;
+		var qrLeft = qrRight - qrSize;
+		var footTop = H - 300;                  /* 底部区起点 */
+		/* 左落款可用宽度：从 padX 到二维码左侧再留 40px 间距 */
+		var textMaxW = qrLeft - padX - 50;
+
+		/* 顶部一条贯穿的淡分隔线（编辑感） */
 		ctx.strokeStyle = INK;
 		ctx.globalAlpha = 0.18;
 		ctx.lineWidth = 1.5;
 		ctx.beginPath();
-		ctx.moveTo(W / 2 - 40, footY);
-		ctx.lineTo(W / 2 + 40, footY);
+		ctx.moveTo(padX, footTop);
+		ctx.lineTo(W - padX, footTop);
 		ctx.stroke();
 		ctx.globalAlpha = 1;
 
-		ctx.textAlign = 'center';
+		/* —— 左侧落款：文章标题 + 品牌 —— */
+		ctx.textAlign = 'left';
+		ctx.textBaseline = 'alphabetic';
 		/* 文章标题（限制一行，过长截断） */
 		ctx.font = '500 30px "Noto Serif SC", serif';
 		ctx.fillStyle = 'rgb(' + TEXT_RGB + ')';
-		var titleLine = ellipsis(ctx, ARTICLE_TITLE, contentW);
-		ctx.fillText(titleLine, W / 2, footY + 60);
-
+		ctx.fillText(ellipsis(ctx, ARTICLE_TITLE, textMaxW), padX, footTop + 60);
 		/* 品牌「好读」用 accent 强调 */
-		ctx.font = '700 34px "Noto Serif SC", serif';
+		ctx.font = '700 38px "Noto Serif SC", serif';
 		ctx.fillStyle = INK;
-		ctx.fillText('好读', W / 2, footY + 110);
-
-		/* 域名 */
-		ctx.font = '400 24px "Source Serif 4", Georgia, serif';
+		ctx.fillText('好读', padX, footTop + 120);
+		/* 域名（品牌下方小字） */
+		ctx.font = '400 22px "Source Serif 4", Georgia, serif';
 		ctx.fillStyle = 'rgb(' + MUTED_RGB + ')';
-		ctx.fillText('kaifengzhang.com', W / 2, footY + 150);
+		ctx.fillText('kaifengzhang.com', padX, footTop + 152);
+
+		/* —— 右侧二维码 + 扫码提示 —— */
+		var qrTop = footTop + 30;
+		if (qrImg) {
+			/* 淡外框，让 QR 在暖底上更稳 */
+			ctx.strokeStyle = 'rgb(' + MUTED_RGB + ')';
+			ctx.globalAlpha = 0.25;
+			ctx.lineWidth = 1;
+			ctx.strokeRect(qrLeft - 8, qrTop - 8, qrSize + 16, qrSize + 16);
+			ctx.globalAlpha = 1;
+			ctx.drawImage(qrImg, qrLeft, qrTop, qrSize, qrSize);
+		}
+		/* 二维码下方「扫码阅读全文」提示，居中于 QR */
+		ctx.textAlign = 'center';
+		ctx.font = '400 22px "Noto Serif SC", serif';
+		ctx.fillStyle = 'rgb(' + MUTED_RGB + ')';
+		ctx.fillText('扫码阅读全文', qrLeft + qrSize / 2, qrTop + qrSize + 34);
 
 		return canvas.toDataURL('image/png');
 	}
 
 	function pickFontSize(ctx, quote, maxW) {
-		/* 安全区高度：顶部留给引号约 300，底部留给落款约 350 */
-		var availH = H - 650;
+		/* 安全区高度：与 drawCard 的 safeTop(320)/safeBottom(H-320) 一致 */
+		var availH = H - 640;
 		/* 字数越少字号越大 */
 		var len = quote.length;
 		var size;
@@ -387,7 +425,7 @@ const { title } = Astro.props;
 				await document.fonts.load('500 96px "Noto Serif SC"');
 			}
 		} catch (e) {}
-		var url = drawCard(quote);
+		var url = await drawCard(quote);
 		cardImg.src = url;
 		setTip('');
 		/* 探测分享能力，决定按钮显隐 */

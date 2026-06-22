@@ -24,6 +24,8 @@ export async function getStaticPaths() {
 const { post, categoryDir, categorySlug } = Astro.props;
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
 const { Content } = await render(post);
+/* 当前文章的二维码路径（由 scripts/gen-qr.mjs 构建期生成） */
+const qrSrc = `/qr/${post.id}.png`;
 ---
 
 <html lang="zh-CN">
@@ -246,7 +248,7 @@ const { Content } = await render(post);
 		<Footer />
 
 		<!-- Quote card: select text → generate shareable card -->
-		<QuoteCard title={title} />
+		<QuoteCard title={title} qrSrc={qrSrc} />
 
 		<!-- Paged reading mode UI -->
 		<button id="paged-toggle" class="paged-toggle" aria-label="切换为翻页模式">📖</button>
