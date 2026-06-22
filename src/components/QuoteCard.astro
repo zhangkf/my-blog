@@ -48,14 +48,17 @@ const { title } = Astro.props;
 	}
 	.qc-bubble-btn {
 		display: inline-block;
-		padding: 0.5em 1em;
+		/* 移动端触控目标 ≥44px：加大 padding 与 min-height */
+		padding: 0.7em 1.2em;
+		min-height: 44px;
+		box-sizing: border-box;
 		background: var(--accent);
 		color: #fff;
 		border: none;
 		border-radius: 999px;
 		font-size: 0.9rem;
 		font-family: inherit;
-		line-height: 1;
+		line-height: 1.2;
 		white-space: nowrap;
 		cursor: pointer;
 		box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
@@ -212,19 +215,30 @@ const { title } = Astro.props;
 		}
 		var rect = sel.getRangeAt(0).getBoundingClientRect();
 		bubble.hidden = false;
-		/* 气泡放在选区上方居中，越界则贴边 */
-		var bw = bubble.offsetWidth || 160;
+		/* 气泡放在选区【下方】居中——把上方让给 iOS/微信的原生选中菜单，
+		   二者不再争抢同一块屏幕区域。仅在下方溢出屏幕时才改放上方。 */
+		var bw = bubble.offsetWidth || 180;
+		var bh = bubble.offsetHeight || 40;
 		var left = rect.left + rect.width / 2 - bw / 2;
 		left = Math.max(8, Math.min(left, window.innerWidth - bw - 8));
-		var top = rect.top - bubble.offsetHeight - 8;
-		if (top < 8) top = rect.bottom + 8;   /* 上方放不下就放下方 */
+		var belowTop = rect.bottom + 10;
+		var aboveTop = rect.top - bh - 10;
+		var top = belowTop + bh > window.innerHeight - 8 ? aboveTop : belowTop;
+		if (top < 8) top = belowTop;   /* 上方也放不下时仍回下方 */
 		bubble.style.left = left + 'px';
 		bubble.style.top = top + 'px';
 	}
 
+	/* 选区一变化就缓存文字——点击气泡时不依赖选区是否仍然存活。
+	   iOS/微信在 tap 气泡的瞬间常会清除选区，若那时才读会拿不到文字。
+	   注意：选区被清空时【不清空】缓存，否则 tap 触发的那次 selectionchange
+	   会把刚选好的文字抹掉。仅在拿到新的非空选区时才更新。 */
+	var pendingQuote = '';
 	document.addEventListener('selectionchange', function () {
 		var sel = window.getSelection();
 		if (!sel || sel.isCollapsed) { bubble.hidden = true; return; }
+		var t = sel.toString().trim();
+		if (t.length >= 2) pendingQuote = t;
 		/* 延迟一帧，确保移动端选区尺寸已更新 */
 		requestAnimationFrame(placeBubble);
 	});
@@ -394,16 +408,27 @@ const { title } = Astro.props;
 
 	function setTip(t) { if (tipEl) tipEl.textContent = t; }
 
-	/* ---- 事件绑定 ---- */
-	makeBtn.addEventListener('click', function (e) {
-		e.stopPropagation();
-		var text = getSelectionText();
-		if (!text) return;
-		/* 清除选区，避免气泡残留 */
-		try { window.getSelection().removeAllRanges(); } catch (err) {}
+	/* ---- 事件绑定 ----
+	   iOS/微信选中态下，tap 气泡的那次触摸常被系统挪去调整选区手柄或
+	   关闭原生 callout 菜单，click 根本不触发。所以：
+	   1) 用 selectionchange 缓存好的 pendingQuote，不依赖点击瞬间选区；
+	   2) touchstart 上 preventDefault 抢下这次触摸；
+	   3) 保留 click 作为桌面/非触摸 fallback，用标志位避免双触发。 */
+	function triggerMake(e) {
+		if (e) { e.preventDefault(); e.stopPropagation(); }
+		if (consumed) return;
+		consumed = true;
+		var text = pendingQuote || getSelectionText();
+		if (!text) { consumed = false; return; }
 		bubble.hidden = true;
+		/* 清除选区，收起原生菜单 */
+		try { window.getSelection().removeAllRanges(); } catch (err) {}
 		openCard(text);
-	});
+		setTimeout(function () { consumed = false; }, 400);
+	}
+	var consumed = false;
+	makeBtn.addEventListener('touchstart', triggerMake, { passive: false });
+	makeBtn.addEventListener('click', triggerMake);
 
 	shareBtn.addEventListener('click', async function () {
 		if (!cardImg.src) return;
