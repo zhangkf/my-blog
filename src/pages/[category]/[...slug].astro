@@ -93,12 +93,17 @@ const { Content } = await render(post);
 			}
 
 			@media (max-width: 720px) {
+				/* Reserve a top toolbar (☰ left + 📖 right, ~56px tall) so the
+				   article meta line and title sit below the buttons, never under. */
+				.prose {
+					padding-top: 56px;
+				}
 				.paged-toggle {
 					display: flex;
 					align-items: center;
 					justify-content: center;
 					position: fixed;
-					top: 0.6rem;
+					top: 5px;
 					right: 0.6rem;
 					width: 46px;
 					height: 46px;
@@ -135,7 +140,9 @@ const { Content } = await render(post);
 					width: 100%;
 					max-width: 100%;
 					margin: 0;
-					padding: 0.8rem 1.5rem;
+					/* padding-top clears the fixed top toolbar (☰ + 📖 buttons, ~56px)
+					   so the article meta line never sits under either button. */
+					padding: 56px 1.5rem 0.8rem;
 					box-sizing: border-box;
 					column-fill: auto;
 					overflow: hidden;
@@ -187,7 +194,7 @@ const { Content } = await render(post);
 					letter-spacing: 0.12em;
 				}
 				body.paged-mode .paged-toggle {
-					top: 0.6rem;
+					top: 5px;
 				}
 
 				/* Swipe hint (first-time) */
