@@ -1,0 +1,284 @@
+---
+/**
+ * HighlightQuotes — 自动高亮金句
+ *
+ * 文章渲染后扫描 .prose 内段落，挑出若干金句用 <mark> 包裹，
+ * 配点状下划线呈现；点击高亮句分发 haodu:quote 事件，
+ * 由 QuoteCard 接管生成金句卡预览。
+ *
+ * 挑选规则（客户端运行期，不动 Markdown / Notion 同步）：
+ *   A 级：整段加粗的段落（<p><strong>…</strong></p>）—— 作者强调的核心句
+ *   B 级：段内行内 <strong> 文本（12–60 字）
+ *   C 级：前两级不足时，按段落位置补一句长度适中（15–50 字）的完整句子
+ *
+ * 分布节奏：每 3–5 段一句，软上限 7 句，避免长文满屏高亮。
+ *
+ * 仅文章页使用，无 UI、无 props。与 QuoteCard 通过 haodu:quote 事件解耦。
+ */
+---
+
+<style is:global>
+	/* 全局：文章正文内的自动高亮金句。限定在 .prose 内避免影响其他页面。
+	   文字不变色，仅墨蓝点状下划线；hover 一抹淡底纹作二次确认。 */
+	.prose mark.haodu-quote {
+		background: none;
+		color: inherit;
+		text-decoration: underline dotted var(--accent);
+		text-decoration-thickness: 2px;
+		text-underline-offset: 5px;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		transition: background-color 0.15s;
+	}
+	.prose mark.haodu-quote:hover {
+		background-color: var(--surface-accent);
+	}
+	@media (hover: none) {
+		/* 纯触屏设备无 hover：改用 active 按压反馈 */
+		.prose mark.haodu-quote:active {
+			background-color: var(--surface-accent);
+		}
+	}
+</style>
+
+<script is:inline>
+(function () {
+	/* 仅文章页执行：以 .prose 存在为守卫 */
+	var prose = document.querySelector('.prose');
+	if (!prose) return;
+
+	/* ---- 配置 ---- */
+	var MIN_GAP = 3;      /* 相邻两句至少间隔段数，避免过密 */
+	var MAX_GAP = 5;      /* 超过此间隔且无加粗候选时用 C 级补一句 */
+	var MAX_QUOTES = 7;   /* 每篇软上限 */
+	var STRONG_MIN = 12;  /* 加粗文本最短字数（B 级） */
+	var STRONG_MAX = 60;  /* 加粗文本最长字数（B 级） */
+	var A_MAX = 120;      /* 整段加粗最长字数（A 级，整段可略长） */
+	var FALLBACK_MIN = 15;/* C 级补足句最短字数 */
+	var FALLBACK_MAX = 50;/* C 级补足句最长字数 */
+
+	/* ---- 工具：去掉首尾标点/空白后的纯文本长度 ---- */
+	function visibleLen(s) {
+		return (s || '')
+			.replace(/^[\s。，、；：！？“”‘’（）《》【】—…\-,.!?:"'()]+/, '')
+			.replace(/[\s。，、；：！？“”‘’（）《》【】—…\-,.!?:"'()]+$/, '')
+			.length;
+	}
+
+	/* ---- 判断 <p> 是否整段加粗（A 级） ----
+	   条件：直接子节点全为 <strong>/<b>（可夹纯空白文本）。返回合格文本或 null。 */
+	function wholeParaBold(p) {
+		var kids = p.childNodes;
+		var boldText = '';
+		var allBold = true;
+		for (var i = 0; i < kids.length; i++) {
+			var n = kids[i];
+			if (n.nodeType === 3) {                  /* 文本节点 */
+				if (n.nodeValue && n.nodeValue.trim()) { allBold = false; break; }
+			} else if (n.nodeType === 1) {           /* 元素节点 */
+				var tag = n.tagName;
+				if (tag === 'STRONG' || tag === 'B') boldText += n.textContent;
+				else { allBold = false; break; }
+			}
+		}
+		if (!allBold) return null;
+		var len = visibleLen(boldText);
+		return (len >= STRONG_MIN && len <= A_MAX) ? boldText.trim() : null;
+	}
+
+	/* ---- 取段内单个行内 <strong>（B 级）：挑最长的合格者 ---- */
+	function bestInlineBold(p) {
+		var strongs = p.querySelectorAll('strong, b');
+		var best = null, bestLen = 0;
+		for (var i = 0; i < strongs.length; i++) {
+			var t = (strongs[i].textContent || '').trim();
+			var len = visibleLen(t);
+			if (len >= STRONG_MIN && len <= STRONG_MAX && len > bestLen) {
+				best = strongs[i]; bestLen = len;
+			}
+		}
+		return best;
+	}
+
+	/* ---- 从普通段落文本里挑一句长度适中的句子（C 级补足） ----
+	   用 match 抓句（兼容性好，不依赖 lookbehind）。
+	   要求句子以句末标点收尾，排除书名/名词性短语（如《…》）这类
+	   不适合作为金句的片段。 */
+	function pickFallbackSentence(p) {
+		var text = (p.textContent || '').trim();
+		if (!text) return null;
+		var parts = text.match(/[^。！？!?…]+[。！？!?…]+/g) || [];
+		var picks = [];
+		for (var i = 0; i < parts.length; i++) {
+			var s = parts[i].trim();
+			var len = visibleLen(s);
+			if (len >= FALLBACK_MIN && len <= FALLBACK_MAX) picks.push(s);
+		}
+		if (!picks.length) return null;
+		/* 取中间一句，避开首句（常是过渡）和末句（常是收尾） */
+		return picks[Math.floor(picks.length / 2)];
+	}
+
+	/* ---- 收集候选段落（跳过标题区、空段） ---- */
+	var paras = [];
+	var nodes = prose.querySelectorAll('p');
+	for (var i = 0; i < nodes.length; i++) {
+		var p = nodes[i];
+		if (!p.textContent || !p.textContent.trim()) continue;
+		if (p.closest('.article-header')) continue;
+		paras.push(p);
+	}
+	if (!paras.length) return;
+
+	/* ---- 收集 A 级（整段加粗）候选 ---- */
+	var levelA = [];
+	for (var i = 0; i < paras.length; i++) {
+		var t = wholeParaBold(paras[i]);
+		if (t) levelA.push({ idx: i, node: paras[i], text: t });
+	}
+
+	/* ---- 分布节奏选择 ---- */
+	var chosen = [];   /* [{ idx, node, level }] */
+	var chosenIdx = {};
+	var lastIdx = -MIN_GAP;
+
+	/* 在 [from+1, to-1] 段间补一句：优先 B 级，退而 C 级 */
+	function gapFill(from, to) {
+		for (var k = from + 1; k <= to - 1; k++) {
+			if (chosenIdx[k] || !paras[k]) continue;
+			var bNode = bestInlineBold(paras[k]);
+			if (bNode) { chosen.push({ idx: k, node: bNode, level: 'B' }); chosenIdx[k] = 1; return true; }
+		}
+		for (var k = from + 1; k <= to - 1; k++) {
+			if (chosenIdx[k] || !paras[k]) continue;
+			var fb = pickFallbackSentence(paras[k]);
+			if (fb) { chosen.push({ idx: k, node: paras[k], level: 'C', text: fb }); chosenIdx[k] = 1; return true; }
+		}
+		return false;
+	}
+
+	/* 把 A 级按 MIN_GAP 过滤进 chosen，并在大间隙处补足 */
+	var aSorted = levelA.slice().sort(function (a, b) { return a.idx - b.idx; });
+	for (var j = 0; j < aSorted.length; j++) {
+		var c = aSorted[j];
+		if (c.idx - lastIdx < MIN_GAP) continue;       /* 太近，跳过 */
+		if (c.idx - lastIdx > MAX_GAP) gapFill(lastIdx, c.idx);   /* 间隙过大，补一句 */
+		if (chosen.length >= MAX_QUOTES) break;
+		chosen.push({ idx: c.idx, node: c.node, level: 'A' });
+		chosenIdx[c.idx] = 1;
+		lastIdx = c.idx;
+	}
+	/* 文末若还剩大间隙且未达上限，再补一句收尾 */
+	if (chosen.length < MAX_QUOTES && paras.length - 1 - lastIdx > MAX_GAP) {
+		gapFill(lastIdx, paras.length);
+	}
+
+	/* ---- 文章完全没有 A 级：退化为纯均匀分布（B/C 级） ---- */
+	if (!chosen.length) {
+		var estCount = Math.max(1, Math.min(MAX_QUOTES, Math.floor(paras.length / 4)));
+		var step = Math.max(MIN_GAP, Math.floor(paras.length / estCount));
+		for (var k = step; k < paras.length && chosen.length < MAX_QUOTES; k += step) {
+			if (!paras[k]) continue;
+			var bNode2 = bestInlineBold(paras[k]);
+			if (bNode2) { chosen.push({ idx: k, node: bNode2, level: 'B' }); continue; }
+			var fb2 = pickFallbackSentence(paras[k]);
+			if (fb2) chosen.push({ idx: k, node: paras[k], level: 'C', text: fb2 });
+		}
+	}
+
+	if (!chosen.length) return;
+
+	/* ---- 把每个候选用 <mark> 包裹 ----
+	   A 级：mark 包住 p 的所有子节点  → <p><mark><strong>…</strong></mark></p>
+	   B 级：mark 包住该 strong        → <mark><strong>…</strong></mark>
+	   C 级：在 p 文本里精确包裹那一句   → 只高亮该句，不动同段其它句子 */
+	function makeMark() {
+		var m = document.createElement('mark');
+		m.className = 'haodu-quote';
+		return m;
+	}
+
+	/* 在文本节点内按"忽略空白"匹配 needle，把匹配区间切成前/中/后，
+	   仅中段包进 mark。返回创建的 mark 或 null。 */
+	function wrapSubstring(textNode, needle) {
+		var raw = textNode.nodeValue;
+		if (!raw) return null;
+		/* 构建可见字符到原始索引的映射，做忽略空白匹配 */
+		var idxMap = [];
+		var compact = '';
+		for (var i = 0; i < raw.length; i++) {
+			var ch = raw[i];
+			if (!/\s/.test(ch)) { idxMap.push(i); compact += ch; }
+		}
+		var start = compact.indexOf(needle);
+		if (start === -1) return null;
+		var rawStart = idxMap[start];
+		var rawEnd = idxMap[start + needle.length - 1] + 1;
+		if (rawEnd <= rawStart) return null;
+
+		var parent = textNode.parentNode;
+		var matched = raw.slice(rawStart, rawEnd);
+		/* 切分：before 文本节点 / mark(matched) / after 文本节点 */
+		if (rawStart > 0) parent.insertBefore(document.createTextNode(raw.slice(0, rawStart)), textNode);
+		var mark = makeMark();
+		mark.textContent = matched;
+		mark.setAttribute('data-quote', matched);
+		parent.insertBefore(mark, textNode);
+		if (rawEnd < raw.length) parent.insertBefore(document.createTextNode(raw.slice(rawEnd)), textNode);
+		parent.removeChild(textNode);
+		return mark;
+	}
+
+	var marks = [];
+	for (var m = 0; m < chosen.length; m++) {
+		var item = chosen[m];
+		var markEl = null;
+
+		if (item.level === 'A') {
+			/* 把 p 所有子节点移入 mark */
+			var markA = makeMark();
+			markA.setAttribute('data-quote', item.node.textContent.trim());
+			while (item.node.firstChild) markA.appendChild(item.node.firstChild);
+			item.node.appendChild(markA);
+			markEl = markA;
+
+		} else if (item.level === 'B') {
+			/* 用 mark 包住 strong */
+			var markB = makeMark();
+			markB.setAttribute('data-quote', item.node.textContent.trim());
+			item.node.parentNode.insertBefore(markB, item.node);
+			markB.appendChild(item.node);
+			markEl = markB;
+
+		} else { /* C 级：在 p 文本里精确包裹该句 */
+			var needle = item.text.replace(/\s+/g, '');
+			var walker = document.createTreeWalker(item.node, NodeFilter.SHOW_TEXT, null);
+			var tn;
+			while ((tn = walker.nextNode())) {
+				if (!tn.nodeValue || !tn.nodeValue.trim()) continue;
+				var norm = tn.nodeValue.replace(/\s+/g, '');
+				if (norm.indexOf(needle) !== -1) {
+					markEl = wrapSubstring(tn, needle);
+					break;
+				}
+			}
+		}
+
+		if (markEl) marks.push(markEl);
+	}
+
+	if (!marks.length) return;
+
+	/* ---- 点击高亮 → 分发 haodu:quote 事件（QuoteCard 接管） ---- */
+	for (var m = 0; m < marks.length; m++) {
+		(function (el) {
+			el.addEventListener('click', function (e) {
+				e.stopPropagation();                /* 不触发翻页模式 tap-zone */
+				try { window.getSelection().removeAllRanges(); } catch (err) {}
+				var q = el.getAttribute('data-quote') || el.textContent || '';
+				document.dispatchEvent(new CustomEvent('haodu:quote', { detail: { quote: q } }));
+			});
+		})(marks[m]);
+	}
+})();
+</script>

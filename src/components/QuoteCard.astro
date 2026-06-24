@@ -185,6 +185,13 @@ const { title, qrSrc } = Astro.props;
 	var QR_SRC = overlay.getAttribute('data-qr') || '';
 	var currentQuote = '';
 
+	/* ---- 自动高亮金句入口：HighlightQuotes 点击时分发本事件，直达预览 ----
+	   与划选气泡流程独立，互不干扰。 */
+	document.addEventListener('haodu:quote', function (e) {
+		var q = e && e.detail && e.detail.quote;
+		if (q) openCard(q);
+	});
+
 	/* ---- 卡片视觉常量（与 Kami 设计一致） ---- */
 	var W = 1080, H = 1350;                 /* 4:5 朋友圈/小红书比例 */
 	var BG = '#f5f4ed';                     /* 暖纸底 */
