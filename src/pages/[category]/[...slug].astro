@@ -6,6 +6,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import QuoteCard from '../../components/QuoteCard.astro';
 import HighlightQuotes from '../../components/HighlightQuotes.astro';
+import Tldr from '../../components/Tldr.astro';
 import categories from '../../notion-categories.json';
 
 export async function getStaticPaths() {
@@ -251,8 +252,11 @@ const qrSrc = `/qr/${post.id}.png`;
 		<!-- Quote card: select text → generate shareable card -->
 		<QuoteCard title={title} qrSrc={qrSrc} />
 
-		<!-- Auto-highlight quotes: dotted underline → tap to make card -->
-		<HighlightQuotes />
+<!-- Auto-highlight quotes: dotted underline → tap to make card -->
+<HighlightQuotes />
+
+<!-- TL;DR curated summary block: editor callout → styled + tappable -->
+<Tldr />
 
 		<!-- Paged reading mode UI -->
 		<button id="paged-toggle" class="paged-toggle" aria-label="切换为翻页模式">📖</button>

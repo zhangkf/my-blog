@@ -1,0 +1,114 @@
+---
+/**
+ * Tldr — TL;DR 策展总结块
+ *
+ * 编辑约定：在 Notion 文章正文最上方放一个 💡 callout，内容以
+ * 「TL;DR：」开头，写一句话总结。sync 会把它转成 markdown 引用块
+ * `> 💡 TL;DR：…` → 渲染成 <blockquote>。
+ *
+ * 本组件扫 .prose 内的 blockquote，宽松匹配第一个 TL;DR 块：
+ *   · 套策展样式（墨蓝左竖线 + 淡底纹 + 右上角 TL;DR 标签）
+ *   · 清掉行内的 emoji 与「TL;DR：」前缀文字（前缀改由 CSS 标签呈现）
+ *   · 整块可点 → 分发 haodu:quote 事件，复用 QuoteCard 出金句卡
+ *
+ * 与 HighlightQuotes 互不干扰（一个改 blockquote，一个改 strong）。
+ * 纯客户端、无 props、无 UI。仅文章页使用。
+ */
+---
+
+<style is:global>
+	/* 全局：文章正文内的 TL;DR 策展块。限定在 .prose 内避免影响其他页面。
+	   左墨蓝竖线 + 淡底纹；TL;DR 用右上角小标签呈现（不占正文行）。
+	   整块可点，点击出金句卡。 */
+	.prose .haodu-tldr {
+		position: relative;
+		border-left: 3px solid var(--accent);
+		background-color: var(--surface-accent);
+		border-radius: 4px;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		transition: background-color 0.15s;
+	}
+	.prose .haodu-tldr:hover {
+		background-color: var(--surface-hover);
+	}
+	@media (hover: none) {
+		/* 纯触屏无 hover：改用 active 按压反馈 */
+		.prose .haodu-tldr:active {
+			background-color: var(--surface-hover);
+		}
+	}
+	.prose .haodu-tldr::after {
+		content: "TL;DR";
+		position: absolute;
+		top: 0.4em;
+		right: 0.6em;
+		color: var(--accent);
+		font-size: 0.7em;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		opacity: 0.7;
+		pointer-events: none;
+	}
+	/* 与金句高亮协调：tldr 块内禁用 strong 的点状下划线，
+	   点击行为交给整块，避免「下划线 + 整块可点」叠加混乱。 */
+	.prose .haodu-tldr mark.haodu-quote {
+		text-decoration: none;
+		cursor: pointer;
+	}
+</style>
+
+<script is:inline>
+(function () {
+	/* 仅文章页执行：以 .prose 存在为守卫 */
+	var prose = document.querySelector('.prose');
+	if (!prose) return;
+
+	/* ---- 宽松匹配：去掉开头的 emoji + 空白后，是否 TL;DR 开头 ----
+	   兼容大小写、TL;DR / TL，DR（中文逗号误打）。图标非强制。 */
+	var TLDR_RE = /^[\s\u3000]*[\u2190-\u2BFF\uE000-\uF8FF\u{1F000}-\u{1FAFF}\u2600-\u27BF\u2300-\u23FF]*[\s\u3000]*tl[;，,]?\s*dr[\s：:。.、]*/iu;
+
+	/* 收集正文内所有 blockquote，找第一个命中的 */
+	var quotes = prose.querySelectorAll('blockquote');
+	var tldrEl = null;
+	for (var i = 0; i < quotes.length; i++) {
+		var raw = quotes[i].textContent.trim();
+		if (TLDR_RE.test(raw)) {
+			tldrEl = quotes[i];
+			break;
+		}
+	}
+	if (!tldrEl) return;
+
+	/* ---- 清理前缀：把行内的「💡 TL;DR：」前缀文字从可见文本删掉 ----
+	   前缀改由右上角 CSS ::after 标签呈现，避免正文里重复。 */
+	function stripPrefix(node) {
+		var walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null);
+		var firstText = walker.nextNode();
+		if (!firstText) return;
+		var m = firstText.nodeValue.match(TLDR_RE);
+		if (m) {
+			firstText.nodeValue = firstText.nodeValue.slice(m[0].length);
+			/* 删完前缀后若该文本节点只剩空白，移除避免多余空隙 */
+			if (!firstText.nodeValue.trim() && firstText.parentNode) {
+				firstText.parentNode.removeChild(firstText);
+			}
+		}
+	}
+	stripPrefix(tldrEl);
+
+	/* ---- 套策展样式 ---- */
+	tldrEl.classList.add('haodu-tldr');
+
+	/* ---- 取干净文本作为金句内容（点击分享用） ---- */
+	var quoteText = tldrEl.textContent.replace(/\s+/g, ' ').trim();
+
+	/* ---- 整块可点 → 分发 haodu:quote 事件（QuoteCard 接管） ----
+	   stopPropagation 避免误触翻页模式 tap-zone。 */
+	tldrEl.addEventListener('click', function (e) {
+		e.stopPropagation();
+		try { window.getSelection().removeAllRanges(); } catch (err) {}
+		document.dispatchEvent(new CustomEvent('haodu:quote', { detail: { quote: quoteText } }));
+	});
+})();
+</script>
