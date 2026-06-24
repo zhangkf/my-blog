@@ -96,6 +96,10 @@ const qrSrc = `/qr/${post.id}.png`;
 			.page-indicator {
 				display: none;
 			}
+			/* Hide footer in paged mode regardless of viewport width */
+			body.paged-mode footer {
+				display: none !important;
+			}
 
 			@media (max-width: 720px) {
 				/* Reserve a top toolbar (☰ left + 📖 right, ~56px tall) so the
