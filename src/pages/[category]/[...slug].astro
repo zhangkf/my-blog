@@ -96,10 +96,6 @@ const qrSrc = `/qr/${post.id}.png`;
 			.page-indicator {
 				display: none;
 			}
-			/* Hide footer in paged mode regardless of viewport width */
-			body.paged-mode footer {
-				display: none !important;
-			}
 
 			@media (max-width: 720px) {
 				/* Reserve a top toolbar (☰ left + 📖 right, ~56px tall) so the
@@ -223,6 +219,13 @@ const qrSrc = `/qr/${post.id}.png`;
 				.paged-hint.show {
 					opacity: 1;
 				}
+			}
+		</style>
+		<style is:global>
+			/* Footer lives in a separate component (different Astro scope),
+			   so this rule must be global to match it. */
+			body.paged-mode footer {
+				display: none !important;
 			}
 		</style>
 	</head>
