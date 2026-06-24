@@ -1,19 +1,13 @@
 ---
-title: '微软的AI策略'
-description: '作者： Ben Thompson（Stratechery(https://stratechery.com/)）
-原文： The Nvidia AI PC, Project Solara, Microsoft AI(https://stratechery.com/2026/the-nvidia-ai-pc-project-solara-microsoft-ai/)'
+title: 'Ben Thompson：微软的AI策略'
+description: '我通常不会提前透露采访对象，但这周要破例了，因为主题和下面的更新内容关系太大。我是在旧金山写的这篇，刚刚在微软 CEO 萨提亚·纳德拉的 Build 开发者大会主题演讲(https://www.youtube.com/watch?v=FFMm454fxNA)之后采访了他；一般来说我会想立刻发布采访内容，好让你们有完整的分析背景。'
 pubDate: '2026-06-07'
 heroImage: 'https://images.unsplash.com/photo-1737922342275-71bab46ace83?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'AI'
 source: notion
 notion_id: '37845fd1-9f92-8008-bf78-f0cb816db009'
 notion_parent: 'AI'
-last_synced: '2026-06-07T12:21:39.286Z'
----
-
-**作者：** Ben Thompson（[Stratechery](https://stratechery.com/)）
-**原文：** [The Nvidia AI PC, Project Solara, Microsoft AI](https://stratechery.com/2026/the-nvidia-ai-pc-project-solara-microsoft-ai/)
-
+last_synced: '2026-06-24T06:01:53.254Z'
 ---
 
 我通常不会提前透露采访对象，但这周要破例了，因为主题和下面的更新内容关系太大。我是在旧金山写的这篇，刚刚在微软 CEO 萨提亚·纳德拉的 [Build 开发者大会主题演讲](https://www.youtube.com/watch?v=FFMm454fxNA)之后采访了他；一般来说我会想立刻发布采访内容，好让你们有完整的分析背景。

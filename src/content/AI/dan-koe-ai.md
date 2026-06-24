@@ -1,18 +1,14 @@
 ---
 title: 'Dan Koe：偶尔如何在 AI 大规模替代中幸存'
-description: '作者：Dan Koe (@thedankoe)'
+description: '不幸的是，所有工作都将在短短几秒钟内消失。'
 pubDate: '2026-06-23'
 heroImage: 'https://app.notion.com/images/page-cover/met_silk_kashan_carpet.jpg'
 category: 'AI'
 source: notion
 notion_id: '38845fd1-9f92-8007-8848-ce3105640837'
 notion_parent: 'AI'
-last_synced: '2026-06-24T02:44:17.977Z'
+last_synced: '2026-06-24T06:01:55.157Z'
 ---
-
-**作者：Dan Koe (@thedankoe)**
-
-**原文发布于 X（原 Twitter）**
 
 不幸的是，所有工作都将在短短几秒钟内消失。
 

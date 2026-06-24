@@ -1,5 +1,5 @@
 ---
-title: 'AI 工作悲伤：席卷科技工作者的无名心理危机'
+title: 'AI 工作悲伤——席卷科技工作者的无名心理危机'
 description: '2025年夏天，Epic Games 的一次裁员让一名身患绝症的父亲失去了工作。根据讨论最热烈的报道，他的家人不仅失去了工作，还失去了他的人寿保险。Reddit 上记录这一事件的帖子在 r/technology 获得了 36,687 个 upvotes。评论区充满了震惊、愤怒和深深的无助。但这些评论中，却找不到一个能准确描述这件事的固定词汇。最接近的说法是一种反复出现的感受：被夺走的不仅仅是一份薪'
 pubDate: '2026-06-06'
 heroImage: 'https://app.notion.com/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg'
@@ -7,7 +7,7 @@ category: 'AI'
 source: notion
 notion_id: '37745fd1-9f92-80c8-a4c9-d34f7209e237'
 notion_parent: 'AI'
-last_synced: '2026-06-07T12:29:09.116Z'
+last_synced: '2026-06-24T06:01:51.913Z'
 ---
 
 2025年夏天，Epic Games 的一次裁员让一名身患绝症的父亲失去了工作。根据讨论最热烈的报道，他的家人不仅失去了工作，还失去了他的人寿保险。Reddit 上记录这一事件的帖子在 r/technology 获得了 36,687 个 upvotes。评论区充满了震惊、愤怒和深深的无助。但这些评论中，却找不到一个能准确描述这件事的固定词汇。最接近的说法是一种反复出现的感受：被夺走的不仅仅是一份薪水，还有更多东西。

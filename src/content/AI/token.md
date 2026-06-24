@@ -1,5 +1,5 @@
 ---
-title: '那么，下一词元预测将我们置于何地？'
+title: '那么，下一Token预测将我们置于何地？'
 description: '互联网上某些角落的AI极端乐观主义者，特别讨厌人们把大型语言模型仅仅称为“下一词元预测器”（next-token predictors）或“随机鹦鹉”（stochastic parrots）。他们本能地把这些说法当成贬义词。他们用“已解决”或“搞定”这样的词，来宣告那些需要真正人类创造力、专业知识或努力的行业或工作类别已经终结。“动画已解决”“好莱坞搞定”“编程已解决”“研究生搞定”等等。这远非对'
 pubDate: '2026-06-06'
 heroImage: 'https://images.unsplash.com/photo-1672911640817-d2902754be5a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
@@ -7,7 +7,7 @@ category: 'AI'
 source: notion
 notion_id: '37745fd1-9f92-8076-a48c-e2b35ec2ca86'
 notion_parent: 'AI'
-last_synced: '2026-06-06T03:17:49.351Z'
+last_synced: '2026-06-24T06:01:51.428Z'
 ---
 
 ## 已解决/搞定（Solved/Cooked）

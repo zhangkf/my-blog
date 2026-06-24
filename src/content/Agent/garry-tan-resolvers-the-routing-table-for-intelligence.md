@@ -1,5 +1,5 @@
 ---
-title: '2. Resolvers: The Routing Table for Intelligence | Garry Tan'
+title: '2. Garry Tan: Resolvers: The Routing Table for Intelligence'
 description: '在《薄 Harness，胖 Skills》中，我介绍了构建真正有效的 Agent 系统的五个核心定义。Skills 获得了最多的关注，人们收藏了“Skill-as-method-call”模式、Diarization 概念以及薄 Harness 架构。很好，这些确实很重要。'
 pubDate: '2026-05-16T23:40'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_261S.jpg'
@@ -7,7 +7,7 @@ category: 'Agent'
 source: notion
 notion_id: '36245fd1-9f92-80d9-9026-f54d1cfc315e'
 notion_parent: 'Agent'
-last_synced: '2026-06-07T09:35:01.089Z'
+last_synced: '2026-06-24T06:02:00.262Z'
 ---
 
 在《薄 Harness，胖 Skills》中，我介绍了构建真正有效的 Agent 系统的五个核心定义。Skills 获得了最多的关注，人们收藏了“Skill-as-method-call”模式、Diarization 概念以及薄 Harness 架构。很好，这些确实很重要。

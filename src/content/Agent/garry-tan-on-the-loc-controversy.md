@@ -1,5 +1,5 @@
 ---
-title: '3. On the LOC controversy | Garry Tan'
+title: '3. Garry Tan: On the LOC controversy'
 description: '或者：当我提到我最近出货了多少行代码，以及实际数字到底说明了什么时，发生了什么。'
 pubDate: '2026-05-17T04:06'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_fabric_169S.jpg'
@@ -7,7 +7,7 @@ category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-80ca-b4aa-c339b5cf5367'
 notion_parent: 'Agent'
-last_synced: '2026-06-07T09:35:01.592Z'
+last_synced: '2026-06-24T06:02:00.883Z'
 ---
 
 **或者：当我提到我最近出货了多少行代码，以及实际数字到底说明了什么时，发生了什么。**

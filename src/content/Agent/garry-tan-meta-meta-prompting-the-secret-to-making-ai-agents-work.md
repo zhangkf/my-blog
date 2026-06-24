@@ -1,5 +1,5 @@
 ---
-title: '6. Meta-Meta-Prompting: The Secret to Making AI Agents Work | Garry Tan'
+title: '6. Garry Tan: Meta-Meta-Prompting: The Secret to Making AI Agents Work'
 description: '大家一直问我，为什么我晚上还要熬夜 coding 到凌晨 2 点。我有一份正经工作，而且是份大工作——作为 Y Combinator 的 CEO，我们每年帮助数千名创业者实现梦想，打造真正有收入、快速增长的初创公司。'
 pubDate: '2026-05-17T09:09'
 heroImage: 'https://app.notion.com/images/page-cover/woodcuts_14.jpg'
@@ -7,7 +7,7 @@ category: 'Agent'
 source: notion
 notion_id: '36345fd1-9f92-805a-b531-ecb0dc1c909a'
 notion_parent: 'Agent'
-last_synced: '2026-06-07T09:35:03.612Z'
+last_synced: '2026-06-24T06:02:06.198Z'
 ---
 
 大家一直问我，为什么我晚上还要熬夜 coding 到凌晨 2 点。我有一份正经工作，而且是份大工作——作为 Y Combinator 的 CEO，我们每年帮助数千名创业者实现梦想，打造真正有收入、快速增长的初创公司。
