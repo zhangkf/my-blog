@@ -84,7 +84,11 @@
 	   前缀改由右上角 CSS ::after 标签呈现，避免正文里重复。 */
 	function stripPrefix(node) {
 		var walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null);
+		/* 跳过空白文本节点（blockquote 与内部 <p> 之间的 \n 等） */
 		var firstText = walker.nextNode();
+		while (firstText && !firstText.nodeValue.trim()) {
+			firstText = walker.nextNode();
+		}
 		if (!firstText) return;
 		var m = firstText.nodeValue.match(TLDR_RE);
 		if (m) {
