@@ -93,6 +93,11 @@ const isArticle = variant === 'article';
 		border-radius: 50%;
 		border: 1px solid var(--border-mid);
 		background: var(--bg);
+		/* <button> doesn't inherit body color — set it explicitly so the ☰/✕
+		   glyph adapts to theme (dark icon on parchment, light icon in dark mode).
+		   Without this, the UA default `buttontext` renders a near-black glyph
+		   that's nearly invisible on the dark-mode background. */
+		color: rgb(var(--gray-dark));
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 		font-size: 1.25rem;
 		line-height: 1;
