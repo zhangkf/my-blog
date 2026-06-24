@@ -128,13 +128,13 @@ const qrSrc = `/qr/${post.id}.png`;
 					transform: scale(0.9);
 				}
 
-				/* --- Body in paged mode --- */
-				body.paged-mode {
-					overflow: hidden;
-				}
-				body.paged-mode footer {
-					display: none;
-				}
+			/* --- Body in paged mode --- */
+			body.paged-mode {
+				overflow: hidden;
+			}
+			body.paged-mode footer {
+				display: none !important;
+			}
 				body.paged-mode main {
 					width: 100%;
 					max-width: 100%;
