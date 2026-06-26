@@ -3,7 +3,7 @@
  * QuoteCard — 划选分享金句卡片
  *
  * 读者在文章里划选几句话 → 选区附近弹「摘为金句卡」气泡 →
- * 点开全屏预览（Canvas 实时绘制 1080×1920 卡片）→
+ * 点开全屏预览（Canvas 实时绘制 1080×1350 卡片）→
  *   · 系统浏览器：navigator.share({ files: [png] }) 一步分享
  *   · 微信内：展示图片引导长按保存 + 复制文字 fallback
  *
@@ -193,7 +193,7 @@ const { title, qrSrc } = Astro.props;
 	});
 
 		/* ---- 卡片视觉常量（与 Kami 设计一致） ---- */
-		var W = 1080, H = 1920;                 /* 9:16 朋友圈/小红书最佳比例 */
+		var W = 1080, H = 1350;                 /* 4:5 朋友圈/小红书比例 */
 		var BG = '#f5f4ed';                     /* 暖纸底 */
 		var INK = '#1B365D';                    /* 墨蓝 accent */
 		var TEXT_RGB = '92, 84, 67';            /* 正文 rgb（gray-dark） */
@@ -352,11 +352,10 @@ const { title, qrSrc } = Astro.props;
 		/* —— 左侧落款：文章标题 + 品牌 —— */
 		ctx.textAlign = 'left';
 		ctx.textBaseline = 'alphabetic';
-		/* 文章标题（支持多行换行，加中文引号） */
+		/* 文章标题（支持多行换行） */
 		ctx.font = '500 32px "Noto Serif SC", serif';
 		ctx.fillStyle = 'rgb(' + TEXT_RGB + ')';
-		var titleWithQuotes = '「' + ARTICLE_TITLE + '」';
-		var titleLines = wrapText(ctx, titleWithQuotes, textMaxW);
+		var titleLines = wrapText(ctx, ARTICLE_TITLE, textMaxW);
 		var titleY = footTop + 60;
 		var titleLineHeight = 48;
 		for (var ti = 0; ti < titleLines.length; ti++) {
@@ -395,15 +394,15 @@ const { title, qrSrc } = Astro.props;
 		/* 字数越少字号越大 */
 		var len = quote.length;
 		var size;
-		if (len <= 16) size = 110;
-		else if (len <= 30) size = 92;
-		else if (len <= 50) size = 78;
-		else if (len <= 80) size = 64;
-		else if (len <= 120) size = 54;
-		else size = 46;
+		if (len <= 16) size = 96;
+		else if (len <= 30) size = 80;
+		else if (len <= 50) size = 68;
+		else if (len <= 80) size = 56;
+		else if (len <= 120) size = 48;
+		else size = 42;
 		/* 用换行后实际行高收窄，确保整块不溢出安全区 */
 		ctx.font = '500 ' + size + 'px "Noto Serif SC", serif';
-		while (size > 38) {
+		while (size > 34) {
 			var lh = size * 1.62;
 			var lines = wrapText(ctx, quote, maxW);
 			if (lines.length * lh <= availH) break;
