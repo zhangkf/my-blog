@@ -21,7 +21,7 @@ const CONTENT_DIR = path.join(REPO_ROOT, 'src', 'content');
 const MANIFEST_PATH = path.join(REPO_ROOT, 'src', 'notion-categories.json');
 const QR_DIR = path.join(REPO_ROOT, 'public', 'qr');
 
-const SITE = 'https://kaifengzhang.com';
+const SITE = 'https://haodu.kaifengzhang.com';
 
 /* 读取分类清单 */
 let categories = [];
