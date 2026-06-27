@@ -194,10 +194,26 @@ const { title, qrSrc } = Astro.props;
 
 		/* ---- 卡片视觉常量（与 Kami 设计一致） ---- */
 		var W = 1080, H = 1350;                 /* 4:5 朋友圈/小红书比例 */
-		var BG = '#f5f4ed';                     /* 暖纸底 */
-		var INK = '#1B365D';                    /* 墨蓝 accent */
-		var TEXT_RGB = '92, 84, 67';            /* 正文 rgb（gray-dark） */
-		var MUTED_RGB = '138, 126, 107';        /* 落款 rgb（gray） */
+
+	/* ---- 配色：从 CSS 自定义变量读取，自动跟随网页「晚间模式」 ----
+	   global.css 里 html.dark-mode 会覆盖 --bg-card / --accent / --gray* 等，
+	   这里 getComputedStyle 实时取值，白天亮底、夜晚暗底，单一数据源不脱节。 */
+	function readVar(name, fallback) {
+		var v = getComputedStyle(document.documentElement).getPropertyValue(name);
+		v = v ? v.trim() : '';
+		return v || fallback;
+	}
+	function palette() {
+		var dark = document.documentElement.classList.contains('dark-mode');
+		/* --accent 等为 hex；--gray-dark / --gray 为 "r, g, b" 串 */
+		return {
+			dark: dark,
+			BG: readVar('--bg-card', dark ? '#252220' : '#f5f4ed'),
+			INK: readVar('--accent', dark ? '#8FAFD4' : '#1B365D'),
+			TEXT_RGB: readVar('--gray-dark', dark ? '208, 200, 184' : '92, 84, 67'),
+			MUTED_RGB: readVar('--gray', dark ? '160, 152, 136' : '138, 126, 107')
+		};
+	}
 
 	/* ---- 字体加载守卫：Noto Serif SC 必须就绪才能绘制 ---- */
 	var fontReady = (document.fonts && document.fonts.ready) || Promise.resolve();
@@ -290,6 +306,7 @@ const { title, qrSrc } = Astro.props;
 
 	/* ---- 绘制卡片到离屏 canvas，返回 dataURL（异步：需等 QR 图片加载） ---- */
 	async function drawCard(quote) {
+		var P = palette();
 		var qrImg = await loadQr(QR_SRC);
 		var canvas = document.createElement('canvas');
 		canvas.width = W;
@@ -297,7 +314,7 @@ const { title, qrSrc } = Astro.props;
 		var ctx = canvas.getContext('2d');
 
 		/* 背景 */
-		ctx.fillStyle = BG;
+		ctx.fillStyle = P.BG;
 		ctx.fillRect(0, 0, W, H);
 
 		/* 内容安全区 */
@@ -308,15 +325,15 @@ const { title, qrSrc } = Astro.props;
 		ctx.textAlign = 'left';
 		ctx.textBaseline = 'alphabetic';
 		ctx.font = 'italic 180px "Source Serif 4", Georgia, serif';
-		ctx.fillStyle = INK;
+		ctx.fillStyle = P.INK;
 		ctx.globalAlpha = 0.16;
 		ctx.fillText('\u201C', padX, 250);
 		ctx.globalAlpha = 1;
 
 		/* ---- 引文：字号自适应 + 自动换行，左对齐 ---- */
-		var fontSize = pickFontSize(ctx, quote, contentW);
+		var fontSize = pickFontSize(ctx, quote, contentW, P);
 		ctx.font = '500 ' + fontSize + 'px "Noto Serif SC", "Songti SC", serif';
-		ctx.fillStyle = 'rgb(' + TEXT_RGB + ')';
+		ctx.fillStyle = 'rgb(' + P.TEXT_RGB + ')';
 		var lineHeight = fontSize * 1.62;
 		var lines = wrapText(ctx, quote, contentW);
 		var blockH = lines.length * lineHeight;
@@ -340,7 +357,7 @@ const { title, qrSrc } = Astro.props;
 		var textMaxW = qrLeft - padX - 50;
 
 		/* 顶部一条贯穿的淡分隔线（编辑感） */
-		ctx.strokeStyle = INK;
+		ctx.strokeStyle = P.INK;
 		ctx.globalAlpha = 0.18;
 		ctx.lineWidth = 1.5;
 		ctx.beginPath();
@@ -354,25 +371,25 @@ const { title, qrSrc } = Astro.props;
 		ctx.textBaseline = 'alphabetic';
 		/* 文章标题（支持多行换行） */
 		ctx.font = '500 32px "Noto Serif SC", serif';
-		ctx.fillStyle = 'rgb(' + TEXT_RGB + ')';
+		ctx.fillStyle = 'rgb(' + P.TEXT_RGB + ')';
 		var titleLines = wrapText(ctx, ARTICLE_TITLE, textMaxW);
 		var titleY = footTop + 60;
 		var titleLineHeight = 48;
 		for (var ti = 0; ti < titleLines.length; ti++) {
 			ctx.fillText(titleLines[ti], padX, titleY + ti * titleLineHeight);
 		}
-		
+
 		/* 品牌「好读」用 accent 强调，与二维码底部对齐 */
 		var qrTop = footTop + 30;
 		var qrBottom = qrTop + qrSize;
 		ctx.font = '700 54px "Noto Serif SC", serif';
-		ctx.fillStyle = INK;
+		ctx.fillStyle = P.INK;
 		ctx.fillText('「好读」', padX, qrBottom);
 
 		/* —— 右侧二维码 + 扫码提示 —— */
 		if (qrImg) {
 			/* 淡外框，让 QR 在暖底上更稳 */
-			ctx.strokeStyle = 'rgb(' + MUTED_RGB + ')';
+			ctx.strokeStyle = 'rgb(' + P.MUTED_RGB + ')';
 			ctx.globalAlpha = 0.25;
 			ctx.lineWidth = 1;
 			ctx.strokeRect(qrLeft - 8, qrTop - 8, qrSize + 16, qrSize + 16);
@@ -382,13 +399,13 @@ const { title, qrSrc } = Astro.props;
 		/* 二维码下方「扫码阅读全文」提示，居中于 QR */
 		ctx.textAlign = 'center';
 		ctx.font = '400 22px "Noto Serif SC", serif';
-		ctx.fillStyle = 'rgb(' + MUTED_RGB + ')';
+		ctx.fillStyle = 'rgb(' + P.MUTED_RGB + ')';
 		ctx.fillText('扫码阅读全文', qrLeft + qrSize / 2, qrTop + qrSize + 34);
 
 		return canvas.toDataURL('image/png');
 	}
 
-	function pickFontSize(ctx, quote, maxW) {
+	function pickFontSize(ctx, quote, maxW, P) {
 		/* 安全区高度：与 drawCard 的 safeTop(320)/safeBottom(H-320) 一致 */
 		var availH = H - 640;
 		/* 字数越少字号越大 */
