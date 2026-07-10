@@ -3,11 +3,11 @@ title: '时间旅行指南'
 description: '我曾遇见一位名叫查理的旅人。他走到我面前，说了一句令我永生难忘的话。他说，'
 pubDate: '2026-07-02'
 heroImage: 'https://images.unsplash.com/photo-1547376231-d1cbe4b1be19?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
-category: '健康'
+category: 'Health'
 source: notion
 notion_id: '39145fd1-9f92-80d0-a8cf-c68c3a5d301d'
-notion_parent: '健康'
-last_synced: '2026-07-02T21:25:56.605Z'
+notion_parent: 'Health'
+last_synced: '2026-07-10T01:58:30.757Z'
 ---
 
 我曾遇见一位名叫查理的旅人。他走到我面前，说了一句令我永生难忘的话。他说，

@@ -3,11 +3,11 @@ title: 'Dan Koe：2026人生重置协议'
 description: '因为大多数人改变人生方式完全错了。他们制定这些决心，只是因为别人都在做——我们从地位游戏中制造出一种肤浅的意义——但这些决心根本达不到真正改变所需的条件。真正的改变远比说服自己“今年要更有自律、更高效”要深刻得多。'
 pubDate: '2026-06-22'
 heroImage: 'https://app.notion.com/images/page-cover/woodcuts_sekka_3.jpg'
-category: '健康'
+category: 'Health'
 source: notion
 notion_id: '38745fd1-9f92-8037-8a0c-c0715e1c1b22'
-notion_parent: '健康'
-last_synced: '2026-06-24T06:02:10.470Z'
+notion_parent: 'Health'
+last_synced: '2026-07-10T01:58:30.028Z'
 ---
 
 > 如果你和我一样，也觉得新年决心很愚蠢。

@@ -1,18 +1,18 @@
 [
   {
+    "dir": "Health",
+    "slug": "health"
+  },
+  {
     "dir": "AI",
     "slug": "ai"
   },
   {
-    "dir": "Agent",
-    "slug": "agent"
+    "dir": "OS",
+    "slug": "os"
   },
   {
-    "dir": "健康",
-    "slug": "health"
-  },
-  {
-    "dir": "一句话",
-    "slug": "一句话"
+    "dir": "Archived",
+    "slug": "archived"
   }
 ]

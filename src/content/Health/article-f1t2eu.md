@@ -3,11 +3,11 @@ title: '现实总在不断展现'
 description: '由于我写过自己过去如何焦虑地执着于完成任务，有时会有人问我，现在是否还在沿用某些“效率方法”。他们似乎认为，我如今已修炼成禅宗大师，能随性自如地生活，但或许仍有一两个小技巧让我无法割舍。'
 pubDate: '2026-07-09'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_wood_244S.jpg'
-category: '健康'
+category: 'Health'
 source: notion
 notion_id: '39845fd1-9f92-807b-b5fe-f0928bfc93d1'
-notion_parent: '健康'
-last_synced: '2026-07-09T23:06:19.722Z'
+notion_parent: 'Health'
+last_synced: '2026-07-10T01:58:31.530Z'
 ---
 
 由于我写过自己过去如何焦虑地执着于完成任务，有时会有人问我，现在是否还在沿用某些“效率方法”。他们似乎认为，我如今已修炼成禅宗大师，能随性自如地生活，但或许仍有一两个小技巧让我无法割舍。
