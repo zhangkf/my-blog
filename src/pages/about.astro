@@ -8,140 +8,66 @@ import { SITE_TITLE } from '../consts';
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={`关于 | ${SITE_TITLE}`} description="关于好读 — 高品质中文阅读产品" />
+		<BaseHead
+			title={`关于 | ${SITE_TITLE}`}
+			description="好读是一个中文慢阅读策展站。在信息过载的时代，只读值得读的。"
+		/>
 		<style>
-			.hero {
-				text-align: center;
-				margin-bottom: 2.5em;
-				padding-bottom: 1.5em;
-				border-bottom: 1px solid var(--border-light);
+			.about {
+				max-width: 640px;
+				margin: 0 auto;
+				padding: 3em 1em 4em;
 			}
-			.hero h1 {
-				font-size: 2.5em;
-				margin-bottom: 0.2em;
+			h1 {
+				font-size: 2.2em;
+				margin: 0 0 0.5em;
 				color: var(--accent);
 			}
-			.hero .tagline {
+			.tagline {
+				margin: 0 0 2em;
+				font-size: 1.25em;
+				color: rgb(var(--black));
+			}
+			.copy {
+				padding-top: 1.8em;
+				border-top: 1px solid var(--border-light);
+			}
+			.copy p {
+				margin: 0 0 1.2em;
+			}
+			.signature {
+				padding-top: 0.8em;
 				color: rgb(var(--gray));
-				font-size: 1.15em;
-				margin-bottom: 1em;
-			}
-			.hero .badge {
-				display: inline-block;
-				padding: 0.3em 1em;
-				background: var(--accent);
-				color: #f5f4ed;
-				border-radius: 20px;
-				font-size: 0.85em;
-				font-weight: 600;
-			}
-			section {
-				margin-bottom: 2em;
-			}
-			section h2 {
-				border-bottom: 1.5px solid var(--border-strong);
-				padding-bottom: 0.3em;
-				color: var(--accent);
-			}
-			.values {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-				gap: 1.5em;
-				margin: 1.5em 0;
-			}
-			.value-card {
-				padding: 1.2em;
-				border-left: 3px solid var(--accent);
-				background: var(--surface-accent);
-				border-radius: 0 6px 6px 0;
-			}
-			.value-card h3 {
-				margin: 0 0 0.3em 0;
-			}
-			.value-card p {
-				margin: 0;
-				color: rgb(var(--gray-dark));
-				font-size: 0.95em;
+				font-size: 0.9em;
 			}
 			@media (max-width: 720px) {
-				.hero h1 {
-					font-size: 2em;
+				.about {
+					padding-top: 2em;
+				}
+				h1 {
+					font-size: 1.8em;
+				}
+				.tagline {
+					font-size: 1.1em;
 				}
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
-		<main>
-			<div class="hero">
-				<h1>好读</h1>
-				<p class="tagline">在信息过载的时代，只读值得读的</p>
-				<span class="badge">🆓 免费阅读</span>
+		<main class="about">
+			<h1>关于「好读」</h1>
+			<p class="tagline">在信息过载的时代，只读值得读的。</p>
+
+			<div class="copy">
+				<p>
+					「好读」是一个中文慢阅读策展站。我从日常阅读中挑选真正值得花时间的文章，整理成更适合中文阅读的版本。
+				</p>
+				<p>
+					不追热点，不追数量。关注 AI、健康，以及一句话就能说清的好想法。
+				</p>
+				<p class="signature">由开封维护 · 免费阅读 · 无广告</p>
 			</div>
-
-			<section>
-				<h2>好读是什么？</h2>
-				<p>
-					我们每天被海量信息包围，但真正值得深度阅读的内容却越来越难找到。
-					很多全球最好的思考、最前沿的实践，散落在英文世界的各个角落——个人博客、长推文、Newsletter。
-					中文读者很难系统性地接触到这些内容。
-				</p>
-				<p>
-					<strong>好读</strong>想解决的就是这个问题：精选全球优质文章，翻译、整理、分类，
-					用中文呈现给你。不是机器翻译的粗糙搬运，而是经过理解、消化后的高质量呈现。
-					确保你花的每一分钟阅读时间都有回报。
-				</p>
-			</section>
-
-			<section>
-				<h2>内容方向</h2>
-				<div class="values">
-					<div class="value-card">
-						<h3>🤖 AI & Agent</h3>
-						<p>从 AI 架构设计到 Agent 工程实践，关注真正在一线构建 AI 系统的人和他们的方法论。</p>
-					</div>
-					<div class="value-card">
-						<h3>🏢 一人公司 (OPC)</h3>
-						<p>一个人 + AI 就是一家公司。探索个人如何借助 AI 工具，独立创造商业价值。</p>
-					</div>
-					<div class="value-card">
-						<h3>🧠 认知思维</h3>
-						<p>如何更好地思考、决策、学习。第一性原理、心智模型、系统思维。</p>
-					</div>
-					<div class="value-card">
-						<h3>💪 健康</h3>
-						<p>高效能的前提是可持续的身心健康。精力管理、运动科学、心理韧性。</p>
-					</div>
-				</div>
-			</section>
-
-			<section>
-				<h2>内容是怎么来的？</h2>
-				<p>
-					好读的内容来自创始人的日常阅读和研究。发现好文章后，翻译整理后发布到这里。
-					分类会随着内容的积累和读者的需求动态调整——你在导航栏看到的每一个分类，
-					都对应着一个正在持续更新的主题领域。
-				</p>
-				<p>
-					整个发布流程是自动化的：内容在 Notion 中整理完成后，自动同步到网站。
-					这让我们可以把精力完全放在内容质量上，而不是技术运维上。
-				</p>
-			</section>
-
-			<section>
-				<h2>关于定价</h2>
-				<p>
-					好读目前完全<strong>免费</strong>。
-					我们相信好的内容应该先被更多人看到。未来如果推出高级功能，基础阅读体验将始终免费。
-				</p>
-			</section>
-
-			<section>
-				<h2>联系</h2>
-				<p>
-					如果你有好的文章推荐，或者任何建议反馈，欢迎联系。
-				</p>
-			</section>
 		</main>
 		<Footer />
 	</body>
