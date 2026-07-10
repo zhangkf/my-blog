@@ -1,15 +1,41 @@
 import { expect, type Page, test } from '@playwright/test';
 
-const CASES = [
-	{
-		path: '/ai/satya-nadella/',
-		finalText: '这就是公司如何为自己和更广泛的经济驱动价值的方式。这也是我们应该共同构建的稳定均衡状态。',
-	},
-	{
-		path: '/health/article-byhil1/',
-		finalText: '回顾你至今的人生，你甚至可能会得出结论：到目前为止，你其实处理得相当出色。',
-	},
-];
+const ARTICLE_CASES = [0, 1];
+
+async function openLongArticle(page: Page, articleIndex: number) {
+	await page.addInitScript(() => localStorage.setItem('haodu-paged', '0'));
+	await page.goto('/');
+
+	const paths = await page.locator('.article-list a').evaluateAll((links) =>
+		links
+			.map((link) => link.getAttribute('href'))
+			.filter((href): href is string => Boolean(href)),
+	);
+	let longArticleIndex = 0;
+
+	for (const path of paths) {
+		const response = await page.goto(path);
+		if (!response?.ok()) continue;
+
+		const prose = page.locator('.prose');
+		if (!(await prose.isVisible())) continue;
+		const article = await prose.evaluate((element) => {
+			const text = element.innerText.replace(/\s+/g, '');
+			return {
+				isLong: element.scrollHeight > window.innerHeight * 1.5,
+				finalText: text.slice(-40),
+			};
+		});
+		if (!article.isLong || article.finalText.length < 20) continue;
+
+		if (longArticleIndex === articleIndex) {
+			return { path, finalText: article.finalText };
+		}
+		longArticleIndex++;
+	}
+
+	throw new Error(`Only found ${longArticleIndex} long article(s); expected at least ${articleIndex + 1}`);
+}
 
 async function enablePagedModeIfNeeded(page: Page) {
 	const body = page.locator('body');
@@ -139,9 +165,9 @@ async function finalPageLayout(page: Page) {
 	});
 }
 
-for (const { path, finalText } of CASES) {
-	test(`mobile paged mode shows final text without blank or shifted last page: ${path}`, async ({ page }) => {
-		await page.goto(path);
+for (const articleIndex of ARTICLE_CASES) {
+	test(`mobile paged mode shows final text without blank or shifted last page: article ${articleIndex + 1}`, async ({ page }) => {
+		const { finalText } = await openLongArticle(page, articleIndex);
 		await enablePagedModeIfNeeded(page);
 		await expect.poll(() => indicatedPageCount(page)).toBe(await measuredContentPageCount(page));
 		await goToLastPage(page);
