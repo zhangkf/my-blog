@@ -1,7 +1,7 @@
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
-import categories from '../notion-categories.json';
+import { publicCategories } from '../notionCategories';
 
 interface Props {
 	variant?: 'default' | 'article';
@@ -14,7 +14,7 @@ const isArticle = variant === 'article';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			{categories.map(({ dir, slug }: { dir: string; slug: string }) => (
+			{publicCategories.map(({ dir, slug }) => (
 				<HeaderLink href={`/${slug}`}>{dir}</HeaderLink>
 			))}
 			<HeaderLink href="/about">关于</HeaderLink>
@@ -26,7 +26,7 @@ const isArticle = variant === 'article';
 	{isArticle && (
 		<div id="menu-panel" class="menu-panel" data-open="false">
 			<a href="/" class="menu-brand">好读</a>
-			{categories.map(({ dir, slug }: { dir: string; slug: string }) => (
+			{publicCategories.map(({ dir, slug }) => (
 				<a href={`/${slug}`} class="menu-link">{dir}</a>
 			))}
 			<span class="menu-divider"></span>

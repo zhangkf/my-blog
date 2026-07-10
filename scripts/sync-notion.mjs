@@ -16,12 +16,14 @@ import fs from "node:fs";
 import path from "node:path";
 import https from "node:https";
 import { fileURLToPath } from "node:url";
+import { getContentRoute, parseFrontmatterValue } from "./content-routing.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
 const CONTENT_DIR = path.join(REPO_ROOT, "src", "content");
 const ASSETS_DIR = path.join(REPO_ROOT, "public", "notion-assets");
 const MANIFEST_PATH = path.join(REPO_ROOT, "src", "notion-categories.json");
+const ARCHIVED_CATEGORY = "Archived";
 
 // ── Config ──────────────────────────────────────────────────────────
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
@@ -98,11 +100,57 @@ function getSlugFromMap(title) {
 // ── Category Slug Map ───────────────────────────────────────────────
 // Maps Chinese category directory names to English URL slugs.
 const CATEGORY_SLUG_MAP = {
+  "Health": "health",
   "健康": "health",
   "AI": "ai",
+  "OS": "os",
+  "OS (One Sentence)": "os",
+  "OS（One Sentence）": "os",
+  "一句话": "os",
   "Agent": "agent",
+  "Archived": "archived",
   // Add new categories here as they appear
 };
+
+function loadPreviousCategories() {
+  if (!fs.existsSync(MANIFEST_PATH)) return [];
+
+  try {
+    return JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf-8"));
+  } catch (err) {
+    throw new Error(`Failed to parse ${MANIFEST_PATH}: ${err.message}`);
+  }
+}
+
+function loadExistingArticleRoutes(categories) {
+  const routes = new Map();
+
+  for (const { dir, slug: categorySlug } of categories) {
+    const categoryPath = path.join(CONTENT_DIR, dir);
+    if (!fs.existsSync(categoryPath)) continue;
+
+    for (const entry of fs.readdirSync(categoryPath, { withFileTypes: true })) {
+      if (!entry.isFile() || !entry.name.match(/\.mdx?$/)) continue;
+
+      const content = fs.readFileSync(path.join(categoryPath, entry.name), "utf-8");
+      const notionId = parseFrontmatterValue(content, "notion_id");
+      if (!notionId) continue;
+
+      const route = getContentRoute(
+        content,
+        categorySlug,
+        entry.name.replace(/\.mdx?$/, "")
+      );
+      const existing = { routeCategory: route.category, routeSlug: route.slug };
+      if (routes.has(notionId)) {
+        throw new Error(`Duplicate notion_id found in local content: ${notionId}`);
+      }
+      routes.set(notionId, existing);
+    }
+  }
+
+  return routes;
+}
 
 function escapeYaml(str) {
   if (!str) return '""';
@@ -364,9 +412,10 @@ async function blocksToMarkdown(blocks, pageId, indent = "") {
 
 // ── Main Sync Logic ────────────────────────────────────────────────
 
-async function syncPage(childBlock, parentTitle, categoryDir) {
+async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, existingRoute) {
   const pageId = childBlock.id;
   const title = childBlock.child_page.title;
+  const archived = parentTitle === ARCHIVED_CATEGORY;
 
   console.log(`  📄 Syncing: ${title}`);
 
@@ -425,6 +474,11 @@ async function syncPage(childBlock, parentTitle, categoryDir) {
     `pubDate: '${createdTime}'`,
     heroImage ? `heroImage: ${escapeYaml(heroImage)}` : null,
     `category: ${escapeYaml(parentTitle)}`,
+    `archived: ${archived}`,
+    `route_category: ${escapeYaml(
+      archived && existingRoute ? existingRoute.routeCategory : categorySlug
+    )}`,
+    `route_slug: ${escapeYaml(existingRoute?.routeSlug || slugify(cleanTitle))}`,
     `source: notion`,
     `notion_id: '${pageId}'`,
     `notion_parent: ${escapeYaml(parentTitle)}`,
@@ -440,7 +494,7 @@ async function syncPage(childBlock, parentTitle, categoryDir) {
   const outputDir = path.join(CONTENT_DIR, categoryDir);
   fs.mkdirSync(outputDir, { recursive: true });
 
-  const slug = slugify(cleanTitle);
+  const slug = existingRoute?.routeSlug || slugify(cleanTitle);
   const filename = `${slug}.md`;
   const relPath = path.join(categoryDir, filename);
   const filePath = path.join(outputDir, filename);
@@ -451,13 +505,27 @@ async function syncPage(childBlock, parentTitle, categoryDir) {
     const normalize = (s) => s.replace(/last_synced:.*\n/, "");
     if (normalize(existing) === normalize(content)) {
       console.log(`    ⏭️  No changes`);
-      return { pageId, relPath, changed: false };
+      return {
+        pageId,
+        relPath,
+        routeCategory:
+          archived && existingRoute ? existingRoute.routeCategory : categorySlug,
+        routeSlug: slug,
+        changed: false,
+      };
     }
   }
 
   fs.writeFileSync(filePath, content, "utf-8");
   console.log(`    ✅ Written: ${relPath}`);
-  return { pageId, relPath, changed: true };
+  return {
+    pageId,
+    relPath,
+    routeCategory:
+      archived && existingRoute ? existingRoute.routeCategory : categorySlug,
+    routeSlug: slug,
+    changed: true,
+  };
 }
 
 /** Check if a page's children are articles or sub-categories. */
@@ -507,6 +575,8 @@ async function main() {
   console.log("🚀 Starting Notion → Blog sync...\n");
 
   fs.mkdirSync(ASSETS_DIR, { recursive: true });
+  const previousCategories = loadPreviousCategories();
+  const existingArticleRoutes = loadExistingArticleRoutes(previousCategories);
 
   // Auto-discover parent pages if not explicitly configured
   let parentPageIds = PARENT_PAGE_IDS_ENV;
@@ -529,6 +599,7 @@ async function main() {
 
   const allSyncedFiles = [];
   const activeCategoryDirs = new Set();
+  let syncFailureCount = 0;
 
   for (const parentId of parentPageIds) {
     const parentPage = await notion.pages.retrieve({ page_id: parentId });
@@ -542,13 +613,22 @@ async function main() {
 
     for (const { parentTitle, childPages } of groups) {
       const categoryDir = parentTitle; // Use Notion subcategory name as directory name
+      const categorySlug =
+        CATEGORY_SLUG_MAP[categoryDir] || categoryDir.toLowerCase().replace(/\s+/g, "-");
       console.log(`\n  📁 Category: ${parentTitle} → notion/${categoryDir}/ (${childPages.length} articles)`);
       activeCategoryDirs.add(categoryDir);
       for (const child of childPages) {
         try {
-          const result = await syncPage(child, parentTitle, categoryDir);
+          const result = await syncPage(
+            child,
+            parentTitle,
+            categoryDir,
+            categorySlug,
+            existingArticleRoutes.get(child.id)
+          );
           allSyncedFiles.push(result);
         } catch (err) {
+          syncFailureCount++;
           console.error(`   ❌ Failed to sync "${child.child_page.title}": ${err.message}`);
         }
       }
@@ -556,13 +636,27 @@ async function main() {
     console.log("");
   }
 
-  // Clean up: remove files/dirs that no longer exist in Notion
+  if (syncFailureCount > 0) {
+    throw new Error(
+      `${syncFailureCount} article(s) failed to sync; skipped cleanup to preserve existing content`
+    );
+  }
+
+  const routeOwners = new Map();
+  for (const result of allSyncedFiles) {
+    const route = `/${result.routeCategory}/${result.routeSlug}/`;
+    const existingPageId = routeOwners.get(route);
+    if (existingPageId) {
+      throw new Error(
+        `Duplicate article route ${route} for Notion pages ${existingPageId} and ${result.pageId}`
+      );
+    }
+    routeOwners.set(route, result.pageId);
+  }
+
+  // Clean up only after every page and route has been validated.
   const syncedRelPaths = new Set(allSyncedFiles.map((f) => f.relPath));
-
-  // Protected directories that should never be touched
   const protectedDirs = new Set(["blog", "readings"]);
-
-  // Clean up orphaned files within active category dirs
   for (const catDir of activeCategoryDirs) {
     const catPath = path.join(CONTENT_DIR, catDir);
     if (!fs.existsSync(catPath)) continue;
@@ -580,14 +674,7 @@ async function main() {
   }
 
   // Remove Notion-created category directories that no longer exist
-  // Read previous manifest to know which dirs were created by this script
-  let previousCategories = [];
-  if (fs.existsSync(MANIFEST_PATH)) {
-    try {
-      previousCategories = JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf-8")).map((c) => c.dir);
-    } catch {}
-  }
-  for (const dir of previousCategories) {
+  for (const { dir } of previousCategories) {
     if (!activeCategoryDirs.has(dir) && !protectedDirs.has(dir)) {
       const dirPath = path.join(CONTENT_DIR, dir);
       if (fs.existsSync(dirPath)) {
@@ -601,6 +688,7 @@ async function main() {
   const categoriesManifest = [...activeCategoryDirs].map((dir) => ({
     dir,
     slug: CATEGORY_SLUG_MAP[dir] || dir.toLowerCase().replace(/\s+/g, "-"),
+    published: dir !== ARCHIVED_CATEGORY,
   }));
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(categoriesManifest, null, 2), "utf-8");
   console.log(`\n📋 Categories manifest: ${categoriesManifest.map((c) => c.dir).join(", ")}`);

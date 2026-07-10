@@ -3,7 +3,7 @@
  * gen-qr.mjs — 为每篇文章预生成二维码 PNG
  *
  * 读取 src/notion-categories.json，遍历每个分类目录下的 .md 文件，
- * 文件名（去扩展名）即文章 slug。二维码内容 = 文章完整 URL，
+ * 并优先使用 frontmatter 中保存的稳定路由。二维码内容 = 文章完整 URL，
  * 输出到 public/qr/{slug}.png。供金句卡片 Canvas drawImage 使用。
  *
  * 运行：node scripts/gen-qr.mjs
@@ -14,6 +14,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import QRCode from 'qrcode';
+import { getContentRoute } from './content-routing.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -54,24 +55,29 @@ for (const { dir, slug: catSlug } of categories) {
 	const files = fs.readdirSync(catDir).filter((f) => f.endsWith('.md'));
 	for (const file of files) {
 		const articleSlug = file.replace(/\.md$/, '');
-		const url = `${SITE}/${catSlug}/${articleSlug}/`;
-		const outPath = path.join(QR_DIR, `${articleSlug}.png`);
+		const content = fs.readFileSync(path.join(catDir, file), 'utf-8');
+		const route = getContentRoute(content, catSlug, articleSlug);
+		const url = `${SITE}/${route.category}/${route.slug}/`;
+		const outPath = path.join(QR_DIR, `${route.slug}.png`);
 		try {
 			await QRCode.toFile(outPath, url, QR_OPTS);
 			count++;
 		} catch (err) {
-			errors.push(`${catSlug}/${articleSlug}: ${err.message}`);
+			errors.push(`${route.category}/${route.slug}: ${err.message}`);
 		}
 	}
 }
 
 /* 清理孤儿：删除 QR 目录里不再对应任何文章的 png（例如文章被 Notion 移除） */
 const validSlugs = new Set();
-for (const { dir } of categories) {
+for (const { dir, slug: catSlug } of categories) {
 	const catDir = path.join(CONTENT_DIR, dir);
 	if (!fs.existsSync(catDir)) continue;
 	for (const f of fs.readdirSync(catDir).filter((x) => x.endsWith('.md'))) {
-		validSlugs.add(f.replace(/\.md$/, '') + '.png');
+		const articleSlug = f.replace(/\.md$/, '');
+		const content = fs.readFileSync(path.join(catDir, f), 'utf-8');
+		const route = getContentRoute(content, catSlug, articleSlug);
+		validSlugs.add(route.slug + '.png');
 	}
 }
 if (fs.existsSync(QR_DIR)) {

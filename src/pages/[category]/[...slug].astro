@@ -7,15 +7,17 @@ import Header from '../../components/Header.astro';
 import QuoteCard from '../../components/QuoteCard.astro';
 import HighlightQuotes from '../../components/HighlightQuotes.astro';
 import Tldr from '../../components/Tldr.astro';
-import categories from '../../notion-categories.json';
+import { categories } from '../../notionCategories';
 
 export async function getStaticPaths() {
 	const paths = [];
 	for (const { dir, slug } of categories) {
 		const posts = await getCollection(slug as any);
 		for (const post of posts) {
+			const routeCategory = post.data.route_category || slug;
+			const routeSlug = post.data.route_slug || post.id;
 			paths.push({
-				params: { category: slug, slug: post.id },
+				params: { category: routeCategory, slug: routeSlug },
 				props: { post, categoryDir: dir, categorySlug: slug },
 			});
 		}
@@ -25,6 +27,7 @@ export async function getStaticPaths() {
 
 const { post, categoryDir, categorySlug } = Astro.props;
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
+const archived = post.data.archived === true;
 const { Content } = await render(post);
 /* 当前文章的二维码路径（由 scripts/gen-qr.mjs 构建期生成） */
 const qrSrc = `/qr/${post.id}.png`;
@@ -32,7 +35,7 @@ const qrSrc = `/qr/${post.id}.png`;
 
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} noindex={archived} />
 		<style>
 			.prose {
 				width: 680px;
@@ -72,6 +75,9 @@ const qrSrc = `/qr/${post.id}.png`;
 			.category-tag:hover {
 				background: var(--accent-dark);
 				color: white;
+			}
+			.category-tag--archived {
+				font-style: normal;
 			}
 			.hero-image {
 				margin-bottom: 2em;
@@ -237,7 +243,11 @@ const qrSrc = `/qr/${post.id}.png`;
 				<div class="prose">
 					<div class="article-header">
 						<div class="article-meta">
-							<a href={`/${categorySlug}/`} class="category-tag">{categoryDir}</a>
+							{archived ? (
+								<span class="category-tag category-tag--archived">Archived</span>
+							) : (
+								<a href={`/${categorySlug}/`} class="category-tag">{categoryDir}</a>
+							)}
 							<FormattedDate date={pubDate} />
 						</div>
 						<h1>{title}</h1>

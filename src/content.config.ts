@@ -15,6 +15,9 @@ const notionSchema = ({ image }: { image: Function }) =>
 		notion_id: z.string().optional(),
 		notion_parent: z.string().optional(),
 		last_synced: z.string().optional(),
+		archived: z.boolean().optional(),
+		route_category: z.string().optional(),
+		route_slug: z.string().optional(),
 	});
 
 // Dynamically register Notion category collections
@@ -22,7 +25,7 @@ const notionCategories: Record<string, ReturnType<typeof defineCollection>> = {}
 try {
 	const manifest = JSON.parse(
 		fs.readFileSync('./src/notion-categories.json', 'utf-8')
-	) as { dir: string; slug: string }[];
+	) as { dir: string; slug: string; published?: boolean }[];
 	for (const { dir, slug } of manifest) {
 		notionCategories[slug] = defineCollection({
 			loader: glob({ base: `./src/content/${dir}`, pattern: '**/*.{md,mdx}' }),

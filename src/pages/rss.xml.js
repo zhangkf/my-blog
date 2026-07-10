@@ -1,11 +1,11 @@
 import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import categories from '../notion-categories.json';
+import { publicCategories } from '../notionCategories';
 
 export async function GET(context) {
 	const allPosts = [];
-	for (const { slug } of categories) {
+	for (const { slug } of publicCategories) {
 		const posts = await getCollection(slug);
 		for (const post of posts) {
 			allPosts.push({
