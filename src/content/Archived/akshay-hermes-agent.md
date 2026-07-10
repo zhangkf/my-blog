@@ -5,6 +5,9 @@ description: '原文链接：https://x.com/i/status/2054564519280804028(https://
 pubDate: '2026-05-18'
 heroImage: 'https://app.notion.com/images/page-cover/hudsonRiverSchool_theOxbow.jpg'
 category: 'Archived'
+archived: true
+route_category: 'agent'
+route_slug: 'akshay-hermes-agent'
 source: notion
 notion_id: '36445fd1-9f92-80b9-abeb-e15c17180d56'
 notion_parent: 'Archived'

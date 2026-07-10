@@ -4,6 +4,9 @@ description: '大家一直问我，为什么我晚上还要熬夜 coding 到凌�
 pubDate: '2026-05-17T09:09'
 heroImage: 'https://app.notion.com/images/page-cover/woodcuts_14.jpg'
 category: 'Archived'
+archived: true
+route_category: 'agent'
+route_slug: 'garry-tan-meta-meta-prompting-the-secret-to-making-ai-agents-work'
 source: notion
 notion_id: '36345fd1-9f92-805a-b531-ecb0dc1c909a'
 notion_parent: 'Archived'

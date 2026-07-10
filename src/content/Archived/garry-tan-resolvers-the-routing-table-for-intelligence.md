@@ -4,6 +4,9 @@ description: '在《薄 Harness，胖 Skills》中，我介绍了构建真正有
 pubDate: '2026-05-16T23:40'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_261S.jpg'
 category: 'Archived'
+archived: true
+route_category: 'agent'
+route_slug: 'garry-tan-resolvers-the-routing-table-for-intelligence'
 source: notion
 notion_id: '36245fd1-9f92-80d9-9026-f54d1cfc315e'
 notion_parent: 'Archived'

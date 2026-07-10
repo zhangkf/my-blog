@@ -4,6 +4,9 @@ description: '作者：Oliver Burkeman，著《四千周》'
 pubDate: '2026-06-09'
 heroImage: 'https://app.notion.com/images/page-cover/nasa_fingerprints_of_water_on_the_sand.jpg'
 category: 'Archived'
+archived: true
+route_category: 'archived'
+route_slug: 'still-learning-to-write'
 source: notion
 notion_id: '37a45fd1-9f92-80cd-b961-e86acef5f8f7'
 notion_parent: 'Archived'

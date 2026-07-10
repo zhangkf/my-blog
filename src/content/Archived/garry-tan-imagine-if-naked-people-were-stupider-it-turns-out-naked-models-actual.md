@@ -4,6 +4,9 @@ description: '抱歉，不是那种裸体模特。但你现在感受到的失望
 pubDate: '2026-05-17T04:44'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_285S.jpg'
 category: 'Archived'
+archived: true
+route_category: 'agent'
+route_slug: 'garry-tan-imagine-if-naked-people-were-stupider-it-turns-out-naked-models-actual'
 source: notion
 notion_id: '36345fd1-9f92-80a1-82e1-f245382c7c04'
 notion_parent: 'Archived'

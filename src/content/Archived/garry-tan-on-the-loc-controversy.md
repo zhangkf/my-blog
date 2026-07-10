@@ -4,6 +4,9 @@ description: '或者：当我提到我最近出货了多少行代码，以及实
 pubDate: '2026-05-17T04:06'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_fabric_169S.jpg'
 category: 'Archived'
+archived: true
+route_category: 'agent'
+route_slug: 'garry-tan-on-the-loc-controversy'
 source: notion
 notion_id: '36345fd1-9f92-80ca-b4aa-c339b5cf5367'
 notion_parent: 'Archived'

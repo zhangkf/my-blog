@@ -4,6 +4,9 @@ description: 'Steve Yegge 说，使用 AI 编码代理的人“比今天使用 C
 pubDate: '2026-05-16T23:35'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_126S.jpg'
 category: 'Archived'
+archived: true
+route_category: 'agent'
+route_slug: 'garry-tan-thin-harness-fat-skills'
 source: notion
 notion_id: '36245fd1-9f92-800d-9078-d2aa9e2a54cf'
 notion_parent: 'Archived'

@@ -4,6 +4,9 @@ description: '我通常不会提前透露采访对象，但这周要破例了，
 pubDate: '2026-06-07'
 heroImage: 'https://images.unsplash.com/photo-1737922342275-71bab46ace83?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Archived'
+archived: true
+route_category: 'ai'
+route_slug: 'ben-thompson-ai'
 source: notion
 notion_id: '37845fd1-9f92-8008-bf78-f0cb816db009'
 notion_parent: 'Archived'

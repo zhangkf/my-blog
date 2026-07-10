@@ -1,18 +1,22 @@
 [
   {
     "dir": "Health",
-    "slug": "health"
+    "slug": "health",
+    "published": true
   },
   {
     "dir": "AI",
-    "slug": "ai"
+    "slug": "ai",
+    "published": true
   },
   {
     "dir": "OS",
-    "slug": "os"
+    "slug": "os",
+    "published": true
   },
   {
     "dir": "Archived",
-    "slug": "archived"
+    "slug": "archived",
+    "published": false
   }
 ]

@@ -4,6 +4,9 @@ description: '过去一年，我一直在用 AI 进行编码。不只是简单�
 pubDate: '2026-05-17T09:13'
 heroImage: 'https://app.notion.com/images/page-cover/nasa_the_blue_marble.jpg'
 category: 'Archived'
+archived: true
+route_category: 'agent'
+route_slug: 'garry-tan-the-ai-agent-complexity-ratchet-why-90-test-coverage-is-required'
 source: notion
 notion_id: '36345fd1-9f92-80b0-877a-d51a83d92c1b'
 notion_parent: 'Archived'

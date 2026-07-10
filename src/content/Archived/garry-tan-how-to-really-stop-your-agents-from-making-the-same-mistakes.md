@@ -4,6 +4,9 @@ description: 'LangChain 已经融资 1.6 亿美元。三年开发，估值十亿
 pubDate: '2026-05-17T09:05'
 heroImage: 'https://app.notion.com/images/page-cover/usda_pear.png'
 category: 'Archived'
+archived: true
+route_category: 'agent'
+route_slug: 'garry-tan-how-to-really-stop-your-agents-from-making-the-same-mistakes'
 source: notion
 notion_id: '36345fd1-9f92-8004-a645-d6917eeddf0f'
 notion_parent: 'Archived'
