@@ -4,10 +4,13 @@ description: '过去，爬上公司高层是人们的奋斗目标。比如，“
 pubDate: '2026-07-03'
 heroImage: 'https://images.unsplash.com/photo-1682435487817-97287a23462c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Health'
+archived: false
+route_category: 'health'
+route_slug: 'article-o4s2b6'
 source: notion
 notion_id: '39245fd1-9f92-803a-acb2-d27c4a30fad4'
 notion_parent: 'Health'
-last_synced: '2026-07-10T01:58:31.213Z'
+last_synced: '2026-07-10T02:19:41.654Z'
 ---
 
 ### 高影响力个人贡献者（HI-C！）的兴起

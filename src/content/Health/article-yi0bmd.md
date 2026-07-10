@@ -4,10 +4,13 @@ description: '几周前，凌晨 1 点 40 分，一位朋友打来电话。不�
 pubDate: '2026-07-02'
 heroImage: 'https://images.unsplash.com/photo-1622037022824-0c71d511ef3c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Health'
+archived: false
+route_category: 'health'
+route_slug: 'article-yi0bmd'
 source: notion
 notion_id: '39145fd1-9f92-8021-964f-d1c4795980e8'
 notion_parent: 'Health'
-last_synced: '2026-07-10T01:58:30.431Z'
+last_synced: '2026-07-10T02:19:40.869Z'
 ---
 
 几周前，凌晨 1 点 40 分，一位朋友打来电话。不是发信息，而是直接拨号。那一瞬间，我本能地绷紧了神经，准备迎接坏消息。成年人的世界让我们习惯了这样的认知：深夜来电，往往意味着灾祸——有人进了医院，有人陷入困境，有人已经离世。然而，这次什么也没发生。

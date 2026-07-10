@@ -4,10 +4,13 @@ description: '不幸的是，所有工作都将在短短几秒钟内消失。'
 pubDate: '2026-06-23'
 heroImage: 'https://images.unsplash.com/photo-1630603334774-c8ae1c1f1fce?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'AI'
+archived: false
+route_category: 'ai'
+route_slug: 'dan-koe-ai'
 source: notion
 notion_id: '38845fd1-9f92-8007-8848-ce3105640837'
 notion_parent: 'AI'
-last_synced: '2026-06-24T12:36:15.186Z'
+last_synced: '2026-07-10T02:19:47.749Z'
 ---
 
 > 💡 TL;DR：如果你不主动创造一个日常 routine，你就会被分配一个。

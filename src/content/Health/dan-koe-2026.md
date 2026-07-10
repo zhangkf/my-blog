@@ -4,10 +4,13 @@ description: '因为大多数人改变人生方式完全错了。他们制定这
 pubDate: '2026-06-22'
 heroImage: 'https://app.notion.com/images/page-cover/woodcuts_sekka_3.jpg'
 category: 'Health'
+archived: false
+route_category: 'health'
+route_slug: 'dan-koe-2026'
 source: notion
 notion_id: '38745fd1-9f92-8037-8a0c-c0715e1c1b22'
 notion_parent: 'Health'
-last_synced: '2026-07-10T01:58:30.028Z'
+last_synced: '2026-07-10T02:19:40.505Z'
 ---
 
 > 如果你和我一样，也觉得新年决心很愚蠢。

@@ -5,10 +5,13 @@ description: '
 pubDate: '2026-06-15'
 heroImage: 'https://app.notion.com/images/page-cover/woodcuts_9.jpg'
 category: 'AI'
+archived: false
+route_category: 'ai'
+route_slug: 'article-e69cs4'
 source: notion
 notion_id: '38045fd1-9f92-8076-8401-e7f6494bf3c6'
 notion_parent: 'AI'
-last_synced: '2026-06-16T05:36:31.592Z'
+last_synced: '2026-07-10T02:19:46.373Z'
 ---
 
 > 这种想法推演至逻辑终点，既荒谬可笑，又足以自我否定。

@@ -4,10 +4,13 @@ description: '速溶咖啡看似平凡。它只是粉末加热水而已。但要
 pubDate: '2026-05-18'
 heroImage: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Health'
+archived: false
+route_category: 'health'
+route_slug: 'birth-of-instant-coffee'
 source: notion
 notion_id: '36445fd1-9f92-8030-8aaf-c6cb9be21ec1'
 notion_parent: 'Health'
-last_synced: '2026-07-10T01:58:27.582Z'
+last_synced: '2026-07-10T02:19:38.441Z'
 ---
 
 **速溶咖啡看似平凡。它只是粉末加热水而已。但要让它真正发挥作用，却花了几十年的时间。**

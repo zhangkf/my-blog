@@ -4,10 +4,13 @@ description: 'AI 即将把你的公司视为一系列可优化的组件'
 pubDate: '2026-06-05'
 heroImage: 'https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'AI'
+archived: false
+route_category: 'ai'
+route_slug: 'article-dbvygf'
 source: notion
 notion_id: '37645fd1-9f92-80a2-8c45-cc9d7d2be606'
 notion_parent: 'AI'
-last_synced: '2026-06-24T06:01:51.061Z'
+last_synced: '2026-07-10T02:19:44.943Z'
 ---
 
 **AI 即将把你的公司视为一系列可优化的组件**

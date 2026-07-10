@@ -4,10 +4,13 @@ description: '互联网上某些角落的AI极端乐观主义者，特别讨厌�
 pubDate: '2026-06-06'
 heroImage: 'https://images.unsplash.com/photo-1672911640817-d2902754be5a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'AI'
+archived: false
+route_category: 'ai'
+route_slug: 'token'
 source: notion
 notion_id: '37745fd1-9f92-8076-a48c-e2b35ec2ca86'
 notion_parent: 'AI'
-last_synced: '2026-06-24T06:01:51.428Z'
+last_synced: '2026-07-10T02:19:45.457Z'
 ---
 
 ## 已解决/搞定（Solved/Cooked）
