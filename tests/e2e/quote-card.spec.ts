@@ -146,6 +146,13 @@ test('二维码深链在分页模式定位并高亮跨页金句', async ({ page 
 	await expect(page.locator('body')).toHaveClass(/paged-mode/);
 	await expect(page.locator('.haodu-return-quote')).not.toHaveCount(0);
 	await expect(page.locator('.haodu-return-quote.is-active')).not.toHaveCount(0);
+	await expect.poll(async () => {
+		return page.locator('.haodu-return-quote.is-active').first().evaluate((element) => {
+			const color = getComputedStyle(element).backgroundColor;
+			const alpha = color.match(/rgba?\([^)]*[,/]\s*([\d.]+)\s*\)$/)?.[1];
+			return color === 'transparent' ? 0 : Number(alpha ?? 1);
+		});
+	}).toBeGreaterThanOrEqual(0.15);
 	await expect(page.locator('#page-info')).toHaveText(
 		new RegExp(`^${expectedPage}\\s*/\\s*\\d+$`),
 	);

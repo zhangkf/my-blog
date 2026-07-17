@@ -25,6 +25,7 @@
 	--border-ghost: rgba(27, 54, 93, 0.06);
 	--surface-hover: rgba(27, 54, 93, 0.04);
 	--surface-accent: rgba(27, 54, 93, 0.03);
+	--surface-quote-highlight: rgba(27, 54, 93, 0.22);
 	--overlay-hint: rgba(27, 54, 93, 0.75);
 }
 
@@ -50,6 +51,7 @@ html.dark-mode {
 	--border-ghost: rgba(160, 152, 136, 0.06);
 	--surface-hover: rgba(160, 152, 136, 0.06);
 	--surface-accent: rgba(160, 152, 136, 0.04);
+	--surface-quote-highlight: rgba(143, 175, 212, 0.24);
 	--overlay-hint: rgba(26, 24, 22, 0.85);
 	/* CJK: bump font weight for legibility on dark bg */
 	font-weight: 500;

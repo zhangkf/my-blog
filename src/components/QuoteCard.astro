@@ -168,28 +168,27 @@ const { title, qrSrc } = Astro.props;
 		animation: qc-return-pulse 3.8s ease-out both;
 	}
 	@keyframes qc-return-pulse {
-		0%,
+		0% {
+			background-color: var(--surface-quote-highlight);
+			box-shadow: 0 0 0 0.16em var(--surface-quote-highlight);
+		}
+		40% {
+			background-color: transparent;
+			box-shadow: none;
+		}
+		65% {
+			background-color: var(--surface-quote-highlight);
+			box-shadow: 0 0 0 0.1em var(--surface-quote-highlight);
+		}
 		100% {
 			background-color: transparent;
 			box-shadow: none;
-		}
-		15% {
-			background-color: var(--surface-accent);
-			box-shadow: 0 0 0 0.16em var(--surface-accent);
-		}
-		45% {
-			background-color: transparent;
-			box-shadow: none;
-		}
-		70% {
-			background-color: var(--surface-accent);
-			box-shadow: 0 0 0 0.1em var(--surface-accent);
 		}
 	}
 	@media (prefers-reduced-motion: reduce) {
 		:global(.prose .haodu-return-quote.is-active) {
 			animation: none;
-			background-color: var(--surface-accent);
+			background-color: var(--surface-quote-highlight);
 		}
 	}
 </style>
