@@ -220,3 +220,47 @@ test('跨出正文的选区不会生成金句卡入口', async ({ page }) => {
 	});
 	await expect(page.locator('#qc-bubble')).toBeHidden();
 });
+
+test('分页定位容忍微信 WebView 的目标坐标左偏', async ({ page }) => {
+	await openLongArticle(page);
+	const pageInfo = page.locator('#page-info');
+	const total = Number((await pageInfo.textContent())?.match(/\/\s*(\d+)/)?.[1]);
+	const expectedPage = Math.min(5, total);
+	const pageTargets = [await page.locator('.prose').evaluate((prose) => prose.scrollLeft)];
+
+	for (let current = 2; current <= expectedPage; current++) {
+		await page.keyboard.press('ArrowRight');
+		await expect(pageInfo).toHaveText(`${current} / ${total}`);
+		await page.waitForTimeout(320);
+		pageTargets.push(await page.locator('.prose').evaluate((prose) => prose.scrollLeft));
+	}
+	for (let current = expectedPage - 1; current >= 1; current--) {
+		await page.keyboard.press('ArrowLeft');
+		await expect(pageInfo).toHaveText(`${current} / ${total}`);
+	}
+	await page.waitForTimeout(320);
+
+	await page.locator('.prose').evaluate((prose, targetLeft) => {
+		const proseRect = prose.getBoundingClientRect();
+		const syntheticTarget = {
+			getClientRects() {
+				return [{
+					left: proseRect.left + targetLeft - prose.scrollLeft - 1,
+					right: proseRect.left + targetLeft - prose.scrollLeft + 20,
+					top: proseRect.top + 20,
+					bottom: proseRect.top + 40,
+					width: 20,
+					height: 20,
+					x: proseRect.left + targetLeft - prose.scrollLeft - 1,
+					y: proseRect.top + 20,
+					toJSON() {},
+				}];
+			},
+		};
+		document.dispatchEvent(new CustomEvent('haodu:reveal-quote', {
+			detail: { elements: [syntheticTarget] },
+		}));
+	}, pageTargets.at(-1)!);
+
+	await expect(pageInfo).toHaveText(`${expectedPage} / ${total}`);
+});

@@ -424,22 +424,33 @@ const qrSrc = `/qr/${post.id}.png`;
 					return;
 				}
 
-				var proseRect = prose.getBoundingClientRect();
 				var savedLeft = prose.scrollLeft;
-				var firstRect = null;
-				for (var i = 0; i < detail.elements.length && !firstRect; i++) {
-					var rects = detail.elements[i].getClientRects();
-					for (var j = 0; j < rects.length; j++) {
-						if (rects[j].width > 0 && rects[j].height > 0) {
-							firstRect = rects[j];
-							break;
+				var targetPage = -1;
+				for (var candidate = 0; candidate < pages; candidate++) {
+					prose.scrollLeft = pageTargets[candidate] !== undefined
+						? pageTargets[candidate]
+						: candidate * stride;
+					var proseRect = prose.getBoundingClientRect();
+					var firstRect = null;
+					for (var i = 0; i < detail.elements.length && !firstRect; i++) {
+						var rects = detail.elements[i].getClientRects();
+						for (var j = 0; j < rects.length; j++) {
+							if (rects[j].width > 0 && rects[j].height > 0) {
+								firstRect = rects[j];
+								break;
+							}
 						}
 					}
+					if (firstRect
+						&& firstRect.right >= proseRect.left - 2
+						&& firstRect.left < proseRect.right - 2) {
+						targetPage = candidate;
+						break;
+					}
 				}
-				if (!firstRect) return;
+				prose.scrollLeft = savedLeft;
+				if (targetPage < 0) return;
 
-				var absLeft = firstRect.left - proseRect.left + savedLeft;
-				var targetPage = Math.floor(Math.max(0, absLeft) / stride);
 				go(targetPage);
 				pendingQuoteReveal = null;
 				if (typeof detail.done === 'function') setTimeout(detail.done, 320);
