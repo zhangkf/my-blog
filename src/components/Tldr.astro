@@ -112,7 +112,9 @@
 	tldrEl.addEventListener('click', function (e) {
 		e.stopPropagation();
 		try { window.getSelection().removeAllRanges(); } catch (err) {}
-		document.dispatchEvent(new CustomEvent('haodu:quote', { detail: { quote: quoteText } }));
+		document.dispatchEvent(new CustomEvent('haodu:quote', {
+			detail: { quote: quoteText, source: tldrEl }
+		}));
 	});
 })();
 </script>

@@ -22,7 +22,7 @@ const { title, qrSrc } = Astro.props;
 	<button type="button" id="qc-make" class="qc-bubble-btn">✂️ 摘为金句卡</button>
 </div>
 
-<div id="qc-overlay" class="qc-overlay" data-title={title} data-qr={qrSrc || ''} hidden>
+<div id="qc-overlay" class="qc-overlay" data-title={title} data-qr={qrSrc || ''} data-quote-url="" data-qr-url="" hidden>
 	<div class="qc-sheet" role="dialog" aria-modal="true" aria-label="金句卡片预览">
 		<div class="qc-preview">
 			<img id="qc-card-img" alt="金句卡片预览" />
@@ -159,9 +159,48 @@ const { title, qrSrc } = Astro.props;
 		font-size: 0.8rem;
 		min-height: 1.2em;
 	}
+	:global(.prose .haodu-return-quote) {
+		border-radius: 0.12em;
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+	}
+	:global(.prose .haodu-return-quote.is-active) {
+		animation: qc-return-pulse 3.8s ease-out both;
+	}
+	@keyframes qc-return-pulse {
+		0%,
+		100% {
+			background-color: transparent;
+			box-shadow: none;
+		}
+		15% {
+			background-color: var(--surface-accent);
+			box-shadow: 0 0 0 0.16em var(--surface-accent);
+		}
+		45% {
+			background-color: transparent;
+			box-shadow: none;
+		}
+		70% {
+			background-color: var(--surface-accent);
+			box-shadow: 0 0 0 0.1em var(--surface-accent);
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		:global(.prose .haodu-return-quote.is-active) {
+			animation: none;
+			background-color: var(--surface-accent);
+		}
+	}
 </style>
 
-<script is:inline>
+<script>
+import {
+	createQuoteLocator,
+	resolveQuoteLocator,
+	wrapQuoteRange,
+} from '../scripts/quoteLocator.js';
+
 (function () {
 	/* 仅文章页执行：以气泡 DOM 存在为守卫 */
 	var bubble = document.getElementById('qc-bubble');
@@ -187,12 +226,15 @@ const { title, qrSrc } = Astro.props;
 	/* 当前文章二维码路径（构建期预生成，data-qr 传入） */
 	var QR_SRC = overlay.getAttribute('data-qr') || '';
 	var currentQuote = '';
+	var currentQuoteURL = ARTICLE_URL;
+	var prose = document.querySelector('.prose');
 
 	/* ---- 自动高亮金句入口：HighlightQuotes 点击时分发本事件，直达预览 ----
 	   与划选气泡流程独立，互不干扰。 */
 	document.addEventListener('haodu:quote', function (e) {
 		var q = e && e.detail && e.detail.quote;
-		if (q) openCard(q);
+		var source = e && e.detail && e.detail.source;
+		if (q) openCard(q, source);
 	});
 
 		/* ---- 卡片视觉常量（与 Kami 设计一致） ---- */
@@ -236,14 +278,15 @@ const { title, qrSrc } = Astro.props;
 		}
 		var text = sel.toString().trim();
 		if (text.length < 2) { bubble.hidden = true; return; }
-		/* 选区必须在正文 .prose 内 */
-		var node = sel.anchorNode;
-		var prose = node && (node.nodeType === 1 ? node : node.parentElement);
-		if (!prose || !prose.closest || !prose.closest('.prose')) {
+		/* 选区起止点都必须在正文内，避免卡片文字与定位范围不一致。 */
+		var range = sel.getRangeAt(0);
+		if (!prose
+			|| !prose.contains(range.startContainer)
+			|| !prose.contains(range.endContainer)) {
 			bubble.hidden = true;
 			return;
 		}
-		var rect = sel.getRangeAt(0).getBoundingClientRect();
+		var rect = range.getBoundingClientRect();
 		bubble.hidden = false;
 		/* 气泡放在选区【下方】居中——把上方让给 iOS/微信的原生选中菜单，
 		   二者不再争抢同一块屏幕区域。仅在下方溢出屏幕时才改放上方。 */
@@ -264,11 +307,23 @@ const { title, qrSrc } = Astro.props;
 	   注意：选区被清空时【不清空】缓存，否则 tap 触发的那次 selectionchange
 	   会把刚选好的文字抹掉。仅在拿到新的非空选区时才更新。 */
 	var pendingQuote = '';
+	var pendingRange = null;
 	document.addEventListener('selectionchange', function () {
 		var sel = window.getSelection();
 		if (!sel || sel.isCollapsed) { bubble.hidden = true; return; }
+		var range = sel.rangeCount && sel.getRangeAt(0);
+		if (!range
+			|| !prose
+			|| !prose.contains(range.startContainer)
+			|| !prose.contains(range.endContainer)) {
+			bubble.hidden = true;
+			return;
+		}
 		var t = sel.toString().trim();
-		if (t.length >= 2) pendingQuote = t;
+		if (t.length >= 2) {
+			pendingQuote = t;
+			pendingRange = range.cloneRange();
+		}
 		/* 延迟一帧，确保移动端选区尺寸已更新 */
 		requestAnimationFrame(placeBubble);
 	});
@@ -307,10 +362,33 @@ const { title, qrSrc } = Astro.props;
 		});
 	}
 
+	var qrModulePromise;
+	var qrUsedFallback = false;
+	async function quoteQrSource(url) {
+		try {
+			if (!qrModulePromise) qrModulePromise = import('qrcode');
+			var qrModule = await qrModulePromise;
+			var QRCode = qrModule.default || qrModule;
+			var dataURL = await QRCode.toDataURL(url, {
+				errorCorrectionLevel: 'M',
+				margin: 1,
+				width: 440,
+				color: { dark: '#1B365D', light: '#00000000' }
+			});
+			overlay.setAttribute('data-qr-url', url);
+			qrUsedFallback = false;
+			return dataURL;
+		} catch (err) {
+			overlay.setAttribute('data-qr-url', ARTICLE_URL);
+			qrUsedFallback = true;
+			return QR_SRC;
+		}
+	}
+
 	/* ---- 绘制卡片到离屏 canvas，返回 dataURL（异步：需等 QR 图片加载） ---- */
-	async function drawCard(quote) {
+	async function drawCard(quote, quoteURL) {
 		var P = palette();
-		var qrImg = await loadQr(QR_SRC);
+		var qrImg = await loadQr(await quoteQrSource(quoteURL));
 		var canvas = document.createElement('canvas');
 		canvas.width = W;
 		canvas.height = H;
@@ -440,8 +518,12 @@ const { title, qrSrc } = Astro.props;
 	}
 
 	/* ---- 打开预览 ---- */
-	async function openCard(quote) {
+	async function openCard(quote, source) {
 		currentQuote = quote;
+		var locator = prose && createQuoteLocator(prose, source, quote);
+		currentQuoteURL = locator ? ARTICLE_URL + '#q=' + locator : ARTICLE_URL;
+		overlay.setAttribute('data-quote-url', currentQuoteURL);
+		overlay.setAttribute('data-qr-url', '');
 		setTip('正在生成卡片…');
 		cardImg.removeAttribute('src');
 		overlay.hidden = false;
@@ -455,14 +537,18 @@ const { title, qrSrc } = Astro.props;
 				await document.fonts.load('500 96px "Noto Serif SC"');
 			}
 		} catch (e) {}
-		var url = await drawCard(quote);
+		var url = await drawCard(quote, currentQuoteURL);
 		cardImg.src = url;
-		setTip('');
+		setTip(qrUsedFallback ? '卡片已生成，二维码将打开文章首页' : '');
 		/* 探测分享能力，决定按钮显隐 */
 		var canShareImg = !!(navigator.canShare && navigator.canShare({ files: [pngFile('card.png', url)] }));
 		shareBtn.hidden = !canShareImg;
 		saveHintBtn.hidden = canShareImg;
-		if (!canShareImg) setTip('长按图片保存到相册，再去聊天里发送');
+		if (!canShareImg) {
+			setTip(qrUsedFallback
+				? '二维码将打开文章首页；可长按图片保存'
+				: '长按图片保存到相册，再去聊天里发送');
+		}
 	}
 
 	function pngFile(name, dataURL) {
@@ -495,10 +581,11 @@ const { title, qrSrc } = Astro.props;
 		consumed = true;
 		var text = pendingQuote || getSelectionText();
 		if (!text) { consumed = false; return; }
+		var source = pendingRange && pendingRange.cloneRange();
 		bubble.hidden = true;
 		/* 清除选区，收起原生菜单 */
 		try { window.getSelection().removeAllRanges(); } catch (err) {}
-		openCard(text);
+		openCard(text, source);
 		setTimeout(function () { consumed = false; }, 400);
 	}
 	var consumed = false;
@@ -551,5 +638,36 @@ const { title, qrSrc } = Astro.props;
 	document.addEventListener('keydown', function (e) {
 		if (!overlay.hidden && e.key === 'Escape') close();
 	});
+
+	function activateReturnHighlight(marks) {
+		for (var i = 0; i < marks.length; i++) marks[i].classList.add('is-active');
+		setTimeout(function () {
+			for (var i = 0; i < marks.length; i++) marks[i].classList.remove('is-active');
+		}, 4200);
+	}
+
+	function revealQuoteFromURL() {
+		if (!prose || window.location.hash.indexOf('#q=') !== 0) return;
+		var token = window.location.hash.slice(3);
+		var range = resolveQuoteLocator(prose, token);
+		if (!range) return;
+		var marks = wrapQuoteRange(range);
+		if (!marks.length) return;
+
+		if (document.body.classList.contains('paged-mode')) {
+			document.dispatchEvent(new CustomEvent('haodu:reveal-quote', {
+				detail: {
+					elements: marks,
+					done: function () { activateReturnHighlight(marks); }
+				}
+			}));
+			return;
+		}
+
+		marks[0].scrollIntoView({ block: 'center', behavior: 'auto' });
+		requestAnimationFrame(function () { activateReturnHighlight(marks); });
+	}
+
+	revealQuoteFromURL();
 })();
 </script>

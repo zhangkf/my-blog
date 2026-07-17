@@ -301,6 +301,7 @@ const qrSrc = `/qr/${post.id}.png`;
 
 			var page = 0, pages = 1, stride = 0, active = false;
 			var pageTargets = [0];
+			var pendingQuoteReveal = null;
 			var prosePosition = prose.style.position;
 			var endGuard = document.createElement('span');
 			endGuard.setAttribute('aria-hidden', 'true');
@@ -416,6 +417,38 @@ const qrSrc = `/qr/${post.id}.png`;
 				updateUI();
 			}
 
+			function revealQuote(detail) {
+				if (!detail || !detail.elements || !detail.elements.length) return;
+				if (!active || !stride) {
+					pendingQuoteReveal = detail;
+					return;
+				}
+
+				var proseRect = prose.getBoundingClientRect();
+				var savedLeft = prose.scrollLeft;
+				var firstRect = null;
+				for (var i = 0; i < detail.elements.length && !firstRect; i++) {
+					var rects = detail.elements[i].getClientRects();
+					for (var j = 0; j < rects.length; j++) {
+						if (rects[j].width > 0 && rects[j].height > 0) {
+							firstRect = rects[j];
+							break;
+						}
+					}
+				}
+				if (!firstRect) return;
+
+				var absLeft = firstRect.left - proseRect.left + savedLeft;
+				var targetPage = Math.floor(Math.max(0, absLeft) / stride);
+				go(targetPage);
+				pendingQuoteReveal = null;
+				if (typeof detail.done === 'function') setTimeout(detail.done, 320);
+			}
+
+			document.addEventListener('haodu:reveal-quote', function (e) {
+				revealQuote(e && e.detail);
+			});
+
 			/* ---- Activate / Deactivate ---- */
 			function activate() {
 				active = true;
@@ -430,6 +463,7 @@ const qrSrc = `/qr/${post.id}.png`;
 						prose.scrollLeft = 0;
 						updateUI();
 						showHint();
+						if (pendingQuoteReveal) revealQuote(pendingQuoteReveal);
 					});
 				});
 				try { localStorage.setItem(KEY, '1'); } catch (e) {}

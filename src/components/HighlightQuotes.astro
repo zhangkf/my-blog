@@ -83,7 +83,9 @@
 				e.stopPropagation();                /* 不触发翻页模式 tap-zone */
 				try { window.getSelection().removeAllRanges(); } catch (err) {}
 				var q = markEl.getAttribute('data-quote') || markEl.textContent || '';
-				document.dispatchEvent(new CustomEvent('haodu:quote', { detail: { quote: q } }));
+				document.dispatchEvent(new CustomEvent('haodu:quote', {
+					detail: { quote: q, source: markEl }
+				}));
 			});
 		})(marks[m]);
 	}
