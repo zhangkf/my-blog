@@ -180,6 +180,9 @@ const { title, qrSrc } = Astro.props;
 	var titleEl = document.querySelector('.prose .article-header h1');
 	var domTitle = titleEl && titleEl.textContent && titleEl.textContent.trim();
 	var ARTICLE_TITLE = (overlayTitle && overlayTitle.trim()) || domTitle || '好读';
+	var canonicalEl = document.querySelector('link[rel="canonical"]');
+	var canonicalHref = canonicalEl && canonicalEl.getAttribute('href');
+	var ARTICLE_URL = canonicalHref || (window.location.origin + window.location.pathname);
 
 	/* 当前文章二维码路径（构建期预生成，data-qr 传入） */
 	var QR_SRC = overlay.getAttribute('data-qr') || '';
@@ -473,6 +476,13 @@ const { title, qrSrc } = Astro.props;
 
 	function setTip(t) { if (tipEl) tipEl.textContent = t; }
 
+	function shareText() {
+		return '「' + currentQuote.trim() + '」\n\n'
+			+ '《' + ARTICLE_TITLE + '》\n'
+			+ '来自「好读」· 慢一点，读好一点\n'
+			+ ARTICLE_URL;
+	}
+
 	/* ---- 事件绑定 ----
 	   iOS/微信选中态下，tap 气泡的那次触摸常被系统挪去调整选区手柄或
 	   关闭原生 callout 菜单，click 根本不触发。所以：
@@ -507,7 +517,7 @@ const { title, qrSrc } = Astro.props;
 	});
 
 	copyBtn.addEventListener('click', async function () {
-		var text = '"' + currentQuote + '"\n—— ' + ARTICLE_TITLE + ' · 好读';
+		var text = shareText();
 		try {
 			await navigator.clipboard.writeText(text);
 			setTip('已复制文字');
