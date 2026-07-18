@@ -9,13 +9,17 @@ import { SITE_TITLE } from '../consts';
 interface Props {
 	title: string;
 	description: string;
-	image?: ImageMetadata;
+	image?: ImageMetadata | string;
 	noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = FallbackImage, noindex = false } = Astro.props;
+
+/* image 可以是 ImageMetadata（Astro 静态资产）或字符串路径（public/ 下）。
+   统一转成可放入 meta content 的 URL 字符串。 */
+const imageSrc = typeof image === 'string' ? image : image.src;
 ---
 
 <!-- Global Metadata -->
@@ -56,14 +60,14 @@ const { title, description, image = FallbackImage, noindex = false } = Astro.pro
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image.src, Astro.url)} />
+<meta property="og:image" content={new URL(imageSrc, Astro.url)} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+<meta property="twitter:image" content={new URL(imageSrc, Astro.url)} />
 
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9840ad33d662496a94633e8109c2d7b9"}'></script>

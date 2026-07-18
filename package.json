@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "gen-qr": "node scripts/gen-qr.mjs",
-    "build": "node scripts/gen-qr.mjs && astro build",
+    "gen-og": "node scripts/gen-og.mjs",
+    "build": "node scripts/gen-qr.mjs && node scripts/gen-og.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "sync": "node scripts/sync-notion.mjs",
