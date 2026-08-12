@@ -10,10 +10,8 @@ route_slug: 'article-7vn6r7'
 source: notion
 notion_id: '3ba45fd1-9f92-806c-bf7e-e60747f8ff57'
 notion_parent: 'Health'
-last_synced: '2026-08-12T02:28:45.876Z'
+last_synced: '2026-08-12T04:12:28.812Z'
 ---
-
-> ✍️ **The Imperfectionist - Oliver Burkeman**
 
 如果你对冥想稍有涉猎，很可能听过这样一个故事：两位和尚长途步行，途中遇到一条湍急的河流。岸边有位女子无法过河，他们便违背了不近女色的戒律，将她背了过去。走了数里之后，一位和尚仍为破戒而耿耿于怀。“师兄，”另一位和尚对他说，“我早已将那女子放下，你为何还一直背着她？”
 
