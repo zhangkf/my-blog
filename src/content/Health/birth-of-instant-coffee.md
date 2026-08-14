@@ -10,14 +10,10 @@ route_slug: 'birth-of-instant-coffee'
 source: notion
 notion_id: '36445fd1-9f92-8030-8aaf-c6cb9be21ec1'
 notion_parent: 'Health'
-last_synced: '2026-07-10T02:19:38.441Z'
+last_synced: '2026-08-14T01:42:10.898Z'
 ---
 
 **速溶咖啡看似平凡。它只是粉末加热水而已。但要让它真正发挥作用，却花了几十年的时间。**
-
-《Works in Progress》
-
-2026年4月6日
 
 *奥斯卡·赛克斯（Oscar Sykes）和本杰明·斯塔宾（Benjamin Stubbing）解释了为什么在不破坏咖啡风味的情况下将其干燥是如此困难。*
 
