@@ -130,6 +130,14 @@ const ARTICLES = [
     author: "Oliver Burkeman",
     note: "中文由好读整理，版权归原作者。原文来自作者邮件通讯。",
   },
+  {
+    title: "那么，下一Token预测将我们置于何地？",
+    pageId: "37745fd1-9f92-8076-a48c-e2b35ec2ca86",
+    publication: "POP RDI; RET;",
+    originTitle: "So, Where Does Next-Token Prediction Leave Us?",
+    author: "0x5FC3",
+    url: "https://pop.rdi.sh/where-does-next-token-prediction-leave-us/",
+  },
 ];
 
 function textBlock(content) {
