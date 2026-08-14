@@ -106,6 +106,30 @@ const ARTICLES = [
     author: "Pranav Jain",
     url: "https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/",
   },
+  {
+    title: "我们别再谈人工智能了",
+    pageId: "3ba45fd1-9f92-806c-bf7e-e60747f8ff57",
+    publication: "The Imperfectionist",
+    originTitle: "Let's stop talking about A.I.",
+    author: "Oliver Burkeman",
+    note: "中文由好读整理，版权归原作者。原文来自作者邮件通讯。",
+  },
+  {
+    title: "末日并未临近",
+    pageId: "38045fd1-9f92-801a-8b34-c376b263c7d2",
+    publication: "The Imperfectionist",
+    originTitle: "The end isn't nigh",
+    author: "Oliver Burkeman",
+    note: "中文由好读整理，版权归原作者。原文来自作者邮件通讯。",
+  },
+  {
+    title: "现实总在不断展现",
+    pageId: "39845fd1-9f92-807b-b5fe-f0928bfc93d1",
+    publication: "The Imperfectionist",
+    originTitle: "Reality just keeps unfolding",
+    author: "Oliver Burkeman",
+    note: "中文由好读整理，版权归原作者。原文来自作者邮件通讯。",
+  },
 ];
 
 function textBlock(content) {
@@ -127,7 +151,11 @@ function buildCallout(article) {
   if (article.originTitle) items.push(bullet(`原名：${article.originTitle}`));
   if (article.author) items.push(bullet(`作者：${article.author}`));
   if (article.url) items.push(bullet(`原文：${article.url}`));
-  items.push(bullet("说明：中文由好读整理，版权归原作者"));
+  items.push(
+    bullet(
+      `说明：${article.note || "中文由好读整理，版权归原作者"}`
+    )
+  );
 
   return {
     type: "callout",
@@ -164,7 +192,7 @@ async function hasCopyrightCallout(pageId) {
   for (const block of blocks) {
     if (block.type !== "callout") continue;
     const head = blockPlain(block).trim();
-    if (/^(出处|版权|原文出处|copyright|source)\b/i.test(head)) return true;
+    if (/^(出处|版权|原文出处|copyright|source)([：:\s]|$)/i.test(head)) return true;
   }
   return false;
 }
