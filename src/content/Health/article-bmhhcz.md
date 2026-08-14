@@ -14,7 +14,7 @@ origin_url: 'https://www.raptitude.com/2026/07/how-to-exist/'
 origin_publication: 'Raptitude'
 notion_id: '3ba45fd1-9f92-80df-a5a1-d9c9e1eca546'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:10:11.650Z'
+last_synced: '2026-08-14T02:27:37.889Z'
 ---
 
 这里有一个专为真正胆大者设计的实验。

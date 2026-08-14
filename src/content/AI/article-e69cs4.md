@@ -15,7 +15,7 @@ origin_url: 'https://www.theatlantic.com/philosophy/2026/06/no-artificial-intell
 origin_publication: 'The Atlantic'
 notion_id: '38045fd1-9f92-8076-8401-e7f6494bf3c6'
 notion_parent: 'AI'
-last_synced: '2026-08-14T02:10:18.979Z'
+last_synced: '2026-08-14T02:27:45.423Z'
 ---
 
 > 这种想法推演至逻辑终点，既荒谬可笑，又足以自我否定。

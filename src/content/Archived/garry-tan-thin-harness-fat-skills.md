@@ -10,7 +10,7 @@ route_slug: 'garry-tan-thin-harness-fat-skills'
 source: notion
 notion_id: '36245fd1-9f92-800d-9078-d2aa9e2a54cf'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:36.821Z'
+last_synced: '2026-08-14T02:27:51.351Z'
 ---
 
 Steve Yegge 说，使用 AI 编码代理的人“比今天使用 Cursor 和聊天的人生产力高 10x 到 100x，大致相当于 2005 年 Googlers 的 1000x 生产力。”

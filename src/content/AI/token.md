@@ -8,9 +8,13 @@ archived: false
 route_category: 'ai'
 route_slug: 'token'
 source: notion
+origin_author: '0x5FC3'
+origin_title: 'So, Where Does Next-Token Prediction Leave Us?'
+origin_url: 'https://pop.rdi.sh/where-does-next-token-prediction-leave-us/'
+origin_publication: 'POP RDI; RET'
 notion_id: '37745fd1-9f92-8076-a48c-e2b35ec2ca86'
 notion_parent: 'AI'
-last_synced: '2026-07-10T02:19:45.457Z'
+last_synced: '2026-08-14T02:27:41.848Z'
 ---
 
 ## 已解决/搞定（Solved/Cooked）

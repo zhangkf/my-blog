@@ -10,7 +10,7 @@ route_slug: 'garry-tan-resolvers-the-routing-table-for-intelligence'
 source: notion
 notion_id: '36245fd1-9f92-80d9-9026-f54d1cfc315e'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:37.605Z'
+last_synced: '2026-08-14T02:27:52.539Z'
 ---
 
 在《薄 Harness，胖 Skills》中，我介绍了构建真正有效的 Agent 系统的五个核心定义。Skills 获得了最多的关注，人们收藏了“Skill-as-method-call”模式、Diarization 概念以及薄 Harness 架构。很好，这些确实很重要。

@@ -10,7 +10,7 @@ route_slug: 'still-learning-to-write'
 source: notion
 notion_id: '37a45fd1-9f92-80cd-b961-e86acef5f8f7'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:43.469Z'
+last_synced: '2026-08-14T02:28:01.401Z'
 ---
 
 作者：Oliver Burkeman，著《四千周》

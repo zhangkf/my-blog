@@ -10,7 +10,7 @@ route_slug: 'garry-tan-imagine-if-naked-people-were-stupider-it-turns-out-naked-
 source: notion
 notion_id: '36345fd1-9f92-80a1-82e1-f245382c7c04'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:39.270Z'
+last_synced: '2026-08-14T02:27:54.685Z'
 ---
 
 **抱歉，不是那种裸体模特。但你现在感受到的失望？那正是 Kyle Kingsbury 对 LLM 的感受。**

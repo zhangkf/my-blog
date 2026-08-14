@@ -14,7 +14,7 @@ origin_url: 'https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/
 origin_publication: 'Works in Progress'
 notion_id: '36445fd1-9f92-8030-8aaf-c6cb9be21ec1'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:10:00.584Z'
+last_synced: '2026-08-14T02:27:25.200Z'
 ---
 
 **速溶咖啡看似平凡。它只是粉末加热水而已。但要让它真正发挥作用，却花了几十年的时间。**

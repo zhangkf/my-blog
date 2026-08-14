@@ -14,7 +14,7 @@ origin_url: 'https://letters.thedankoe.com/p/how-to-survive-ai-mass-replacement'
 origin_publication: 'The Koe Letter'
 notion_id: '38845fd1-9f92-8007-8848-ce3105640837'
 notion_parent: 'AI'
-last_synced: '2026-08-14T02:10:20.357Z'
+last_synced: '2026-08-14T02:27:47.508Z'
 ---
 
 > 💡 TL;DR：如果你不主动创造一个日常 routine，你就会被分配一个。

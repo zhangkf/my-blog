@@ -10,7 +10,7 @@ route_slug: 'garry-tan-the-ai-agent-complexity-ratchet-why-90-test-coverage-is-r
 source: notion
 notion_id: '36345fd1-9f92-80b0-877a-d51a83d92c1b'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:41.736Z'
+last_synced: '2026-08-14T02:27:59.034Z'
 ---
 
 过去一年，我一直在用 AI 进行编码。不只是简单提示（prompting）——而是真正构建软件。我有两个开源项目：GStack，它让 AI 编码代理变得更强大；GBrain，它能把你阅读和编写的一切内容转化为 AI 可搜索的知识库。两者加起来，大约有 97 万行代码和 665 个测试文件。几乎所有代码都是在我的指导下，由 Claude Code 和 Codex 完成的（大多数时候同时运行 15 个 Conductor 会话）。

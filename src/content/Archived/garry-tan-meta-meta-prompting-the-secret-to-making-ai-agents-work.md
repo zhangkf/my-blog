@@ -10,7 +10,7 @@ route_slug: 'garry-tan-meta-meta-prompting-the-secret-to-making-ai-agents-work'
 source: notion
 notion_id: '36345fd1-9f92-805a-b531-ecb0dc1c909a'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:41.007Z'
+last_synced: '2026-08-14T02:27:57.387Z'
 ---
 
 大家一直问我，为什么我晚上还要熬夜 coding 到凌晨 2 点。我有一份正经工作，而且是份大工作——作为 Y Combinator 的 CEO，我们每年帮助数千名创业者实现梦想，打造真正有收入、快速增长的初创公司。

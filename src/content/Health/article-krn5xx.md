@@ -13,7 +13,7 @@ origin_title: 'Compulsion To Closure'
 origin_url: 'https://www.awakin.org/v2/read/view.php?tid=2602'
 notion_id: '39845fd1-9f92-8056-94d3-d7e780c67798'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:10:10.767Z'
+last_synced: '2026-08-14T02:27:36.872Z'
 ---
 
 最近，我在某处听到或看到“闭合强迫”这个说法。虽然记不清原话的具体用法，但这个短语精准地描绘了人类难以容忍悬而未决和不确定性，以及我们那种强迫性地想要确定一切、抓住要点、找到立足点、锁定正确答案、弄清所有事情，并以绝对确定性掌握终极真相的冲动。这种强迫在解决实际问题时显然有利于生存，但一旦延伸到其他领域，就很容易成为问题。

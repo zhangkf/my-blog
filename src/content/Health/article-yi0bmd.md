@@ -14,7 +14,7 @@ origin_url: 'https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-gri
 origin_publication: 'The Times of India'
 notion_id: '39145fd1-9f92-8021-964f-d1c4795980e8'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:10:06.585Z'
+last_synced: '2026-08-14T02:27:30.744Z'
 ---
 
 几周前，凌晨 1 点 40 分，一位朋友打来电话。不是发信息，而是直接拨号。那一瞬间，我本能地绷紧了神经，准备迎接坏消息。成年人的世界让我们习惯了这样的认知：深夜来电，往往意味着灾祸——有人进了医院，有人陷入困境，有人已经离世。然而，这次什么也没发生。

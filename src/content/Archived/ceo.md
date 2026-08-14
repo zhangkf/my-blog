@@ -10,7 +10,7 @@ route_slug: 'ceo'
 source: notion
 notion_id: '38045fd1-9f92-804a-8931-d697bad2d70d'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:45.409Z'
+last_synced: '2026-08-14T02:28:04.835Z'
 ---
 
 我一直在思考企业在 AI 驱动的经济中的未来。

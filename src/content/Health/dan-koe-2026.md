@@ -14,7 +14,7 @@ origin_url: 'https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1'
 origin_publication: 'The Koe Letter'
 notion_id: '38745fd1-9f92-8037-8a0c-c0715e1c1b22'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:10:05.559Z'
+last_synced: '2026-08-14T02:27:29.792Z'
 ---
 
 > 如果你和我一样，也觉得新年决心很愚蠢。

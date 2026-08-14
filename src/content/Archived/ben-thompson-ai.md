@@ -10,7 +10,7 @@ route_slug: 'ben-thompson-ai'
 source: notion
 notion_id: '37845fd1-9f92-8008-bf78-f0cb816db009'
 notion_parent: 'Archived'
-last_synced: '2026-07-14T12:39:12.623Z'
+last_synced: '2026-08-14T02:28:04.186Z'
 ---
 
 我通常不会提前透露采访对象，但这周要破例了我是在旧金山写的这篇，刚刚在微软 CEO 萨提亚·纳德拉的 Build 开发者大会主题演讲之后采访了他。一般来说，我会想立刻发布采访内容，好让你们有完整的分析背景。，因为主题和下面的更新内容关系太大。我是

@@ -10,7 +10,7 @@ route_slug: 'garry-tan-how-to-really-stop-your-agents-from-making-the-same-mista
 source: notion
 notion_id: '36345fd1-9f92-8004-a645-d6917eeddf0f'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:40.560Z'
+last_synced: '2026-08-14T02:27:56.609Z'
 ---
 
 LangChain 已经融资 1.6 亿美元。三年开发，估值十亿美元。他们的测试平台 LangSmith 确实非常成熟：轨迹评估、轨迹转数据集管道、LLM 作为评判者、回归测试套件、工具的单元测试框架。他们拥有这些组件。功劳归功于他们。

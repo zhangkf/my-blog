@@ -11,7 +11,7 @@ route_slug: 'akshay-hermes-agent'
 source: notion
 notion_id: '36445fd1-9f92-80b9-abeb-e15c17180d56'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:43.126Z'
+last_synced: '2026-08-14T02:28:00.826Z'
 ---
 
 **原文链接**：[https://x.com/i/status/2054564519280804028](https://x.com/i/status/2054564519280804028)  

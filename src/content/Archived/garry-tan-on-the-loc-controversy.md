@@ -10,7 +10,7 @@ route_slug: 'garry-tan-on-the-loc-controversy'
 source: notion
 notion_id: '36345fd1-9f92-80ca-b4aa-c339b5cf5367'
 notion_parent: 'Archived'
-last_synced: '2026-07-10T01:58:38.191Z'
+last_synced: '2026-08-14T02:27:53.466Z'
 ---
 
 **或者：当我提到我最近出货了多少行代码，以及实际数字到底说明了什么时，发生了什么。**
