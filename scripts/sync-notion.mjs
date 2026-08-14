@@ -17,6 +17,10 @@ import path from "node:path";
 import https from "node:https";
 import { fileURLToPath } from "node:url";
 import { getContentRoute, parseFrontmatterValue } from "./content-routing.mjs";
+import {
+  extractCopyrightFromMarkdown,
+  parseCopyrightText,
+} from "./copyright.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
@@ -218,6 +222,11 @@ async function downloadAsset(url, pageId, filename) {
 
 // ── Rich Text → Markdown ───────────────────────────────────────────
 
+function richTextToPlain(richTextArray) {
+  if (!richTextArray || richTextArray.length === 0) return "";
+  return richTextArray.map((rt) => rt.plain_text || "").join("");
+}
+
 function richTextToMarkdown(richTextArray) {
   if (!richTextArray || richTextArray.length === 0) return "";
   return richTextArray
@@ -237,7 +246,7 @@ function richTextToMarkdown(richTextArray) {
 
 // ── Blocks → Markdown ──────────────────────────────────────────────
 
-async function blocksToMarkdown(blocks, pageId, indent = "") {
+async function blocksToMarkdown(blocks, pageId, indent = "", ctx = null) {
   const lines = [];
   let numberedIndex = 0;
 
@@ -275,7 +284,7 @@ async function blocksToMarkdown(blocks, pageId, indent = "") {
         lines.push(`${indent}- ${richTextToMarkdown(data.rich_text)}`);
         if (block.has_children) {
           const children = await fetchAllBlocks(block.id);
-          const childMd = await blocksToMarkdown(children, pageId, indent + "  ");
+          const childMd = await blocksToMarkdown(children, pageId, indent + "  ", ctx);
           lines.push(childMd);
         }
         break;
@@ -285,7 +294,7 @@ async function blocksToMarkdown(blocks, pageId, indent = "") {
         lines.push(`${indent}${numberedIndex}. ${richTextToMarkdown(data.rich_text)}`);
         if (block.has_children) {
           const children = await fetchAllBlocks(block.id);
-          const childMd = await blocksToMarkdown(children, pageId, indent + "  ");
+          const childMd = await blocksToMarkdown(children, pageId, indent + "  ", ctx);
           lines.push(childMd);
         }
         break;
@@ -301,7 +310,7 @@ async function blocksToMarkdown(blocks, pageId, indent = "") {
         lines.push("");
         if (block.has_children) {
           const children = await fetchAllBlocks(block.id);
-          const childMd = await blocksToMarkdown(children, pageId, indent);
+          const childMd = await blocksToMarkdown(children, pageId, indent, ctx);
           lines.push(childMd);
         }
         lines.push(`${indent}</details>`);
@@ -323,22 +332,39 @@ async function blocksToMarkdown(blocks, pageId, indent = "") {
         });
         if (block.has_children) {
           const children = await fetchAllBlocks(block.id);
-          const childMd = await blocksToMarkdown(children, pageId, indent + "> ");
+          const childMd = await blocksToMarkdown(children, pageId, indent + "> ", ctx);
           lines.push(childMd);
         }
         lines.push("");
         break;
 
-      case "callout":
+      case "callout": {
         const icon = data.icon?.emoji || "💡";
-        lines.push(`${indent}> ${icon} ${richTextToMarkdown(data.rich_text)}`);
+        const head = richTextToMarkdown(data.rich_text);
+        let children = [];
         if (block.has_children) {
-          const children = await fetchAllBlocks(block.id);
-          const childMd = await blocksToMarkdown(children, pageId, indent + "> ");
+          children = await fetchAllBlocks(block.id);
+        }
+        const childPlain = children
+          .map((child) => {
+            const childData = child[child.type];
+            return childData?.rich_text ? richTextToPlain(childData.rich_text) : "";
+          })
+          .filter(Boolean);
+        const parsed = parseCopyrightText([head, ...childPlain].join("\n"));
+        // 顶层「出处」callout 抽成结构化字段，不再写入正文
+        if (parsed && indent === "" && ctx) {
+          ctx.copyright = parsed;
+          break;
+        }
+        lines.push(`${indent}> ${icon} ${head}`);
+        if (children.length) {
+          const childMd = await blocksToMarkdown(children, pageId, indent + "> ", ctx);
           lines.push(childMd);
         }
         lines.push("");
         break;
+      }
 
       case "divider":
         lines.push(`${indent}---`);
@@ -451,7 +477,13 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
 
   // Fetch and convert blocks
   const blocks = await fetchAllBlocks(pageId);
-  const markdown = await blocksToMarkdown(blocks, pageId);
+  const copyrightCtx = { copyright: null };
+  let markdown = await blocksToMarkdown(blocks, pageId, "", copyrightCtx);
+  if (!copyrightCtx.copyright) {
+    const extracted = extractCopyrightFromMarkdown(markdown);
+    markdown = extracted.markdown;
+    copyrightCtx.copyright = extracted.copyright;
+  }
 
   // Extract description from first meaningful paragraph
   const firstPara = blocks.find(
@@ -480,6 +512,18 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
     )}`,
     `route_slug: ${escapeYaml(existingRoute?.routeSlug || slugify(cleanTitle))}`,
     `source: notion`,
+    copyrightCtx.copyright?.author
+      ? `origin_author: ${escapeYaml(copyrightCtx.copyright.author)}`
+      : null,
+    copyrightCtx.copyright?.title
+      ? `origin_title: ${escapeYaml(copyrightCtx.copyright.title)}`
+      : null,
+    copyrightCtx.copyright?.url
+      ? `origin_url: ${escapeYaml(copyrightCtx.copyright.url)}`
+      : null,
+    copyrightCtx.copyright?.publication
+      ? `origin_publication: ${escapeYaml(copyrightCtx.copyright.publication)}`
+      : null,
     `notion_id: '${pageId}'`,
     `notion_parent: ${escapeYaml(parentTitle)}`,
     `last_synced: '${new Date().toISOString()}'`,

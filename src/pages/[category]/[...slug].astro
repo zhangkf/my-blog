@@ -7,6 +7,7 @@ import Header from '../../components/Header.astro';
 import QuoteCard from '../../components/QuoteCard.astro';
 import HighlightQuotes from '../../components/HighlightQuotes.astro';
 import Tldr from '../../components/Tldr.astro';
+import Copyright from '../../components/Copyright.astro';
 import { categories } from '../../notionCategories';
 
 export async function getStaticPaths() {
@@ -27,6 +28,10 @@ export async function getStaticPaths() {
 
 const { post, categoryDir, categorySlug } = Astro.props;
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
+const originAuthor = post.data.origin_author;
+const originTitle = post.data.origin_title;
+const originUrl = post.data.origin_url;
+const originPublication = post.data.origin_publication;
 const archived = post.data.archived === true;
 const { Content } = await render(post);
 /* 当前文章的二维码路径（由 scripts/gen-qr.mjs 构建期生成） */
@@ -176,7 +181,8 @@ const ogImage = `/og/${post.id}.png`;
 				body.paged-mode .prose figure,
 				body.paged-mode .prose table,
 				body.paged-mode .prose .article-header,
-				body.paged-mode .prose .hero-image {
+				body.paged-mode .prose .hero-image,
+				body.paged-mode .prose .haodu-copyright {
 					break-inside: avoid;
 				}
 				body.paged-mode .prose h1,
@@ -260,6 +266,12 @@ const ogImage = `/og/${post.id}.png`;
 						</div>
 					)}
 					<Content />
+					<Copyright
+						author={originAuthor}
+						title={originTitle}
+						url={originUrl}
+						publication={originPublication}
+					/>
 				</div>
 			</article>
 		</main>

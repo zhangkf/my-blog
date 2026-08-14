@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "sync": "node scripts/sync-notion.mjs",
+    "test:copyright": "node --test scripts/copyright.test.mjs",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed"
   },

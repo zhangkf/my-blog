@@ -4,6 +4,7 @@ const today = new Date();
 
 <footer>
 	&copy; {today.getFullYear()} 好读 · 高品质中文阅读
+	<span class="site-disclaimer">多数文章为中文整理译文，版权归原作者。</span>
 </footer>
 <style>
 	footer {
@@ -13,5 +14,10 @@ const today = new Date();
 		font-size: 0.82em;
 		border-top: 1px solid var(--border-faint);
 		margin-top: 2em;
+	}
+	.site-disclaimer {
+		display: block;
+		margin-top: 0.45em;
+		font-size: 0.95em;
 	}
 </style>

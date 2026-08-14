@@ -1,0 +1,227 @@
+---
+/**
+ * 文章出处栏
+ *
+ * 数据来源：
+ *   1. sync 从 Notion「出处」callout 写入的 origin_* frontmatter
+ *   2. 若 frontmatter 为空，客户端回退扫描正文里残留的出处引用块
+ *
+ * Notion 约定（文末 callout，图标随意）：
+ *   出处
+ *   作者：Oscar Sykes
+ *   原名：A brief history of instant coffee
+ *   原文：https://...
+ */
+interface Props {
+	author?: string;
+	title?: string;
+	url?: string;
+	publication?: string;
+}
+
+const { author = '', title = '', url = '', publication = '' } = Astro.props;
+const hasData = Boolean(author || title || url || publication);
+---
+
+<aside
+	class="haodu-copyright"
+	aria-label="文章出处"
+	hidden={!hasData}
+	data-author={author}
+	data-title={title}
+	data-url={url}
+	data-publication={publication}
+>
+	<div class="haodu-copyright-label">出处</div>
+	{publication && <p class="haodu-copyright-pub" data-field="publication">{publication}</p>}
+	{title && <p class="haodu-copyright-title" data-field="title">{title}</p>}
+	{author && <p class="haodu-copyright-author" data-field="author">{author}</p>}
+	{url && (
+		<p class="haodu-copyright-link" data-field="url">
+			<a href={url} target="_blank" rel="noopener noreferrer">阅读原文</a>
+		</p>
+	)}
+	<p class="haodu-copyright-note">中文由好读整理，版权归原作者。</p>
+</aside>
+
+<style is:global>
+	.prose .haodu-copyright {
+		margin: 2.8em 0 0.4em;
+		padding: 1.35em 0 0;
+		border-top: 1px solid var(--border-light);
+		color: rgb(var(--gray-dark));
+		break-inside: avoid;
+	}
+	.prose .haodu-copyright[hidden] {
+		display: none;
+	}
+	.prose .haodu-copyright p {
+		margin: 0;
+		text-align: left;
+		text-align-last: left;
+	}
+	.prose .haodu-copyright-label {
+		font-size: 0.72em;
+		letter-spacing: 0.18em;
+		color: rgb(var(--gray));
+		margin-bottom: 0.65em;
+	}
+	.prose .haodu-copyright-pub {
+		font-size: 0.88em;
+		color: rgb(var(--gray));
+		margin-bottom: 0.15em;
+	}
+	.prose .haodu-copyright-title {
+		font-style: italic;
+		color: rgb(var(--black));
+		line-height: 1.5;
+		margin-bottom: 0.2em;
+	}
+	.prose .haodu-copyright-author {
+		font-size: 0.92em;
+		color: rgb(var(--gray-dark));
+		margin-bottom: 0.45em;
+	}
+	.prose .haodu-copyright-link {
+		font-size: 0.9em;
+		margin-bottom: 0.2em;
+	}
+	.prose .haodu-copyright-note {
+		margin-top: 0.9em;
+		font-size: 0.82em;
+		color: rgb(var(--gray));
+	}
+</style>
+
+<script is:inline>
+(function () {
+	var aside = document.querySelector('.haodu-copyright');
+	var prose = document.querySelector('.prose');
+	if (!aside || !prose) return;
+
+	var HEADER_RE = /^(出处|版权|原文出处|copyright|source)(\b|[：:\s]|$)/i;
+	var EMOJI_RE = /^[\s\u3000]*(?:[\u2190-\u2BFF\u2600-\u27BF\u2300-\u23FF\uE000-\uF8FF\u{1F000}-\u{1FAFF}]\s*)+/u;
+
+	function stripEmoji(text) {
+		return String(text || '').replace(EMOJI_RE, '').trim();
+	}
+
+	function isHeader(line) {
+		return HEADER_RE.test(stripEmoji(line));
+	}
+
+	function matchField(text, labels) {
+		var label = labels.join('|');
+		var re = new RegExp(
+			'(?:^|[\\n\\s·|；;：:])(?:' + label + ')\\s*[：:]\\s*(.+?)(?=\\s*(?:作者|文章原名|原文标题|原名|原题|原文链接|原文|链接|Author|Title|URL|Link)\\s*[：:]|$)',
+			'is'
+		);
+		var m = text.match(re);
+		return m ? m[1].replace(/\s+/g, ' ').trim() : '';
+	}
+
+	function extractUrl(text) {
+		var md = text.match(/\[([^\]]*)\]\((https?:\/\/[^)\s]+)\)/);
+		if (md) return md[2];
+		var labeled = text.match(/(?:原文链接|原文|链接|URL|Link)\s*[：:]\s*(https?:\/\/[^\s)）>]+)/i);
+		if (labeled) return labeled[1].replace(/[.,;；。]+$/, '');
+		var bare = text.match(/https?:\/\/[^\s)）>\]]+/);
+		return bare ? bare[0].replace(/[.,;；。]+$/, '') : '';
+	}
+
+	function parseText(raw) {
+		var lines = String(raw || '').split('\n').map(function (line) { return line.trim(); }).filter(Boolean);
+		if (!lines.length || !isHeader(lines[0])) return null;
+		var blob = lines.map(stripEmoji).join('\n');
+		var author = matchField(blob, ['作者', 'Author']);
+		var title = matchField(blob, ['文章原名', '原文标题', '原名', '原题', 'Title']);
+		var url = extractUrl(blob);
+		var publication = '';
+		var rest = stripEmoji(lines[0]).match(/^(?:出处|版权|原文出处|copyright|source)[：:]\s*(.+)$/i);
+		if (rest && rest[1] && !/(作者|原名|原文|文章原名)[：:]/i.test(rest[1])) {
+			publication = rest[1].trim();
+		}
+		if (!author && !title && !url && !publication) return null;
+		return { author: author, title: title, url: url, publication: publication };
+	}
+
+	function findCallout() {
+		var quotes = prose.querySelectorAll('blockquote');
+		for (var i = 0; i < quotes.length; i++) {
+			if (quotes[i].classList.contains('haodu-tldr')) continue;
+			var firstLine = (quotes[i].textContent || '').trim().split('\n')[0] || '';
+			if (!isHeader(firstLine)) continue;
+			var nodes = [quotes[i]];
+			var texts = [(quotes[i].textContent || '').trim()];
+			var next = quotes[i].nextElementSibling;
+			while (next && next.tagName === 'BLOCKQUOTE') {
+				nodes.push(next);
+				texts.push((next.textContent || '').trim());
+				next = next.nextElementSibling;
+			}
+			return { nodes: nodes, text: texts.join('\n') };
+		}
+		return null;
+	}
+
+	function setField(name, value) {
+		var el = aside.querySelector('[data-field="' + name + '"]');
+		if (name === 'url') {
+			if (!el && value) {
+				el = document.createElement('p');
+				el.className = 'haodu-copyright-link';
+				el.setAttribute('data-field', 'url');
+				var note = aside.querySelector('.haodu-copyright-note');
+				aside.insertBefore(el, note);
+			}
+			if (el) {
+				if (!value) {
+					el.remove();
+					return;
+				}
+				var a = el.querySelector('a') || document.createElement('a');
+				a.href = value;
+				a.target = '_blank';
+				a.rel = 'noopener noreferrer';
+				a.textContent = '阅读原文';
+				if (!a.parentNode) el.appendChild(a);
+			}
+			return;
+		}
+		if (!el && value) {
+			el = document.createElement('p');
+			el.setAttribute('data-field', name);
+			el.className = name === 'title'
+				? 'haodu-copyright-title'
+				: name === 'author'
+					? 'haodu-copyright-author'
+					: 'haodu-copyright-pub';
+			var note = aside.querySelector('.haodu-copyright-note');
+			aside.insertBefore(el, note);
+		}
+		if (el) {
+			if (!value) el.remove();
+			else el.textContent = value;
+		}
+	}
+
+	var found = findCallout();
+	var hasServerData = !aside.hasAttribute('hidden');
+
+	if (found) {
+		found.nodes.forEach(function (node) {
+			node.hidden = true;
+		});
+		if (!hasServerData) {
+			var parsed = parseText(found.text);
+			if (parsed) {
+				setField('publication', parsed.publication);
+				setField('title', parsed.title);
+				setField('author', parsed.author);
+				setField('url', parsed.url);
+				aside.hidden = false;
+			}
+		}
+	}
+})();
+</script>
