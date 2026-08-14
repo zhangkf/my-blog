@@ -9,21 +9,20 @@ test('页脚和关于页展示全站版权声明', async ({ page }) => {
 });
 
 test('有出处的文章渲染统一版权栏，并隐藏原文末 callout', async ({ page }) => {
-	await page.goto('/health/birth-of-instant-coffee/');
+	await page.goto('/health/article-bmhhcz/');
 
 	const bar = page.locator('.haodu-copyright');
 	await expect(bar).toBeVisible();
-	await expect(bar).toContainText('Works in Progress');
-	await expect(bar).toContainText('A brief history of instant coffee');
-	await expect(bar).toContainText('Oscar Sykes');
+	await expect(bar).toContainText('How to Exist');
+	await expect(bar).toContainText('David Cain');
 	await expect(bar.getByRole('link', { name: '阅读原文' })).toHaveAttribute(
 		'href',
-		'https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/',
+		'https://www.raptitude.com/2026/07/how-to-exist/',
 	);
 	await expect(bar).toContainText('中文由好读整理，版权归原作者');
 
 	const leftover = page.locator('blockquote', { hasText: '出处' });
-	await expect(leftover).toBeHidden();
+	await expect(leftover).toHaveCount(0);
 });
 
 test('没有出处的文章不显示版权栏', async ({ page }) => {
