@@ -8,9 +8,12 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-dbvygf'
 source: notion
+origin_author: 'Daniel Miessler'
+origin_title: 'Companies Are Just a Graph of Algorithms'
+origin_url: 'https://danielmiessler.com/blog/companies-graph-of-algorithms'
 notion_id: '37645fd1-9f92-80a2-8c45-cc9d7d2be606'
 notion_parent: 'AI'
-last_synced: '2026-07-10T02:19:44.943Z'
+last_synced: '2026-08-14T02:10:14.548Z'
 ---
 
 **AI 即将把你的公司视为一系列可优化的组件**

@@ -8,9 +8,12 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-ktcopj'
 source: notion
+origin_author: 'Jack Maguire'
+origin_title: 'AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers'
+origin_url: 'https://jackmaguire.org/blog/ai-job-grief/'
 notion_id: '37745fd1-9f92-80c8-a4c9-d34f7209e237'
 notion_parent: 'AI'
-last_synced: '2026-07-10T02:19:45.936Z'
+last_synced: '2026-08-14T02:10:17.212Z'
 ---
 
 2025年夏天，Epic Games 的一次裁员让一名身患绝症的父亲失去了工作。根据讨论最热烈的报道，他的家人不仅失去了工作，还失去了他的人寿保险。Reddit 上记录这一事件的帖子在 r/technology 获得了 36,687 个 upvotes。评论区充满了震惊、愤怒和深深的无助。但这些评论中，却找不到一个能准确描述这件事的固定词汇。最接近的说法是一种反复出现的感受：被夺走的不仅仅是一份薪水，还有更多东西。

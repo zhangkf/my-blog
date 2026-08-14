@@ -8,9 +8,13 @@ archived: false
 route_category: 'health'
 route_slug: 'article-upen9x'
 source: notion
+origin_author: 'Brian Chesky'
+origin_title: 'How to Time Travel'
+origin_url: 'https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0'
+origin_publication: 'Medium'
 notion_id: '39145fd1-9f92-80d0-a8cf-c68c3a5d301d'
 notion_parent: 'Health'
-last_synced: '2026-07-10T02:19:41.181Z'
+last_synced: '2026-08-14T02:10:08.478Z'
 ---
 
 我曾遇见一位名叫查理的旅人。他走到我面前，说了一句令我永生难忘的话。他说，

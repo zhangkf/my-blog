@@ -8,9 +8,13 @@ archived: false
 route_category: 'ai'
 route_slug: 'dan-koe-ai'
 source: notion
+origin_author: 'Dan Koe'
+origin_title: 'How to survive AI mass replacement (and escape wage slavery)'
+origin_url: 'https://letters.thedankoe.com/p/how-to-survive-ai-mass-replacement'
+origin_publication: 'The Koe Letter'
 notion_id: '38845fd1-9f92-8007-8848-ce3105640837'
 notion_parent: 'AI'
-last_synced: '2026-07-10T02:19:47.749Z'
+last_synced: '2026-08-14T02:10:20.357Z'
 ---
 
 > 💡 TL;DR：如果你不主动创造一个日常 routine，你就会被分配一个。

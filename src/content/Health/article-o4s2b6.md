@@ -8,9 +8,13 @@ archived: false
 route_category: 'health'
 route_slug: 'article-o4s2b6'
 source: notion
+origin_author: 'Elena Verna'
+origin_title: 'IC work is the new career flex'
+origin_url: 'https://www.elenaverna.com/p/ic-work-is-the-new-career-flex'
+origin_publication: 'Elena''s Growth Scoop'
 notion_id: '39245fd1-9f92-803a-acb2-d27c4a30fad4'
 notion_parent: 'Health'
-last_synced: '2026-07-10T02:19:41.654Z'
+last_synced: '2026-08-14T02:10:09.369Z'
 ---
 
 ### 高影响力个人贡献者（HI-C！）的兴起

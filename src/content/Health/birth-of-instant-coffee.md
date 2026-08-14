@@ -8,9 +8,13 @@ archived: false
 route_category: 'health'
 route_slug: 'birth-of-instant-coffee'
 source: notion
+origin_author: 'Oscar Sykes, Benjamin Stubbing'
+origin_title: 'A brief history of instant coffee'
+origin_url: 'https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/'
+origin_publication: 'Works in Progress'
 notion_id: '36445fd1-9f92-8030-8aaf-c6cb9be21ec1'
 notion_parent: 'Health'
-last_synced: '2026-08-14T01:51:32.888Z'
+last_synced: '2026-08-14T02:10:00.584Z'
 ---
 
 **速溶咖啡看似平凡。它只是粉末加热水而已。但要让它真正发挥作用，却花了几十年的时间。**
