@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'birth-of-instant-coffee'
 source: notion
-origin_author: 'Oscar Sykes, Benjamin Stubbing'
-origin_title: 'A brief history of instant coffee'
-origin_url: 'https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/'
-origin_publication: 'Works in Progress'
 notion_id: '36445fd1-9f92-8030-8aaf-c6cb9be21ec1'
 notion_parent: 'Health'
-last_synced: '2026-08-14T01:42:10.898Z'
+last_synced: '2026-08-14T01:51:32.888Z'
 ---
 
 **速溶咖啡看似平凡。它只是粉末加热水而已。但要让它真正发挥作用，却花了几十年的时间。**
@@ -112,9 +108,3 @@ Flavourtech的旋转锥柱——最初为葡萄酒脱醇开发——已成为高
 虽然速溶咖啡可能永远不会成为咖啡鉴赏家的首选饮品，但几十年的创新已让它在数百万人的生活中占据一席之地。从战场上的士兵，到匆忙的早晨和露营旅行，当时间或设备不足时，它提供了一个实用的解决方案。
 
 *本杰明·斯塔宾是一位经济分析师。奥斯卡·赛克斯是一位软件……*
-
-> 📄 出处
-> 作者：Oscar Sykes, Benjamin Stubbing
-> 原名：A brief history of instant coffee
-> 原文：https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/
-

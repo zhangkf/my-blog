@@ -8,9 +8,12 @@ archived: false
 route_category: 'health'
 route_slug: 'article-bmhhcz'
 source: notion
+origin_author: 'David Cain'
+origin_title: 'How to Exist'
+origin_url: 'https://www.raptitude.com/2026/07/how-to-exist/'
 notion_id: '3ba45fd1-9f92-80df-a5a1-d9c9e1eca546'
 notion_parent: 'Health'
-last_synced: '2026-08-13T01:55:27.675Z'
+last_synced: '2026-08-14T01:51:40.060Z'
 ---
 
 这里有一个专为真正胆大者设计的实验。
@@ -108,10 +111,3 @@ last_synced: '2026-08-13T01:55:27.675Z'
 坚持定期护理可让过敏症状维持在较轻状态，而一旦疏忽，症状便会卷土重来。
 
 尤其是，你可能会发现自己不再那么需要娱乐或分散注意力。像刷手机消磨时间、随手吃零食、咬指甲、（放火？）以及反复纠结这类逃避型习惯，都会变得不那么有吸引力。当单纯的活着感觉还不错时，你就不必再做那么多事了。
-
-> ✍️ 出处
-> 作者：David Cain
-
-> 原名：How to Exist
-
-> 原文：[https://www.raptitude.com/2026/07/how-to-exist/](https://www.raptitude.com/2026/07/how-to-exist/)
