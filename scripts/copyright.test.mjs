@@ -46,6 +46,19 @@ test("出处后可带刊物名", () => {
   assert.equal(parsed.author, "Oscar Sykes");
 });
 
+test("识别刊物字段标签", () => {
+  const parsed = parseCopyrightText(`出处
+刊物：Raptitude
+原名：How to Exist
+作者：David Cain
+原文：https://www.raptitude.com/2026/07/how-to-exist/
+说明：中文由好读整理，版权归原作者`);
+  assert.equal(parsed.publication, "Raptitude");
+  assert.equal(parsed.author, "David Cain");
+  assert.equal(parsed.title, "How to Exist");
+  assert.equal(parsed.url, "https://www.raptitude.com/2026/07/how-to-exist/");
+});
+
 test("缺少部分字段仍然成立", () => {
   const parsed = parseCopyrightText("版权\n作者：张凯峰");
   assert.deepEqual(parsed, { author: "张凯峰" });

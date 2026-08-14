@@ -17,7 +17,7 @@ const EMOJI_RE =
 const HEADER_RE = /^(出处|版权|原文出处|copyright|source)(\b|[：:\s]|$)/i;
 
 const NEXT_FIELD =
-  "(?:作者|文章原名|原文标题|原名|原题|原文链接|原文|链接|Author|Title|URL|Link)\\s*[：:]";
+  "(?:作者|文章原名|原文标题|原名|原题|原文链接|原文|链接|刊物|出版物|刊名|说明|Author|Title|URL|Link|Publication)\\s*[：:]";
 
 function stripLeadingEmoji(text) {
   return String(text || "").replace(EMOJI_RE, "").trim();
@@ -84,22 +84,24 @@ export function parseCopyrightText(raw) {
     "Title",
   ]);
   const url = extractUrl(blob);
+  let publication = matchField(blob, ["刊物", "出版物", "刊名", "Publication"]);
 
-  let publication = "";
-  const first = stripLeadingEmoji(nonempty[0]);
-  const rest = first.match(
-    /^(?:出处|版权|原文出处|copyright|source)[：:]\s*(.+)$/i
-  );
-  if (rest) {
-    const leftover = rest[1].trim();
-    if (
-      leftover &&
-      !/^(作者|原名|文章原名|原文标题|原文链接|原文|链接|Author|Title|URL)/i.test(
-        leftover
-      ) &&
-      !/(作者|原名|原文|文章原名)[：:]/i.test(leftover)
-    ) {
-      publication = cleanValue(leftover);
+  if (!publication) {
+    const first = stripLeadingEmoji(nonempty[0]);
+    const rest = first.match(
+      /^(?:出处|版权|原文出处|copyright|source)[：:]\s*(.+)$/i
+    );
+    if (rest) {
+      const leftover = rest[1].trim();
+      if (
+        leftover &&
+        !/^(作者|原名|文章原名|原文标题|原文链接|原文|链接|刊物|说明|Author|Title|URL)/i.test(
+          leftover
+        ) &&
+        !/(作者|原名|原文|文章原名|刊物)[：:]/i.test(leftover)
+      ) {
+        publication = cleanValue(leftover);
+      }
     }
   }
 
