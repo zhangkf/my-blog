@@ -1,6 +1,6 @@
 ---
 title: '生活得自己去过'
-description: '这些年我做了很多播客访谈，现在对我称之为“播客主持人的标准收尾问题”已经习以为常。“我们的听众今天可以开始做哪一件事，”主持人常会问，或差不多意思的话，“能让他们开始把这套哲学用在自己的生活中？”'
+description: '这些年，我上过很多播客。主持人快结束时，总爱问同一个问题：“听众今天能做哪一件事，把你这套想法用起来？”'
 pubDate: '2026-10-03'
 heroImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
@@ -8,12 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-y0sn02'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'You have to do the living yourself'
-origin_publication: 'The Imperfectionist'
 notion_id: '3ee45fd1-9f92-8103-873b-edbc451c6f1d'
 notion_parent: 'Health'
-last_synced: '2026-10-03T14:55:11.674Z'
+last_synced: '2026-10-05T15:58:56.545Z'
 ---
 
 这些年，我上过很多播客。主持人快结束时，总爱问同一个问题：“听众今天能做哪一件事，把你这套想法用起来？”
@@ -41,3 +38,12 @@ Linker 这篇，和我理解的播客问题，接到一起了。问题不在日�
 “自我掌控”这种词，听着吓人。Linker 也说，现在更难了。过去还有学校、教会、社区，时不时推你一把。现在这些都弱了。但我仍然觉得，这条路比找“完美方法”要好走。那种找法没有尽头，会折磨你一辈子。而自我掌控只发生在当下，就是现在。过去失败的次数，不算账。将来会不会失败，也不用管。你现在试一次就行。可能会有点不舒服，那就选那个健康的选项，关掉社交媒体，再写一百个字，或者认真听对面的人把话说完。你一试，就已经成了。然后，下一个时刻又来，你再试一次。
 
 就这一件事。这就是我的答案。谢谢你请我来上节目。
+
+✍️ 出处
+
+出处
+
+- 刊物：The Imperfectionist
+- 原名：You have to do the living yourself
+- 作者：Oliver Burkeman
+- 说明：中文由好读整理，版权归原作者。原文来自作者邮件通讯。
