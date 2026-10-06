@@ -1,6 +1,6 @@
 ---
 title: '维系联络的艺术'
-description: '作者：帕姆·英格尔斯'
+description: '作者：maja'
 pubDate: '2026-08-22'
 heroImage: 'https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Health'
@@ -8,6 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-ljzvwq'
 source: notion
+origin_author: 'maja'
+origin_title: 'the art of staying in touch'
+origin_publication: 'Velvet Noise'
 notion_id: '3c445fd1-9f92-8031-bf0e-cef9b8dead9a'
 notion_parent: 'Health'
 last_synced: '2026-10-06T09:11:32.273Z'
@@ -17,7 +20,7 @@ last_synced: '2026-10-06T09:11:32.273Z'
 > ### 论现代友谊，以及当生活渐行渐远时如何保持亲密
 
 
-作者：帕姆·英格尔斯
+作者：maja
 
 ![“我说得对吗” 作者：帕姆·英格尔斯](https://substackcdn.com/image/fetch/$s_!b4Si!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F33bc36ee-3d49-4105-b42e-1257767dbf36_734x312.jpeg)
 
