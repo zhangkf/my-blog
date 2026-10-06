@@ -7,12 +7,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-68301m'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'Nobody''s ever ready'
-origin_publication: 'The Imperfectionist'
 notion_id: '3ed45fd1-9f92-8163-aa49-cfa80d32dcf8'
 notion_parent: 'Health'
-last_synced: '2026-10-05T15:58:55.235Z'
+last_synced: '2026-10-06T09:11:32.682Z'
 ---
 
 这期《不完美主义者》其实不是讲 AI 的。我保证。但它确实从 AI 说起。因为现在有种病，正在 AI 圈里集中爆发：胃里发紧的焦虑。世界变得太快，你拼尽全力才跟得上。几乎每天都有新的病毒式警告刷屏：大事要发生了，大多数人还没准备好。再不学习新技能，只剩 18 个月就过时了。言外之意都一样：这一步走错，你就被永远甩在后面，人生完蛋。
@@ -36,3 +33,12 @@ last_synced: '2026-10-05T15:58:55.235Z'
 这不耽误你用各种数字工具。你只是把它们放回工具的位置。某些情境下有用，某些情境下局限太大。它们不是神，不值得你牺牲生活去供奉。
 
 **我认为，这是面对这波技术炒作最好的清醒剂。我确信，这波热潮以后回看，会夸张得让人尴尬。就算我看错了，这样活也是做出好作品的路子。因为作品会源于鲜活感。而鲜活感，正是人们最想感受、最想连接的东西。就算这也错了——我很怀疑——至少，你会以一种更丰盈、更投入的方式度过在世的时间。去体验不确定那种颤抖的、心酸又神秘的真实。而不是一路紧绷、恐惧、跟它对抗。**
+
+✍️ 出处
+
+出处
+
+- 刊物：The Imperfectionist
+- 原名：Nobody's ever ready
+- 作者：Oliver Burkeman
+- 说明：中文由好读整理，版权归原作者。原文来自作者邮件通讯。

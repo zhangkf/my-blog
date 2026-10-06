@@ -8,12 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-vr9xsl'
 source: notion
-origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
-origin_title: 'Why AI hasn''t replaced software engineers, and won''t'
-origin_publication: 'AI as Normal Technology'
 notion_id: '3ef45fd1-9f92-8151-b321-ebfa7e1bd698'
 notion_parent: 'AI'
-last_synced: '2026-10-05T15:59:04.460Z'
+last_synced: '2026-10-06T09:11:45.248Z'
 ---
 
 人们对 AI 取代工作，充满焦虑和不确定。怎么越过含糊的警告和夸张的预言，让数据来说话？一个很好的切入点，是去看 AI 能力走得最远、采用又异常快的职业：软件工程。
@@ -127,3 +124,12 @@ Deena Mousa 指出，基于“AI 暴露度”这类指标的、宽泛的、全�
 四十年前，Fred Brooks 在一篇堪称非凡的文章《没有银弹》里，区分了软件的“本质复杂性”和“偶然复杂性”。他论证说，软件的部分复杂性是偶然的。源于当下技术的局限，比如编程语言的笨拙。会随着工具改进而缓解。但部分复杂性是本质的。因为“把软件的正确行为规格化”本身就很难。他有力地阐明了为什么三明治的“决定层”又厚又抗拒自动化。有意思的是，早在那时，通过 AI 提升程序员生产力的期望就已经很流行了！Brooks 论证说，AI 或任何其他技术只减少偶然复杂性，它不会带来数量级的生产力提升。Brooks 是《人月神话》的作者。那几乎肯定是软件工程领域最知名、影响最深远的写作。《没有银弹》后来也被收入该文集。
 
 感谢 Felix Chen 对本文草稿的反馈。
+
+✍️ 出处
+
+出处
+
+- 刊物：AI as Normal Technology
+- 原名：Why AI hasn't replaced software engineers, and won't
+- 作者：Arvind Narayanan 与 Sayash Kapoor
+- 说明：中文由好读整理，版权归原作者。原文来自作者邮件通讯。

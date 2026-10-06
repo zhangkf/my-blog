@@ -8,12 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-d19j0s'
 source: notion
-origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
-origin_title: 'AI existential risk probabilities are (still) too unreliable to inform policy'
-origin_publication: 'AI as Normal Technology'
 notion_id: '3f045fd1-9f92-818a-8511-ee8616187514'
 notion_parent: 'AI'
-last_synced: '2026-10-05T15:59:04.958Z'
+last_synced: '2026-10-06T09:11:45.800Z'
 ---
 
 两年前，我们写过一篇长文，专门拆解 p(doom)，也就是“AI 末日概率”。我们当时的说法很简单：这个数字的主要作用，是把模糊的直觉和恐惧，套上一层量化的外衣，洗成看起来很严谨的样子。今天重发这篇，是因为 p(doom) 这种话，正在驱动公共讨论和政策注意力，力度比以前还大。不意外，今天这些 AI 末日概率，也没比 2024 年的更严谨。
@@ -177,3 +174,12 @@ Metaculus 上那个智能持平问题，定义用的是数学、物理、计算�
 那政府对 AI 末日风险到底该做什么？我们的看法不是什么都不做。但他们应该拒绝那种在末日风险显得紧急又严重时，看起来很有说服力的政策。最典型的，是限制 AI 发展。正如本系列后续文章会论证的，这类政策不光没必要，还可能增加末日风险。相反，政府应该采取与多种风险估计都兼容的政策。就算风险微不足道，这些政策整体上也有好处。幸运的是，这种政策是存在的。政府也应该改政策制定流程，让它对新证据更灵敏。这一切，后面再细说。
 
 延伸阅读材料略。致谢略。
+
+✍️ 出处
+
+出处
+
+- 刊物：AI as Normal Technology
+- 原名：AI existential risk probabilities are (still) too unreliable to inform policy
+- 作者：Arvind Narayanan 与 Sayash Kapoor
+- 说明：中文由好读整理，版权归原作者。原文来自作者邮件通讯。
