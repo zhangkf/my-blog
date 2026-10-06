@@ -8,6 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-d19j0s'
 source: notion
+origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
+origin_title: 'AI existential risk probabilities are (still) too unreliable to inform policy'
+origin_publication: 'AI as Normal Technology'
 notion_id: '3f045fd1-9f92-818a-8511-ee8616187514'
 notion_parent: 'AI'
 last_synced: '2026-10-05T15:59:04.958Z'

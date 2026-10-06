@@ -8,6 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-2tedd8'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'Interest is everything'
+origin_publication: 'The Imperfectionist'
 notion_id: '3ed45fd1-9f92-8146-8298-cb9973d0eb2d'
 notion_parent: 'Health'
 last_synced: '2026-10-05T15:58:56.163Z'

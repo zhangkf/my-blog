@@ -8,6 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-8zpodr'
 source: notion
+origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
+origin_title: 'A big-tent or small-tent AI safety movement?'
+origin_publication: 'AI as Normal Technology'
 notion_id: '3ee45fd1-9f92-8133-b2f6-effbf4ed7800'
 notion_parent: 'AI'
 last_synced: '2026-10-05T15:59:03.232Z'

@@ -7,6 +7,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-68301m'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'Nobody's ever ready'
+origin_publication: 'The Imperfectionist'
 notion_id: '3ed45fd1-9f92-8163-aa49-cfa80d32dcf8'
 notion_parent: 'Health'
 last_synced: '2026-10-05T15:58:55.235Z'

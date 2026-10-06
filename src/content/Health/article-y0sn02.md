@@ -8,6 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-y0sn02'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'You have to do the living yourself'
+origin_publication: 'The Imperfectionist'
 notion_id: '3ee45fd1-9f92-8103-873b-edbc451c6f1d'
 notion_parent: 'Health'
 last_synced: '2026-10-05T15:58:56.545Z'

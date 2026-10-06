@@ -8,6 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-wwu5ty'
 source: notion
+origin_author: 'Ethan Mollick'
+origin_title: 'Choosing to Stay Human'
+origin_publication: 'One Useful Thing'
 notion_id: '3ed45fd1-9f92-811b-9066-d4f251654995'
 notion_parent: 'Health'
 last_synced: '2026-10-05T15:58:55.620Z'

@@ -8,6 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-vr9xsl'
 source: notion
+origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
+origin_title: 'Why AI hasn't replaced software engineers, and won't'
+origin_publication: 'AI as Normal Technology'
 notion_id: '3ef45fd1-9f92-8151-b321-ebfa7e1bd698'
 notion_parent: 'AI'
 last_synced: '2026-10-05T15:59:04.460Z'

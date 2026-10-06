@@ -8,6 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-o3ur70'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'Do what you want'
+origin_publication: 'The Imperfectionist'
 notion_id: '3ef45fd1-9f92-8189-97f2-c5aa42b5a7aa'
 notion_parent: 'Health'
 last_synced: '2026-10-05T15:58:57.006Z'

@@ -8,6 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-ejx5av'
 source: notion
+origin_author: 'Ethan Mollick'
+origin_title: 'The Dot and the Swarm'
+origin_publication: 'One Useful Thing'
 notion_id: '3ee45fd1-9f92-81e3-8a20-dc2c60602185'
 notion_parent: 'AI'
 last_synced: '2026-10-05T15:59:03.972Z'
