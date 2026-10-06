@@ -11,8 +11,6 @@ source: notion
 origin_author: 'Jack Maguire'
 origin_title: 'AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers'
 origin_url: 'https://jackmaguire.org/blog/ai-job-grief/'
-origin_author: 'Jack Maguire'
-origin_title: 'AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers'
 origin_publication: 'Jack Maguire（个人博客）'
 notion_id: '37745fd1-9f92-80c8-a4c9-d34f7209e237'
 notion_parent: 'AI'

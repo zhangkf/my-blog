@@ -11,8 +11,6 @@ source: notion
 origin_author: 'Daniel Miessler'
 origin_title: 'Companies Are Just a Graph of Algorithms'
 origin_url: 'https://danielmiessler.com/blog/companies-graph-of-algorithms'
-origin_author: 'Daniel Miessler'
-origin_title: 'Companies Are Just a Graph of Algorithms'
 origin_publication: 'Daniel Miessler（个人博客）'
 notion_id: '37645fd1-9f92-80a2-8c45-cc9d7d2be606'
 notion_parent: 'AI'

@@ -11,8 +11,6 @@ source: notion
 origin_author: 'Joan Tollifson'
 origin_title: 'Compulsion To Closure'
 origin_url: 'https://www.awakin.org/v2/read/view.php?tid=2602'
-origin_author: 'Joan Tollifson'
-origin_title: 'Compulsion To Closure'
 origin_publication: 'Awakin'
 notion_id: '39845fd1-9f92-8056-94d3-d7e780c67798'
 notion_parent: 'Health'
