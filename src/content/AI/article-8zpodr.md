@@ -97,12 +97,3 @@ AI 网络风险为什么没得到更多头条，不难解释：AI 是低显著�
 让我们搭一顶更大的帐篷。
 
 （感谢阿比·奥尔维拉、乔舒亚·萨克斯和罗希特·克里希南对初稿的反馈。）
-
-✍️ 出处
-
-出处
-
-- 刊物：AI as Normal Technology
-- 原名：A big-tent or small-tent AI safety movement?
-- 作者：Arvind Narayanan 与 Sayash Kapoor
-- 说明：中文由好读整理，版权归原作者。原文来自作者邮件通讯。
