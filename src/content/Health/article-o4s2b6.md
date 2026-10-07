@@ -1,6 +1,6 @@
 ---
 title: '个人贡献者工作成为新的职业优势'
-description: '爬上高层曾是成功的信号；Elena Verna 说新潮流是回归个人贡献者——"高影响力 IC"独立交付整个项目、拿领导级薪酬，AI 让这一切成为可能。'
+description: '过去，成功的信号是头衔："我是副总裁，我可是个大人物。"Elena Verna 说，新潮流是反方向：回到个人贡献者（IC）。'
 pubDate: '2026-07-03'
 heroImage: 'https://images.unsplash.com/photo-1682435487817-97287a23462c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-o4s2b6'
 source: notion
-origin_author: 'Elena Verna'
-origin_title: 'IC work is the new career flex'
-origin_url: 'https://www.elenaverna.com/p/ic-work-is-the-new-career-flex'
-origin_publication: 'Elena''s Growth Scoop'
 notion_id: '39245fd1-9f92-803a-acb2-d27c4a30fad4'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:33.602Z'
+last_synced: '2026-10-07T13:41:04.366Z'
 ---
 
 ## 摘要
@@ -51,3 +47,16 @@ last_synced: '2026-08-14T02:27:33.602Z'
 - 作者：Elena Verna
 - 刊物：Elena's Growth Scoop
 - 原文链接：[https://www.elenaverna.com/p/ic-work-is-the-new-career-flex](https://www.elenaverna.com/p/ic-work-is-the-new-career-flex)
+> ✍️ 出处
+
+> 
+
+> - 刊物：Elena's Growth Scoop
+
+> - 原名：IC work is the new career flex
+
+> - 作者：Elena Verna
+
+> - 原文链接：[https://www.elenaverna.com/p/ic-work-is-the-new-career-flex](https://www.elenaverna.com/p/ic-work-is-the-new-career-flex)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

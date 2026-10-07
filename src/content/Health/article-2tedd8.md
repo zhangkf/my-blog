@@ -1,6 +1,6 @@
 ---
 title: '兴趣就是一切'
-description: 'Burkeman：选题时别问"读者想看什么"，问"我对什么感兴趣"。追逐自己的兴趣，反而最能点燃别人的兴趣。而 AI 生成的东西，缺的恰恰就是"感兴趣"这种能力。'
+description: 'Burkeman 写这篇，起因很小：每次给通讯选题，心里那个"评判者"都会跳出来——选个讨喜的话题吧，别写你那些没人关心的怪癖。他的解法是打断它，只问一个问题：我真正感兴趣、想写的是什么？'
 pubDate: '2026-10-02'
 heroImage: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
@@ -8,12 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-2tedd8'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'Interest is everything'
-origin_publication: 'The Imperfectionist'
 notion_id: '3ed45fd1-9f92-8146-8298-cb9973d0eb2d'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:36.481Z'
+last_synced: '2026-10-07T13:41:07.412Z'
 ---
 
 ## 摘要
@@ -45,3 +42,17 @@ AI 那个注脚，是全文我最喜欢的一段。它给了"AI 味"一个全新
 ## 阅读原文
 
 英文原标题：Interest is everything，作者 Oliver Burkeman，刊物 The Imperfectionist。原文为邮件通讯，暂无公开链接。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：Interest is everything
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

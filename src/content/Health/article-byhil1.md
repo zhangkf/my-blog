@@ -1,6 +1,6 @@
 ---
 title: '末日并未临近'
-description: 'Burkeman 的一份公开声明：字面意义上的世界末日，短期内发生的可能性极低。我们高估自己时代的特殊性，这种心态有个名字，叫"时代沙文主义"。'
+description: 'Burkeman 发了一份"公开声明"，想缓解弥漫的极度焦虑：字面意义上的世界末日，短期内发生的可能性极低。我们几乎肯定不在人类文明的终结点，甚至大概率不在某种前所未有的剧烈断裂边缘。这不是"数据证明一切变好"的鸡汤，他强调这个时代危险而重要，但大致正常。'
 pubDate: '2026-06-15'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_metal_212S.jpg'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-byhil1'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'The end isn''t nigh'
-origin_publication: 'The Imperfectionist'
-origin_url: ''
 notion_id: '38045fd1-9f92-801a-8b34-c376b263c7d2'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:26.369Z'
+last_synced: '2026-10-07T13:41:02.708Z'
 ---
 
 ## 摘要
@@ -41,3 +37,16 @@ Burkeman 发了一份"公开声明"，想缓解弥漫的极度焦虑：字面意
 - 作者：Oliver Burkeman
 - 刊物：The Imperfectionist
 - 链接：暂缺（作者邮件通讯，无公开网页版）
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：The end isn't nigh
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

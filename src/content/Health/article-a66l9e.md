@@ -1,6 +1,6 @@
 ---
 title: '一串珠子'
-description: '世界坏消息太多、焦虑到僵住时怎么办？Burkeman 给了一个意象：把一天里做的事看成往绳上穿珠子，一颗一颗穿下去。'
+description: '查理·柯克遇刺、美国压制言论、英国本土主义回潮，再叠加加沙的惨剧、气候动荡、AI 可能灭绝人类的阴影。Burkeman 说，这是黑暗、不安、近乎末世的年月，人人被一种没着落的焦虑钉住：大事什么都做不了，小事又没法专心做。'
 pubDate: '2026-10-06'
 heroImage: 'https://images.unsplash.com/photo-1647987766377-9b888a197369?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-a66l9e'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'A string of beads'
-origin_publication: 'The Imperfectionist'
-origin_url: ''
 notion_id: '3f145fd1-9f92-815c-8ea6-e1523e35b2c8'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:38.240Z'
+last_synced: '2026-10-07T13:41:09.232Z'
 ---
 
 ## 摘要
@@ -41,3 +37,16 @@ last_synced: '2026-10-06T09:11:38.240Z'
 - 作者：Oliver Burkeman
 - 刊物：The Imperfectionist
 - 链接：暂缺（作者邮件通讯，无公开网页版）
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：A string of beads
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

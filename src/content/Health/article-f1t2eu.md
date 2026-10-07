@@ -1,6 +1,6 @@
 ---
 title: '现实总在不断展现'
-description: '放下"对结局的执念"：别再幻想走向某个一切搞定的终点。现实总在不断展现，你只需要活在当下，去做事。'
+description: '有人问 Burkeman：你现在还用效率方法吗？他说，对效率的执着和从前差不多。真正变的是，他不再幻想走向某个终点，在那里找到完美体系、对自己满意。如今只是在不断尝试。换方法不是因为旧方法失败，而是"如何安排时间"这个课题本身永远在演变。'
 pubDate: '2026-07-09'
 heroImage: 'https://app.notion.com/images/page-cover/texturelabs_wood_244S.jpg'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-f1t2eu'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'Reality just keeps unfolding'
-origin_publication: 'The Imperfectionist'
-origin_url: ''
 notion_id: '39845fd1-9f92-807b-b5fe-f0928bfc93d1'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:35.788Z'
+last_synced: '2026-10-07T13:41:04.678Z'
 ---
 
 ## 摘要
@@ -43,3 +39,16 @@ last_synced: '2026-08-14T02:27:35.788Z'
 - 作者：Oliver Burkeman
 - 刊物：The Imperfectionist
 - 链接：暂缺（作者邮件通讯，无公开网页版）
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：Reality just keeps unfolding
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

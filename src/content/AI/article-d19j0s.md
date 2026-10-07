@@ -1,6 +1,6 @@
 ---
 title: 'AI 末日概率，依然靠不住'
-description: 'Narayanan 与 Kapoor 重发长文拆解 p(doom)：没有参照类、没有可靠理论、主观估计满天飞——末日概率是"感觉穿上了数字的衣服"，不能用来指导政策。摘要与好读评论。'
+description: '这是一篇重发的长文。两年前作者拆解过 p(doom)——"AI 末日概率"；今天重发，是因为这类数字正在以前所未有的力度驱动公共讨论和政策注意力，而严谨程度并没有比 2024 年进步。核心主张只有一句：AI 末日概率预测太不可靠，不能用来指导政策，而且很误导。'
 pubDate: '2026-10-05'
 heroImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
@@ -10,11 +10,7 @@ route_slug: 'article-d19j0s'
 source: notion
 notion_id: '3f045fd1-9f92-818a-8511-ee8616187514'
 notion_parent: 'AI'
-last_synced: '2026-10-06T09:11:45.800Z'
-origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
-origin_title: 'AI existential risk probabilities are (still) too unreliable to inform policy'
-origin_publication: 'AI as Normal Technology'
-origin_url: 'https://www.normaltech.ai/p/p-doom'
+last_synced: '2026-10-07T13:41:13.958Z'
 ---
 
 ## 摘要
@@ -51,3 +47,16 @@ origin_url: 'https://www.normaltech.ai/p/p-doom'
 - 作者：Arvind Narayanan 与 Sayash Kapoor
 - 刊物：AI as Normal Technology
 - 原文链接：[AI existential risk probabilities are (still) too unreliable to inform policy](https://www.normaltech.ai/p/p-doom)
+> ✍️ 出处
+
+> 
+
+> - 刊物：AI as Normal Technology
+
+> - 原名：AI existential risk probabilities are (still) too unreliable to inform policy
+
+> - 作者：Arvind Narayanan 与 Sayash Kapoor
+
+> - 原文链接：[https://www.normaltech.ai/p/p-doom](https://www.normaltech.ai/p/p-doom)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

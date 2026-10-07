@@ -1,6 +1,6 @@
 ---
 title: 'AI 伤不了脑，但能伤思考'
-description: 'Mollick 回应"AI 会损伤大脑吗"的焦虑：MIT 那篇论文被误读了，真正的赌注不是神经元，而是思维习惯。学习、创意、群体协作三个领域，决定 AI 是帮脑还是伤脑的，永远是用法和顺序：先自己想，再问 AI。'
+description: '越来越多的人问 Mollick："AI 会损伤大脑吗？"他的回答是：不会。但这个问题本身值得认真对待，因为它暴露了我们真正的恐惧——AI 会对我们的思考能力做什么。'
 pubDate: '2026-10-07'
 heroImage: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'against-brain-damage'
 source: notion
-origin_author: 'Ethan Mollick'
-origin_title: 'Against "Brain Damage"'
-origin_publication: 'One Useful Thing'
-origin_url: 'https://www.oneusefulthing.org/p/against-brain-damage'
 notion_id: '3f245fd1-9f92-8181-9b64-f138a132f18b'
 notion_parent: 'Health'
-last_synced: '2026-10-07T07:48:30.000Z'
+last_synced: '2026-10-07T13:41:09.575Z'
 ---
 
 ## 摘要
@@ -51,3 +47,16 @@ Mollick 把战场分成三个领域。
 
 [阅读原文](https://www.oneusefulthing.org/p/against-brain-damage)
 
+> ✍️ 出处
+
+> 
+
+> - 刊物：One Useful Thing
+
+> - 原名：Against "Brain Damage"
+
+> - 作者：Ethan Mollick
+
+> - 原文链接：[https://www.oneusefulthing.org/p/against-brain-damage](https://www.oneusefulthing.org/p/against-brain-damage)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

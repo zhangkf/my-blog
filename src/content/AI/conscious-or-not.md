@@ -1,6 +1,6 @@
 ---
 title: 'AI 有意识吗？'
-description: 'Kevin Kelly 谈 AI 意识：别再争"有还是没有"了，意识不是开关，而是一条连续谱。大猩猩、海豚、免疫系统、大语言模型，各有各的配比。而人类式意识的关键原料，是语言。'
+description: '我记事以来，人们就一直在争：机器到底能不能拥有智能。到了 2026 年，这场争论结束了——大语言模型在很多脑力任务上超过普通人，"机器永远不可能智能"这种论调，消失了。'
 pubDate: '2026-10-07'
 heroImage: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'conscious-or-not'
 source: notion
-origin_author: 'Kevin Kelly'
-origin_title: 'Conscious or Not'
-origin_publication: 'Kevin Kelly（Substack）'
-origin_url: 'https://kevinkelly.substack.com/p/conscious-or-not'
 notion_id: '3f245fd1-9f92-8127-9a23-c15fc638acc1'
 notion_parent: 'AI'
-last_synced: '2026-10-07T06:16:02.572Z'
+last_synced: '2026-10-07T13:41:14.659Z'
 ---
 
 ## 摘要
@@ -48,3 +44,17 @@ Kelly 的反驳很漂亮：AlphaFold 确实有一丝"分子意识"，离人类�
 英文原标题：Conscious or Not，作者 Kevin Kelly，刊物 Kevin Kelly（Substack）。
 
 [阅读原文](https://kevinkelly.substack.com/p/conscious-or-not)
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：Kevin Kelly（Substack）
+
+> - 原名：Conscious or Not
+
+> - 作者：Kevin Kelly
+
+> - 原文链接：[https://kevinkelly.substack.com/p/conscious-or-not](https://kevinkelly.substack.com/p/conscious-or-not)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

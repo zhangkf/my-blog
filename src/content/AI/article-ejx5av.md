@@ -1,6 +1,6 @@
 ---
 title: '点与蜂群'
-description: 'Mollick 承认自己判断错了：他以为组织智能体需要人类精心设计，结果模型自己学会了组织——从"苦涩的教训"到 OpenAI 的智能体蜂群 88 小时解出千禧年数学难题。'
+description: 'Mollick 先认了个错。他这几年写 Substack，自认对 AI 的方向和速度判断得不错。但有一件大事，他判断错了。'
 pubDate: '2026-10-03'
 heroImage: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
@@ -10,11 +10,7 @@ route_slug: 'article-ejx5av'
 source: notion
 notion_id: '3ee45fd1-9f92-81e3-8a20-dc2c60602185'
 notion_parent: 'AI'
-last_synced: '2026-10-06T09:11:44.720Z'
-origin_author: 'Ethan Mollick'
-origin_title: 'The Dot and the Swarm'
-origin_publication: 'One Useful Thing'
-origin_url: 'https://www.oneusefulthing.org/p/the-dot-and-the-swarm'
+last_synced: '2026-10-07T13:41:13.204Z'
 ---
 
 ## 摘要
@@ -54,3 +50,17 @@ Meta 的 Muse、OpenAI 的 dots 这类个人智能体，已经不用你打进大
 刊物：One Useful Thing
 
 原文链接：[The Dot and the Swarm](https://www.oneusefulthing.org/p/the-dot-and-the-swarm)
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：One Useful Thing
+
+> - 原名：The Dot and the Swarm
+
+> - 作者：Ethan Mollick
+
+> - 原文链接：[https://www.oneusefulthing.org/p/the-dot-and-the-swarm](https://www.oneusefulthing.org/p/the-dot-and-the-swarm)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

@@ -1,6 +1,6 @@
 ---
 title: 'Dan Koe：2026人生重置协议'
-description: 'Dan Koe 的人生重置协议：别先立目标，先换掉那个立目标的人。七个观念加一整天的提问流程。本文为摘要与评论。'
+description: 'Dan Koe 开宗明义：新年决心都是废纸。不是因为目标不重要，而是大多数人搞错了改变的顺序。'
 pubDate: '2026-06-22'
 heroImage: 'https://app.notion.com/images/page-cover/woodcuts_sekka_3.jpg'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'dan-koe-2026'
 source: notion
-origin_author: 'Dan Koe'
-origin_title: 'How to fix your entire life in 1 day'
-origin_url: 'https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1'
-origin_publication: 'The Koe Letter'
 notion_id: '38745fd1-9f92-8037-8a0c-c0715e1c1b22'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:29.792Z'
+last_synced: '2026-10-07T13:41:03.217Z'
 ---
 
 ## 摘要
@@ -51,3 +47,16 @@ Dan Koe 开宗明义：新年决心都是废纸。不是因为目标不重要，
 - 作者：Dan Koe
 - 刊物：The Koe Letter
 - [阅读原文](https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1)
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Koe Letter
+
+> - 原名：How to fix your entire life in 1 day
+
+> - 作者：Dan Koe
+
+> - 原文链接：[https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1](https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

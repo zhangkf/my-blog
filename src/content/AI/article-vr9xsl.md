@@ -1,6 +1,6 @@
 ---
 title: '为什么 AI 还没有取代软件工程师，也不会取代'
-description: '用数据检验"AI 导致大规模裁员"的叙事：Block、Snap、Intuit 的故事背后都是财务压力；软件工作是"决定—执行—交付"三明治，AI 只压缩了中间层。'
+description: 'Narayanan 和 Kapoor 开宗明义：关于 AI 取代工作，警告含糊、预言夸张，不如让数据说话。最好的观察点，是 AI 能力走得最远、采用最快的职业：软件工程。'
 pubDate: '2026-10-04'
 heroImage: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
@@ -10,11 +10,7 @@ route_slug: 'article-vr9xsl'
 source: notion
 notion_id: '3ef45fd1-9f92-8151-b321-ebfa7e1bd698'
 notion_parent: 'AI'
-last_synced: '2026-10-06T09:11:45.248Z'
-origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
-origin_title: 'Why AI hasn''t replaced software engineers, and won''t'
-origin_publication: 'AI as Normal Technology'
-origin_url: 'https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers'
+last_synced: '2026-10-07T13:41:13.534Z'
 ---
 
 ## 摘要
@@ -52,3 +48,17 @@ Narayanan 和 Kapoor 开宗明义：关于 AI 取代工作，警告含糊、预�
 刊物：AI as Normal Technology
 
 原文链接：[Why AI hasn't replaced software engineers, and won't](https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers)
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：AI as Normal Technology
+
+> - 原名：Why AI hasn't replaced software engineers, and won't
+
+> - 作者：Arvind Narayanan 与 Sayash Kapoor
+
+> - 原文链接：[https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers](https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

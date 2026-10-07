@@ -1,6 +1,6 @@
 ---
 title: '生活得自己去过'
-description: 'Burkeman：有意义的生活不在方法，而在一次次亲自下场。本文为摘要与好读评论。'
+description: 'Burkeman 上播客，主持人结尾总爱问：听众今天能做哪一件事，把你这套想法用起来？问题是好意，但他听出了另一层意思：有没有偷懒的办法？照着规则做，就不用亲自下场，不用面对生活的不确定、风险和强度。'
 pubDate: '2026-10-03'
 heroImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-y0sn02'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'You have to do the living yourself'
-origin_publication: 'The Imperfectionist'
-origin_url: 'https://ckarchive.com/b/k0umh6h56x947t6n33wn4aokxz577h8hgxwdn'
 notion_id: '3ee45fd1-9f92-8103-873b-edbc451c6f1d'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:36.813Z'
+last_synced: '2026-10-07T13:41:07.800Z'
 ---
 
 ## 摘要
@@ -51,3 +47,16 @@ Burkeman 也承认，护栏有用，意志力有上限。他自己写这篇文�
 - 作者：Oliver Burkeman
 - 刊物：The Imperfectionist
 - [阅读原文](https://ckarchive.com/b/k0umh6h56x947t6n33wn4aokxz577h8hgxwdn)
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：You have to do the living yourself
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：[https://ckarchive.com/b/k0umh6h56x947t6n33wn4aokxz577h8hgxwdn](https://ckarchive.com/b/k0umh6h56x947t6n33wn4aokxz577h8hgxwdn)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

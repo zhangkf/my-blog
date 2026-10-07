@@ -1,6 +1,6 @@
 ---
 title: '共存：协同智能的终结'
-description: '《协同智能》写的是聊天机器人时代；自主智能体来了，Mollick 在新书《共存》里回答三个更怪的问题：何时拒绝 AI 的主动帮忙，何时交出方向盘。'
+description: '《协同智能》出版两年了。书写 AI，成绩远超 Mollick 预期：登上《纽约时报》畅销榜，译成 25 种以上语言。但他说，这本书写的是一个属于聊天机器人和早期模型的世界。在那个世界里，和 AI 共事是协作练习：来回跟聊天机器人打磨，带上自己的知识和质疑，人站在中心，聊天机器人是帮手。'
 pubDate: '2026-10-06'
 heroImage: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-xlifx8'
 source: notion
-origin_author: 'Ethan Mollick'
-origin_title: 'Co-Existence and the End of Co-Intelligence'
-origin_publication: 'One Useful Thing'
-origin_url: 'https://www.oneusefulthing.org/p/co-existence-and-the-end-of-co-intelligence'
 notion_id: '3f145fd1-9f92-81d4-b73f-f56add62a4e7'
 notion_parent: 'AI'
-last_synced: '2026-10-06T01:43:27.000Z'
+last_synced: '2026-10-07T13:41:14.316Z'
 ---
 
 ## 摘要
@@ -50,3 +46,17 @@ last_synced: '2026-10-06T01:43:27.000Z'
 刊物：One Useful Thing
 
 原文链接：[Co-Existence and the End of Co-Intelligence](https://www.oneusefulthing.org/p/co-existence-and-the-end-of-co-intelligence)
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：One Useful Thing
+
+> - 原名：Co-Existence and the End of Co-Intelligence
+
+> - 作者：Ethan Mollick
+
+> - 原文链接：[https://www.oneusefulthing.org/p/co-existence-and-the-end-of-co-intelligence](https://www.oneusefulthing.org/p/co-existence-and-the-end-of-co-intelligence)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

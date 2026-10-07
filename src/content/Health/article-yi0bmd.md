@@ -1,6 +1,6 @@
 ---
 title: '成年友谊的无声哀伤'
-description: '一场深夜来电引出的观察：成年人的友谊往往死于"什么都没发生"，而我们甚至不承认自己有权难过。本文为摘要与评论。'
+description: '凌晨一点四十分，一通电话打来。不是发信息，是直接拨号。作者第一反应是出事了。结果什么都没发生——朋友只是听了一首老歌，突然想打个电话。'
 pubDate: '2026-07-02'
 heroImage: 'https://images.unsplash.com/photo-1622037022824-0c71d511ef3c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-yi0bmd'
 source: notion
-origin_author: 'Pranav Jain'
-origin_title: 'The quiet grief of adult friendship'
-origin_url: 'https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/'
-origin_publication: 'The Times of India'
 notion_id: '39145fd1-9f92-8021-964f-d1c4795980e8'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:30.744Z'
+last_synced: '2026-10-07T13:41:03.562Z'
 ---
 
 ## 摘要
@@ -45,3 +41,16 @@ last_synced: '2026-08-14T02:27:30.744Z'
 - 作者：Pranav Jain
 - 刊物：The Times of India
 - [阅读原文](https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/)
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Times of India
+
+> - 原名：The quiet grief of adult friendship
+
+> - 作者：Pranav Jain
+
+> - 原文链接：[https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/](https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

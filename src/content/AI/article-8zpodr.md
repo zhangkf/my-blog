@@ -1,6 +1,6 @@
 ---
 title: 'AI 安全，该搭大帐篷还是小帐篷？'
-description: 'Narayanan 与 Kapoor：末日警告可能是真诚但错的，对 AI 安全政策反而有害。主张搭一顶"大帐篷"：别只盯着超级智能，先把具体的灾难性风险防御做好。摘要与好读评论。'
+description: '最近关于 AI 安全有两种流行叙事：要么末日风险真实且迫在眉睫，要么 AI 大佬们在演戏——"心理战"、炒作、变相的监管俘获。作者提出第三种可能：末日警告是真诚的，但只是错了，而且对 AI 安全有害。'
 pubDate: '2026-10-03'
 heroImage: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
@@ -10,11 +10,7 @@ route_slug: 'article-8zpodr'
 source: notion
 notion_id: '3ee45fd1-9f92-8133-b2f6-effbf4ed7800'
 notion_parent: 'AI'
-last_synced: '2026-10-06T09:11:44.254Z'
-origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
-origin_title: 'A big-tent or small-tent AI safety movement?'
-origin_publication: 'AI as Normal Technology'
-origin_url: 'https://www.normaltech.ai/p/a-big-tent-or-small-tent-ai-safety'
+last_synced: '2026-10-07T13:41:12.539Z'
 ---
 
 ## 摘要
@@ -47,3 +43,16 @@ origin_url: 'https://www.normaltech.ai/p/a-big-tent-or-small-tent-ai-safety'
 - 作者：Arvind Narayanan 与 Sayash Kapoor
 - 刊物：AI as Normal Technology
 - 原文链接：[A big-tent or small-tent AI safety movement?](https://www.normaltech.ai/p/a-big-tent-or-small-tent-ai-safety)
+> ✍️ 出处
+
+> 
+
+> - 刊物：AI as Normal Technology
+
+> - 原名：A big-tent or small-tent AI safety movement?
+
+> - 作者：Arvind Narayanan 与 Sayash Kapoor
+
+> - 原文链接：[https://www.normaltech.ai/p/a-big-tent-or-small-tent-ai-safety](https://www.normaltech.ai/p/a-big-tent-or-small-tent-ai-safety)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

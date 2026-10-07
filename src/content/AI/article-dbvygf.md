@@ -1,6 +1,6 @@
 ---
 title: '公司本质上就是一张算法图谱'
-description: 'Daniel Miessler：公司本质上是一张"算法图谱"，AI 即将把每个流程拆开优化；咨询公司先动手，然后是持续优化。唯一的出路是迎头而上。摘要与好读评论。'
+description: '作者的核心判断是：很多人低估 AI 的影响，是因为没意识到"一切都是算法"——而公司本身，就是一张算法图谱。'
 pubDate: '2026-06-05'
 heroImage: 'https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'AI'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-dbvygf'
 source: notion
-origin_author: 'Daniel Miessler'
-origin_title: 'Companies Are Just a Graph of Algorithms'
-origin_url: 'https://danielmiessler.com/blog/companies-graph-of-algorithms'
-origin_publication: 'Daniel Miessler（个人博客）'
 notion_id: '37645fd1-9f92-80a2-8c45-cc9d7d2be606'
 notion_parent: 'AI'
-last_synced: '2026-10-06T09:11:38.801Z'
+last_synced: '2026-10-07T13:41:09.970Z'
 ---
 
 ## 摘要
@@ -47,3 +43,16 @@ last_synced: '2026-10-06T09:11:38.801Z'
 - 作者：Daniel Miessler
 - 刊物：Daniel Miessler（个人博客）
 - 原文链接：[Companies Are Just a Graph of Algorithms](https://danielmiessler.com/blog/companies-graph-of-algorithms)
+> ✍️ 出处
+
+> 
+
+> - 刊物：Daniel Miessler（个人博客）
+
+> - 原名：Companies Are Just a Graph of Algorithms
+
+> - 作者：Daniel Miessler
+
+> - 原文链接：[https://danielmiessler.com/blog/companies-graph-of-algorithms](https://danielmiessler.com/blog/companies-graph-of-algorithms)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

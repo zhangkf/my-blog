@@ -1,6 +1,6 @@
 ---
 title: '做你想做的事'
-description: '被世界崩坏感或待办清单淹没时，Burkeman 的建议是：把生活转向你真正想做的事，而非你觉得自己应该做的事——并正面回答那个"这不是特权吗"的质疑。'
+description: '被"世界正在崩坏"的感觉淹没，被待办清单淹没，或卡在人生低谷里动不了——Burkeman 说，有个办法大概率有用：把生活转向你真正想做的事，而不是你觉得自己应该怎么活。'
 pubDate: '2026-10-04'
 heroImage: 'https://embed.filekitcdn.com/e/8UttBKqg4o6BP1DNRup4f/4J1sr6WcTk5aStesXXHUyf'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-o3ur70'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'Do what you want'
-origin_publication: 'The Imperfectionist'
-origin_url: ''
 notion_id: '3ef45fd1-9f92-8189-97f2-c5aa42b5a7aa'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:37.220Z'
+last_synced: '2026-10-07T13:41:08.224Z'
 ---
 
 ## 摘要
@@ -49,3 +45,16 @@ last_synced: '2026-10-06T09:11:37.220Z'
 - 作者：Oliver Burkeman
 - 刊物：The Imperfectionist
 - 原文链接：暂缺
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：Do what you want
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

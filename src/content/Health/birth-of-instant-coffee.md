@@ -1,6 +1,6 @@
 ---
 title: '速溶咖啡的诞生'
-description: '一勺咖啡粉加水，看似平凡。它背后藏着两百年的技术攻坚：从黄油糊、糖蜜精，到喷雾干燥、冷冻干燥与闪冻。本文为摘要与评论。'
+description: '速溶咖啡看似平凡：粉末加水，搅一搅就好。可要让它真的好喝，人类花了两百多年。'
 pubDate: '2026-05-18'
 heroImage: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'birth-of-instant-coffee'
 source: notion
-origin_author: 'Oscar Sykes, Benjamin Stubbing'
-origin_title: 'A brief history of instant coffee'
-origin_url: 'https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/'
-origin_publication: 'Works in Progress'
 notion_id: '36445fd1-9f92-8030-8aaf-c6cb9be21ec1'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:25.200Z'
+last_synced: '2026-10-07T13:41:02.322Z'
 ---
 
 ## 摘要
@@ -53,3 +49,16 @@ last_synced: '2026-08-14T02:27:25.200Z'
 - 作者：Oscar Sykes, Benjamin Stubbing
 - 刊物：Works in Progress
 - [阅读原文](https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/)
+> ✍️ 出处
+
+> 
+
+> - 刊物：Works in Progress
+
+> - 原名：A brief history of instant coffee
+
+> - 作者：Oscar Sykes, Benjamin Stubbing
+
+> - 原文链接：[https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/](https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

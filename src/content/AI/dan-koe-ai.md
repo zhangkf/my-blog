@@ -1,6 +1,6 @@
 ---
 title: 'Dan Koe：如何在 AI 大规模替代中幸存'
-description: '所有工作不会在几秒内消失；真正的威胁是你把生存依赖在别人手里。Koe 谈工资奴隶制、五个成功要素，以及如何成为"不可雇佣的人"。'
+description: '先说清楚：所有工作不会在几秒钟内消失。Dan Koe 开篇就自嘲了自己的标题党。社交媒体上那些喊"去他妈的 AI"的人，喊完行为一点没变，既没拓宽技能，也没适应新世界。'
 pubDate: '2026-06-23'
 heroImage: 'https://images.unsplash.com/photo-1630603334774-c8ae1c1f1fce?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'AI'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'dan-koe-ai'
 source: notion
-origin_author: 'Dan Koe'
-origin_title: 'How to survive AI mass replacement (and escape wage slavery)'
-origin_url: 'https://letters.thedankoe.com/p/how-to-survive-ai-mass-replacement'
-origin_publication: 'The Koe Letter'
 notion_id: '38845fd1-9f92-8007-8848-ce3105640837'
 notion_parent: 'AI'
-last_synced: '2026-08-14T02:27:47.508Z'
+last_synced: '2026-10-07T13:41:11.813Z'
 ---
 
 ## 摘要
@@ -58,3 +54,17 @@ Koe 这篇能进好读，靠的是选题：它讲的是"人怎么活"，不是"�
 刊物：The Koe Letter
 
 原文链接：[How to survive AI mass replacement (and escape wage slavery)](https://letters.thedankoe.com/p/how-to-survive-ai-mass-replacement)
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Koe Letter
+
+> - 原名：How to survive AI mass replacement (and escape wage slavery)
+
+> - 作者：Dan Koe
+
+> - 原文链接：[https://letters.thedankoe.com/p/how-to-survive-ai-mass-replacement](https://letters.thedankoe.com/p/how-to-survive-ai-mass-replacement)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

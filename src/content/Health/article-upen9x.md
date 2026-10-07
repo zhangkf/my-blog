@@ -1,6 +1,6 @@
 ---
 title: '时间旅行指南'
-description: 'Chesky：新体验让人生变长，旅途越多记忆越鲜活。本文为摘要与好读评论。'
+description: '一位叫 Charlie 的旅人对 Chesky 说：我旅行，是因为它让生命感觉更漫长。'
 pubDate: '2026-07-02'
 heroImage: 'https://images.unsplash.com/photo-1547376231-d1cbe4b1be19?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-upen9x'
 source: notion
-origin_author: 'Brian Chesky'
-origin_title: 'How to Time Travel'
-origin_url: 'https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0'
-origin_publication: 'Medium'
 notion_id: '39145fd1-9f92-80d0-a8cf-c68c3a5d301d'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:31.599Z'
+last_synced: '2026-10-07T13:41:03.984Z'
 ---
 
 ## 摘要
@@ -43,3 +39,16 @@ Chesky 算了一笔账。坐校车上学，一年 200 天，十几年下来 2000
 - 作者：Brian Chesky
 - 刊物：Medium
 - [阅读原文](https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0)
+> ✍️ 出处
+
+> 
+
+> - 刊物：Medium
+
+> - 原名：How to Time Travel
+
+> - 作者：Brian Chesky
+
+> - 原文链接：[https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0](https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

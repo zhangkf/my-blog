@@ -1,6 +1,6 @@
 ---
 title: '特德姜：不，人工智能并没有意识'
-description: '姜峯楠：把聊天机器人当成有意识的存在，是把流利误认为灵魂。LLM 只是句子续写机器，《Claude 的宪法》与其说是道德教育，不如说是一份角色卡。摘要与好读评论。'
+description: 'Anthropic 发布了一份 84 页的《Claude 的宪法》，CEO 说对"AI 可能有意识"持开放态度，驻场哲学家担心 Claude 会"焦虑"。姜峯楠的回答是：不，绝对不是。把生成文本的流利程度误认为意识，会让我们在每次使用聊天机器人时，把责任归咎于完全错误的对象。'
 pubDate: '2026-06-15'
 heroImage: 'https://app.notion.com/images/page-cover/woodcuts_9.jpg'
 category: 'AI'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-e69cs4'
 source: notion
-origin_author: 'Ted Chiang'
-origin_title: 'No, Artificial Intelligence Is Not Conscious'
-origin_url: 'https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/'
-origin_publication: 'The Atlantic'
 notion_id: '38045fd1-9f92-8076-8401-e7f6494bf3c6'
 notion_parent: 'AI'
-last_synced: '2026-08-14T02:27:45.423Z'
+last_synced: '2026-10-07T13:41:11.304Z'
 ---
 
 ## 摘要
@@ -49,3 +45,16 @@ LLM 是一台一次只生成一个词的机器。聊天机器人本质上是手�
 - 作者：Ted Chiang
 - 刊物：The Atlantic
 - 原文链接：[No, Artificial Intelligence Is Not Conscious](https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/)
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Atlantic
+
+> - 原名：No, Artificial Intelligence Is Not Conscious
+
+> - 作者：Ted Chiang
+
+> - 原文链接：[https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/](https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

@@ -1,6 +1,6 @@
 ---
 title: '对闭合的强迫性追求'
-description: '托利夫森谈人对"确定答案"的强迫：解实际问题时它是生存利器，一旦延伸到终极真理，就成了焦虑的源头。放下抓取，安住当下，焦虑自会消散。'
+description: '人对不确定性有一种近乎强迫的忍耐无能。托利夫森借用"闭合强迫"这个说法：我们总想确定一切、抓住要点、锁定正确答案，并以绝对的把握掌握终极真相。'
 pubDate: '2026-07-09'
 heroImage: 'https://app.notion.com/images/page-cover/usda_oranges.png'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-krn5xx'
 source: notion
-origin_author: 'Joan Tollifson'
-origin_title: 'Compulsion To Closure'
-origin_url: 'https://www.awakin.org/v2/read/view.php?tid=2602'
-origin_publication: 'Awakin'
 notion_id: '39845fd1-9f92-8056-94d3-d7e780c67798'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:29.911Z'
+last_synced: '2026-10-07T13:41:05.116Z'
 ---
 
 ## 摘要
@@ -45,3 +41,16 @@ last_synced: '2026-10-06T09:11:29.911Z'
 - 作者：Joan Tollifson
 - 刊物：Awakin
 - 原文链接：[https://www.awakin.org/v2/read/view.php?tid=2602](https://www.awakin.org/v2/read/view.php?tid=2602)
+> ✍️ 出处
+
+> 
+
+> - 刊物：Awakin
+
+> - 原名：Compulsion To Closure
+
+> - 作者：Joan Tollifson
+
+> - 原文链接：[https://www.awakin.org/v2/read/view.php?tid=2602](https://www.awakin.org/v2/read/view.php?tid=2602)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

@@ -1,6 +1,6 @@
 ---
 title: 'AI 工作悲伤——席卷科技工作者的无名心理危机'
-description: 'AI 替代带来的不只是失业恐惧，而是一种尚未被命名的悲伤：工作即身份，裁员被包装成战略调整，悲伤没有被允许的出口。'
+description: 'Jack Maguire 提出一个判断：AI 替代正在制造一种独特的情感，它最接近悲伤，而不是普通的恐惧、焦虑或倦怠。他给了它一个名字：AI 工作悲伤。'
 pubDate: '2026-06-06'
 heroImage: 'https://app.notion.com/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg'
 category: 'AI'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-ktcopj'
 source: notion
-origin_author: 'Jack Maguire'
-origin_title: 'AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers'
-origin_publication: 'Jack Maguire（个人博客）'
-origin_url: 'https://jackmaguire.org/blog/ai-job-grief/'
 notion_id: '37745fd1-9f92-80c8-a4c9-d34f7209e237'
 notion_parent: 'AI'
-last_synced: '2026-10-06T09:11:41.488Z'
+last_synced: '2026-10-07T13:41:10.987Z'
 ---
 
 ## 摘要
@@ -52,3 +48,17 @@ Maguire 的诚实值得记一笔。他用的证据主要是 Reddit 帖子的热�
 刊物：Jack Maguire（个人博客）
 
 原文链接：[AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers](https://jackmaguire.org/blog/ai-job-grief/)
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：Jack Maguire（个人博客）
+
+> - 原名：AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers
+
+> - 作者：Jack Maguire
+
+> - 原文链接：[https://jackmaguire.org/blog/ai-job-grief/](https://jackmaguire.org/blog/ai-job-grief/)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

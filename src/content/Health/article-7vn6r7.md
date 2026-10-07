@@ -1,6 +1,6 @@
 ---
 title: '我们别再谈人工智能了'
-description: 'Burkeman 的意向声明：AI 已经成了当代过度思考最强的触发器。他决定放下它——不是无视变革，而是不再让它主宰注意力。生活所包含的，远远超出软件所能企及的范围。'
+description: '开头是个禅宗故事：两个和尚背女子过河，走出几里后，一个还在为破戒耿耿于怀。另一个说：我早已把她放下，你为什么还背着？Burkeman 说，AI 在他心里就像那个河边的女子——他写作时不用 AI，工作之外偶尔当搜索引擎用，本来没什么纠结。但他发现，自己没法跟朋友聊天、发帖子、甚至安静地做白日梦，而话题最后不绕到 AI 上。'
 pubDate: '2026-08-12'
 heroImage: 'https://app.notion.com/images/page-cover/usda_pear.png'
 category: 'Health'
@@ -8,12 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-7vn6r7'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'Let''s stop talking about A.I.'
-origin_publication: 'The Imperfectionist'
 notion_id: '3ba45fd1-9f92-806c-bf7e-e60747f8ff57'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:39.787Z'
+last_synced: '2026-10-07T13:41:05.775Z'
 ---
 
 ## 摘要
@@ -41,3 +38,17 @@ last_synced: '2026-08-14T02:27:39.787Z'
 ## 阅读原文
 
 英文原标题：Let's stop talking about A.I.，作者 Oliver Burkeman，刊物 The Imperfectionist。原文为邮件通讯，暂无公开链接。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：Let's stop talking about A.I.
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

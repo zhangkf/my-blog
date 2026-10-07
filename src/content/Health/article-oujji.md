@@ -1,6 +1,6 @@
 ---
 title: '自由书写的生活之道'
-description: 'Burkeman：放下控制欲反而更有行动力，自由书写的道理可以搬到生活里。本文为摘要与好读评论。'
+description: '自由书写的做法很简单：定个十分钟的计时器，不停笔、不删除，把脑子里冒出来的东西全写下来，哪怕是垃圾。'
 pubDate: '2026-10-05'
 heroImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-oujji'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'The freewriting way of life'
-origin_publication: 'The Imperfectionist'
-origin_url: ''
 notion_id: '3f045fd1-9f92-81d7-8a75-f98d23c27f85'
 notion_parent: 'Health'
-last_synced: '2026-10-05T07:00:52.610Z'
+last_synced: '2026-10-07T13:41:08.849Z'
 ---
 
 ## 摘要
@@ -47,3 +43,16 @@ last_synced: '2026-10-05T07:00:52.610Z'
 - 作者：Oliver Burkeman
 - 刊物：The Imperfectionist
 - 原文链接：暂缺（未找到可验证的公开存档链接）
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：The freewriting way of life
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

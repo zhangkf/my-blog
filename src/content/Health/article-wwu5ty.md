@@ -1,6 +1,6 @@
 ---
 title: '选择继续做人'
-description: 'Mollick：警惕 AI 时代的"认知投降"，关键在于是让 AI 替你想还是推着你想。本文为摘要与好读评论。'
+description: '打开社交媒体，满屏的帖子长得可疑地相似，评论区很多是 AI 生成的。学术论文、报纸评论、获奖小说，无一幸免。Mollick 说，潦草提示词带出来的文字，每个词里的意义少得可怜，只是长得像意义的"注意力吸血鬼"：耗你的脑力去解码，不还你等量的理解。'
 pubDate: '2026-10-02'
 heroImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-wwu5ty'
 source: notion
-origin_author: 'Ethan Mollick'
-origin_title: 'Choosing to Stay Human'
-origin_publication: 'One Useful Thing'
-origin_url: 'https://www.oneusefulthing.org/p/choosing-to-stay-human'
 notion_id: '3ed45fd1-9f92-811b-9066-d4f251654995'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:36.130Z'
+last_synced: '2026-10-07T13:41:06.834Z'
 ---
 
 ## 摘要
@@ -53,3 +49,16 @@ Mollick 的结论：重点不是回避 AI，而是有意识地用。现在正是
 - 作者：Ethan Mollick
 - 刊物：One Useful Thing
 - [阅读原文](https://www.oneusefulthing.org/p/choosing-to-stay-human)
+> ✍️ 出处
+
+> 
+
+> - 刊物：One Useful Thing
+
+> - 原名：Choosing to Stay Human
+
+> - 作者：Ethan Mollick
+
+> - 原文链接：[https://www.oneusefulthing.org/p/choosing-to-stay-human](https://www.oneusefulthing.org/p/choosing-to-stay-human)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

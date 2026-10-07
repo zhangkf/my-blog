@@ -1,18 +1,15 @@
 ---
 title: '没有人真正准备好'
-description: 'Burkeman：AI 圈正在爆发一种病——胃里发紧的焦虑。但"抵达安全地带"根本不可能，不确定是我们的基本状态。办法不是绷紧迎接厄运，而是安顿进不确定性里，一天接一天往前走。'
+description: '这期 Burkeman 从 AI 说起，但不是讲 AI 的。他说，现在 AI 圈里有种病在集中爆发：胃里发紧的焦虑。世界变得太快，几乎每天都有病毒式警告刷屏——大事要发生了，大多数人还没准备好，再不学新技能只剩 18 个月。言外之意都一样：这一步走错，你就被永远甩在后面。'
 pubDate: '2026-10-02'
 category: 'Health'
 archived: false
 route_category: 'health'
 route_slug: 'article-68301m'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'Nobody''s ever ready'
-origin_publication: 'The Imperfectionist'
 notion_id: '3ed45fd1-9f92-8163-aa49-cfa80d32dcf8'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:32.682Z'
+last_synced: '2026-10-07T13:41:06.483Z'
 ---
 
 ## 摘要
@@ -42,3 +39,17 @@ last_synced: '2026-10-06T09:11:32.682Z'
 ## 阅读原文
 
 英文原标题：Nobody's ever ready，作者 Oliver Burkeman，刊物 The Imperfectionist。原文为邮件通讯，暂无公开链接。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：Nobody's ever ready
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

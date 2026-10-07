@@ -1,6 +1,6 @@
 ---
 title: '那么，下一Token预测将我们置于何地？'
-description: '0x5FC3 的檄文：AI 极端乐观主义者的"已解决"话术背后，是阶级问题。劳动是普通人唯一的谈判筹码，正在被夺走。AI 提高了产出上限，也提高了门槛。'
+description: '这篇的火气很大。作者 0x5FC3 先瞄准一种话术：网上某些 AI 极端乐观主义者，特别爱用"已解决""搞定"来宣告一个个行业终结——"动画已解决""编程已解决""研究生搞定"。这不是中性的技术描述，里面带着幸灾乐祸的快感，带着部落主义的攻击性。'
 pubDate: '2026-06-06'
 heroImage: 'https://images.unsplash.com/photo-1672911640817-d2902754be5a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'AI'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'token'
 source: notion
-origin_author: '0x5FC3'
-origin_title: 'So, Where Does Next-Token Prediction Leave Us?'
-origin_url: 'https://pop.rdi.sh/where-does-next-token-prediction-leave-us/'
-origin_publication: 'POP RDI; RET'
 notion_id: '37745fd1-9f92-8076-a48c-e2b35ec2ca86'
 notion_parent: 'AI'
-last_synced: '2026-08-14T02:27:41.848Z'
+last_synced: '2026-10-07T13:41:10.344Z'
 ---
 
 ## 摘要
@@ -48,3 +44,17 @@ last_synced: '2026-08-14T02:27:41.848Z'
 英文原标题：So, Where Does Next-Token Prediction Leave Us?，作者 0x5FC3，刊物 POP RDI; RET。
 
 [阅读原文](https://pop.rdi.sh/where-does-next-token-prediction-leave-us/)
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：POP RDI; RET
+
+> - 原名：So, Where Does Next-Token Prediction Leave Us?
+
+> - 作者：0x5FC3
+
+> - 原文链接：[https://pop.rdi.sh/where-does-next-token-prediction-leave-us/](https://pop.rdi.sh/where-does-next-token-prediction-leave-us/)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

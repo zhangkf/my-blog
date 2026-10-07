@@ -1,6 +1,6 @@
 ---
 title: '维系联络的艺术'
-description: '异地友谊不会自己保鲜：共同背景越少，寒暄成本越高。作者收集了一套"把目标放小"的微举动——随手照片、语音便签、毫无缘由的问候，让亲密抵御距离。'
+description: '朋友散了，往往不是吵架，而是生活把人带向了不同的时区。作者给远在重洋之外的挚友打电话，聊起这个：年复一年，爱的地图越拓越宽，每位朋友都成了一条轨道，需要不断努力才能回归。'
 pubDate: '2026-08-22'
 heroImage: 'https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-ljzvwq'
 source: notion
-origin_author: '帕姆·英格尔斯'
-origin_title: '维系联络的艺术'
-origin_publication: 'Substack（英文原名待考）'
-origin_url: ''
 notion_id: '3c445fd1-9f92-8031-bf0e-cef9b8dead9a'
 notion_parent: 'Health'
-last_synced: '2026-10-06T15:56:17.017Z'
+last_synced: '2026-10-07T13:41:06.136Z'
 ---
 
 ## 摘要
@@ -47,3 +43,16 @@ last_synced: '2026-10-06T15:56:17.017Z'
 - 作者：帕姆·英格尔斯
 - 刊物：Substack（英文原名待考）
 - 原文链接：暂缺
+> ✍️ 出处
+
+> 
+
+> - 刊物：Substack（英文原名待考）
+
+> - 原名：维系联络的艺术
+
+> - 作者：帕姆·英格尔斯
+
+> - 原文链接：暂缺
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。

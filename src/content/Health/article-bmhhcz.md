@@ -1,6 +1,6 @@
 ---
 title: '如何存在'
-description: '坐三分钟，什么都不做，还要知足常乐。David Cain 说，这个极简实验会暴露一个真相：光是存在本身，就让人难以承受。'
+description: 'Cain 设计了一个实验，专给胆大的人：坐三分钟，遵守两条规则。第一，什么都不做：不动，不坐立不安，不任思绪飘飞，呼吸和眨眼可以。第二，知足常乐：对无所事事的状态完全自在，不试图改变什么，不焦躁。'
 pubDate: '2026-08-12'
 heroImage: 'https://app.notion.com/images/page-cover/artemis_ii_6.jpg'
 category: 'Health'
@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-bmhhcz'
 source: notion
-origin_author: 'David Cain'
-origin_title: 'How to Exist'
-origin_url: 'https://www.raptitude.com/2026/07/how-to-exist/'
-origin_publication: 'Raptitude'
 notion_id: '3ba45fd1-9f92-80df-a5a1-d9c9e1eca546'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:37.889Z'
+last_synced: '2026-10-07T13:41:05.453Z'
 ---
 
 ## 摘要
@@ -45,3 +41,16 @@ Cain 设计了一个实验，专给胆大的人：坐三分钟，遵守两条规
 - 作者：David Cain
 - 刊物：Raptitude
 - 链接：[How to Exist](https://www.raptitude.com/2026/07/how-to-exist/)
+> ✍️ 出处
+
+> 
+
+> - 刊物：Raptitude
+
+> - 原名：How to Exist
+
+> - 作者：David Cain
+
+> - 原文链接：[https://www.raptitude.com/2026/07/how-to-exist/](https://www.raptitude.com/2026/07/how-to-exist/)
+
+> - 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。
