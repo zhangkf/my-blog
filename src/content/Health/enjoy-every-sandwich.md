@@ -3,9 +3,9 @@ title: '享受每一份三明治'
 description: '这个引人入胜的副标题，真让你很想读下去，对吧？！'
 pubDate: '2026-09-22'
 heroImage: 'https://substackcdn.com/image/fetch/$s_!VZY4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6227760a-3238-42dd-ae04-a84728f14980_3300x2550.png'
-category: 'Archived'
-archived: true
-route_category: 'archived'
+category: 'Health'
+archived: false
+route_category: 'health'
 route_slug: 'enjoy-every-sandwich'
 source: 'Substack'
 origin_author: 'Brad Montague'
