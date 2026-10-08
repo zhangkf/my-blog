@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'the-power-of-immediacy'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'The power of immediacy'
-origin_publication: 'The Imperfectionist'
-origin_url: 'https://ckarchive.com/b/r8u8hov3qpe9w4e48nzg83sden4n66h6hw83o'
 notion_id: '3f345fd1-9f92-81f1-8a63-c82baa438f34'
 notion_parent: 'Health'
-last_synced: '2026-10-08T01:48:00.000Z'
+last_synced: '2026-10-08T04:00:46.128Z'
 ---
 
 ## 摘要
@@ -23,7 +19,7 @@ Burkeman 最近干了一件痛快事：删掉了攒着"以后看"的 300 篇文�
 
 这之前，他正处在创作休耕期，好几天"什么都没干"，内心戏很足。转折点恰恰是那场大清理：他原以为自己缺的是攒够资源、攒出动力，结果缺的是腾出空间，让动力自己进来。
 
-**他给这种行为起了个名，叫"[囤积式刷屏](https://hardlyworking1.substack.com/p/hoarding-type-scrolling)"——好内容先存下来，以后再看。问题有两个：存下来的东西，极少真的会去看；就算看了，也不再是当初被打动时的那份鲜活，而是一种还欠账、清库存的义务感。**
+**他给这种行为起了个名，叫"**[**囤积式刷屏**](https://hardlyworking1.substack.com/p/hoarding-type-scrolling)**"——好内容先存下来，以后再看。问题有两个：存下来的东西，极少真的会去看；就算看了，也不再是当初被打动时的那份鲜活，而是一种还欠账、清库存的义务感。**
 
 清单、计划、愿望单也一样：收藏代替了行动。他扔掉的那些清单里，只有极少数是真正怕忘掉的时效性事项；大多数是"重新设计 newsletter 模板""跟儿子学语言""买顶帐篷"这种根本不会忘的愿望。写下来，并没有让他离去做更近一步——反而更远了。
 
@@ -50,3 +46,15 @@ Burkeman 最近干了一件痛快事：删掉了攒着"以后看"的 300 篇文�
 英文原标题：The power of immediacy，作者 Oliver Burkeman，刊物 The Imperfectionist。
 
 [阅读原文](https://ckarchive.com/b/r8u8hov3qpe9w4e48nzg83sden4n66h6hw83o)
+
+> ✍️ 出处
+
+> 刊物：The Imperfectionist
+
+> 原名：The power of immediacy
+
+> 作者：Oliver Burkeman
+
+> 原文链接：[https://ckarchive.com/b/r8u8hov3qpe9w4e48nzg83sden4n66h6hw83o](https://ckarchive.com/b/r8u8hov3qpe9w4e48nzg83sden4n66h6hw83o)
+
+> 说明：本文为摘要与评论，非全文翻译；观点归原作者，评论归好读。原文来自作者邮件通讯。
