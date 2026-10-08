@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-dbvygf'
 source: notion
-origin_author: 'Daniel Miessler'
-origin_title: 'Companies Are Just a Graph of Algorithms'
-origin_url: 'https://danielmiessler.com/blog/companies-graph-of-algorithms'
-origin_publication: ''
 notion_id: '37645fd1-9f92-80a2-8c45-cc9d7d2be606'
 notion_parent: 'AI'
-last_synced: '2026-10-06T09:11:38.801Z'
+last_synced: '2026-10-08T11:20:06.013Z'
 ---
 
 **AI 即将把你的公司视为一系列可优化的组件**
@@ -169,3 +165,16 @@ AI 很快就会大量做这些事，而且往往比大多数人类做得更好�
 3. AI 即将让这一过程成为所有企业的常态，因为公司迫不及待地想要使用 AI 进行优化，而 AI 的燃料就是透明度。
 4. 无论你是企业主还是员工，现在是时候开始做好准备了。
 5. 理解你的企业作为一张算法图谱的样子，并开始思考在 AI 到来之前它会推荐什么。
+> ✍️ 出处
+
+> 
+
+> - 刊物：暂缺
+
+> - 原名：Companies Are Just a Graph of Algorithms
+
+> - 作者：Daniel Miessler
+
+> - 原文链接：[https://danielmiessler.com/blog/companies-graph-of-algorithms](https://danielmiessler.com/blog/companies-graph-of-algorithms)
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

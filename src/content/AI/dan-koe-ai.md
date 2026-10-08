@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'dan-koe-ai'
 source: notion
-origin_author: 'Dan Koe'
-origin_title: 'How to survive AI mass replacement (and escape wage slavery)'
-origin_url: 'https://letters.thedankoe.com/p/how-to-survive-ai-mass-replacement'
-origin_publication: 'The Koe Letter'
 notion_id: '38845fd1-9f92-8007-8848-ce3105640837'
 notion_parent: 'AI'
-last_synced: '2026-08-14T02:27:47.508Z'
+last_synced: '2026-10-08T11:20:09.745Z'
 ---
 
 > 💡 TL;DR：如果你不主动创造一个日常 routine，你就会被分配一个。
@@ -373,3 +369,17 @@ Peterson、Huberman、Watts——他们都有“个人品牌”，但他们与�
 下次再聊。
 
 **— Dan**
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Koe Letter
+
+> - 原名：How to survive AI mass replacement (and escape wage slavery)
+
+> - 作者：Dan Koe
+
+> - 原文链接：[https://letters.thedankoe.com/p/how-to-survive-ai-mass-replacement](https://letters.thedankoe.com/p/how-to-survive-ai-mass-replacement)
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

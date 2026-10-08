@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-o4s2b6'
 source: notion
-origin_author: 'Elena Verna'
-origin_title: 'IC work is the new career flex'
-origin_url: 'https://www.elenaverna.com/p/ic-work-is-the-new-career-flex'
-origin_publication: 'Elena''s Growth Scoop'
 notion_id: '39245fd1-9f92-803a-acb2-d27c4a30fad4'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:33.602Z'
+last_synced: '2026-10-08T11:20:01.604Z'
 ---
 
 ### 高影响力个人贡献者（HI-C！）的兴起
@@ -154,3 +150,17 @@ last_synced: '2026-08-14T02:27:33.602Z'
 领导者们：别再忙于应付各种议程、演示文稿和季度计划了，回归初心，重拾当初开启你职业生涯的那门手艺吧。看看团队路线图上某个有价值但本月可能无法完成的项目。别把它委派给别人，试着亲自动手去做（必要时可以借助人工智能）。当你亲身尝试并看到自己能走多远时，你就会像我一样恍然大悟。也许这样，你就能重新找回对工作的热爱。
 
 如今，既然无需管理团队也能获得实实在在的影响力（以及相应的丰厚回报），那我们就达成共识吧：把精力投入到创造自己热爱的事业上，而不是去攀爬那条令人厌恶的晋升阶梯。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：Elena's Growth Scoop
+
+> - 原名：IC work is the new career flex
+
+> - 作者：Elena Verna
+
+> - 原文链接：[https://www.elenaverna.com/p/ic-work-is-the-new-career-flex](https://www.elenaverna.com/p/ic-work-is-the-new-career-flex)
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

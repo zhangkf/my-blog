@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-a66l9e'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'A string of beads'
-origin_url: ''
-origin_publication: 'The Imperfectionist'
 notion_id: '3f145fd1-9f92-815c-8ea6-e1523e35b2c8'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:38.240Z'
+last_synced: '2026-10-08T11:20:05.125Z'
 ---
 
 不用我说你也知道，这是黑暗、不安、近乎末世的年月。我在英美朋友圈里，人人都不安：查理·柯克遇刺，以及随后美国对言论的打压；英国本土主义和反移民情绪回潮；再叠加加沙的惨剧、气候动荡，还有 AI 可能灭绝人类的阴影。
@@ -38,3 +34,17 @@ last_synced: '2026-10-06T09:11:38.240Z'
 **我们能做的，是把珠子一颗一颗穿下去，并慢慢长出一种内在的信任：相信以后需要穿的珠子，到时候也穿得上。** （有人说过，焦虑的反面不是平静，而是相信自己能应付以后发生的事。）要做的只有"下一件对的事"——荣格这么说，《冰雪奇缘》里的安娜也这么说。其实想想，这也是唯一能做的：选下一颗珠子，穿上，再选下一颗，再穿。穿过末世般的年月，也穿过好的年月，能穿多少年，就穿多少年。
 
 这个想法让我平静，但不止平静。还有劲，有力量。在当代生活的疲惫和迷失里，它常常让我兴奋地想去选下一颗珠子。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：A string of beads
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

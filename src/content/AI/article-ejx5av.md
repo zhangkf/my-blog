@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-ejx5av'
 source: notion
-origin_author: 'Ethan Mollick'
-origin_title: 'The Dot and the Swarm'
-origin_url: ''
-origin_publication: 'One Useful Thing'
 notion_id: '3ee45fd1-9f92-81e3-8a20-dc2c60602185'
 notion_parent: 'AI'
-last_synced: '2026-10-06T09:11:44.720Z'
+last_synced: '2026-10-08T11:20:10.467Z'
 ---
 
 我自认这几年写 Substack，对 AI 的方向和速度判断得不错。但最近，我好像有一件大事判断错了。过去一年我一直在写：我猜人得像经理一样和智能体共事，决定怎么把工作分给智能体、怎么组织它们。我原以为，要让智能体有效地组队工作，需要精心构造。就像建一家公司，还需要时间摸索。
@@ -66,3 +62,17 @@ OpenClaw 和它的后继者，我称之为 Claw 类产品。想法是：给一�
 做得好，且智能体和我们的需求对齐，这可能意味着人的工作更多，而不是更少。组织贵的时候，组织只尝试能配备人手的事。组织便宜了，值得尝试的事的清单可以变长。纳维-斯托克斯那一轮里，智能体做了组织工作。人决定把它们指向哪里，并在过程中重新评估。你可以争论 OpenAI 把它们指向了正确的事没有。25 位菲尔兹奖得主争论了。但这种分工本身，至少目前看来是对的。
 
 另外提醒一下，我的新书《共存》将于 10 月 20 日出版。如果你想读或听（我读了有声书，读得有点太快），你可以预订。这对我作为作者有帮助，你也能获得一个很酷的预订奖励。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：One Useful Thing
+
+> - 原名：The Dot and the Swarm
+
+> - 作者：Ethan Mollick
+
+> - 原文链接：暂缺
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

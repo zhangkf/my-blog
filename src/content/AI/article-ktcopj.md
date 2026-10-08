@@ -8,20 +8,16 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-ktcopj'
 source: notion
-origin_author: 'Jack Maguire'
-origin_title: 'AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers'
-origin_url: 'https://jackmaguire.org/blog/ai-job-grief/'
-origin_publication: ''
 notion_id: '37745fd1-9f92-80c8-a4c9-d34f7209e237'
 notion_parent: 'AI'
-last_synced: '2026-10-06T09:11:41.488Z'
+last_synced: '2026-10-08T11:20:08.547Z'
 ---
 
 2025年夏天，Epic Games 的一次裁员让一名身患绝症的父亲失去了工作。根据讨论最热烈的报道，他的家人不仅失去了工作，还失去了他的人寿保险。Reddit 上记录这一事件的帖子在 r/technology 获得了 36,687 个 upvotes。评论区充满了震惊、愤怒和深深的无助。但这些评论中，却找不到一个能准确描述这件事的固定词汇。最接近的说法是一种反复出现的感受：被夺走的不仅仅是一份薪水，还有更多东西。
 
 这个帖子并非孤例。它属于一个更大的模式，如今几乎随处可见。只要花一个下午浏览 Reddit 上关于 AI 和工作的社区——包括 r/technology、r/datascience、r/Futurology 和 r/analytics——你就会不断看到同类帖子。在过去六个月里，关于 AI 驱动的工作替代讨论中，最受关注的帖子都带有相同的情感色彩。把它们放在一起阅读，就会发现一种尚未被正式命名的情感状态：它没有官方名称，没有人力资源政策，也没有成熟的临床框架。工作者们不仅仅害怕失去工作，许多人正在哀悼一种尚未完全发生的丧失。
 
-![](/notion-assets/37745fd1-9f92-80c8-a4c9-d34f7209e237/37845fd19f928098999ff056dddbe96f.png)
+![]()
 
 本文提出三个核心主张：
 
@@ -125,3 +121,16 @@ Reddit 上的记录从另一个方向抵达了同一堵墙。Futurology 那个�
 - 相互拟社会性与数字关系
 - 将 AI 作为日常问题解决工具
 - 为新英格兰渔船打造的数据平台
+> ✍️ 出处
+
+> 
+
+> - 刊物：暂缺
+
+> - 原名：AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers
+
+> - 作者：Jack Maguire
+
+> - 原文链接：[https://jackmaguire.org/blog/ai-job-grief/](https://jackmaguire.org/blog/ai-job-grief/)
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-krn5xx'
 source: notion
-origin_publication: ''
-origin_author: 'Joan Tollifson'
-origin_title: 'Compulsion To Closure'
-origin_url: 'https://www.awakin.org/v2/read/view.php?tid=2602'
 notion_id: '39845fd1-9f92-8056-94d3-d7e780c67798'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:29.911Z'
+last_synced: '2026-10-08T11:20:02.037Z'
 ---
 
 最近，我在某处听到或看到“闭合强迫”这个说法。虽然记不清原话的具体用法，但这个短语精准地描绘了人类难以容忍悬而未决和不确定性，以及我们那种强迫性地想要确定一切、抓住要点、找到立足点、锁定正确答案、弄清所有事情，并以绝对确定性掌握终极真相的冲动。这种强迫在解决实际问题时显然有利于生存，但一旦延伸到其他领域，就很容易成为问题。
@@ -30,3 +26,17 @@ last_synced: '2026-10-06T09:11:29.911Z'
 现实很简单，就在眼前。当下的体验，原原本本。清晨的微风、手中的这杯茶、朝我跑来的爱犬、翠绿的树叶、绽放的花朵，还有数百万光年外正在诞生与消亡的星系——这整个奇妙的魔法秀。然而，我们永远无法真正把握它、抓住它，或用任何终极方式解释它。我们就是它本身。这个不可分割的当下，既显而易见又不可思议。它从未固化为任何最终形态，从未离开过当下的直接性，我们也从未与它分离。
 
 那么，我们能否坦然接受没有终极真理的状态？能否安住于未知与无根基的开放之中？能否在缺乏终结感、以及生命每时每刻展现的流动性与多重维度中找到归属？事实上，我们别无选择。然而，一旦不再抗拒，这一切或许会变得愉悦而奇妙，即便表面看来并非如此。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：暂缺
+
+> - 原名：Compulsion To Closure
+
+> - 作者：Joan Tollifson
+
+> - 原文链接：[https://www.awakin.org/v2/read/view.php?tid=2602](https://www.awakin.org/v2/read/view.php?tid=2602)
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

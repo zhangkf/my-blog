@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-f1t2eu'
 source: notion
-origin_url: ''
-origin_author: 'Oliver Burkeman'
-origin_title: 'Reality just keeps unfolding'
-origin_publication: 'The Imperfectionist'
 notion_id: '39845fd1-9f92-807b-b5fe-f0928bfc93d1'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:35.788Z'
+last_synced: '2026-10-08T11:20:01.822Z'
 ---
 
 由于我写过自己过去如何焦虑地执着于完成任务，有时会有人问我，现在是否还在沿用某些“效率方法”。他们似乎认为，我如今已修炼成禅宗大师，能随性自如地生活，但或许仍有一两个小技巧让我无法割舍。
@@ -44,3 +40,17 @@ last_synced: '2026-08-14T02:27:35.788Z'
 无常，即佛教中所说的这个概念，意味着你永远无法真正松懈——如果“松懈”是指只有当你确信自己已掌控一切，终于成为一个有条不紊的人，你的效率系统已臻完美，并且最严重的政治威胁已被彻底消除之后才能享受的状态。
 
 但换个角度说，你完全可以在此刻此地放松地融入现实——这种放松不仅是身心上的安逸，更是从容地行动，做好该做的事，全然接纳自己在现实中的位置。你无需为某个未来的圆满时刻而保留自己。那份压力已经卸下。唯一要做的就是纵身跃入水中——或者更确切地说，意识到你早已身处其中。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：Reality just keeps unfolding
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

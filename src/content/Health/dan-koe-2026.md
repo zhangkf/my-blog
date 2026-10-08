@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'dan-koe-2026'
 source: notion
-origin_author: 'Dan Koe'
-origin_title: 'How to fix your entire life in 1 day'
-origin_url: 'https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1'
-origin_publication: 'The Koe Letter'
 notion_id: '38745fd1-9f92-8037-8a0c-c0715e1c1b22'
 notion_parent: 'Health'
-last_synced: '2026-08-14T02:27:29.792Z'
+last_synced: '2026-10-08T11:20:00.511Z'
 ---
 
 > 如果你和我一样，也觉得新年决心很愚蠢。
@@ -70,8 +66,8 @@ last_synced: '2026-08-14T02:27:29.792Z'
 ## **二、你之所以没有到达想要的地方，是因为你其实不想去那里**
 
 > Trust only movement. Life happens at the level of events, not of words. Trust movement.
-> —— Alfred Adler
 
+> —— Alfred Adler
 
 如果你想改变自己，你必须理解心灵是如何运作的，这样才能开始重新编程它。
 
@@ -104,8 +100,8 @@ last_synced: '2026-08-14T02:27:29.792Z'
 ## **三、你之所以没有到达想要的地方，是因为你害怕去那里**
 
 > The important thing for you to remember is that it does not matter in the least how you got the idea or where it came from. You may never have met a professional hypnotist. You may never have been formally hypnotized. But if you have accepted an idea - from yourself, your teachers, your parents, friends, advertisements, from any other source - and further, if you are firmly convinced that idea is true, it has the same power over you as the hypnotist’s words have over the hypnotized subject.
-> —— Maxwell Maltz
 
+> —— Maxwell Maltz
 
 以下就是你如何成为今天的自己，以及你将如何成为明天那个自己的过程。这就是身份的解剖学：
 
@@ -167,8 +163,8 @@ last_synced: '2026-08-14T02:27:29.792Z'
 ## **五、智慧就是从生活中得到你想要的东西的能力**
 
 > The only real test of intelligence is if you get what you want out of life.
-> —— Naval Ravikant
 
+> —— Naval Ravikant
 
 成功有一个公式。
 
@@ -383,8 +379,8 @@ Cybernetics 来自希腊语 kybernetikos，意思是“驾驶”或“善于驾�
 ## **七、把你的人生变成一场电子游戏**
 
 > The optimal state of inner experience is one in which there is order in consciousness. This happens when psychic energy—or attention—is invested in realistic goals, and when skills match the opportunities for action. The pursuit of a goal brings order in awareness because a person must concentrate attention on the task at hand and momentarily forget everything else.
-> —— Mihaly Csikszentmihalyi
 
+> —— Mihaly Csikszentmihalyi
 
 你现在已经拥有通往美好人生的所有组件。
 
@@ -421,3 +417,17 @@ Cybernetics 来自希腊语 kybernetikos，意思是“驾驶”或“善于驾�
 你玩游戏越多，这个力就越强，很快它就会成为你是谁，而你也不会想要任何其他方式。
 
 —— Dan
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Koe Letter
+
+> - 原名：How to fix your entire life in 1 day
+
+> - 作者：Dan Koe
+
+> - 原文链接：[https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1](https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1)
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

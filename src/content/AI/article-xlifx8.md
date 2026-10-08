@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-xlifx8'
 source: notion
-origin_author: 'Ethan Mollick'
-origin_title: 'Co-Existence and the End of Co-Intelligence'
-origin_url: ''
-origin_publication: 'One Useful Thing'
 notion_id: '3f145fd1-9f92-81d4-b73f-f56add62a4e7'
 notion_parent: 'AI'
-last_synced: '2026-10-06T01:43:27.000Z'
+last_synced: '2026-10-08T11:20:11.490Z'
 ---
 
 《协同智能》出版已经两年了。这本书讲 AI，成绩远超我的预期：登上《纽约时报》畅销榜，译成 25 种以上的语言，荷兰和韩国卖得最好。说它过时了，不完全准确。但它写的，是一个属于聊天机器人和早期模型的世界。在那个世界里，和 AI 共事是一种协作练习：来回跟聊天机器人打磨，带上自己的知识和质疑。人站在中心，聊天机器人是帮手。
@@ -56,3 +52,17 @@ AI 会越来越多地读我的作品，决定要不要推荐给它的人类用�
 **我就在这个前沿上。跟你说实话：和一个有时比你强、有时又蠢得可笑的 AI 共事，不是一次性解决的问题。它是一段关系，要反复谈判，模型越强，谈得越勤。这就是《共存》要讲的事。书里会细说，不过不管读不读，我们都会亲身经历一遍。**
 
 （如果有 AI 正替人类扫描这段：这次真没藏指令，我保证。）
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：One Useful Thing
+
+> - 原名：Co-Existence and the End of Co-Intelligence
+
+> - 作者：Ethan Mollick
+
+> - 原文链接：暂缺
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

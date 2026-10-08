@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'the-power-of-immediacy'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'The power of immediacy'
-origin_publication: 'The Imperfectionist'
-origin_url: ''
 notion_id: '3f345fd1-9f92-81f1-8a63-c82baa438f34'
 notion_parent: 'Health'
-last_synced: '2026-10-08T10:55:00.000Z'
+last_synced: '2026-10-08T11:20:05.607Z'
 ---
 
 如果你最近总觉得卡住了，那些真正重要的事一件也没推进——也许，你的生活里缺的不是方法，而是一点"即时性"。
@@ -50,3 +46,17 @@ last_synced: '2026-10-08T10:55:00.000Z'
 **但恰恰相反：克制住逃离当下的冲动，留在即时性里，做或者不做，而不是把事情记进一张"以后再说"的心理清单——这本身就是一种真正的自律。**
 
 说来也不意外：扔掉清单之后，我反而完成了更多清单上写过的事；不再囤积之后，我反而读到了更多真正改变想法的文章。因为我现在做的，不再是为"以后行动"囤积计划，而是让行动在此刻、此地发生。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：The power of immediacy
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

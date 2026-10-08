@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-o3ur70'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'Do what you want'
-origin_url: ''
-origin_publication: 'The Imperfectionist'
 notion_id: '3ef45fd1-9f92-8189-97f2-c5aa42b5a7aa'
 notion_parent: 'Health'
-last_synced: '2026-10-06T09:11:37.220Z'
+last_synced: '2026-10-08T11:20:04.397Z'
 ---
 
 如果你被一种感觉淹没了：世界正在崩坏。或者，只是被待办清单淹没。或者，卡在某种人生低谷里动不了。有个办法大概率对你有用：把生活调个方向。**调到你真正想做的事上，而不是调到你觉得自己应该怎么活上。**
@@ -46,3 +42,17 @@ last_synced: '2026-10-06T09:11:37.220Z'
 我们需要的是我称之为“更高的自私”的东西。最能表达它的，是前坎特伯雷大主教罗恩·威廉姆斯在《做门徒》一书里，回忆他与德斯蒙德·图图会面时写下的一段话（经 Substack 看到）：
 
 > 我有一个理论，是在见过德斯蒙德·图图几次之后开始形成的：这个世界上有两种自恋者。一种自恋者如此爱自己，以至于心里再没有别人的位置。另一种自恋者也如此爱自己，却因此让其他每一个人也能爱他们自己。他们在自己的皮肤里安然自在。从这个意义上说，德斯蒙德·图图显然热爱做德斯蒙德·图图，这一点毫无疑问。但这带来的效果，不是让我感到冻结或萎缩。它让我觉得，也许有一天，靠着上帝无限的恩典，我也能像德斯蒙德热爱做德斯蒙德那样，热爱做罗恩·威廉姆斯。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：Do what you want
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

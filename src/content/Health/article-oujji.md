@@ -8,13 +8,9 @@ archived: false
 route_category: 'health'
 route_slug: 'article-oujji'
 source: notion
-origin_author: 'Oliver Burkeman'
-origin_title: 'The freewriting way of life'
-origin_publication: 'The Imperfectionist'
 notion_id: '3f045fd1-9f92-81d7-8a75-f98d23c27f85'
 notion_parent: 'Health'
-last_synced: '2026-10-05T07:00:52.610Z'
-origin_url: ''
+last_synced: '2026-10-08T11:20:04.803Z'
 ---
 
 自由书写，顾名思义，就是定个计时器，打开文档或笔记本，然后把脑子里冒出来的东西一股脑写下来，哪怕看起来完全是垃圾。它在我梳理、表达想法的过程中已经陪了我很久，尽管它几乎挑战了我那完美主义、控制欲极强的灵魂的每一个部分。最近，我开始把它看作一种更广义的生存方式的缩影。因为我相信，自由书写的原则里，藏着一整套让生活变得有意义、鲜活、高产的哲学——哪怕你根本不是作家，也从来不用这个技巧。
@@ -47,3 +43,17 @@ origin_url: ''
 **归根到底，我想，这种松开式的生活之所以行得通，是因为它反映了事物的本来样子。我们所有人，事实上都在自由书写自己的人生，无论喜不喜欢。哪怕是最守规矩、最爱做计划的人，也在每一个新的瞬间，一遍又一遍地选择继续遵循那些计划和例行公事。哪怕是最焦虑的人，没完没了地试图排除未来的不确定性，也无法逃脱一个根本真相：**[**任何事都可能在任何时候发生**](https://www.oliverburkeman.com/anythingcouldhappen)**。**
 
 向生活松开双手，要求我们学会在不确定和不安中放松下来，因为“在不确定和不安中”，正是我们一直所在的位置。回报是，当你不再装作不是这样时，你能感受到的生命力、能动性，以及对生活的踏实感。
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：The Imperfectionist
+
+> - 原名：The freewriting way of life
+
+> - 作者：Oliver Burkeman
+
+> - 原文链接：暂缺
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

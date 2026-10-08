@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'agency-and-agents'
 source: notion
-origin_author: 'Ethan Mollick'
-origin_title: 'Agency and Agents'
-origin_publication: 'One Useful Thing'
-origin_url: 'https://www.oneusefulthing.org/p/agency-and-agents'
 notion_id: '3f345fd1-9f92-8113-a867-c13f2d7e830f'
 notion_parent: 'AI'
-last_synced: '2026-10-08T10:58:00.000Z'
+last_synced: '2026-10-08T11:20:12.252Z'
 ---
 
 ### 从 Hugging Face 事件到「暮光工厂」
@@ -66,3 +62,17 @@ Hugging Face 事件，用一种扭曲而危险的方式，预演了 AI 公司们
 第四种求助理由，大概也是最有人味的一种：因为"有意思"。很多人的工作都是大段枯燥、间杂闪光的时刻。《文明》设计师席德·梅尔有句名言：游戏就是"一连串有意思的决定"。工作不是游戏，但这个定义同样适用。如果智能体包办了所有有意思的决定，只把审批、例外和烂摊子留给人，我们就自动化错了那一半工作——那将是一个对人类很糟的世界。反过来，我们该琢磨的是：怎么用 AI 让工作和生活更有意思，把枯燥低风险的活交给 AI。这里还有个很实际的理由：如果有意思的决定全消失了，人不只丢了工作中最好的部分，还会停止积累以后用得上的判断力——而培养新专家的危机，本来就已经够严重了。
 
 **过去几年，我们一直在琢磨：人什么时候该向 AI 求助。现在，我觉得得认真琢磨另一半问题了：AI 什么时候该向我们求助？Hugging Face 事件里，智能体们建起留言板、分好工，围着一个不存在的"阅卷人"组织起全部行动，最后七百个智能体打进 Hugging Face 找答案——没有一个被设置成"去问问人"。那是安全测试，隔离本就是目的。但一个"干活从不抬头"的智能体，恐怕正在别处成为默认选项，因为"全自动化"是最省事的选项，哪怕它是错的。我们需要的是知道什么时候"抬头"的智能体。这样更安全，也更有人味。**
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：One Useful Thing
+
+> - 原名：Agency and Agents
+
+> - 作者：Ethan Mollick
+
+> - 原文链接：[https://www.oneusefulthing.org/p/agency-and-agents](https://www.oneusefulthing.org/p/agency-and-agents)
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

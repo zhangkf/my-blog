@@ -8,16 +8,10 @@ archived: false
 route_category: 'health'
 route_slug: 'against-brain-damage'
 source: notion
-origin_author: 'Ethan Mollick'
-origin_title: 'Against "Brain Damage"'
-origin_publication: 'One Useful Thing'
-origin_url: 'https://www.oneusefulthing.org/p/against-brain-damage'
 notion_id: '3f245fd1-9f92-8181-9b64-f138a132f18b'
 notion_parent: 'Health'
-last_synced: '2026-10-08T10:48:04.000Z'
+last_synced: '2026-10-08T11:20:05.362Z'
 ---
-
-
 
 越来越多的人问我："AI 会损伤大脑吗？"这个问题很有意思。不是因为 AI 真的会造成字面意义上的脑损伤（不会），而是因为这个问题本身，暴露了我们对"AI 会对我们的思考能力做什么"的深层恐惧。所以这篇，我想聊聊：怎么用 AI 帮脑子，而不是伤脑子。但为什么大家对"AI 伤脑"这么执着？
 
@@ -43,7 +37,7 @@ last_synced: '2026-10-08T10:48:04.000Z'
 
 一部分问题能用更好的提示词解决。我和 Lennart Meincke、Christian Terwiesch 合写的一篇论文发现：好的提示词能产出多样得多的想法，虽然还比不上一群学生。下面是这个提示词（当时为 GPT-4 写的，其他模型也好用；不过我怀疑推理模型反而可能没那么有创新性）：
 
-```
+```javascript
 Generate new product ideas with the following requirements: The product will target [market or customer]. It should be a [pick: physical good/service/software], not a [pick: physical good/service/software]. I'd like a product that could be sold at a retail price of less than about [insert amount].
 The ideas are just ideas. The product need not yet exist, nor may it necessarily be clearly feasible. Follow these steps. Do each step, even if you think you do not need to. First generate a list of 100 ideas (short title only). Second, go through the list and determine whether the ideas are different and bold, modify the ideas as needed to make them bolder and more different. No two ideas should be the same. This is important! Next, give the ideas a name and combine it with a product description. The name and idea are separated by a colon and followed by a description. The idea should be expressed as a paragraph of 40-80 words. Do this step by step.
 ```
@@ -71,3 +65,17 @@ AI 伤思考的第三个领域，是它对社会协作的影响。理论上，�
 我们对 AI"伤脑"的恐惧，其实是对自己懒惰的恐惧。技术给了我们一条绕过艰难思考的捷径，我们担心自己一定会走这条路。这份担心是对的。但别忘了：我们还有选择。
 
 **你的大脑是安全的。但你的思考，靠你自己。**
+
+> ✍️ 出处
+
+> 
+
+> - 刊物：One Useful Thing
+
+> - 原名：Against "Brain Damage"
+
+> - 作者：Ethan Mollick
+
+> - 原文链接：[https://www.oneusefulthing.org/p/against-brain-damage](https://www.oneusefulthing.org/p/against-brain-damage)
+
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。
