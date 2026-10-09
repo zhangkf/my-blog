@@ -11,8 +11,11 @@ source: notion
 notion_id: '3f245fd1-9f92-8127-9a23-c15fc638acc1'
 notion_parent: 'AI'
 last_synced: '2026-10-08T11:20:11.724Z'
+origin_author: "Kevin Kelly"
+origin_title: "Conscious or Not"
+origin_publication: "Kevin Kelly（Substack）"
+origin_url: "https://kevinkelly.substack.com/p/conscious-or-not"
 ---
-
 我记事以来，人们就一直在争：机器到底能不能拥有智能。
 
 很多科幻作家和科幻迷——包括我——都觉得这只是时间问题，迟早的事。但另一边，也有不少顶尖聪明人，论证得头头是道：机器在根本上就不可能思考，不可能有智能。他们笃信，智能是人类独有的。两边的说法看着都有道理，但最大的毛病是：谁都说不清智能到底是什么。争到最后，往往只能搬出图灵测试。可图灵测试测的，根本不是智能。
@@ -46,17 +49,3 @@ last_synced: '2026-10-08T11:20:11.724Z'
 足斤足两的工业级意识，未必总是好事。有些心智，我们压根不希望它有意识。自动驾驶汽车的那个“司机”，你想让它有意识吗？为了安全，我们可不想它一边开车一边纠结当年该不该学化学。我们只想让它好好开车。
 
 这场“AI 有没有意识”的争论，会是一场持久战。沿途的追问，会让我们对自己的意识也产生更多不确定。这场对意识本质的大调查，会带来神经科学、心理学、哲学史上最大的进展。未来 25 年，我们对自己的了解，会超过过去 25000 年的总和。一百年后，我们对“人是什么”的想法，会完全不同。
-
-> ✍️ 出处
-
-> 
-
-> - 刊物：Kevin Kelly（Substack）
-
-> - 原名：Conscious or Not
-
-> - 作者：Kevin Kelly
-
-> - 原文链接：[https://kevinkelly.substack.com/p/conscious-or-not](https://kevinkelly.substack.com/p/conscious-or-not)
-
-> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

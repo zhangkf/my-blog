@@ -11,8 +11,11 @@ source: notion
 notion_id: '39145fd1-9f92-80d0-a8cf-c68c3a5d301d'
 notion_parent: 'Health'
 last_synced: '2026-10-08T11:20:01.307Z'
+origin_author: "Brian Chesky"
+origin_title: "How to Time Travel"
+origin_publication: "Medium"
+origin_url: "https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0"
 ---
-
 我曾遇见一位名叫查理的旅人。他走到我面前，说了一句令我永生难忘的话。他说，
 
 > *“布莱恩，我旅行是因为它让我的生命感觉更漫长。”*
@@ -38,17 +41,3 @@ Press enter or click to view image in full size多年前，我和妹妹、妈妈
 **俗话说“人生如旅途”，但人生其实是由无数段旅程组成的。你走过的路越多，这段人生就会显得越漫长。**
 
 这篇《纽约客》文章精彩地介绍了神经科学家大卫·伊格曼的研究，他深入探索了人类对时间的感知机制，以及时间为何有时会显得缓慢，有时又飞逝如电。
-
-> ✍️ 出处
-
-> 
-
-> - 刊物：Medium
-
-> - 原名：How to Time Travel
-
-> - 作者：Brian Chesky
-
-> - 原文链接：[https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0](https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0)
-
-> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

@@ -11,8 +11,11 @@ source: notion
 notion_id: '38045fd1-9f92-8076-8401-e7f6494bf3c6'
 notion_parent: 'AI'
 last_synced: '2026-10-08T11:20:08.802Z'
+origin_author: "Ted Chiang"
+origin_title: "No, Artificial Intelligence Is Not Conscious"
+origin_publication: "The Atlantic"
+origin_url: "https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/"
 ---
-
 > 这种想法推演至逻辑终点，既荒谬可笑，又足以自我否定。
 
 > 💡 作者：姜峯楠（Ted Chiang），居于美国太平洋西北地区的华裔作家。著有短篇小说集《你一生的故事》及《呼吸：姜峯楠第二本小說集》。
@@ -106,17 +109,3 @@ Anthropic 被视为人工智能领域的巨头，但它真正擅长的，或许�
 幸运的是，大型语言模型并没有意识，否则各大人工智能公司的所作所为将比现在更加骇人。那么，Anthropic 的员工为何暗示 Claude 可能具有意识？或许这只是另一种形式的炒作；或许他们已然陷入了自己向顾客施加的同一种魔咒之中。但当他们发布一份关于 Claude 道德教育的文件，并让公司驻场哲学家进行媒体巡回宣传时，我们应当将其理解为：他们在邀请我们其余人配合他们的幻想。我们没有义务照单全收。撰写这篇文章时，我花在迁就他们上的时间已经超出他们应得的，但我希望这能让你免于将时间浪费在迁就他们上。如果你想思考大型语言模型，有无数其他更值得你深思的问题；关于它们是否具有意识，你可以放心地置之不理。
 
 ---
-
-> ✍️ 出处
-
-> 
-
-> - 刊物：The Atlantic
-
-> - 原名：No, Artificial Intelligence Is Not Conscious
-
-> - 作者：Ted Chiang
-
-> - 原文链接：[https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/](https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/)
-
-> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

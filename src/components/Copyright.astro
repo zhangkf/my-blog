@@ -100,7 +100,7 @@ const hasData = Boolean(author || title || url || publication);
 	if (!aside || !prose) return;
 
 	var HEADER_RE = /^(出处|版权|原文出处|copyright|source)(\b|[：:\s]|$)/i;
-	var EMOJI_RE = /^[\s\u3000]*(?:[\u2190-\u2BFF\u2600-\u27BF\u2300-\u23FF\uE000-\uF8FF\u{1F000}-\u{1FAFF}]\s*)+/u;
+	var EMOJI_RE = /^[\s\u3000]*(?:[\u2190-\u2BFF\u2600-\u27BF\u2300-\u23FF\uE000-\uF8FF\uFE0F\u200D\u{1F000}-\u{1FAFF}]\s*)+/u;
 
 	function stripEmoji(text) {
 		return String(text || '').replace(EMOJI_RE, '').trim();
@@ -130,7 +130,7 @@ const hasData = Boolean(author || title || url || publication);
 	}
 
 	function parseText(raw) {
-		var lines = String(raw || '').split('\n').map(function (line) { return line.trim(); }).filter(Boolean);
+		var lines = String(raw || '').split('\n').map(function (line) { return line.trim().replace(/^([-*•·]|\d+[.)])\s+/, '').trim(); }).filter(Boolean);
 		if (!lines.length || !isHeader(lines[0])) return null;
 		var blob = lines.map(stripEmoji).join('\n');
 		var author = matchField(blob, ['作者', 'Author']);

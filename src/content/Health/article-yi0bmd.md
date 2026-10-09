@@ -11,8 +11,11 @@ source: notion
 notion_id: '39145fd1-9f92-8021-964f-d1c4795980e8'
 notion_parent: 'Health'
 last_synced: '2026-10-08T11:20:01.070Z'
+origin_author: "Pranav Jain"
+origin_title: "The quiet grief of adult friendship"
+origin_publication: "The Times of India"
+origin_url: "https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/"
 ---
-
 几周前，凌晨 1 点 40 分，一位朋友打来电话。不是发信息，而是直接拨号。那一瞬间，我本能地绷紧了神经，准备迎接坏消息。成年人的世界让我们习惯了这样的认知：深夜来电，往往意味着灾祸——有人进了医院，有人陷入困境，有人已经离世。然而，这次什么也没发生。
 
 她刚下班，开车行驶在伦敦近乎空旷的街道上，听到一首我们过去常一起哼唱的歌，突然很想我。于是她打来电话。我们聊了半小时，说的都是些写下来会显得平淡无奇的事：工作上的疲惫、宝莱坞的八卦、她如何尽情享受婚姻生活、一过三十就出现的背痛这种恼人的事，还有一个我们曾经讨厌但现在却时常想念的教授。没什么深刻的。
@@ -66,17 +69,3 @@ last_synced: '2026-10-08T11:20:01.070Z'
 或许正因如此，成年人的友谊才愈发显得珍贵而反叛。它抗拒着现代生活处处推崇的交易逻辑。因为真正的朋友给予了一种极为稀缺的东西：不加修饰的陪伴。家庭靠血缘维系，婚姻靠制度约束，工作关系靠利益驱动。而友谊，纯粹依靠彼此的选择而存在。没有人必须留下，但有些人，偏偏选择了留下。
 
 尽管日程排得满满当当，情感上也精疲力竭，但有些朋友依然选择维系联系。他们会在会议间隙发来搞笑表情包，记得你所有重要的日子，还会冷不丁地打电话给你。这并非出于便利，而是因为在成年生活带来的种种疲惫之下，他们依然在乎你的内心世界。有时候，这不过是一种执拗的选择——即便这个世界不断教导你要把其他事情排在前面，你仍然坚持回到这些人身边。
-
-> ✍️ 出处
-
-> 
-
-> - 刊物：The Times of India
-
-> - 原名：The quiet grief of adult friendship
-
-> - 作者：Pranav Jain
-
-> - 原文链接：[https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/](https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/)
-
-> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

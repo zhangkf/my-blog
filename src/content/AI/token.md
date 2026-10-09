@@ -11,8 +11,11 @@ source: notion
 notion_id: '37745fd1-9f92-8076-a48c-e2b35ec2ca86'
 notion_parent: 'AI'
 last_synced: '2026-10-08T11:20:08.302Z'
+origin_author: "0x5FC3"
+origin_title: "So, Where Does Next-Token Prediction Leave Us?"
+origin_publication: "POP RDI; RET"
+origin_url: "https://pop.rdi.sh/where-does-next-token-prediction-leave-us/"
 ---
-
 ## 已解决/搞定（Solved/Cooked）
 
 互联网上某些角落的AI极端乐观主义者，特别讨厌人们把大型语言模型仅仅称为“下一词元预测器”（next-token predictors）或“随机鹦鹉”（stochastic parrots）。他们本能地把这些说法当成贬义词。他们用“已解决”或“搞定”这样的词，来宣告那些需要真正人类创造力、专业知识或努力的行业或工作类别已经终结。“动画已解决”“好莱坞搞定”“编程已解决”“研究生搞定”等等。这远非对技术进步的中性描述，其中带着某种幸灾乐祸的快感。他们庆祝这种过时。讨论中充满攻击性，这与人们在网上政治站队的情形极为相似。我想不出还有哪种技术能达到这种部落主义程度。嗯，也许是加密货币？Arch Linux用户？都差得远。
@@ -58,17 +61,3 @@ AI*民主化*了CEO们想要淘汰的那些东西。当然，它可能会教你�
 每一个网站、每一本书、所有*曾经*写过、制作过、拍摄过、录制过的东西，都默认成为了训练语料库中的opt-out内容。只有当你运营一个网站，并在`robots.txt`里添加相应行，尊重的爬虫才会停止抓取。但仍然有大量不自我标识的爬虫，我猜想甚至存在被抓取内容的黑市。除了网站之外，你就毫无办法。成千上万的人被支付微薄的工资去标注、精炼和优化数据集。许多人因为数据中心以惊人速度建设而被迫支付更高的水电费。
 
 巨额资金被投入到AI机器中。没有人做这件事是没有回报承诺的。如果不是这样，我们早就已经在逆转气候变化、拯救海龟了。相反，我们被告知AI将解决这些极其困难的问题，同时还能带来额外回报。在许多方面，AI狂潮……
-
-> ✍️ 出处
-
-> 
-
-> - 刊物：POP RDI; RET
-
-> - 原名：So, Where Does Next-Token Prediction Leave Us?
-
-> - 作者：0x5FC3
-
-> - 原文链接：[https://pop.rdi.sh/where-does-next-token-prediction-leave-us/](https://pop.rdi.sh/where-does-next-token-prediction-leave-us/)
-
-> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

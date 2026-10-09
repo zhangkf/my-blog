@@ -12,7 +12,7 @@
  */
 
 const EMOJI_RE =
-  /^[\s\u3000]*(?:[\u2190-\u2BFF\u2600-\u27BF\u2300-\u23FF\uE000-\uF8FF\u{1F000}-\u{1FAFF}]\s*)+/u;
+  /^[\s\u3000]*(?:[\u2190-\u2BFF\u2600-\u27BF\u2300-\u23FF\uE000-\uF8FF\uFE0F\u200D\u{1F000}-\u{1FAFF}]\s*)+/u;
 
 const HEADER_RE = /^(出处|版权|原文出处|copyright|source)(\b|[：:\s]|$)/i;
 
@@ -70,7 +70,12 @@ export function parseCopyrightText(raw) {
 
   const lines = text
     .split("\n")
-    .map((line) => line.replace(/^>\s?/, "").trim());
+    .map((line) =>
+      line
+        .replace(/^>\s?/, "")
+        .replace(/^([-*•·]|\d+[.)])\s+/, "")
+        .trim()
+    );
   const nonempty = lines.filter(Boolean);
   if (!nonempty.length || !isCopyrightHeader(nonempty[0])) return null;
 
@@ -158,15 +163,37 @@ function findBlockquoteGroups(markdown) {
 /**
  * 从 markdown 正文抽出最后一段出处引用块，并从正文删除。
  * 供 sync 兜底，以及本地已写出的 callout 二次处理。
+ *
+ * 兼容：出处块前面可能紧挨着正文引用块（两者被空行隔开但同属一组），
+ * 此时从组内最后一个「出处/版权」标题行开始提取，只删除标题行及之后的部分。
  */
 export function extractCopyrightFromMarkdown(markdown) {
   const source = String(markdown || "");
   const groups = findBlockquoteGroups(source);
 
   for (let i = groups.length - 1; i >= 0; i--) {
-    const copyright = parseCopyrightText(groups[i].text);
+    const group = groups[i];
+    const groupLines = group.text.split("\n");
+    // 从后往前找标题行，取最后一个匹配的（正文引用里几乎不可能出现「出处」标题行）
+    let headerIdx = -1;
+    let headerAbsOffset = -1;
+    let absOffset = group.start;
+    for (let li = 0; li < groupLines.length; li++) {
+      const line = groupLines[li];
+      const stripped = line
+        .replace(/^>\s?/, "")
+        .replace(/^([-*•·]|\d+[.)])\s+/, "")
+        .trim();
+      if (stripped && isCopyrightHeader(stripped)) {
+        headerIdx = li;
+        headerAbsOffset = absOffset;
+      }
+      absOffset += line.length + 1;
+    }
+    if (headerIdx === -1) continue;
+    const copyright = parseCopyrightText(groupLines.slice(headerIdx).join("\n"));
     if (!copyright) continue;
-    const next = `${source.slice(0, groups[i].start)}${source.slice(groups[i].end)}`;
+    const next = `${source.slice(0, headerAbsOffset)}${source.slice(group.end)}`;
     return {
       copyright,
       markdown: `${next.replace(/\n{3,}/g, "\n\n").trim()}\n`,

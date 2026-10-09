@@ -11,8 +11,11 @@ source: notion
 notion_id: '38745fd1-9f92-8037-8a0c-c0715e1c1b22'
 notion_parent: 'Health'
 last_synced: '2026-10-08T11:20:00.511Z'
+origin_author: "Dan Koe"
+origin_title: "How to fix your entire life in 1 day"
+origin_publication: "The Koe Letter"
+origin_url: "https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1"
 ---
-
 > 如果你和我一样，也觉得新年决心很愚蠢。
 
 因为大多数人改变人生方式完全错了。他们制定这些决心，只是因为别人都在做——我们从地位游戏中制造出一种肤浅的意义——但这些决心根本达不到真正改变所需的条件。真正的改变远比说服自己“今年要更有自律、更高效”要深刻得多。
@@ -417,17 +420,3 @@ Cybernetics 来自希腊语 kybernetikos，意思是“驾驶”或“善于驾�
 你玩游戏越多，这个力就越强，很快它就会成为你是谁，而你也不会想要任何其他方式。
 
 —— Dan
-
-> ✍️ 出处
-
-> 
-
-> - 刊物：The Koe Letter
-
-> - 原名：How to fix your entire life in 1 day
-
-> - 作者：Dan Koe
-
-> - 原文链接：[https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1](https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1)
-
-> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

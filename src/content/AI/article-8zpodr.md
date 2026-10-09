@@ -11,8 +11,11 @@ source: notion
 notion_id: '3ee45fd1-9f92-8133-b2f6-effbf4ed7800'
 notion_parent: 'AI'
 last_synced: '2026-10-08T11:20:10.228Z'
+origin_author: "Arvind Narayanan 与 Sayash Kapoor"
+origin_title: "A big-tent or small-tent AI safety movement?"
+origin_publication: "AI as Normal Technology"
+origin_url: ""
 ---
-
 最近几周，关于 AI 安全冒出两种叙事。要么：AI 末日风险真实且迫在眉睫。要么：AI 领袖和吹哨人这么说，言不由衷。是一场“心理战”，或者炒作，或者某种变了形的监管俘获。
 
 很少有人考虑第三种可能：末日警告是真诚的，但只是错了，还对 AI 安全有害。仿佛所有人都默认，敲警钟的人都是天才，唯一的分歧是他们善良还是邪恶。
@@ -97,17 +100,3 @@ AI 网络风险为什么没得到更多头条，不难解释：AI 是低显著�
 让我们搭一顶更大的帐篷。
 
 （感谢阿比·奥尔维拉、乔舒亚·萨克斯和罗希特·克里希南对初稿的反馈。）
-
-> ✍️ 出处
-
-> 
-
-> - 刊物：AI as Normal Technology
-
-> - 原名：A big-tent or small-tent AI safety movement?
-
-> - 作者：Arvind Narayanan 与 Sayash Kapoor
-
-> - 原文链接：暂缺
-
-> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。
