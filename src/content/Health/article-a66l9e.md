@@ -8,14 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'article-a66l9e'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'A string of beads'
+origin_publication: 'The Imperfectionist'
 notion_id: '3f145fd1-9f92-815c-8ea6-e1523e35b2c8'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:05.125Z'
-origin_author: "Oliver Burkeman"
-origin_title: "A string of beads"
-origin_publication: "The Imperfectionist"
-origin_url: ""
+last_synced: '2026-10-09T02:41:35.689Z'
 ---
+
 不用我说你也知道，这是黑暗、不安、近乎末世的年月。我在英美朋友圈里，人人都不安：查理·柯克遇刺，以及随后美国对言论的打压；英国本土主义和反移民情绪回潮；再叠加加沙的惨剧、气候动荡，还有 AI 可能灭绝人类的阴影。
 
 一种没着落的焦虑，一种被车灯照住的僵直：这些事好像什么都做不了，可又没法专心做别的事。连最会屏蔽新闻的人，都觉得现实在挤压自己，或者脚下的地毯正被抽走。那些攒出丰盛人生的项目和关系，越来越难推进。

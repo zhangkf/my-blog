@@ -8,14 +8,14 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-vr9xsl'
 source: notion
+origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
+origin_title: 'Why AI hasn''t replaced software engineers, and won''t'
+origin_publication: 'AI as Normal Technology'
 notion_id: '3ef45fd1-9f92-8151-b321-ebfa7e1bd698'
 notion_parent: 'AI'
-last_synced: '2026-10-08T11:20:10.840Z'
-origin_author: "Arvind Narayanan 与 Sayash Kapoor"
-origin_title: "Why AI hasn't replaced software engineers, and won't"
-origin_publication: "AI as Normal Technology"
-origin_url: ""
+last_synced: '2026-10-09T02:41:41.902Z'
 ---
+
 人们对 AI 取代工作，充满焦虑和不确定。怎么越过含糊的警告和夸张的预言，让数据来说话？一个很好的切入点，是去看 AI 能力走得最远、采用又异常快的职业：软件工程。
 
 我们的论点是：已有的证据，足以拒绝这样一种叙事。AI 能力越过某个门槛，就会引发大规模裁员。即使在一个几乎没有监管壁垒的行业里，这件事都没发生。其他大多数职业，只会得到更多缓冲。

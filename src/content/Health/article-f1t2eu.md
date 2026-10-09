@@ -8,14 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'article-f1t2eu'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'Reality just keeps unfolding'
+origin_publication: 'The Imperfectionist'
 notion_id: '39845fd1-9f92-807b-b5fe-f0928bfc93d1'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:01.822Z'
-origin_author: "Oliver Burkeman"
-origin_title: "Reality just keeps unfolding"
-origin_publication: "The Imperfectionist"
-origin_url: ""
+last_synced: '2026-10-09T02:41:30.932Z'
 ---
+
 由于我写过自己过去如何焦虑地执着于完成任务，有时会有人问我，现在是否还在沿用某些“效率方法”。他们似乎认为，我如今已修炼成禅宗大师，能随性自如地生活，但或许仍有一两个小技巧让我无法割舍。
 
 不过说实话，在某些方面，我对效率的执着和从前并无二致。真正发生巨变的是——这确实是个重大转变——我不再幻想自己正走向某个终点，在那里能找到最完美的体系，并终于能对自己感到满意。如今，我只是在不断尝试。当我放弃一种方式改用另一种时，并非因为之前那个曾被我视为灵丹妙药的方法最终令人失望。仅仅是因为，在如何安排时间这个永远在演变、对我而言始终充满魅力的课题上，是时候尝试些新花样了。

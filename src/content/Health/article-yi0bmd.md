@@ -8,14 +8,15 @@ archived: false
 route_category: 'health'
 route_slug: 'article-yi0bmd'
 source: notion
+origin_author: 'Pranav Jain'
+origin_title: 'The quiet grief of adult friendship'
+origin_url: 'https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/'
+origin_publication: 'The Times of India'
 notion_id: '39145fd1-9f92-8021-964f-d1c4795980e8'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:01.070Z'
-origin_author: "Pranav Jain"
-origin_title: "The quiet grief of adult friendship"
-origin_publication: "The Times of India"
-origin_url: "https://timesofindia.indiatimes.com/blogs/civil-irony/the-quiet-grief-of-adult-friendship/"
+last_synced: '2026-10-09T02:41:29.628Z'
 ---
+
 几周前，凌晨 1 点 40 分，一位朋友打来电话。不是发信息，而是直接拨号。那一瞬间，我本能地绷紧了神经，准备迎接坏消息。成年人的世界让我们习惯了这样的认知：深夜来电，往往意味着灾祸——有人进了医院，有人陷入困境，有人已经离世。然而，这次什么也没发生。
 
 她刚下班，开车行驶在伦敦近乎空旷的街道上，听到一首我们过去常一起哼唱的歌，突然很想我。于是她打来电话。我们聊了半小时，说的都是些写下来会显得平淡无奇的事：工作上的疲惫、宝莱坞的八卦、她如何尽情享受婚姻生活、一过三十就出现的背痛这种恼人的事，还有一个我们曾经讨厌但现在却时常想念的教授。没什么深刻的。

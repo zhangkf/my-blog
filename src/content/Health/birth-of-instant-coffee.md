@@ -8,14 +8,15 @@ archived: false
 route_category: 'health'
 route_slug: 'birth-of-instant-coffee'
 source: notion
+origin_author: 'Oscar Sykes, Benjamin Stubbing'
+origin_title: 'A brief history of instant coffee'
+origin_url: 'https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/'
+origin_publication: 'Works in Progress'
 notion_id: '36445fd1-9f92-8030-8aaf-c6cb9be21ec1'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:19:59.662Z'
-origin_author: "Oscar Sykes, Benjamin Stubbing"
-origin_title: "A brief history of instant coffee"
-origin_publication: "Works in Progress"
-origin_url: "https://worksinprogress.co/issue/a-brief-history-of-instant-coffee/"
+last_synced: '2026-10-09T02:41:26.202Z'
 ---
+
 **速溶咖啡看似平凡。它只是粉末加热水而已。但要让它真正发挥作用，却花了几十年的时间。**
 
 *奥斯卡·赛克斯（Oscar Sykes）和本杰明·斯塔宾（Benjamin Stubbing）解释了为什么在不破坏咖啡风味的情况下将其干燥是如此困难。*

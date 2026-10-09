@@ -8,14 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'article-byhil1'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'The end isn''t nigh'
+origin_publication: 'The Imperfectionist'
 notion_id: '38045fd1-9f92-801a-8b34-c376b263c7d2'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:19:59.884Z'
-origin_author: "Oliver Burkeman"
-origin_title: "The end isn't nigh"
-origin_publication: "The Imperfectionist"
-origin_url: ""
+last_synced: '2026-10-09T02:41:26.537Z'
 ---
+
 我觉得有必要发表一份公开声明，来缓解我不断在他人身上——有时也在自己身上——感受到的那种极度焦虑：字面意义上的世界末日，在短期内发生的可能性其实极低。我们几乎可以肯定，自己并非生活在人类文明的终结时刻。坦白说，我们甚至不太可能正处于某种前所未有的剧烈断裂的边缘。我已经做好了招致反对的准备——而且我保证，这不是那种“统计数据表明一切都在变好，所以你该放松”的文章——但事实是，我们所处的时代，在未来历史学家眼中，很可能只是一个大致正常的时期。危险而重要，是的，但仍属于常态。
 
 对这一观点最强烈的反驳，来自我每天收到的那些斥责：是时候把头从沙子里（或别的什么地方）拔出来了，该接受这样一个事实——人工智能即将摧毁所有工作、毁灭人类，或者至少将我们推过某个门槛，进入一个完全无法辨认的未来。然而，我在这里的核心论点，并非针对人工智能或其他潜在的灾难性因素，而是：我们极难（也许根本不可能）摆脱一种被称为「时代沙文主义」的心态——即认为自己所处的这个时代，是人类历史上最重要、最可怕的时刻，仅仅因为这是我们恰好身处其中的时代。

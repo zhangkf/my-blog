@@ -8,14 +8,15 @@ archived: false
 route_category: 'health'
 route_slug: 'article-o4s2b6'
 source: notion
+origin_author: 'Elena Verna'
+origin_title: 'IC work is the new career flex'
+origin_url: 'https://www.elenaverna.com/p/ic-work-is-the-new-career-flex'
+origin_publication: 'Elena''s Growth Scoop'
 notion_id: '39245fd1-9f92-803a-acb2-d27c4a30fad4'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:01.604Z'
-origin_author: "Elena Verna"
-origin_title: "IC work is the new career flex"
-origin_publication: "Elena's Growth Scoop"
-origin_url: "https://www.elenaverna.com/p/ic-work-is-the-new-career-flex"
+last_synced: '2026-10-09T02:41:30.542Z'
 ---
+
 ### 高影响力个人贡献者（HI-C！）的兴起
 
 过去，爬上公司高层是人们的奋斗目标。比如，“我是副总裁，我……可是个大人物。”这曾是你功成名就的信号。如今，真正的潮流是回归个人贡献者的身份。

@@ -8,14 +8,15 @@ archived: false
 route_category: 'health'
 route_slug: 'against-brain-damage'
 source: notion
+origin_author: 'Ethan Mollick'
+origin_title: 'Against "Brain Damage"'
+origin_url: 'https://www.oneusefulthing.org/p/against-brain-damage'
+origin_publication: 'One Useful Thing'
 notion_id: '3f245fd1-9f92-8181-9b64-f138a132f18b'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:05.362Z'
-origin_author: "Ethan Mollick"
-origin_title: "Against \"Brain Damage\""
-origin_publication: "One Useful Thing"
-origin_url: "https://www.oneusefulthing.org/p/against-brain-damage"
+last_synced: '2026-10-09T02:41:36.125Z'
 ---
+
 越来越多的人问我："AI 会损伤大脑吗？"这个问题很有意思。不是因为 AI 真的会造成字面意义上的脑损伤（不会），而是因为这个问题本身，暴露了我们对"AI 会对我们的思考能力做什么"的深层恐惧。所以这篇，我想聊聊：怎么用 AI 帮脑子，而不是伤脑子。但为什么大家对"AI 伤脑"这么执着？
 
 一部分原因，是对 MIT 媒体实验室一篇备受瞩目的论文[《你的大脑在 ChatGPT 上》](https://substack.com/redirect/49ad987f-58c6-42bc-aac2-eab0964b9822?j=eyJ1IjoiMTd6bjZyIn0.lmyJvTzu_qoKWtxvvkhauS63s7gyQOgXbMbR82U0f_g)的误读。这项研究其实没有媒体报道的那么夸张：他们让一小群大学生写作文——有人自己写，有人用谷歌，有人用 ChatGPT（只许用这一种工具）。用 ChatGPT 的学生，投入程度更低，对自己写了什么也记得更少。四个月后，研究者让 9 个之前用过 ChatGPT 的学生重新写一篇、这次不许用 AI：他们的表现比最初就没用 AI 的那组更差，写的时候脑电活动也更弱。当然，这里没有任何脑损伤。但更戏剧化的解读抓住了大家的想象——因为我们一直害怕新技术毁掉思考能力：柏拉图觉得文字会削弱智慧；手机刚出来时，也有人担心不用记电话号码会让人变笨。

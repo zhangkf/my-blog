@@ -8,14 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'the-power-of-immediacy'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'The power of immediacy'
+origin_publication: 'The Imperfectionist'
 notion_id: '3f345fd1-9f92-81f1-8a63-c82baa438f34'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:05.607Z'
-origin_author: "Oliver Burkeman"
-origin_title: "The power of immediacy"
-origin_publication: "The Imperfectionist"
-origin_url: ""
+last_synced: '2026-10-09T02:41:36.530Z'
 ---
+
 如果你最近总觉得卡住了，那些真正重要的事一件也没推进——也许，你的生活里缺的不是方法，而是一点"即时性"。
 
 先说说前几天我干的一件事，你们就明白什么叫"即时性"了：我把攒着"以后看"的三百篇文章删了，扔进回收站；把收藏夹里七十来个网页书签清了；把一摞三英寸厚、自以为无比重要的打印资料处理了；还有那些待办清单和旧项目计划，多到我都不愿细数。

@@ -8,14 +8,15 @@ archived: false
 route_category: 'health'
 route_slug: 'dan-koe-2026'
 source: notion
+origin_author: 'Dan Koe'
+origin_title: 'How to fix your entire life in 1 day'
+origin_url: 'https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1'
+origin_publication: 'The Koe Letter'
 notion_id: '38745fd1-9f92-8037-8a0c-c0715e1c1b22'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:00.511Z'
-origin_author: "Dan Koe"
-origin_title: "How to fix your entire life in 1 day"
-origin_publication: "The Koe Letter"
-origin_url: "https://letters.thedankoe.com/p/how-to-fix-your-entire-life-in-1"
+last_synced: '2026-10-09T02:41:27.595Z'
 ---
+
 > 如果你和我一样，也觉得新年决心很愚蠢。
 
 因为大多数人改变人生方式完全错了。他们制定这些决心，只是因为别人都在做——我们从地位游戏中制造出一种肤浅的意义——但这些决心根本达不到真正改变所需的条件。真正的改变远比说服自己“今年要更有自律、更高效”要深刻得多。

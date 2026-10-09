@@ -8,14 +8,14 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-xlifx8'
 source: notion
+origin_author: 'Ethan Mollick'
+origin_title: 'Co-Existence and the End of Co-Intelligence'
+origin_publication: 'One Useful Thing'
 notion_id: '3f145fd1-9f92-81d4-b73f-f56add62a4e7'
 notion_parent: 'AI'
-last_synced: '2026-10-08T11:20:11.490Z'
-origin_author: "Ethan Mollick"
-origin_title: "Co-Existence and the End of Co-Intelligence"
-origin_publication: "One Useful Thing"
-origin_url: ""
+last_synced: '2026-10-09T02:41:43.040Z'
 ---
+
 《协同智能》出版已经两年了。这本书讲 AI，成绩远超我的预期：登上《纽约时报》畅销榜，译成 25 种以上的语言，荷兰和韩国卖得最好。说它过时了，不完全准确。但它写的，是一个属于聊天机器人和早期模型的世界。在那个世界里，和 AI 共事是一种协作练习：来回跟聊天机器人打磨，带上自己的知识和质疑。人站在中心，聊天机器人是帮手。
 
 **但这种协同，从来不是 AI 公司的长期愿景。按 OpenAI 章程的说法，他们的目标一直是：造出“在大多数有经济价值的工作上超越人类的高度自主系统”。他们想造的是自主智能体。当时听起来还很远……直到突然不远了。**

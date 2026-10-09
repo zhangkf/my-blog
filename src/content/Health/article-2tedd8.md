@@ -8,14 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'article-2tedd8'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'Interest is everything'
+origin_publication: 'The Imperfectionist'
 notion_id: '3ed45fd1-9f92-8146-8298-cb9973d0eb2d'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:03.898Z'
-origin_author: "Oliver Burkeman"
-origin_title: "Interest is everything"
-origin_publication: "The Imperfectionist"
-origin_url: ""
+last_synced: '2026-10-09T02:41:34.119Z'
 ---
+
 每次给这份通讯选题，总有个时刻，我心里那个自视甚高的评判者会跳出来。他最爱掺和这种事，想确保我选个得体的话题。他希望我问：眼下什么话题最讨喜、最有用？读者正面临什么问题？记住，这不是关于你。千万别落到你那些没人会在乎的怪癖上。还有，你大概不该谈政治。或者，你绝对应该谈……
 
 好在如今，我几乎总能及时打断这场徒劳的揣测，提醒自己：真正要紧的问题只有一个。我真正感兴趣、想写的是什么？因为两点。第一，我要是不探索自己的兴趣，我都不知道为什么要做这一切。第二，一次又一次，正是这种做法真的奏效。跟着兴趣走，最靠谱地产出我能写的最有用、最讨喜、最切题的文字。

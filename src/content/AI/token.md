@@ -8,14 +8,15 @@ archived: false
 route_category: 'ai'
 route_slug: 'token'
 source: notion
+origin_author: '0x5FC3'
+origin_title: 'So, Where Does Next-Token Prediction Leave Us?'
+origin_url: 'https://pop.rdi.sh/where-does-next-token-prediction-leave-us/'
+origin_publication: 'POP RDI; RET'
 notion_id: '37745fd1-9f92-8076-a48c-e2b35ec2ca86'
 notion_parent: 'AI'
-last_synced: '2026-10-08T11:20:08.302Z'
-origin_author: "0x5FC3"
-origin_title: "So, Where Does Next-Token Prediction Leave Us?"
-origin_publication: "POP RDI; RET"
-origin_url: "https://pop.rdi.sh/where-does-next-token-prediction-leave-us/"
+last_synced: '2026-10-09T02:41:37.418Z'
 ---
+
 ## 已解决/搞定（Solved/Cooked）
 
 互联网上某些角落的AI极端乐观主义者，特别讨厌人们把大型语言模型仅仅称为“下一词元预测器”（next-token predictors）或“随机鹦鹉”（stochastic parrots）。他们本能地把这些说法当成贬义词。他们用“已解决”或“搞定”这样的词，来宣告那些需要真正人类创造力、专业知识或努力的行业或工作类别已经终结。“动画已解决”“好莱坞搞定”“编程已解决”“研究生搞定”等等。这远非对技术进步的中性描述，其中带着某种幸灾乐祸的快感。他们庆祝这种过时。讨论中充满攻击性，这与人们在网上政治站队的情形极为相似。我想不出还有哪种技术能达到这种部落主义程度。嗯，也许是加密货币？Arch Linux用户？都差得远。

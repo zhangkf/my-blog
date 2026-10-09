@@ -8,14 +8,15 @@ archived: false
 route_category: 'health'
 route_slug: 'article-bmhhcz'
 source: notion
+origin_author: 'David Cain'
+origin_title: 'How to Exist'
+origin_url: 'https://www.raptitude.com/2026/07/how-to-exist/'
+origin_publication: 'Raptitude'
 notion_id: '3ba45fd1-9f92-80df-a5a1-d9c9e1eca546'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:02.308Z'
-origin_author: "David Cain"
-origin_title: "How to Exist"
-origin_publication: "Raptitude"
-origin_url: "https://www.raptitude.com/2026/07/how-to-exist/"
+last_synced: '2026-10-09T02:41:31.737Z'
 ---
+
 这里有一个专为真正胆大者设计的实验。
 
 在那里坐三分钟，遵守两条规则：

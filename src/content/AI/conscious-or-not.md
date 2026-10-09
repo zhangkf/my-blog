@@ -8,14 +8,15 @@ archived: false
 route_category: 'ai'
 route_slug: 'conscious-or-not'
 source: notion
+origin_author: 'Kevin Kelly'
+origin_title: 'Conscious or Not'
+origin_url: 'https://kevinkelly.substack.com/p/conscious-or-not'
+origin_publication: 'Kevin Kelly（Substack）'
 notion_id: '3f245fd1-9f92-8127-9a23-c15fc638acc1'
 notion_parent: 'AI'
-last_synced: '2026-10-08T11:20:11.724Z'
-origin_author: "Kevin Kelly"
-origin_title: "Conscious or Not"
-origin_publication: "Kevin Kelly（Substack）"
-origin_url: "https://kevinkelly.substack.com/p/conscious-or-not"
+last_synced: '2026-10-09T02:41:43.489Z'
 ---
+
 我记事以来，人们就一直在争：机器到底能不能拥有智能。
 
 很多科幻作家和科幻迷——包括我——都觉得这只是时间问题，迟早的事。但另一边，也有不少顶尖聪明人，论证得头头是道：机器在根本上就不可能思考，不可能有智能。他们笃信，智能是人类独有的。两边的说法看着都有道理，但最大的毛病是：谁都说不清智能到底是什么。争到最后，往往只能搬出图灵测试。可图灵测试测的，根本不是智能。

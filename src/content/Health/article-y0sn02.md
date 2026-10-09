@@ -8,14 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'article-y0sn02'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'You have to do the living yourself'
+origin_publication: 'The Imperfectionist'
 notion_id: '3ee45fd1-9f92-8103-873b-edbc451c6f1d'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:04.116Z'
-origin_author: "Oliver Burkeman"
-origin_title: "You have to do the living yourself"
-origin_publication: "The Imperfectionist"
-origin_url: ""
+last_synced: '2026-10-09T02:41:34.568Z'
 ---
+
 这些年，我上过很多播客。主持人快结束时，总爱问同一个问题：“听众今天能做哪一件事，把你这套想法用起来？”
 
 这问题没毛病，也是好意。说不定嘉宾真能给出一个好点子：一个日记提示、一个跟伴侣吵架时用的办法，或者乱世里让自己平静下来的呼吸法。听的人照着做，日子也许真的好一点。

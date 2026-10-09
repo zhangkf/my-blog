@@ -8,14 +8,15 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-e69cs4'
 source: notion
+origin_author: 'Ted Chiang'
+origin_title: 'No, Artificial Intelligence Is Not Conscious'
+origin_url: 'https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/'
+origin_publication: 'The Atlantic'
 notion_id: '38045fd1-9f92-8076-8401-e7f6494bf3c6'
 notion_parent: 'AI'
-last_synced: '2026-10-08T11:20:08.802Z'
-origin_author: "Ted Chiang"
-origin_title: "No, Artificial Intelligence Is Not Conscious"
-origin_publication: "The Atlantic"
-origin_url: "https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/"
+last_synced: '2026-10-09T02:41:38.326Z'
 ---
+
 > 这种想法推演至逻辑终点，既荒谬可笑，又足以自我否定。
 
 > 💡 作者：姜峯楠（Ted Chiang），居于美国太平洋西北地区的华裔作家。著有短篇小说集《你一生的故事》及《呼吸：姜峯楠第二本小說集》。

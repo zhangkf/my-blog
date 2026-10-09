@@ -8,14 +8,15 @@ archived: false
 route_category: 'ai'
 route_slug: 'article-dbvygf'
 source: notion
+origin_author: 'Daniel Miessler'
+origin_title: 'Companies Are Just a Graph of Algorithms'
+origin_url: 'https://danielmiessler.com/blog/companies-graph-of-algorithms'
+origin_publication: '暂缺'
 notion_id: '37645fd1-9f92-80a2-8c45-cc9d7d2be606'
 notion_parent: 'AI'
-last_synced: '2026-10-08T11:20:06.013Z'
-origin_author: "Daniel Miessler"
-origin_title: "Companies Are Just a Graph of Algorithms"
-origin_publication: "暂缺"
-origin_url: "https://danielmiessler.com/blog/companies-graph-of-algorithms"
+last_synced: '2026-10-09T02:41:37.063Z'
 ---
+
 **AI 即将把你的公司视为一系列可优化的组件**
 
 我认为很多人不理解 AI 会有多大的影响，是因为他们不明白「一切都是算法」这个事实。

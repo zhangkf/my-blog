@@ -8,14 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'article-ljzvwq'
 source: notion
+origin_author: '帕姆·英格尔斯'
+origin_title: '维系联络的艺术'
+origin_publication: 'Substack（英文原名待考）'
 notion_id: '3c445fd1-9f92-8031-bf0e-cef9b8dead9a'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:03.193Z'
-origin_author: "帕姆·英格尔斯"
-origin_title: "维系联络的艺术"
-origin_publication: "Substack（英文原名待考）"
-origin_url: ""
+last_synced: '2026-10-09T02:41:32.889Z'
 ---
+
 > 💡
 
 > ### 论现代友谊，以及当生活渐行渐远时如何保持亲密

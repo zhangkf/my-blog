@@ -7,14 +7,14 @@ archived: false
 route_category: 'health'
 route_slug: 'article-68301m'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'Nobody''s ever ready'
+origin_publication: 'The Imperfectionist'
 notion_id: '3ed45fd1-9f92-8163-aa49-cfa80d32dcf8'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:03.439Z'
-origin_author: "Oliver Burkeman"
-origin_title: "Nobody's ever ready"
-origin_publication: "The Imperfectionist"
-origin_url: ""
+last_synced: '2026-10-09T02:41:33.333Z'
 ---
+
 这期《不完美主义者》其实不是讲 AI 的。我保证。但它确实从 AI 说起。因为现在有种病，正在 AI 圈里集中爆发：胃里发紧的焦虑。世界变得太快，你拼尽全力才跟得上。几乎每天都有新的病毒式警告刷屏：大事要发生了，大多数人还没准备好。再不学习新技能，只剩 18 个月就过时了。言外之意都一样：这一步走错，你就被永远甩在后面，人生完蛋。
 
 这种文章我不贴链接。道理和感冒不朝人脸上打喷嚏一样。坦白说，这个话题戳到我了。为什么？因为这种姿势我很熟：焦虑地往前爬，拼命想爬到一个心理上的安全地带。就怕被判入灾难，坠入虚无。这件事很私人，所以我想说清楚：你不用这样活。它不会让你更快乐。也帮不到你的职业。你完全可以选择另一种活法。更有创造力，也更平静。那些贩卖焦虑的人让你以为没得选。其实有。你得先把他们屏蔽掉。

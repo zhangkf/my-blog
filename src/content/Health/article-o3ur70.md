@@ -8,14 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'article-o3ur70'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'Do what you want'
+origin_publication: 'The Imperfectionist'
 notion_id: '3ef45fd1-9f92-8189-97f2-c5aa42b5a7aa'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:04.397Z'
-origin_author: "Oliver Burkeman"
-origin_title: "Do what you want"
-origin_publication: "The Imperfectionist"
-origin_url: ""
+last_synced: '2026-10-09T02:41:34.998Z'
 ---
+
 如果你被一种感觉淹没了：世界正在崩坏。或者，只是被待办清单淹没。或者，卡在某种人生低谷里动不了。有个办法大概率对你有用：把生活调个方向。**调到你真正想做的事上，而不是调到你觉得自己应该怎么活上。**
 
 听到这话，你的第一反应可能是：我哪有条件做自己想做的事？这种时候谈这个，不道德吧？提出这个的人，是不是被特权蒙了眼？如果是这样，那很遗憾，你恰恰更需要做你想做的事。抱歉。这就是超我，或者叫内在批判者、内在法官，随你怎么称呼，的工作方式。规则不是我定的。

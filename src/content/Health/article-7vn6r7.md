@@ -8,14 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'article-7vn6r7'
 source: notion
+origin_author: 'Oliver Burkeman'
+origin_title: 'Let''s stop talking about A.I.'
+origin_publication: 'The Imperfectionist'
 notion_id: '3ba45fd1-9f92-806c-bf7e-e60747f8ff57'
 notion_parent: 'Health'
-last_synced: '2026-10-08T11:20:02.524Z'
-origin_author: "Oliver Burkeman"
-origin_title: "Let's stop talking about A.I."
-origin_publication: "The Imperfectionist"
-origin_url: ""
+last_synced: '2026-10-09T02:41:32.124Z'
 ---
+
 如果你对冥想稍有涉猎，很可能听过这样一个故事：两位和尚长途步行，途中遇到一条湍急的河流。岸边有位女子无法过河，他们便违背了不近女色的戒律，将她背了过去。走了数里之后，一位和尚仍为破戒而耿耿于怀。“师兄，”另一位和尚对他说，“我早已将那女子放下，你为何还一直背着她？”
 
 这个故事有点离奇——我总在琢磨，是不是有人想让我认同“帮助那位女子是坏事，会玷污僧侣的德行”这种说法——不过其核心道理是说得通的。如果你始终纠结于某件事，那就谈不上真正放下，也谈不上从中获得心灵的自由。思想是现实的一大组成部分，也是痛苦的一大来源。那位在河边妥善应对了状况、随后便放下前行的僧侣，比那位深陷思绪泥沼无法自拔的僧侣，要来得更自在，也更活在当下。

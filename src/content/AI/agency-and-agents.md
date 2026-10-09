@@ -8,14 +8,15 @@ archived: false
 route_category: 'ai'
 route_slug: 'agency-and-agents'
 source: notion
+origin_author: 'Ethan Mollick'
+origin_title: 'Agency and Agents'
+origin_url: 'https://www.oneusefulthing.org/p/agency-and-agents'
+origin_publication: 'One Useful Thing'
 notion_id: '3f345fd1-9f92-8113-a867-c13f2d7e830f'
 notion_parent: 'AI'
-last_synced: '2026-10-08T11:20:12.252Z'
-origin_author: "Ethan Mollick"
-origin_title: "Agency and Agents"
-origin_publication: "One Useful Thing"
-origin_url: "https://www.oneusefulthing.org/p/agency-and-agents"
+last_synced: '2026-10-09T02:41:43.895Z'
 ---
+
 ### 从 Hugging Face 事件到「暮光工厂」
 
 所谓能动性，就是主动行动的意愿。它将越来越决定 AI 的下一步走向——以及那走向对我们是好是坏。但问题是：谁的能动性？
