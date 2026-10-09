@@ -1,6 +1,6 @@
 ---
 title: '用 AI 写作的人，想告诉你的事'
-description: '这是一篇关于"写作者如何与 AI 相处"的实地调查。Every 的 Laura Entis 采访了五位职业写作者——《纽约时报》前科技记者 Kevin Roose、GitHub Next 的设计师 Maggie Appleton、记者 Alexandra Samuel、科技记者 Emilia David，以及 Every 首席执行官 Dan Shipper——问他们在写作的每个环节如何让 AI 进场，又在哪里划线。'
+description: '这是一篇关于"写作者如何与 AI 相处"的实地调查。Every 的 Laura Entis 采访了五位职业写作者——《纽约时报》前科技记者 Kevin Roose、GitHub Next 的设计师 Maggie Appleton、记者 Alexandra Samuel、科技记者 Emilia David，以及 Every 首席执行官 Dan Shipper——问他们在写作的每个环节如何让 AI 进'
 pubDate: '2026-10-09'
 heroImage: 'https://d24ovhgu8s7341.cloudfront.net/uploads/post/cover/4471/full_page_cover_427b1da9dfd4a053-323.jpg'
 category: 'Health'
@@ -14,7 +14,7 @@ origin_url: 'https://every.to/p/what-writers-who-use-ai-want-you-to'
 origin_publication: 'Every'
 notion_id: '3f445fd1-9f92-810f-bab9-ed39e13c49b3'
 notion_parent: 'Health'
-last_synced: '2026-10-09T07:41:00.000Z'
+last_synced: '2026-10-09T09:38:26.153Z'
 ---
 
 这是一篇关于"写作者如何与 AI 相处"的实地调查。Every 的 Laura Entis 采访了五位职业写作者——《纽约时报》前科技记者 Kevin Roose、GitHub Next 的设计师 Maggie Appleton、记者 Alexandra Samuel、科技记者 Emilia David，以及 Every 首席执行官 Dan Shipper——问他们在写作的每个环节如何让 AI 进场，又在哪里划线。
