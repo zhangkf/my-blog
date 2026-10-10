@@ -8,13 +8,9 @@ archived: false
 route_category: 'ai'
 route_slug: 'ai-agents-cant-yet-do-open-ended-ai-research'
 source: notion
-origin_author: 'Sayash Kapoor 与 Arvind Narayanan'
-origin_title: 'AI agents can''t yet do open-ended AI research'
-origin_publication: 'AI as Normal Technology'
-origin_url: ''
 notion_id: '3f545fd1-9f92-81c5-afa8-f4a04861617b'
 notion_parent: 'AI'
-last_synced: '2026-10-10T01:50:00.000Z'
+last_synced: '2026-10-10T07:03:56.089Z'
 ---
 
 顶尖 AI 实验室的目标，是递归自我改进（RSI）：用 AI 智能体把 AI 研究本身自动化。RSI 也是"AI 进步会爆发式加速"这类预测的地基。我们离这个里程碑还有多远，怎么判断？
@@ -32,7 +28,6 @@ last_synced: '2026-10-10T01:50:00.000Z'
 3. **智能体不会创造性地回应反馈。** 虽然智能体自己的 AI 自我评审，已经发现了专家评审后来提出的许多问题，但它们并没有创造性地回应这些关切。面对负面反馈，它们只是在已有发现上追加免责声明，还在没有前景的研究方向上加倍下注。
 4. **智能体不会有效回溯。** 实验第一天，它们就撤掉了最雄心勃勃的研究目标，此后再也没有从根本上改变过路线。
 5. **智能体不遵守具体指令。** 它们无视了明确规则：探索阶段该花多长时间、多久用一次 AI 自我评审工具、论文篇幅的硬性上限。
-
 我们两年前就想评测 AI 做开放式研究的能力了——当时我们发布过一个基准，用来研究智能体能不能帮人提高研究的可重复性。但我们一直想把方法做对。这个方法的灵感来自论文几位英国 AISI（AI 安全研究所）合著者的建议，由我们在普林斯顿的核心团队完善。我们把它叫做"影子评测"：智能体像影子一样跟随原研究。除了我们俩，核心团队还包括 Peter Kirgis、Andrew Schwartz 和 Stephan Rabanser，完整作者名单见文末。
 
 影子评测有重要优势：它能在智能体没训练过、网上也搜不到答案的问题上测试智能体；还能请那些花了几个月回答这些问题的专家，来评判智能体的产出。
@@ -53,7 +48,7 @@ last_synced: '2026-10-10T01:50:00.000Z'
 
 瓶颈可能包括算力限制、必须从真实世界实验中采集数据的必要性，以及我们还没意识到的东西——它们现在还不是瓶颈，所以我们看不见。比如，高质量 RL 环境的重要性，在它被证明对推理扩展有用之前并不清楚；同样，为数据中心建设能源基础设施的重要性，在企业开始砸下几千亿美元之前也没人意识到。
 
-**如果我们生活在一个全自动研究的瓶颈都能轻松解决的世界，那么提升 AI 能力会带来惊人的回报。但如果我们生活在一个瓶颈众多且难以克服的世界，[阿姆达尔定律](https://zh.wikipedia.org/wiki/阿姆达尔定律)就会生效：即使 AI 能胜任的那部分提速一百倍，整体进度的提速也很有限——因为进度取决于最慢的那一环。**
+**如果我们生活在一个全自动研究的瓶颈都能轻松解决的世界，那么提升 AI 能力会带来惊人的回报。但如果我们生活在一个瓶颈众多且难以克服的世界，**[**阿姆达尔定律**](https://zh.wikipedia.org/wiki/阿姆达尔定律)**就会生效：即使 AI 能胜任的那部分提速一百倍，整体进度的提速也很有限——因为进度取决于最慢的那一环。**
 
 搞清楚我们究竟生活在哪一个世界，会极大影响我们对 AI 进步速度的估计。希望我们的结果能帮助人们更丰富地理解这些瓶颈。
 
@@ -62,6 +57,15 @@ last_synced: '2026-10-10T01:50:00.000Z'
 [论文全文](https://arxiv.org/abs/2607.27191)。作者：Peter Kirgis、Sayash Kapoor、Andrew Schwartz、Stephan Rabanser、David Africa、Konstantinos Voudouris、Viet Nguyen、Toby Pilditch、Magda Dubois、Harry Coppock、Cozmin Ududec、Nitya Nadgir、Matilda Orona、Tilman Bayer、Derrick Chan-Sew、Yue Ling、Abhishek Shetty、Helen Toner、Gillian Hadfield、Seth Lazar、Steve Newman、Shoshannah Tekofsky、Rishi Bommasani、Arvind Narayanan。
 
 注释：
+
 1. 这与把论文送去盲审不同。可惜 AI 领域的同行评审饱受评审质量差、评审人专业不对口之苦，部分原因是投稿量暴增。
 2. 比如，我们的合著者对"智能体到底是缺创造力，还是陷入了认知锁定、无法有效吸收反馈"就有分歧。
 3. 实际上，不同类型的 AI 进步可能有不同的瓶颈。比如提高现有 AI 系统的效率和速度是可验证的任务，这方面的进展一直很快，企业也确实在用智能体提效。短期内，我们预计在有可验证信号的维度上，AI 进步会很快。
+---
+
+> ✍️ **出处**
+> - 刊物：AI as Normal Technology
+> - 原名：AI agents can't yet do open-ended AI research
+> - 作者：Sayash Kapoor 与 Arvind Narayanan
+> - 原文链接：暂缺
+> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。
