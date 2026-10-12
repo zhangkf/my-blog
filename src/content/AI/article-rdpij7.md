@@ -1,6 +1,6 @@
 ---
 title: '把 AI 当作寻常技术：一份理解指南'
-description: '当我们发表《AI as Normal Technology》（《把 AI 当作寻常技术》）时，反响之大出乎我们的意料。它很快成为我们两人各自职业生涯中影响力最大的一部作品。我们把这看作一个强烈的信号：值得把更多时间花在思考与书写 AI 的中期未来及其影响上，给出立足事实的分析——而不是在这个本来就容易滋生臆测的议题上继续添砖加瓦。这也是我们工作重心的转移：不再聚焦 AI 的当下与近期影响，而那正是 AI Snake Oil 项目的主题。'
+description: '当我们发表《AI as Normal Technology》（《把 AI 当作寻常技术》）时，反响之大出乎我们的意料。它很快成为我们两人各自职业生涯中影响力最大的一部作品。我们把这看作一个强烈的信号：值得把更多时间花在思考与书写 AI 的中期未来及其影响上，给出立足事实的分析——而不是在这个本来就容易滋生臆测的议题上继续添砖加瓦。这也是我们工作重心的转移：不再聚焦 AI 的当下与近期影响，而那正是'
 pubDate: '2026-10-12'
 heroImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
@@ -10,11 +10,11 @@ route_slug: 'article-rdpij7'
 source: notion
 origin_author: 'Arvind Narayanan、Sayash Kapoor'
 origin_title: 'A guide to understanding AI as normal technology'
-origin_publication: 'AI as Normal Technology'
 origin_url: 'https://www.normaltech.ai/p/a-guide-to-understanding-ai-as-normal'
+origin_publication: 'AI as Normal Technology'
 notion_id: '3f745fd1-9f92-8170-a84d-dcb4ceacc669'
 notion_parent: 'AI'
-last_synced: '2026-10-12T01:45:15.800975+00:00'
+last_synced: '2026-10-12T06:32:04.540Z'
 ---
 
 当我们发表《AI as Normal Technology》（《把 AI 当作寻常技术》）时，反响之大出乎我们的意料。它很快成为我们两人各自职业生涯中影响力最大的一部作品。我们把这看作一个强烈的信号：值得把更多时间花在思考与书写 AI 的中期未来及其影响上，给出立足事实的分析——而不是在这个本来就容易滋生臆测的议题上继续添砖加瓦。这也是我们工作重心的转移：不再聚焦 AI 的当下与近期影响，而那正是 AI Snake Oil 项目的主题。
@@ -27,7 +27,7 @@ last_synced: '2026-10-12T01:45:15.800975+00:00'
 
 论文里已经解释了「寻常」是什么意思（下文会展开），但我们本可以把「它不是什么」说得更明白一些。
 
-我们的意思绝不是「没什么可看的，都散了吧」。事实上，从汽车到社交媒体，强大的技术往往带来不可预测的社会效应——它们是技术与人和复杂互动中涌现出来的结果，无法单靠技术的内在逻辑预测出来。正因为如此，拒绝技术决定论是原论文的核心前提之一。
+**我们的意思绝不是「没什么可看的，都散了吧」。事实上，从汽车到社交媒体，强大的技术往往带来不可预测的社会效应——它们是技术与人和复杂互动中涌现出来的结果，无法单靠技术的内在逻辑预测出来。正因为如此，拒绝技术决定论是原论文的核心前提之一。**
 
 具体到 AI（特别是聊天机器人），我们已经看到涌现的社会效应。AI 伴侣的流行，以及模型谄媚引发的有害效应——比如所谓「AI 精神病」——都让多数观察者措手不及。另一方面，许多曾被预测为迫在眉睫的风险，比如 AI 被用来操纵选举，至今并未成真。
 
@@ -84,15 +84,10 @@ last_synced: '2026-10-12T01:45:15.800975+00:00'
 我们理解，AI 未来最被广泛讨论的两个框架竟然如此大相径庭，这让人不安。（我们的论文第四部分讲政策，本身就对这种局面多有评论。）我们可以给几颗定心丸：
 
 - 在许多具体问题上，我们和《AI 2027》的作者其实有不少共识。我们正在起草一份联合声明梳理这些共识。感谢 Nicholas Carlini 组织这项工作。
-
 - 在我们看来，比信念一致更重要的，是在信念不同时仍能找到的政策共识。即便是各方都同意的「容易」的政策干预，实践起来也是巨大挑战。如果连这些都做不到，那些担心超级智能迫在眉睫的人主张的激进措施就更没指望了。
-
 - 已经有一些工作在努力找出分歧的关键点（crux），并商定一些指标来帮助裁决两种世界观。我们参与了其中几项，会继续参与。感谢 Golden Gate Institute for AI 在这方面的努力。
-
 - 说到指标，我们正在扩展 HAL（Holistic Agent Leaderboard，整体智能体排行榜）的愿景。它现在是一个更好的智能体基准编排系统，新计划是把它做成一个早期预警系统，帮助 AI 社群识别：智能体在哪些领域的能力阈值已被跨过、足以产生变革性的现实影响。我们把这些能力阈值看作影响的必要但不总是充分条件；一旦某个阈值被跨过，我们关于非技术壁垒（对收益和风险都是）的论点将受到更尖锐的考验。
-
 - 注意，HAL 不是做预测，而是做当下的态势感知。这是我们工作的一个主题。AI 讨论里最耐人寻味的，不只是大家对未来看法迥异——连对可观察的当下，比如扩散速度（下文会谈），看法都大相径庭。除非我们这个社群大大提高对当下的测量能力，真正去检验关于进步的竞争性因果解释，否则投向预测的精力都是错位的，因为我们缺少裁决这些预测的手段。比如我们论证过，哪怕 AGI 真的被造出来了，我们事后也未必认得出来。当然，这种局限部分是内在的——AGI 这类概念本身就不精确；但同时我们确实可以在测量上做得好得多。
-
 ## 当你笃信一个世界观，就很难听懂另一个
 
 我们写过：
@@ -199,4 +194,4 @@ last_synced: '2026-10-12T01:45:15.800975+00:00'
 - Arvind 的新 YouTube 频道，从「寻常技术」视角谈 AI 发展。
 - 媒体报道：《纽约时报》近一个月有三篇深入讨论这篇论文的专栏（Eric Schmidt 与 Selina Xu、David Wallace-Wells、Ezra Klein）；《经济学人》上周刊文讨论「寻常技术」论点；《纽约客》Joshua Rothman 把《AI 2027》与「AI as Normal Technology」做了对比；Prospect 杂志 Ethan Zuckerman 讨论了这一视角的用处；MIT Technology Review 的 James O'Donnell 总结了论文论点。
 - 播客：Arvind 上过《纽约时报》Hard Fork、Tim O'Reilly 的播客；Sayash 上过 Lawfare 的 Scaling Laws、Carnegie 的 Interpreting India。
-- 对谈：Sayash 与 Daniel Kokotajlo、Eli Lifland 辩论过；Arvind 与 Daniel Kokotajlo 辩论过；在 Asterisk 杂志，Arvind 与 Ajeya Cotra 辩论了 AI 进步有没有速度极限、以及我们怎么知道
+- 对谈：Sayash 与 Daniel Kokotajlo、Eli Lifland 辩论过；Arvind 与 Daniel Kokotajlo 辩论过；在 Asterisk 杂志，Arvind 与 Ajeya Cotra 辩论了 AI 进步有没有速度极限、以及我们怎么知道。
