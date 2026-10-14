@@ -1,26 +1,27 @@
 ---
 title: '作业末日之后'
-description: '去年夏天，我写了一篇《作业末日》，预言这样一个现实：AI 即将能完成绝大多数传统作业，作业将不再是有效的学习工具和评估手段。如今预言应验了，AI 能在大多数考试中拿高分。但出乎意料的是，这一切并没有带来多少改变——哪怕学生对 AI 的使用已经近乎普及。'
-pubDate: '2026-10-14'
+description: '去年夏天，我写了一篇《作业末日》(https://www.oneusefulthing.org/p/the-homework-apocalypse)，预言这样一个现实：AI 即将能完成绝大多数传统作业，作业将不再是有效的学习工具和评估手段。如今预言应验了，AI 能在大多数考试中拿高分。但出乎意料的是，这一切并没有带来多少改变——哪怕学生对 AI 的使用已经近乎普及。'
+pubDate: '2026-10-13'
 heroImage: 'https://substackcdn.com/image/fetch/$s_!X4kj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6455b64c-3b39-4834-bd60-d8f5b8696c0f_1242x688.jpeg'
 category: 'Health'
 archived: false
 route_category: 'health'
 route_slug: 'article-xtyo86'
-source: direct
+source: notion
 origin_author: 'Ethan Mollick'
 origin_title: 'Post-apocalyptic education'
 origin_url: 'https://www.oneusefulthing.org/p/post-apocalyptic-education'
 origin_publication: 'One Useful Thing'
+notion_id: '3f845fd1-9f92-8106-a4ef-d0d6a4565ea8'
 notion_parent: 'Health'
-last_synced: '2026-10-14T01:41:04.000000+00:00'
+last_synced: '2026-10-14T06:08:58.965Z'
 ---
 
 去年夏天，我写了一篇[《作业末日》](https://www.oneusefulthing.org/p/the-homework-apocalypse)，预言这样一个现实：AI 即将能完成绝大多数传统作业，作业将不再是有效的学习工具和评估手段。如今预言应验了，AI 能在大多数考试中拿高分。但出乎意料的是，这一切并没有带来多少改变——哪怕学生对 AI 的使用已经近乎普及。
 
 八个月前美国的一项[代表性调查](https://8ce82b94a8c4fdc3ea6d-b1d233e3bc3cb10858bea65ff05e18f2.ssl.cf2.rackcdn.com/bf/24/cd3646584af89e7c668c77)发现，82% 的本科生和 72% 的 K12 学生曾用 AI 完成学业任务，普及速度快得惊人。用 AI 的学生里，56% 用它辅助写作作业，45% 用它完成其他类型的学业任务。调查也记录了 AI 的许多积极用法，这一点后面还会谈到；但现在，让我们先聚焦"AI 帮写作业"这件事。学生并不总把寻求 AI 帮助看作作弊（他们只是让 AI 帮自己解一道难题、搞定作文里难写的一段），但许多老师不这么看。
 
-**说清楚：AI 不是作弊的罪魁祸首。作弊之所以发生，是因为学业任务又难、赌注又大；而学业任务之所以又难又大，是因为[学习并不总是好玩的](https://x.com/emollick/status/1756396139623096695)，像分数这样的外部激励，常常是逼人学习的必要手段。人类极其擅长想方设法规避自己不想做的事，而一项[新的重磅分析](https://psycnet.apa.org/doiLanding?doi=10.1037%2Fbul0000443)表明，大多数人都不喜欢动脑子。于是他们把一部分脑力劳动外包给了 AI。总的来说，我是支持把事情外包给 AI 的（这是我在 MasterClass 新课的主题），但教育不一样——用力本身就是目的。**
+**说清楚：AI 不是作弊的罪魁祸首。作弊之所以发生，是因为学业任务又难、赌注又大；而学业任务之所以又难又大，是因为**[**学习并不总是好玩的**](https://x.com/emollick/status/1756396139623096695)**，像分数这样的外部激励，常常是逼人学习的必要手段。人类极其擅长想方设法规避自己不想做的事，而一项**[**新的重磅分析**](https://psycnet.apa.org/doiLanding?doi=10.1037%2Fbul0000443)**表明，大多数人都不喜欢动脑子。于是他们把一部分脑力劳动外包给了 AI。总的来说，我是支持把事情外包给 AI 的（这是我在 MasterClass 新课的主题），但教育不一样——用力本身就是目的。**
 
 ![任务越费脑，我们的感觉就越糟](https://substackcdn.com/image/fetch/$s_!5bSA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F747ef9c8-2d28-4a88-9847-4f577050a8fe_556x548.png)
 
@@ -37,7 +38,6 @@ last_synced: '2026-10-14T01:41:04.000000+00:00'
 - 没有任何专用 AI 检测器能在[不冒误判风险](https://arxiv.org/abs/2304.02819)、[不怕多轮提示改写](https://arxiv.org/ftp/arxiv/papers/2403/2403.19148.pdf)的前提下高精度识别 AI 写作，[连水印也帮不上多少忙](https://arxiv.org/abs/2303.11156)。
 - 人也识别不好 AI 写作。[顶级语言学期刊的编辑们识别不了](https://www.sciencedirect.com/science/article/abs/pii/S2772766123000289)，[老师们也识别不了（虽然他们自以为能——这正是错觉本身）](https://www.sciencedirect.com/science/article/pii/S2666920X24000109)。简单的 AI 写作也许还有迹可循（"delve"都快成梗了），但用简单的提示词改写一下，就能轻易掩盖 AI 写作的腔调。事实上，精心调过的 AI 文字被读者[判定为"比人写得更像人"](https://arxiv.org/pdf/2407.08853)。
 - 不能靠 AI 来检测 AI 写作（虽然总有人在试）。被问到一篇人写的文字是不是 AI 写的，[GPT-4 有 95% 的概率会答错](https://arxiv.org/pdf/2310.14724)。
-
 想保住旧作业形式，还是有办法的。老师可以回归课堂写作，让学生在课堂上当场展示能力，或者用密切监督的其他办法抑制 AI 作弊。但对绝大多数老师来说，这意味着还没开始的调整和改变。迄今为止，几乎没有老师在"AI 检测幻象"破灭之后，真正改变了自己的教学与评估方式。
 
 当老师们在"检测错觉"里打转时，学生面对的是另一种错觉：虚假的知识感（Illusory Knowledge）。他们并没有意识到，找 AI 帮忙写作业正在侵蚀自己的学习。毕竟 AI 给出的建议和答案帮他们解出了题，这种流畅感很容易被误认为掌握。罗格斯研究的研究者写道："没有理由相信学生们意识到了自己的作业策略正在拉低考试分数……他们凭常识推断：凡是能提高作业成绩的学习策略，一定也能提高考试成绩。"
