@@ -7,13 +7,14 @@ category: 'AI'
 archived: false
 route_category: 'ai'
 route_slug: 'article-3nso2e'
-source: direct
-origin_author: 'Sayash Kapoor、Arvind Narayanan'
+source: notion
+origin_author: 'Sayash Kapoor and Arvind Narayanan'
 origin_title: 'Could AI slow science?'
 origin_url: 'https://www.normaltech.ai/p/could-ai-slow-science'
 origin_publication: 'AI as Normal Technology'
+notion_id: '3fa45fd1-9f92-818a-8dc0-c954285efc00'
 notion_parent: 'AI'
-last_synced: '2026-10-15T01:50:00.000Z'
+last_synced: '2026-10-15T06:27:05.712Z'
 ---
 
 这是一篇关于"AI 对科学制度本身的影响"的长文。AI as Normal Technology 的两位作者 Sayash Kapoor 与 Arvind Narayanan 提出一个反直觉的判断：AI 领袖们预言 AI 将带来科学的巨大飞跃——治愈癌症、寿命翻倍、十年走完一个世纪的路；但个体科学家受益，不等于科学整体受益。对科学这个整体而言，AI 更可能是一剂"不健康的冲击"。
