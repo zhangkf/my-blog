@@ -74,6 +74,12 @@ async function apiCall(label, fn, maxRetries = 6) {
   }
 }
 
+// Routes claimed so far (route → pageId). Seeded in main() from the
+// files already on disk so a new page can never steal an existing
+// article's URL; syncPage uses it to auto-disambiguate slug collisions
+// instead of letting one bad title abort the entire sync.
+const usedRoutes = new Map();
+
 // ── Helpers ─────────────────────────────────────────────────────────
 
 function slugify(text) {
@@ -532,6 +538,22 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
   // Use original title as-is (preserve numbering for series articles)
   const cleanTitle = title;
 
+  // Resolve this page's slug once. If another page already claimed the
+  // route, append a short page-id suffix (and warn) rather than writing
+  // over that page's file and failing the run at the route check.
+  const routeCategoryForSlug =
+    archived && existingRoute ? existingRoute.routeCategory : categorySlug;
+  let slug = existingRoute?.routeSlug || slugify(cleanTitle);
+  const claimedBy = usedRoutes.get(`/${routeCategoryForSlug}/${slug}/`);
+  if (claimedBy && claimedBy !== pageId) {
+    const suffix = pageId.replace(/-/g, "").slice(0, 6);
+    console.warn(
+      `    ⚠️ Slug "${slug}" already claimed by page ${claimedBy}; using "${slug}-${suffix}" — add a slug-map entry for a prettier URL.`,
+    );
+    slug = `${slug}-${suffix}`;
+  }
+  usedRoutes.set(`/${routeCategoryForSlug}/${slug}/`, pageId);
+
   // Build frontmatter
   const frontmatter = [
     "---",
@@ -544,7 +566,7 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
     `route_category: ${escapeYaml(
       archived && existingRoute ? existingRoute.routeCategory : categorySlug
     )}`,
-    `route_slug: ${escapeYaml(existingRoute?.routeSlug || slugify(cleanTitle))}`,
+    `route_slug: ${escapeYaml(slug)}`,
     `source: notion`,
     copyrightCtx.copyright?.author
       ? `origin_author: ${escapeYaml(copyrightCtx.copyright.author)}`
@@ -572,7 +594,6 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
   const outputDir = path.join(CONTENT_DIR, categoryDir);
   fs.mkdirSync(outputDir, { recursive: true });
 
-  const slug = existingRoute?.routeSlug || slugify(cleanTitle);
   const filename = `${slug}.md`;
   const relPath = path.join(categoryDir, filename);
   const filePath = path.join(outputDir, filename);
@@ -655,6 +676,11 @@ async function main() {
   fs.mkdirSync(ASSETS_DIR, { recursive: true });
   const previousCategories = loadPreviousCategories();
   const existingArticleRoutes = loadExistingArticleRoutes(previousCategories);
+  // Claim every existing route up front so new pages get suffixed
+  // instead of overwriting a published article's file.
+  for (const [pid, r] of existingArticleRoutes) {
+    usedRoutes.set(`/${r.routeCategory}/${r.routeSlug}/`, pid);
+  }
 
   // Auto-discover parent pages if not explicitly configured
   let parentPageIds = PARENT_PAGE_IDS_ENV;
