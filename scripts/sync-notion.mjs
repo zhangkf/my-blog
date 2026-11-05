@@ -44,6 +44,36 @@ if (!NOTION_API_KEY) {
 
 const notion = new Client({ auth: NOTION_API_KEY });
 
+// ── Rate-limit resilience ─────────────────────────────────────────
+// Notion allows an integration ~3 requests/second on average. A full
+// sync bursts past that once the page count grows and used to die
+// mid-run with `rate_limited`, aborting the whole sync. Pace every
+// API call (~3/s) and retry 429s with exponential backoff so a limit
+// hit slows the sync down instead of killing it.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+let lastApiCallAt = 0;
+
+async function apiCall(label, fn, maxRetries = 6) {
+  let delay = 2000;
+  for (let attempt = 0; ; attempt++) {
+    const waitMs = lastApiCallAt + 340 - Date.now();
+    if (waitMs > 0) await sleep(waitMs);
+    lastApiCallAt = Date.now();
+    try {
+      return await fn();
+    } catch (err) {
+      const rateLimited = err?.code === "rate_limited" || err?.status === 429;
+      if (!rateLimited || attempt >= maxRetries) throw err;
+      const retryAfter = Number(err?.headers?.get?.("retry-after"));
+      const wait =
+        Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : delay;
+      console.warn(`⏳ Rate limited (${label}); retrying in ${wait}ms…`);
+      await sleep(wait);
+      delay *= 2;
+    }
+  }
+}
+
 // ── Helpers ─────────────────────────────────────────────────────────
 
 function slugify(text) {
@@ -167,11 +197,13 @@ async function fetchAllBlocks(blockId) {
   const blocks = [];
   let cursor = undefined;
   do {
-    const resp = await notion.blocks.children.list({
-      block_id: blockId,
-      start_cursor: cursor,
-      page_size: 100,
-    });
+    const resp = await apiCall("blocks.children.list", () =>
+      notion.blocks.children.list({
+        block_id: blockId,
+        start_cursor: cursor,
+        page_size: 100,
+      }),
+    );
     blocks.push(...resp.results);
     cursor = resp.has_more ? resp.next_cursor : undefined;
   } while (cursor);
@@ -446,7 +478,9 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
   console.log(`  📄 Syncing: ${title}`);
 
   // Fetch page metadata for cover image and created_time
-  const page = await notion.pages.retrieve({ page_id: pageId });
+  const page = await apiCall("pages.retrieve", () =>
+    notion.pages.retrieve({ page_id: pageId }),
+  );
   let createdTime = page.created_time.split("T")[0]; // YYYY-MM-DD
 
   // ── Series ordering ──────────────────────────────────────────────
@@ -626,10 +660,12 @@ async function main() {
   let parentPageIds = PARENT_PAGE_IDS_ENV;
   if (parentPageIds.length === 0) {
     console.log("🔍 No NOTION_PARENT_PAGE_IDS set, auto-discovering pages...\n");
-    const searchResp = await notion.search({
-      filter: { value: "page", property: "object" },
-      page_size: 100,
-    });
+    const searchResp = await apiCall("search", () =>
+      notion.search({
+        filter: { value: "page", property: "object" },
+        page_size: 100,
+      }),
+    );
     parentPageIds = searchResp.results
       .filter((p) => p.parent?.type === "workspace" && !p.in_trash)
       .map((p) => p.id);
@@ -646,7 +682,9 @@ async function main() {
   let syncFailureCount = 0;
 
   for (const parentId of parentPageIds) {
-    const parentPage = await notion.pages.retrieve({ page_id: parentId });
+    const parentPage = await apiCall("pages.retrieve", () =>
+      notion.pages.retrieve({ page_id: parentId }),
+    );
     const topTitle =
       parentPage.properties.title?.title?.map((t) => t.plain_text).join("") ||
       "Untitled";
