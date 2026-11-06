@@ -1,9 +1,10 @@
 name: Sync Notion to Blog
 
 on:
-  schedule:
-    # Run every 15 minutes
-    - cron: '*/15 * * * *'
+  # Schedule removed 2026-11-06: GitHub's */15 cron only actually fired
+  # every 4-8 hours. Sync now runs locally every 15 min via the
+  # haodu-notion-sync-local job (custom.notion-blog-sync runner).
+  # Manual dispatch kept as a fallback.
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions UI
 
