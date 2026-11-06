@@ -1,7 +1,8 @@
 ---
 title: 'NYT：中年做这 9 件事，能提高长寿概率'
 description: '中年（大致指 40 到 60 岁）你如何对待自己的身体和大脑，会极大地影响未来几十年的衰老方式。'
-pubDate: '2026-11-05'
+pubDate: '2026-07-28'
+origin_date: '2026-07-28'
 category: 'Health'
 archived: false
 route_category: 'health'
@@ -9,7 +10,7 @@ route_slug: 'nyt-9'
 source: notion
 notion_id: '40f45fd1-9f92-8136-bd8a-e8a40250bada'
 notion_parent: 'Health'
-last_synced: '2026-11-05T03:12:30.523Z'
+last_synced: '2026-11-06T07:59:02.987Z'
 ---
 
 > 💡 TL;DR：中年想长寿，专家给出的 9 件事：力量训练、睡眠、社交……每条都有研究背书，没有一条需要花大钱。
