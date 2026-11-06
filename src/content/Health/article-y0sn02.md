@@ -1,7 +1,8 @@
 ---
 title: '生活得自己去过'
 description: '这些年，我上过很多播客。主持人快结束时，总爱问同一个问题：“听众今天能做哪一件事，把你这套想法用起来？”'
-pubDate: '2026-10-03'
+pubDate: '2025-10-31'
+origin_date: '2025-10-31'
 heroImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'You have to do the living yourself'
 origin_publication: 'The Imperfectionist'
 notion_id: '3ee45fd1-9f92-8103-873b-edbc451c6f1d'
 notion_parent: 'Health'
-last_synced: '2026-10-09T02:41:34.568Z'
+last_synced: '2026-11-06T07:53:53.116Z'
 ---
 
 这些年，我上过很多播客。主持人快结束时，总爱问同一个问题：“听众今天能做哪一件事，把你这套想法用起来？”

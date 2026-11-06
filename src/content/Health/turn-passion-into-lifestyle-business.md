@@ -1,7 +1,8 @@
 ---
 title: 'Dan Koe：把兴趣变成生活方式生意（完整课程）'
 description: 'Dan Koe · future/proof · 2026-10-05 · 原文(https://letters.thedankoe.com/p/full-course-how-to-turn-your-interests)'
-pubDate: '2026-11-05'
+pubDate: '2026-10-05'
+origin_date: '2026-10-05'
 category: 'Health'
 archived: false
 route_category: 'health'
@@ -9,7 +10,7 @@ route_slug: 'turn-passion-into-lifestyle-business'
 source: notion
 notion_id: '40f45fd1-9f92-81dd-809e-e42609cca519'
 notion_parent: 'Health'
-last_synced: '2026-11-05T03:12:26.980Z'
+last_synced: '2026-11-06T07:54:02.017Z'
 ---
 
 > 💡 TL;DR：多兴趣不是缺陷。用「反愿景」定方向，公开写作验证选题，从微产品、微型服务到教练式辅导层层涨价——一人生意从第一个 1000 美元开始。

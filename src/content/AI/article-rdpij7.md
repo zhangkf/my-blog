@@ -1,7 +1,8 @@
 ---
 title: '把 AI 当作寻常技术：一份理解指南'
 description: '当我们发表《AI as Normal Technology》（《把 AI 当作寻常技术》）时，反响之大出乎我们的意料。它很快成为我们两人各自职业生涯中影响力最大的一部作品。我们把这看作一个强烈的信号：值得把更多时间花在思考与书写 AI 的中期未来及其影响上，给出立足事实的分析——而不是在这个本来就容易滋生臆测的议题上继续添砖加瓦。这也是我们工作重心的转移：不再聚焦 AI 的当下与近期影响，而那正是'
-pubDate: '2026-10-12'
+pubDate: '2025-09-09'
+origin_date: '2025-09-09'
 heroImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
 archived: false
@@ -14,7 +15,7 @@ origin_url: 'https://www.normaltech.ai/p/a-guide-to-understanding-ai-as-normal'
 origin_publication: 'AI as Normal Technology'
 notion_id: '3f745fd1-9f92-8170-a84d-dcb4ceacc669'
 notion_parent: 'AI'
-last_synced: '2026-10-12T06:32:04.540Z'
+last_synced: '2026-11-06T07:54:21.402Z'
 ---
 
 当我们发表《AI as Normal Technology》（《把 AI 当作寻常技术》）时，反响之大出乎我们的意料。它很快成为我们两人各自职业生涯中影响力最大的一部作品。我们把这看作一个强烈的信号：值得把更多时间花在思考与书写 AI 的中期未来及其影响上，给出立足事实的分析——而不是在这个本来就容易滋生臆测的议题上继续添砖加瓦。这也是我们工作重心的转移：不再聚焦 AI 的当下与近期影响，而那正是 AI Snake Oil 项目的主题。

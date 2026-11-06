@@ -1,7 +1,8 @@
 ---
 title: '点与蜂群'
 description: '我自认这几年写 Substack，对 AI 的方向和速度判断得不错。但最近，我好像有一件大事判断错了。过去一年我一直在写：我猜人得像经理一样和智能体共事，决定怎么把工作分给智能体、怎么组织它们。我原以为，要让智能体有效地组队工作，需要精心构造。就像建一家公司，还需要时间摸索。'
-pubDate: '2026-10-03'
+pubDate: '2026-10-01'
+origin_date: '2026-10-01'
 heroImage: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'The Dot and the Swarm'
 origin_publication: 'One Useful Thing'
 notion_id: '3ee45fd1-9f92-81e3-8a20-dc2c60602185'
 notion_parent: 'AI'
-last_synced: '2026-10-09T02:41:41.435Z'
+last_synced: '2026-11-06T07:54:13.633Z'
 ---
 
 我自认这几年写 Substack，对 AI 的方向和速度判断得不错。但最近，我好像有一件大事判断错了。过去一年我一直在写：我猜人得像经理一样和智能体共事，决定怎么把工作分给智能体、怎么组织它们。我原以为，要让智能体有效地组队工作，需要精心构造。就像建一家公司，还需要时间摸索。

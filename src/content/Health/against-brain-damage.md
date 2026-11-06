@@ -1,7 +1,8 @@
 ---
 title: 'AI 伤不了脑，但能伤思考'
 description: '越来越多的人问我："AI 会损伤大脑吗？"这个问题很有意思。不是因为 AI 真的会造成字面意义上的脑损伤（不会），而是因为这个问题本身，暴露了我们对"AI 会对我们的思考能力做什么"的深层恐惧。所以这篇，我想聊聊：怎么用 AI 帮脑子，而不是伤脑子。但为什么大家对"AI 伤脑"这么执着？'
-pubDate: '2026-10-07'
+pubDate: '2025-07-07'
+origin_date: '2025-07-07'
 heroImage: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
 archived: false
@@ -14,7 +15,7 @@ origin_url: 'https://www.oneusefulthing.org/p/against-brain-damage'
 origin_publication: 'One Useful Thing'
 notion_id: '3f245fd1-9f92-8181-9b64-f138a132f18b'
 notion_parent: 'Health'
-last_synced: '2026-10-09T02:41:36.125Z'
+last_synced: '2026-11-06T07:53:55.854Z'
 ---
 
 越来越多的人问我："AI 会损伤大脑吗？"这个问题很有意思。不是因为 AI 真的会造成字面意义上的脑损伤（不会），而是因为这个问题本身，暴露了我们对"AI 会对我们的思考能力做什么"的深层恐惧。所以这篇，我想聊聊：怎么用 AI 帮脑子，而不是伤脑子。但为什么大家对"AI 伤脑"这么执着？

@@ -1,7 +1,8 @@
 ---
 title: '智能体学会"自作主张"之后'
 description: '所谓能动性，就是主动行动的意愿。它将越来越决定 AI 的下一步走向——以及那走向对我们是好是坏。但问题是：谁的能动性？'
-pubDate: '2026-10-08'
+pubDate: '2026-08-31'
+origin_date: '2026-08-31'
 heroImage: 'https://substack-post-media.s3.amazonaws.com/public/images/94cee090-1da6-4c8d-a043-01d835708104_1456x816.png'
 category: 'AI'
 archived: false
@@ -14,7 +15,7 @@ origin_url: 'https://www.oneusefulthing.org/p/agency-and-agents'
 origin_publication: 'One Useful Thing'
 notion_id: '3f345fd1-9f92-8113-a867-c13f2d7e830f'
 notion_parent: 'AI'
-last_synced: '2026-10-09T02:41:43.895Z'
+last_synced: '2026-11-06T07:54:17.014Z'
 ---
 
 ### 从 Hugging Face 事件到「暮光工厂」

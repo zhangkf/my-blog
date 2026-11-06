@@ -1,7 +1,8 @@
 ---
 title: 'NYT：我在商学院教书，是时候关掉它们了'
 description: '作者：Chris Marquis（Christopher Marquis），剑桥大学贾奇商学院教授，《The Profiteers》作者 发表：《纽约时报》观点版 Guest Essay，2026-10-18 链接：https://www.nytimes.com/2026/10/18/opinion/business-school-mba-harvard-cornell-cambridge.htm'
-pubDate: '2026-11-05'
+pubDate: '2026-10-18'
+origin_date: '2026-10-18'
 category: 'Health'
 archived: false
 route_category: 'health'
@@ -9,7 +10,7 @@ route_slug: 'shut-down-business-schools'
 source: notion
 notion_id: '40f45fd1-9f92-81e1-9879-f6f6ac8691a6'
 notion_parent: 'Health'
-last_synced: '2026-11-05T03:12:29.035Z'
+last_synced: '2026-11-06T07:55:22.372Z'
 ---
 
 > 💡 TL;DR：一位剑桥商学院教授的激进观点：商学院没教会学生应对真实商业世界，与其修补，不如关掉。附英文原文。

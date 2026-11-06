@@ -1,7 +1,8 @@
 ---
 title: '一串珠子'
 description: '不用我说你也知道，这是黑暗、不安、近乎末世的年月。我在英美朋友圈里，人人都不安：查理·柯克遇刺，以及随后美国对言论的打压；英国本土主义和反移民情绪回潮；再叠加加沙的惨剧、气候动荡，还有 AI 可能灭绝人类的阴影。'
-pubDate: '2026-10-06'
+pubDate: '2025-09-18'
+origin_date: '2025-09-18'
 heroImage: 'https://images.unsplash.com/photo-1647987766377-9b888a197369?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'A string of beads'
 origin_publication: 'The Imperfectionist'
 notion_id: '3f145fd1-9f92-815c-8ea6-e1523e35b2c8'
 notion_parent: 'Health'
-last_synced: '2026-10-09T02:41:35.689Z'
+last_synced: '2026-11-06T07:53:55.146Z'
 ---
 
 不用我说你也知道，这是黑暗、不安、近乎末世的年月。我在英美朋友圈里，人人都不安：查理·柯克遇刺，以及随后美国对言论的打压；英国本土主义和反移民情绪回潮；再叠加加沙的惨剧、气候动荡，还有 AI 可能灭绝人类的阴影。

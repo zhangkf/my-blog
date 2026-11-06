@@ -1,7 +1,8 @@
 ---
 title: '要么现在，要么放下'
 description: '如果你最近总觉得卡住了，那些真正重要的事一件也没推进——也许，你的生活里缺的不是方法，而是一点"即时性"。'
-pubDate: '2026-10-08'
+pubDate: '2025-08-07'
+origin_date: '2025-08-07'
 heroImage: 'https://images.pexels.com/photos/6014426/pexels-photo-6014426.jpeg?auto=compress&w=1200'
 category: 'Health'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'The power of immediacy'
 origin_publication: 'The Imperfectionist'
 notion_id: '3f345fd1-9f92-81f1-8a63-c82baa438f34'
 notion_parent: 'Health'
-last_synced: '2026-10-09T02:41:36.530Z'
+last_synced: '2026-11-06T07:53:56.516Z'
 ---
 
 如果你最近总觉得卡住了，那些真正重要的事一件也没推进——也许，你的生活里缺的不是方法，而是一点"即时性"。

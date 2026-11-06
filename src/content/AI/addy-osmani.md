@@ -1,7 +1,8 @@
 ---
 title: 'Addy Osmani：智能体时代，如何保住批判性思考'
 description: 'Addy Osmani · X · 2026-11-03 · 原文(https://x.com/addyosmani/status/2117512471930167377)'
-pubDate: '2026-11-05'
+pubDate: '2026-11-03'
+origin_date: '2026-11-03'
 category: 'AI'
 archived: false
 route_category: 'ai'
@@ -9,7 +10,7 @@ route_slug: 'addy-osmani'
 source: notion
 notion_id: '40f45fd1-9f92-81ca-953a-f3e02b67a5e2'
 notion_parent: 'AI'
-last_synced: '2026-11-05T03:12:47.966Z'
+last_synced: '2026-11-06T07:54:23.758Z'
 ---
 
 > 💡 TL;DR：工作越交给智能体，越要主动建批判性思考——提问前先写假设、给智能体搭验证闭环、读懂它替你做的每个决定。活儿可以外包，责任不能。

@@ -1,7 +1,8 @@
 ---
 title: 'AI 安全，该搭大帐篷还是小帐篷？'
 description: '最近几周，关于 AI 安全冒出两种叙事。要么：AI 末日风险真实且迫在眉睫。要么：AI 领袖和吹哨人这么说，言不由衷。是一场“心理战”，或者炒作，或者某种变了形的监管俘获。'
-pubDate: '2026-10-03'
+pubDate: '2026-10-02'
+origin_date: '2026-10-02'
 heroImage: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'A big-tent or small-tent AI safety movement?'
 origin_publication: 'AI as Normal Technology'
 notion_id: '3ee45fd1-9f92-8133-b2f6-effbf4ed7800'
 notion_parent: 'AI'
-last_synced: '2026-10-09T02:41:41.067Z'
+last_synced: '2026-11-06T07:54:13.073Z'
 ---
 
 最近几周，关于 AI 安全冒出两种叙事。要么：AI 末日风险真实且迫在眉睫。要么：AI 领袖和吹哨人这么说，言不由衷。是一场“心理战”，或者炒作，或者某种变了形的监管俘获。

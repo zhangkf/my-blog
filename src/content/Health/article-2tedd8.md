@@ -1,7 +1,8 @@
 ---
 title: '兴趣就是一切'
 description: '每次给这份通讯选题，总有个时刻，我心里那个自视甚高的评判者会跳出来。他最爱掺和这种事，想确保我选个得体的话题。他希望我问：眼下什么话题最讨喜、最有用？读者正面临什么问题？记住，这不是关于你。千万别落到你那些没人会在乎的怪癖上。还有，你大概不该谈政治。或者，你绝对应该谈……'
-pubDate: '2026-10-02'
+pubDate: '2025-11-28'
+origin_date: '2025-11-28'
 heroImage: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'Interest is everything'
 origin_publication: 'The Imperfectionist'
 notion_id: '3ed45fd1-9f92-8146-8298-cb9973d0eb2d'
 notion_parent: 'Health'
-last_synced: '2026-10-09T02:41:34.119Z'
+last_synced: '2026-11-06T07:53:52.420Z'
 ---
 
 每次给这份通讯选题，总有个时刻，我心里那个自视甚高的评判者会跳出来。他最爱掺和这种事，想确保我选个得体的话题。他希望我问：眼下什么话题最讨喜、最有用？读者正面临什么问题？记住，这不是关于你。千万别落到你那些没人会在乎的怪癖上。还有，你大概不该谈政治。或者，你绝对应该谈……

@@ -1,7 +1,8 @@
 ---
 title: 'Andrej Karpathy：LLM 知识库'
 description: 'Andrej Karpathy · X · 2026-04-02 · 原文(https://x.com/karpathy/status/2039805659525644595)'
-pubDate: '2026-11-05'
+pubDate: '2026-04-02'
+origin_date: '2026-04-02'
 category: 'AI'
 archived: false
 route_category: 'ai'
@@ -9,7 +10,7 @@ route_slug: 'andrej-karpathy-llm'
 source: notion
 notion_id: '40f45fd1-9f92-81ac-9e45-f0e875c39d7a'
 notion_parent: 'AI'
-last_synced: '2026-11-06T00:09:46.952Z'
+last_synced: '2026-11-06T07:54:26.433Z'
 ---
 
 > 💡 TL;DR：Karpathy 的新玩法——把研究资料丢进 raw/ 目录，让 LLM 增量「编译」成一部 markdown wiki，Obsidian 当前端，然后向它提问、做体检、跑工具。你几乎从不动手写 wiki，那是 LLM 的领地。

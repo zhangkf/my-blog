@@ -1,7 +1,8 @@
 ---
 title: 'AI 智能体还做不了开放式 AI 研究'
 description: '顶尖 AI 实验室的目标，是递归自我改进（RSI）：用 AI 智能体把 AI 研究本身自动化。RSI 也是"AI 进步会爆发式加速"这类预测的地基。我们离这个里程碑还有多远，怎么判断？'
-pubDate: '2026-10-10'
+pubDate: '2026-08-05'
+origin_date: '2026-08-05'
 heroImage: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
 archived: false
@@ -10,7 +11,7 @@ route_slug: 'ai-agents-cant-yet-do-open-ended-ai-research'
 source: notion
 notion_id: '3f545fd1-9f92-81c5-afa8-f4a04861617b'
 notion_parent: 'AI'
-last_synced: '2026-10-10T07:03:56.089Z'
+last_synced: '2026-11-06T07:54:18.786Z'
 ---
 
 顶尖 AI 实验室的目标，是递归自我改进（RSI）：用 AI 智能体把 AI 研究本身自动化。RSI 也是"AI 进步会爆发式加速"这类预测的地基。我们离这个里程碑还有多远，怎么判断？

@@ -1,7 +1,8 @@
 ---
 title: '聊天机器人的黄昏'
 description: '原副标题：How work changes along the exponential —— 工作如何沿指数曲线变化'
-pubDate: '2026-10-11'
+pubDate: '2026-06-30'
+origin_date: '2026-06-30'
 heroImage: 'https://substackcdn.com/image/fetch/$s_!XxGz!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F586bd72d-edfe-4be3-bfc8-c301b776b0fd_2850x1380.png'
 category: 'AI'
 archived: false
@@ -10,7 +11,7 @@ route_slug: 'the-twilight-of-the-chatbots'
 source: notion
 notion_id: '3f645fd1-9f92-8151-94f9-e61f0c4cb23c'
 notion_parent: 'AI'
-last_synced: '2026-10-11T06:15:13.400Z'
+last_synced: '2026-11-06T07:54:19.730Z'
 ---
 
 *原副标题：How work changes along the exponential —— 工作如何沿指数曲线变化*

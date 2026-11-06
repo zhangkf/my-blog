@@ -1,7 +1,8 @@
 ---
 title: 'AI 有意识吗？'
 description: '我记事以来，人们就一直在争：机器到底能不能拥有智能。'
-pubDate: '2026-10-07'
+pubDate: '2026-06-16'
+origin_date: '2026-06-16'
 heroImage: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
 archived: false
@@ -14,7 +15,7 @@ origin_url: 'https://kevinkelly.substack.com/p/conscious-or-not'
 origin_publication: 'Kevin Kelly（Substack）'
 notion_id: '3f245fd1-9f92-8127-9a23-c15fc638acc1'
 notion_parent: 'AI'
-last_synced: '2026-10-09T02:41:43.489Z'
+last_synced: '2026-11-06T07:54:16.315Z'
 ---
 
 我记事以来，人们就一直在争：机器到底能不能拥有智能。

@@ -1,7 +1,8 @@
 ---
 title: 'AI 末日概率，依然靠不住'
 description: '两年前，我们写过一篇长文，专门拆解 p(doom)，也就是“AI 末日概率”。我们当时的说法很简单：这个数字的主要作用，是把模糊的直觉和恐惧，套上一层量化的外衣，洗成看起来很严谨的样子。今天重发这篇，是因为 p(doom) 这种话，正在驱动公共讨论和政策注意力，力度比以前还大。不意外，今天这些 AI 末日概率，也没比 2024 年的更严谨。'
-pubDate: '2026-10-05'
+pubDate: '2026-09-28'
+origin_date: '2026-09-28'
 heroImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'AI existential risk probabilities are (still) too unreliable to i
 origin_publication: 'AI as Normal Technology'
 notion_id: '3f045fd1-9f92-818a-8511-ee8616187514'
 notion_parent: 'AI'
-last_synced: '2026-10-09T02:41:42.585Z'
+last_synced: '2026-11-06T07:54:15.023Z'
 ---
 
 两年前，我们写过一篇长文，专门拆解 p(doom)，也就是“AI 末日概率”。我们当时的说法很简单：这个数字的主要作用，是把模糊的直觉和恐惧，套上一层量化的外衣，洗成看起来很严谨的样子。今天重发这篇，是因为 p(doom) 这种话，正在驱动公共讨论和政策注意力，力度比以前还大。不意外，今天这些 AI 末日概率，也没比 2024 年的更严谨。

@@ -1,7 +1,8 @@
 ---
 title: 'NYT 杂志：那个教我们如何专注的人'
 description: 'A.O. Scott, The New York Times Magazine, 2026-10-18（10月25日刊，第20页） https://www.nytimes.com/2026/10/18/magazine/john-berger-attention.html(https://www.nytimes.com/2026/10/18/magazine/john-berger-attenti'
-pubDate: '2026-11-05'
+pubDate: '2026-10-18'
+origin_date: '2026-10-18'
 category: 'Health'
 archived: false
 route_category: 'health'
@@ -9,7 +10,7 @@ route_slug: 'the-man-who-taught-us-focus'
 source: notion
 notion_id: '40f45fd1-9f92-8134-aa0b-f754c52724d8'
 notion_parent: 'Health'
-last_synced: '2026-11-05T03:12:29.844Z'
+last_synced: '2026-11-06T07:55:22.949Z'
 ---
 
 > 💡 TL;DR：影评人 A.O. Scott 重读约翰·伯格：在注意力被明码标价的时代，伯格教的「观看之道」反而是最实用的生存技能。

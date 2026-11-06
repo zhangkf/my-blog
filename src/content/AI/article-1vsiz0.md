@@ -1,7 +1,8 @@
 ---
 title: '能力悬置：AI 早已强大，掉队的是我们'
 description: '我们仍处在 AI 发展的指数曲线上。我大概每两周发一篇 Substack，但随着节奏加快，有时候连这个频率都嫌太慢。上一篇发出后的几周里，AI 攻克了一道著名数学难题（伴随着争议），关于 AI 风险和对策的讨论也甚嚣尘上（同样伴随着争议）。我觉得，这些担忧，以及越来越多其他的忧虑，归根结底都指向我跟自己发文频率较劲的同一个问题：我们人类那套系统和流程，跟上 AI 发展速度实在太慢了。'
-pubDate: '2026-10-09'
+pubDate: '2026-09-19'
+origin_date: '2026-09-19'
 heroImage: 'https://substack-post-media.s3.amazonaws.com/public/images/47cb24b9-02ec-426b-960f-8429df91be29_1942x1016.png'
 category: 'AI'
 archived: false
@@ -14,7 +15,7 @@ origin_url: 'https://www.oneusefulthing.org/p/the-overhang'
 origin_publication: 'One Useful Thing'
 notion_id: '3f445fd1-9f92-81fb-8d8a-f032bd1ef6a2'
 notion_parent: 'AI'
-last_synced: '2026-10-09T02:41:44.258Z'
+last_synced: '2026-11-06T07:54:17.708Z'
 ---
 
 我们仍处在 AI 发展的指数曲线上。我大概每两周发一篇 Substack，但随着节奏加快，有时候连这个频率都嫌太慢。上一篇发出后的几周里，AI 攻克了一道著名数学难题（伴随着争议），关于 AI 风险和对策的讨论也甚嚣尘上（同样伴随着争议）。我觉得，这些担忧，以及越来越多其他的忧虑，归根结底都指向我跟自己发文频率较劲的同一个问题：我们人类那套系统和流程，跟上 AI 发展速度实在太慢了。

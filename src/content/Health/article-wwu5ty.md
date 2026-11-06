@@ -1,7 +1,8 @@
 ---
 title: '选择继续做人'
 description: '去你常逛的社交媒体看看。满屏的帖子，长得可疑地相似。评论区也一样，很多是 AI 生成的。学术论文是这样，《纽约时报》的评论是这样，连获奖短篇小说都是这样。你要常用 AI，早就发现了：身边有多少文字是 AI 写的。用得多的人，反而最会识别 AI 文体。你要是没注意，我向你保证：比你想象的多得多。'
-pubDate: '2026-10-02'
+pubDate: '2026-05-27'
+origin_date: '2026-05-27'
 heroImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'Choosing to Stay Human'
 origin_publication: 'One Useful Thing'
 notion_id: '3ed45fd1-9f92-811b-9066-d4f251654995'
 notion_parent: 'Health'
-last_synced: '2026-10-09T02:41:33.775Z'
+last_synced: '2026-11-06T07:53:51.770Z'
 ---
 
 去你常逛的社交媒体看看。满屏的帖子，长得可疑地相似。评论区也一样，很多是 AI 生成的。学术论文是这样，《纽约时报》的评论是这样，连获奖短篇小说都是这样。你要常用 AI，早就发现了：身边有多少文字是 AI 写的。用得多的人，反而最会识别 AI 文体。你要是没注意，我向你保证：比你想象的多得多。

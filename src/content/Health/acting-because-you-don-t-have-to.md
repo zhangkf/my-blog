@@ -1,7 +1,8 @@
 ---
 title: '行动，因为你不必'
 description: '有句话听起来挺反直觉的，可我花了很长时间才真正悟到：想让人生中更多的时间花在有意义、有回报、能带来改变的事情上，最好的办法，是打心底里感受到——这些事，你一件都不必做。'
-pubDate: '2026-10-10'
+pubDate: '2025-07-03'
+origin_date: '2025-07-03'
 heroImage: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=1600&q=80'
 category: 'Health'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'Acting because you don''t have to'
 origin_publication: 'The Imperfectionist'
 notion_id: '3f545fd1-9f92-8116-b175-e3497afdf0f6'
 notion_parent: 'Health'
-last_synced: '2026-10-10T13:38:24.811Z'
+last_synced: '2026-11-06T07:53:57.880Z'
 ---
 
 有句话听起来挺反直觉的，可我花了很长时间才真正悟到：**想让人生中更多的时间花在有意义、有回报、能带来改变的事情上，最好的办法，是打心底里感受到——这些事，你一件都不必做。**

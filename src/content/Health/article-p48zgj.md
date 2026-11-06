@@ -1,7 +1,8 @@
 ---
 title: '我不要一个跟我一模一样的 AI'
 description: '上周我想搞清楚一件事。写中文文案，Opus 4.6、Opus 5、Sonnet 5、GPT-5.6 这几个，到底哪个更像人。'
-pubDate: '2026-10-11'
+pubDate: '2026-08-13'
+origin_date: '2026-08-13'
 heroImage: 'https://img.axtonliu.com/newsletters/2026/08/045-table-ranking.png'
 category: 'Health'
 archived: false
@@ -13,7 +14,7 @@ origin_title: '我不要一个跟我一模一样的 AI ｜ AI 精英周刊 045'
 origin_publication: 'Axton AI 精英周刊'
 notion_id: '3f645fd1-9f92-81b7-bf78-f13fb5a62038'
 notion_parent: 'Health'
-last_synced: '2026-10-11T12:55:44.904Z'
+last_synced: '2026-11-06T07:53:58.569Z'
 ---
 
 > **本期要点**

@@ -1,7 +1,8 @@
 ---
 title: '为什么 AI 还没有取代软件工程师，也不会取代'
 description: '人们对 AI 取代工作，充满焦虑和不确定。怎么越过含糊的警告和夸张的预言，让数据来说话？一个很好的切入点，是去看 AI 能力走得最远、采用又异常快的职业：软件工程。'
-pubDate: '2026-10-04'
+pubDate: '2026-06-11'
+origin_date: '2026-06-11'
 heroImage: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1600&q=80'
 category: 'AI'
 archived: false
@@ -13,7 +14,7 @@ origin_title: 'Why AI hasn''t replaced software engineers, and won''t'
 origin_publication: 'AI as Normal Technology'
 notion_id: '3ef45fd1-9f92-8151-b321-ebfa7e1bd698'
 notion_parent: 'AI'
-last_synced: '2026-10-09T02:41:41.902Z'
+last_synced: '2026-11-06T07:54:14.316Z'
 ---
 
 人们对 AI 取代工作，充满焦虑和不确定。怎么越过含糊的警告和夸张的预言，让数据来说话？一个很好的切入点，是去看 AI 能力走得最远、采用又异常快的职业：软件工程。

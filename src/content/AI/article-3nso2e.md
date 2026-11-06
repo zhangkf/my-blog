@@ -1,7 +1,8 @@
 ---
 title: 'AI 会拖慢科学吗？'
 description: '这是一篇关于"AI 对科学制度本身的影响"的长文。AI as Normal Technology 的两位作者 Sayash Kapoor 与 Arvind Narayanan 提出一个反直觉的判断：AI 领袖们预言 AI 将带来科学的巨大飞跃——治愈癌症、寿命翻倍、十年走完一个世纪的路；但个体科学家受益，不等于科学整体受益。对科学这个整体而言，AI 更可能是一剂"不健康的冲击"。'
-pubDate: '2026-10-15'
+pubDate: '2025-07-16'
+origin_date: '2025-07-16'
 heroImage: 'https://substackcdn.com/image/fetch/$s_!WNiP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4517c5ce-54a5-4d83-a04a-4ace96f4c1d4_1548x586.jpeg'
 category: 'AI'
 archived: false
@@ -14,7 +15,7 @@ origin_url: 'https://www.normaltech.ai/p/could-ai-slow-science'
 origin_publication: 'AI as Normal Technology'
 notion_id: '3fa45fd1-9f92-818a-8dc0-c954285efc00'
 notion_parent: 'AI'
-last_synced: '2026-10-15T06:27:05.712Z'
+last_synced: '2026-11-06T07:54:22.012Z'
 ---
 
 这是一篇关于"AI 对科学制度本身的影响"的长文。AI as Normal Technology 的两位作者 Sayash Kapoor 与 Arvind Narayanan 提出一个反直觉的判断：AI 领袖们预言 AI 将带来科学的巨大飞跃——治愈癌症、寿命翻倍、十年走完一个世纪的路；但个体科学家受益，不等于科学整体受益。对科学这个整体而言，AI 更可能是一剂"不健康的冲击"。

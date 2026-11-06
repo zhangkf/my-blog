@@ -137,6 +137,40 @@ function getSlugFromMap(title) {
   return map[title] || map[normalized] || null;
 }
 
+// ── Origin Date Map: Notion page ID → original publication date ─────
+// Stored in scripts/origin-date-map.json. The site sorts articles by
+// pubDate, so an article's original publication date (when known)
+// replaces the Notion page creation date as its pubDate. Entries here
+// win over the byline date parsed from the article text.
+const ORIGIN_DATE_MAP_PATH = path.join(__dirname, "origin-date-map.json");
+
+function loadOriginDateMap() {
+  try {
+    return JSON.parse(fs.readFileSync(ORIGIN_DATE_MAP_PATH, "utf-8"));
+  } catch {
+    return {};
+  }
+}
+
+const ORIGIN_DATE_MAP = loadOriginDateMap();
+
+/**
+ * Newer articles open with a byline like
+ * "作者 · 刊物 · 2026-04-02 · 原文(https://…)". Pull the ISO date out of
+ * that pattern. The · separators are required so a date merely
+ * mentioned in prose is never mistaken for the publication date.
+ */
+function extractBylineDate(text) {
+  if (!text) return null;
+  const m = text.match(/·\s*(20\d{2})-(\d{2})-(\d{2})\s*·/);
+  if (!m) return null;
+  const iso = `${m[1]}-${m[2]}-${m[3]}`;
+  const dt = new Date(`${iso}T00:00:00Z`);
+  if (isNaN(dt) || dt.toISOString().split("T")[0] !== iso) return null;
+  if (dt.getTime() > Date.now() + 24 * 3600 * 1000) return null;
+  return iso;
+}
+
 // ── Category Slug Map ───────────────────────────────────────────────
 // Maps Chinese category directory names to English URL slugs.
 const CATEGORY_SLUG_MAP = {
@@ -489,21 +523,6 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
   );
   let createdTime = page.created_time.split("T")[0]; // YYYY-MM-DD
 
-  // ── Series ordering ──────────────────────────────────────────────
-  // Titles starting with "N. " (e.g. "1. Thin Harness" or "7. Complexity")
-  // are part of a numbered series. To display them in reverse order
-  // (latest number first), we add the sequence number as a minute offset
-  // to the creation timestamp. This way 7→newest, 1→oldest within the
-  // same base date, and normal time-descending sort produces 7,6,5…1.
-  const seqMatch = title.match(/^(\d+)\.\s/);
-  if (seqMatch) {
-    const seqNum = parseInt(seqMatch[1], 10);
-    // Add seqNum minutes so higher numbers sort later (= appear first in desc order)
-    const dt = new Date(page.created_time);
-    dt.setMinutes(dt.getMinutes() + seqNum);
-    createdTime = dt.toISOString().split("T")[0] + "T" + dt.toISOString().split("T")[1].slice(0, 5);
-  }
-
   // Cover image
   let heroImage = "";
   if (page.cover) {
@@ -535,6 +554,37 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
         .substring(0, 200)
     : "";
 
+  // ── Original publication date ────────────────────────────────────
+  // Listings sort by pubDate, so when the original publication date is
+  // known it replaces the Notion creation date (pages imported in a
+  // batch would otherwise all share one date and sort arbitrarily).
+  // Sources, in order: the curated origin-date map, then the byline.
+  const originDate =
+    ORIGIN_DATE_MAP[pageId] ||
+    extractBylineDate(description) ||
+    extractBylineDate(markdown.slice(0, 600));
+  if (originDate) createdTime = originDate;
+
+  // ── Series ordering ──────────────────────────────────────────────
+  // Titles starting with "N. " (e.g. "1. Thin Harness" or "7. Complexity")
+  // are part of a numbered series. To display them in reverse order
+  // (latest number first), we add the sequence number as a minute offset
+  // to the base timestamp. This way 7→newest, 1→oldest within the
+  // same base date, and normal time-descending sort produces 7,6,5…1.
+  const seqMatch = title.match(/^(\d+)\.\s/);
+  if (seqMatch) {
+    const seqNum = parseInt(seqMatch[1], 10);
+    // Add seqNum minutes so higher numbers sort later (= appear first in desc order)
+    const base = originDate
+      ? new Date(`${originDate}T00:00:00Z`)
+      : new Date(page.created_time);
+    base.setUTCMinutes(base.getUTCMinutes() + seqNum);
+    createdTime =
+      base.toISOString().split("T")[0] +
+      "T" +
+      base.toISOString().split("T")[1].slice(0, 5);
+  }
+
   // Use original title as-is (preserve numbering for series articles)
   const cleanTitle = title;
 
@@ -560,6 +610,7 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
     `title: ${escapeYaml(cleanTitle)}`,
     `description: ${escapeYaml(description)}`,
     `pubDate: '${createdTime}'`,
+    originDate ? `origin_date: '${originDate}'` : null,
     heroImage ? `heroImage: ${escapeYaml(heroImage)}` : null,
     `category: ${escapeYaml(parentTitle)}`,
     `archived: ${archived}`,

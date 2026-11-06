@@ -16,6 +16,7 @@ const notionSchema = ({ image }: { image: Function }) =>
 		origin_title: z.string().optional(),
 		origin_url: z.string().optional(),
 		origin_publication: z.string().optional(),
+		origin_date: z.string().optional(),
 		notion_id: z.string().optional(),
 		notion_parent: z.string().optional(),
 		last_synced: z.string().optional(),
