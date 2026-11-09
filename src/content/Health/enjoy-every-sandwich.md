@@ -14,8 +14,6 @@ origin_url: 'https://bradmontague.substack.com/p/enjoy-every-sandwich'
 origin_publication: 'The Enthusiast by Brad Montague'
 ---
 
-> 作者：Brad Montague　｜　译自 [原文](https://bradmontague.substack.com/p/enjoy-every-sandwich)（The Enthusiast，2026 年 9 月 22 日）
-
 2002 年 10 月，沃伦·泽冯（Warren Zevon）做客戴维·莱特曼的《深夜秀》。
 
 下面这幅画，是我凭记忆画下的那次节目。（向戴夫致歉：我把他画得有点像理查德·尼克松。这完全不是故意的，不过事情就是这样。我还在学习。）
@@ -75,7 +73,3 @@ _你会更加珍惜每一分钟，确实如此。我一直觉得自己多少做�
 1. **邀请我来**[演讲](http://montagueworkshop.com/speaking)。
 2. **买一本**[书](http://montagueworkshop.com/books)。
 3. **把这篇文章转给朋友**。
-
----
-
-本文经作者授权翻译。译文保留原文插图；版权归原作者所有。
