@@ -1,23 +1,18 @@
 ---
 title: 'Ben Thompson：Nvidia AI PC、Project Solara 与微软 AI'
-description: '作者： Ben Thompson（Stratechery(https://stratechery.com/)） 日期： 2026年6月3日（周三） 原文： The Nvidia AI PC, Project Solara, Microsoft AI(https://stratechery.com/2026/the-nvidia-ai-pc-project-solara-microsoft-ai/)'
+description: '我通常不会提前透露采访对象，但这周要破例了，因为主题和下面的更新内容关系太大。我是在旧金山写的这篇，刚刚在微软 CEO 萨提亚·纳德拉的 Build 开发者大会主题演讲之后采访了他；一般来说我会想立刻发布采访内容，好让你们有完整的分析背景。'
 pubDate: '2026-11-05'
 category: 'AI'
 archived: false
 route_category: 'ai'
 route_slug: 'ben-thompson-nvidia-ai-pc-project-solara-ai'
 source: notion
+origin_author: 'Ben Thompson（Stratechery）'
+origin_title: 'The Nvidia AI PC, Project Solara, Microsoft AI'
+origin_url: 'https://stratechery.com/2026/the-nvidia-ai-pc-project-solara-microsoft-ai/'
 notion_id: '40f45fd1-9f92-81dd-9303-e6bec2778720'
 notion_parent: 'AI'
-last_synced: '2026-11-05T03:12:49.998Z'
----
-
-> 💡 TL;DR：Stratechery 六月长文：Nvidia 的 AI PC 攻势、微软的 Project Solara 自研芯片，以及这两条硬件线背后的 AI 策略棋局。
-
-# Nvidia AI PC、Project Solara、微软 AI
-
-**作者：** Ben Thompson（[Stratechery](https://stratechery.com/)） **日期：** 2026年6月3日（周三） **原文：** [The Nvidia AI PC, Project Solara, Microsoft AI](https://stratechery.com/2026/the-nvidia-ai-pc-project-solara-microsoft-ai/)
-
+last_synced: '2026-11-09T14:08:58.050Z'
 ---
 
 早上好，

@@ -1,84 +1,20 @@
 ---
 title: '泰晤士报：数学家面对 AI 革命'
-description: '作者：Tom Whipple（科学记者、特派记者）、Rhys Blakely（科学编辑） 发表：《泰晤士报》（The Times），2026-10-09 18:01 BST 链接：https://www.thetimes.com/uk/science/article/mathematicians-ai-solving-problems-bv3nzhgcf(https://www.thetimes.'
+description: '“恶意收购”：数学家们面对一场 AI 革命 副题：欢迎来到“数学末日”——数百个困扰专家数十年的问题，似乎被人工智能解决了'
 pubDate: '2026-11-05'
 category: 'AI'
 archived: false
 route_category: 'ai'
 route_slug: 'article-qz4bx3'
 source: notion
+origin_author: 'Tom Whipple（科学记者、特派记者）、Rhys Blakely（科学编辑）'
+origin_title: '''Hostile takeover'': mathematicians reckon with an AI revolution'
+origin_url: 'https://www.thetimes.com/uk/science/article/mathematicians-ai-solving-problems-bv3nzhgcf'
+origin_publication: '《泰晤士报》（The Times）'
 notion_id: '40f45fd1-9f92-8146-9400-fc16917c747b'
 notion_parent: 'AI'
-last_synced: '2026-11-05T03:12:48.623Z'
+last_synced: '2026-11-09T14:08:56.700Z'
 ---
-
-> 💡 TL;DR：AI 在数月内给出数百道困扰数学家几十年的难题的解法，他们一边用上它，一边担心「数学末日」：证明的信任、审稿的意义、数学家这个职业还剩什么。
-
-# 'Hostile takeover': mathematicians reckon with an AI revolution
-
-**作者**：Tom Whipple（科学记者、特派记者）、Rhys Blakely（科学编辑） **发表**：《泰晤士报》（The Times），2026-10-09 18:01 BST **链接**：[https://www.thetimes.com/uk/science/article/mathematicians-ai-solving-problems-bv3nzhgcf](https://www.thetimes.com/uk/science/article/mathematicians-ai-solving-problems-bv3nzhgcf) **副题**：Welcome to the 'mathpocalypse', when hundreds of solutions to problems that had stumped experts for decades seemed to be solved by artificial intelligence **备注**：文中 Matt Zaremsky 关于「恐龙骨架 + TNT」的段落即中文网络流传的那段。以下为英文原文 + 中文全文翻译。
-
----
-
-## 原文
-
-When it happened, James Maynard, an Oxford University professor and a Fields medallist, was just about to go to bed.
-
-Instead, sitting in front of his computer late on Tuesday night, he tried to make sense of what might well be the most significant day in the 10,000-year history of maths.
-
-He felt "childish excitement", he said, but also extreme concern. A single PDF had announced hundreds of solutions to problems that had stumped mathematicians for decades, some to problems he never dreamt he would see solved.
-
-However, Maynard, who won the mathematical version of a Nobel prize in 2022, said he could not ignore that the source was not a human but AI. "Everything is moving so fast, I don't know how the community will adapt."
-
-Hugo Duminil-Copin, a French Fields medallist, saw the same update from OpenAI and was a little less equivocal. He compared it to a truck driving through his work. He said: "Dozens of papers deal with topics I was working on. Between results that beat you to the finish line and thousand-page proofs, I don't even know where to look any more.
-
-"The shock is immense. I am paralysed. Tomorrow, we will find a way forward … but for today I don't have the energy."
-
-His reaction is not unusual. Words such as "shock wave", "cataclysm" and "mathpocalypse" have been used among mathematicians. But, also, a little more rarely, "thrilling" and "stupendous".
-
-Late on Tuesday night, OpenAI put more than 700 papers on the internet. Some constituted incremental advances. Others appeared to be breakthroughs in problems that had stumped humans for decades. Many were poorly written, rambling and incomprehensible — at first — to humans. But all told the same story: mathematics will never be the same again.
-
-Mathematicians had anticipated this day would come. Now they were trying to understand what it meant.
-
-Henry Wilton of Cambridge University said the problems OpenAI had tackled were far more than a collection of unsolved puzzles. Some, such as the quasi-Riemann hypothesis, which relates to the distribution of prime numbers, may mark significant steps towards solving some of the biggest problems in mathematics. Others have served as signposts, guiding researchers towards promising lines of inquiry.
-
-Built up over decades, these problems have helped mathematicians to decide which questions were worth pursuing and organise research around shared aims. "They provide structure, a yardstick for progress and long-term goals," he said.
-
-Solving them all at once, he argued, would strip away much of the intellectual framework that gives the field its direction.
-
-"If OpenAI wanted to destroy the mathematical community, this would be a great way to go about it," Wilton said.
-
-"The advent of AI was always going to be a seismic shock, but this huge dump of papers is a tsunami that we have no time to prepare for." That was particularly true because many of the documents were confusingly written. One mathematician likened it to "reading the ramblings of a crackpot."
-
-Ana Caraiani, from Imperial College, called the OpenAI release "more a demonstration of power than of scholarship". A problem she had made significant progress on, then left when she felt it needed "one more trick", had been solved. It had indeed needed one more trick. That, she said, was exciting. But, not the way it had been revealed.
-
-She said: "It feels like a hostile takeover of the community … It's much bigger than mathematics. Anyone who does any intellectual work will face this."
-
-Thomas Fink, director of the London Institute for Mathematical Sciences, said worries were understandable, but they were also clouding the fact that this was a great day for mathematics.
-
-He added: "We feel like we're on crack cocaine. This is an exciting time; we are glued to the calculations, making great progress. So many things will fall." He thinks it is plausible that most open problems in maths — that are solvable — could be solved in a couple of years. What then for mathematicians? He said they would still have a vital role, but that there might not be so many who can fulfil it.
-
-He said: "All these conjectures, a hundred years of smart people saying, 'This is what I think the next step is, go in this direction'? AI has done that. But who is going to say what are the next directions? Choosing which problems to focus on is critical. Someone has to find the next layer. And that's humans.
-
-"There will be people saying life sucks, why bother? But it's not as dark as it seems. Look for something more visionary. The people who will survive need to be visionaries." And those who don't? "There's too many scientists. Too many researchers."
-
-Mathematicians are still trying to digest the papers and to understand the decades of apparent progress that arrived overnight. In some, they have found flaws.
-
-In surveying those that have been tackled, they have also found notable absences. There are open problems in cryptography of potentially comparable difficulty that are absent from the list, but which could have huge ramifications for internet security if solved.
-
-Sophie Maclean, a final year PhD student at King's College London, said that many junior colleagues were simply "taking a breather, going outside, and not thinking about maths".
-
-She said: "I personally am quite down. Maths will still survive, and mathematicians will still survive in some form, but no one knows what form yet. The human bits, the stories, the struggle — I worry those are the bits that are going to suffer.
-
-"The thing I find saddest is it's taking the bits that I love about maths away. The collaborating with people, the finding the limits of human achievement. The solving puzzles."
-
-For some, it is more immediately personal. On the other side of the Atlantic, Matt Zaremsky learnt by text that years of work had been scooped, after putting his four-year-old twins to bed. A colleague had messaged to say a problem Zaremsky had been working on in group theory had been "killed by AI". How did that feel?
-
-"Well, it feels like we've been working on an archeological dig for four years, gradually discovering more and more of a really cool-looking dinosaur skeleton, and then a trillion-dollar company showed up and just blasted the whole thing with TNT, handed us the whole skeleton, and walked away. So, I guess I'd say, 'not great'."
-
----
-
-## 中文全文
 
 **“恶意收购”：数学家们面对一场 AI 革命** 副题：欢迎来到“数学末日”——数百个困扰专家数十年的问题，似乎被人工智能解决了
 

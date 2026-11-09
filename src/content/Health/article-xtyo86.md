@@ -1,6 +1,6 @@
 ---
 title: '作业末日之后'
-description: '去年夏天，我写了一篇《作业末日》(https://www.oneusefulthing.org/p/the-homework-apocalypse)，预言这样一个现实：AI 即将能完成绝大多数传统作业，作业将不再是有效的学习工具和评估手段。如今预言应验了，AI 能在大多数考试中拿高分。但出乎意料的是，这一切并没有带来多少改变——哪怕学生对 AI 的使用已经近乎普及。'
+description: '去年夏天，我写了一篇《作业末日》，预言这样一个现实：AI 即将能完成绝大多数传统作业，作业将不再是有效的学习工具和评估手段。如今预言应验了，AI 能在大多数考试中拿高分。但出乎意料的是，这一切并没有带来多少改变——哪怕学生对 AI 的使用已经近乎普及。'
 pubDate: '2024-08-30'
 origin_date: '2024-08-30'
 heroImage: 'https://substackcdn.com/image/fetch/$s_!X4kj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6455b64c-3b39-4834-bd60-d8f5b8696c0f_1242x688.jpeg'
@@ -15,7 +15,7 @@ origin_url: 'https://www.oneusefulthing.org/p/post-apocalyptic-education'
 origin_publication: 'One Useful Thing'
 notion_id: '3f845fd1-9f92-8106-a4ef-d0d6a4565ea8'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:53:59.272Z'
+last_synced: '2026-11-09T14:08:32.508Z'
 ---
 
 去年夏天，我写了一篇[《作业末日》](https://www.oneusefulthing.org/p/the-homework-apocalypse)，预言这样一个现实：AI 即将能完成绝大多数传统作业，作业将不再是有效的学习工具和评估手段。如今预言应验了，AI 能在大多数考试中拿高分。但出乎意料的是，这一切并没有带来多少改变——哪怕学生对 AI 的使用已经近乎普及。

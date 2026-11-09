@@ -10,12 +10,10 @@ route_slug: 'still-learning-to-write'
 source: notion
 notion_id: '37a45fd1-9f92-80cd-b961-e86acef5f8f7'
 notion_parent: 'Archived'
-last_synced: '2026-08-14T02:28:01.401Z'
+last_synced: '2026-11-09T14:09:09.025Z'
 ---
 
 作者：Oliver Burkeman，著《四千周》
-
-
 
 我仍在为书稿的截稿期限而奔忙，这也解释了近几周《不完美主义者》更新颇为零星的原因。在此期间，我想或许分享一些我这次在写作过程中逐渐领悟到的事，可能会有些意思：
 

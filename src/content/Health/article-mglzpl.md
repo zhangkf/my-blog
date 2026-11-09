@@ -1,46 +1,20 @@
 ---
 title: '大西洋月刊：最好的蛋白质来源藏在眼前'
-description: '作者：Matteo Wong 发表：《大西洋月刊》（The Atlantic），2026-10-10 链接：https://www.theatlantic.com/health/2026/10/yogurt-best-protein-source/688950/(https://www.theatlantic.com/health/2026/10/yogurt-best-protein-sourc'
+description: '最好的蛋白质来源，就藏在眼前 喝点酸奶吧。'
 pubDate: '2026-11-05'
 category: 'Health'
 archived: false
 route_category: 'health'
 route_slug: 'article-mglzpl'
 source: notion
+origin_author: 'Matteo Wong'
+origin_title: 'The Best Protein Source Is Hiding in Plain Sight'
+origin_url: 'https://www.theatlantic.com/health/2026/10/yogurt-best-protein-source/688950/'
+origin_publication: '《大西洋月刊》（The Atlantic）'
 notion_id: '40f45fd1-9f92-8180-8d3d-c13bb6a4e973'
 notion_parent: 'Health'
-last_synced: '2026-11-05T03:12:27.634Z'
+last_synced: '2026-11-09T14:08:35.905Z'
 ---
-
-> 💡 TL;DR：美国人疯狂追蛋白质，但最好的来源不在补剂里，而是最平平无奇的一杯酸奶。附英文原文与中文全文翻译。
-
-# The Best Protein Source Is Hiding in Plain Sight
-
-**作者**：Matteo Wong **发表**：《大西洋月刊》（The Atlantic），2026-10-10 **链接**：[https://www.theatlantic.com/health/2026/10/yogurt-best-protein-source/688950/](https://www.theatlantic.com/health/2026/10/yogurt-best-protein-source/688950/) **备注**：页面标题亦作 "Just Have Some Yogurt"。插图：Tina Zhou / The Atlantic。以下为英文原文 + 中文全文翻译。
-
----
-
-## 原文
-
-Somehow, America has yet to reach peak protein. Perhaps we never will. Even after David bars have gone viral for being bricks of essentially pure protein and Starbucks has rolled out lattes topped with "protein cold foam," new and somehow weirder protein-laced products keep hitting shelves. You can now buy protein Honey Nut Cheerios, protein popcorn and PopCorners, protein sodas, protein ranch dressing, and protein chips. (Doritos launched a nacho-cheese-flavored version with 10 grams of protein per one-ounce serving.)
-
-In an era of GLP-1 drugs and peptide stacks and Oura rings and self-optimization, of wellness influencers and looks-maxxers, everybody seems to be doing everything they can to eat as much protein as possible. The magical macronutrient will supposedly make you more muscular, or more toned, or thinner—or something, really anything, just better. Amid the protein frenzy, regular food seemingly doesn't cut it anymore. Why order a simple flat white when you can instead sip a Dunkin' Nutty Pumpkin Iced Protein Latte?
-
-Into the fray, I would suggest a humble alternative: Have some yogurt. Calorie for calorie, Greek yogurt has more protein than Chipotle's High Protein Low Calorie Bowl, Kraft's new PowerMac, or yes, a Dunkin' Nutty Pumpkin Iced Protein Latte. So do some traditional yogurts, as well as other fermented options in the dairy aisle such as skyr and kefir. And that's if you opt for the full-fat, luscious kind (which I recommend). Nonfat Greek yogurt, which is lower in calories, is roughly as protein-dense as a David bar—with the added benefits of having just two ingredients (milk, culture) and not tasting like plastic.
-
-Yogurt is not only full of protein but also good for your bones, your digestion, and your immune system. Yogurt is an ingredient: Eat it plain or bake with it, use it as the base of a sauce or dip, throw it in a marinade or soup. Sure, some yogurts have added sugars, but so does a Starbucks Iced Banana Protein Cream Matcha. And as far as health fads go, yogurt is typically probiotic. All things considered, yogurt may be the easiest protein of all.
-
-In spite of everything it has going for it, yogurt has not been the face of the protein craze. Perhaps that's because yogurt is not splashy or technologically innovative or referred to by a trademarked proper noun. A David bar may taste different and have distinct packaging from an RxBar or a Jacob protein bar made with beef tallow, but all plain yogurt is the same. Though some companies have released "protein-enhanced" yogurt (whatever that means), for the most part yogurt is not optimized by corporate food scientists and focus groups in the way that today's protein-branded products are. Yogurt *has* been optimized in the sense that humans have consumed it for thousands of years.
-
-Imagine wellness influencers suggesting that you dollop yogurt into a bowl and sprinkle berries on top without measuring anything. There wouldn't be any regimen to adopt or wellness plan to pay for. There wouldn't be any special trademarked protein products for influencers to hawk: The company behind the David bar, for instance, has sponsored Andrew Huberman and, until recently, Peter Attia was its chief science officer. The homemade parfait would all be rather mundane and boring compared with Attia's rotation of four protein powders or the bodybuilder Chris Bumstead's breakfast filet mignon. It wouldn't get any views.
-
-Protein is not just a health fad; it is a business. So is everything else in the world of wellness. Indeed, there's something about many of these setups—which proffer the perfect low-calorie, high-protein snack to pick up on your way to work every morning; a biometric wristband to wear every night; supplements to consume every day for the rest of your life; a weight-loss drug you will inject every week—that keeps people coming back for more, giving their attention and money and energy to the endless pursuit of betterment.
-
-Health and more broadly self-improvement are, obviously, admirable pursuits. Protein can be a way to achieve either. But obsessing over hitting those goals can become unhealthy, as most obsessions are. Have some yogurt, or don't. You'll probably be fine.
-
----
-
-## 中文全文
 
 **最好的蛋白质来源，就藏在眼前** 喝点酸奶吧。
 

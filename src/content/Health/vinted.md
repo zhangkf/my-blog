@@ -1,76 +1,20 @@
 ---
 title: '观察家报：Vinted 悖论——二手购物狂潮可持续吗'
-description: '作者：Jeevan Vasagar（《观察家报》气候编辑） 发表：《观察家报》（The Observer），2026-10-10（10 月 11 日刊） 链接：https://observer.co.uk/news/national/article/the-vinted-paradox-is-the-secondhand-shopping-craze-becoming-unsustainable('
+description: 'Vinted 悖论：二手购物热潮正在变得不可持续吗？ 导语：线上转售平台正蓬勃发展，但专家警告，买二手衣服可能正在助长那种它本来要帮忙抑制的过度消费。'
 pubDate: '2026-11-05'
 category: 'Health'
 archived: false
 route_category: 'health'
 route_slug: 'vinted'
 source: notion
+origin_author: 'Jeevan Vasagar（《观察家报》气候编辑）'
+origin_title: 'The Vinted paradox: is the secondhand shopping craze becoming unsustainable?'
+origin_url: 'https://observer.co.uk/news/national/article/the-vinted-paradox-is-the-secondhand-shopping-craze-becoming-unsustainable'
+origin_publication: '《观察家报》（The Observer）'
 notion_id: '40f45fd1-9f92-81af-a82b-f70ed79198f2'
 notion_parent: 'Health'
-last_synced: '2026-11-05T03:12:28.325Z'
+last_synced: '2026-11-09T14:08:36.628Z'
 ---
-
-> 💡 TL;DR：二手转售平台爆发式增长，但「买旧衣＝环保」可能是悖论：便宜刺激了更多购买，快时尚只是换了件马甲。
-
-# The Vinted paradox: is the secondhand shopping craze becoming unsustainable?
-
-**作者**：Jeevan Vasagar（《观察家报》气候编辑） **发表**：《观察家报》（The Observer），2026-10-10（10 月 11 日刊） **链接**：[https://observer.co.uk/news/national/article/the-vinted-paradox-is-the-secondhand-shopping-craze-becoming-unsustainable](https://observer.co.uk/news/national/article/the-vinted-paradox-is-the-secondhand-shopping-craze-becoming-unsustainable) **导语**：Online resale platforms are booming, but experts warn that buying pre-loved clothes may be fuelling the very overconsumption they were conceived to help curb. **图片**：Suki Dhanda / The Observer
-
----
-
-## 原文
-
-Like many users of peer-to-peer clothing platforms, Briony Hockley admits that scrolling through images of secondhand apparel has an addictive quality. Increasingly, she worries this addiction is fuelling the overconsumption it was meant to curb.
-
-Although Hockley, 29, a civil servant from Essex, was first drawn to platforms such as Vinted and Depop by their affordability, the promise of more sustainable fashion was "maybe 20%" of the appeal. "It does make me feel better that it's secondhand and not going to landfill," she said.
-
-She has since become hooked by an algorithm tailored to her tastes and a constantly refreshed offer of clothes, adding: "You do get into the habit of checking all the time."
-
-Payments for the clothes she sells on Vinted are held in the app rather than transferred straight into her bank account, creating the illusion that it is "free money" to spend on more clothing. "I get into phases of impulse buying," Hockley said. "I have convinced myself that I'm being more sustainable but it is still overconsumption."
-
-Reselling platforms have boomed in recent years. Vinted, founded in Lithuania in 2008, was valued at €8bn (£6.9bn) in April and last year generated worldwide revenues of more than €1bn. The platform launched in Australia this year and is now expanding in the US. Depop had revenue of £141m last year, according to its annual report.
-
-The fashion industry's greenhouse gas emissions come primarily from extracting and processing raw materials and from producing new clothes, so extending the life cycle of existing clothes has the power to transform the industry's impact on the planet. But there is little evidence that the growing popularity of fashion resellers is curbing the desire to buy new.
-
-Mark Sumner, head of the textiles programme at environmental charity Wrap, said: "What we have seen is that people who are buying a secondhand T-shirt, rather than being satisfied with that, are still [also] buying a new T-shirt."
-
-Sumner suggests it takes a higher number of secondhand purchases to scratch the fashion itch compared with buying new: "If they buy four or five [secondhand], it ultimately displaces one new T-shirt."
-
-Hockley used to hunt for bargains at charity shops instead of online, but she feels the quality of the clothing there has declined. Platforms such as Vinted are now skimming off the best of secondhand fashion, experts say, leaving charities to sift the dregs.
-
-About 1.5m tonnes of textile waste is generated in the UK every year and nearly half of this goes into general waste where it is burned for energy or buried in landfill. Traditionally, charities have saved a large proportion of the remainder and sold it back to the public.
-
-"Charities are having to work harder to find valuable products, and there's more leftover stuff that has no value," Sumner said, adding that the closure of scores of charity shops across the country this year and the sector's shrinking capacity to deal with surplus textiles means more clothing is likely to be fly-tipped or dumped at tips.
-
-Advocates of sustainable fashion suggest customers have grown so accustomed to the instant gratification of fast fashion that these habits have been transferred to reselling sites.
-
-Holly Watkins, 44, began selling secondhand clothes on market stalls in 1995 and then shifted to eBay for convenience, but has now returned to offline retail with two stores in north London. Watkins said her focus was on building a community experience around buying second-hand clothes.
-
-"Anything encouraging wider society to buy and sell secondhand is a good thing, but I think people make a better decision in real life," Watkins said. "In the shop, it's a much better process. I can ask somebody, 'What will you style it with?' People can see it fitting into their wardrobe and their life."
-
-Although clothes production has soared globally, durability has dropped. The hierarchy of filters on reselling platforms – from "new with tags" to quality descriptors such as "satisfactory" – tends to deprioritise clothes needing repairs.
-
-"Nobody is going to buy something on Vinted that is shown as broken," said Orsola de Castro, a fashion designer and author. "But repair is the only thing that can slow down mass consumption." She suggested peer-to-peer platforms could play a part in connecting consumers to people with the specialist skills to repair apparel and shoes, but that this would also require a shift in the public's mindset.
-
-"Mending died because of the advent of fast fashion. You have to be willing to spend money to get back something that is better than it was before – a visible mend, or fit to size. It's almost couture, bespoke," she said.
-
-Others in the industry point out that many brands already partner with the online repair site Sojo and run their own reselling platforms, but face modest levels of customer engagement.
-
-An executive at a midsized British fashion brand, who requested anonymity, said: "What it comes back to is: does our customer care? And truthfully the answer is no.
-
-"When you look at actual consumers, whenever we do surveys, sustainability is always number three on the priority list. We don't use virgin materials [clothing that has not been previously used or recycled]. But recycled polyester continues to be our bestselling product."
-
-A spokesperson for Depop said the platform recognised the concerns about overconsumption and had measured how far purchases on its site replaced new ones. They added: "Our research shows most buyers are prepared to wait for the right find, or go without, rather than buy new."
-
-Depop said that more than three in five purchases on its platform prevent the purchase of a brand new item elsewhere. Vinted says that 76% of purchases on its platform replaced new buys last year, according to a survey of nearly 40,000 members.
-
-A Vinted spokesperson said: "We recognise that making second-hand more accessible doesn't eliminate consumption. But there's an important distinction between encouraging people to buy more and giving them a more affordable alternative to buying new."
-
----
-
-## 中文全文
 
 **Vinted 悖论：二手购物热潮正在变得不可持续吗？** 导语：线上转售平台正蓬勃发展，但专家警告，买二手衣服可能正在助长那种它本来要帮忙抑制的过度消费。
 

@@ -9,9 +9,12 @@ archived: false
 route_category: 'ai'
 route_slug: 'ai-agents-cant-yet-do-open-ended-ai-research'
 source: notion
+origin_author: 'Sayash Kapoor 与 Arvind Narayanan'
+origin_title: 'AI agents can''t yet do open-ended AI research'
+origin_publication: 'AI as Normal Technology'
 notion_id: '3f545fd1-9f92-81c5-afa8-f4a04861617b'
 notion_parent: 'AI'
-last_synced: '2026-11-06T07:54:18.786Z'
+last_synced: '2026-11-09T14:08:51.900Z'
 ---
 
 顶尖 AI 实验室的目标，是递归自我改进（RSI）：用 AI 智能体把 AI 研究本身自动化。RSI 也是"AI 进步会爆发式加速"这类预测的地基。我们离这个里程碑还有多远，怎么判断？
@@ -63,10 +66,3 @@ last_synced: '2026-11-06T07:54:18.786Z'
 2. 比如，我们的合著者对"智能体到底是缺创造力，还是陷入了认知锁定、无法有效吸收反馈"就有分歧。
 3. 实际上，不同类型的 AI 进步可能有不同的瓶颈。比如提高现有 AI 系统的效率和速度是可验证的任务，这方面的进展一直很快，企业也确实在用智能体提效。短期内，我们预计在有可验证信号的维度上，AI 进步会很快。
 ---
-
-> ✍️ **出处**
-> - 刊物：AI as Normal Technology
-> - 原名：AI agents can't yet do open-ended AI research
-> - 作者：Sayash Kapoor 与 Arvind Narayanan
-> - 原文链接：暂缺
-> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

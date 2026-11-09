@@ -1,6 +1,6 @@
 ---
 title: 'Dan Koe：2027 年最赚钱的 AI 生意'
-description: 'Dan Koe · future/proof · 2026-11-04 · 原文(https://letters.thedankoe.com/p/the-most-lucrative-ai-business-to)'
+description: '最赚钱的本事，从来都是抓住注意力。'
 pubDate: '2026-11-04'
 origin_date: '2026-11-04'
 category: 'AI'
@@ -8,15 +8,12 @@ archived: false
 route_category: 'ai'
 route_slug: 'dan-koe-2027-ai'
 source: notion
+origin_author: 'Dan Koe'
+origin_url: 'https://letters.thedankoe.com/p/the-most-lucrative-ai-business-to'
+origin_publication: 'future/proof'
 notion_id: '40f45fd1-9f92-8135-89b8-c69f60485a4b'
 notion_parent: 'AI'
-last_synced: '2026-11-06T07:54:23.086Z'
----
-
-> 💡 TL;DR：创作者经济正接近翻倍，最赚的活儿不是自己红，而是替不会做内容的公司当「一人创意团队」——用 AI 帮它们抓住注意力，月费 2500-5000 美元起步。
-
-Dan Koe · future/proof · 2026-11-04 · [原文](https://letters.thedankoe.com/p/the-most-lucrative-ai-business-to)
-
+last_synced: '2026-11-09T14:08:55.382Z'
 ---
 
 ### 成为一人创意团队的完整指南

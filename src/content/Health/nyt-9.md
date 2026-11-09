@@ -8,17 +8,13 @@ archived: false
 route_category: 'health'
 route_slug: 'nyt-9'
 source: notion
+origin_author: 'Dana G. Smith（达娜·G·史密斯）'
+origin_title: '9 Things Experts Wish You''d Do in Midlife to Increase Longevity'
+origin_url: 'https://www.nytimes.com/2026/07/28/well/longevity-expert-tips-middle-age.html'
+origin_publication: 'The New York Times（Well 栏目）'
 notion_id: '40f45fd1-9f92-8136-bd8a-e8a40250bada'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:59:02.987Z'
----
-
-> 💡 TL;DR：中年想长寿，专家给出的 9 件事：力量训练、睡眠、社交……每条都有研究背书，没有一条需要花大钱。
-
-# 中年做这 9 件事，专家说能提高长寿概率
-
-> 原文：The New York Times（Well 栏目） 英文标题：9 Things Experts Wish You'd Do in Midlife to Increase Longevity 作者：Dana G. Smith（达娜·G·史密斯） 日期：2026年7月28日 原文链接：[https://www.nytimes.com/2026/07/28/well/longevity-expert-tips-middle-age.html](https://www.nytimes.com/2026/07/28/well/longevity-expert-tips-middle-age.html) 受访专家：玛吉·拉赫曼（布兰代斯大学）、伊齐基尔·伊曼纽尔（宾夕法尼亚大学）、约翰·比尔德（哥伦比亚大学）、吉列姆·冈萨雷斯-洛马斯（纽约大学）、埃琳娜·沃尔皮（UT Health San Antonio） 存档日期：2026-09-05
-
+last_synced: '2026-11-09T14:08:38.674Z'
 ---
 
 ## 导语

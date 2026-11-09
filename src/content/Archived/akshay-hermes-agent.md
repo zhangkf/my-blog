@@ -1,7 +1,6 @@
 ---
 title: 'Akshay：Hermes Agent 完整指南'
-description: '原文链接：https://x.com/i/status/2054564519280804028(https://x.com/i/status/2054564519280804028)  
-'
+description: '原文链接：https://x.com/i/status/2054564519280804028'
 pubDate: '2026-05-18'
 heroImage: 'https://app.notion.com/images/page-cover/hudsonRiverSchool_theOxbow.jpg'
 category: 'Archived'
@@ -11,11 +10,10 @@ route_slug: 'akshay-hermes-agent'
 source: notion
 notion_id: '36445fd1-9f92-80b9-abeb-e15c17180d56'
 notion_parent: 'Archived'
-last_synced: '2026-08-14T02:28:00.826Z'
+last_synced: '2026-11-09T14:09:08.246Z'
 ---
 
-**原文链接**：[https://x.com/i/status/2054564519280804028](https://x.com/i/status/2054564519280804028)  
-
+**原文链接**：[https://x.com/i/status/2054564519280804028](https://x.com/i/status/2054564519280804028)
 
 > 理解并定制 Hermes Agent 所需的一切。自进化技能、三层记忆、GEPA 优化，以及构建 1 到 10 个为你 24/7 工作的智能体。
 

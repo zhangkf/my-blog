@@ -7,25 +7,15 @@ archived: false
 route_category: 'health'
 route_slug: 'katie-lowe'
 source: notion
+origin_author: 'katie lowe'
+origin_url: 'https://ktklp.substack.com/p/do-you-really-want-a-slow-life'
+origin_publication: 'RAYON'
 notion_id: '40f45fd1-9f92-8102-919d-c211380a4319'
 notion_parent: 'Health'
-last_synced: '2026-11-05T03:12:31.861Z'
+last_synced: '2026-11-09T14:08:40.002Z'
 ---
-
-> 💡 TL;DR：扔掉智能手机 23 个月之后，katie lowe 诚实地写下慢生活的真相：它不是乌托邦，但你可能真的会想要一点点。
-
-# 你真的想要"慢生活"吗？
 
 > **不用智能手机的第 23 个月**
-
-- **作者：** katie lowe
-- **发布于：** RAYON — [ktklp.substack.com](https://ktklp.substack.com/)
-- **日期：** 2026年8月19日
-- **原文：** <[https://ktklp.substack.com/p/do-you-really-want-a-slow-life>](https://ktklp.substack.com/p/do-you-really-want-a-slow-life%3E)
-- **出处：** The Substack Post《The Weekender》周刊（2026年8月22日）
-- *配图："A Moment's Reflection"，Valdemar Vincent Kornerup*
-- *译者：AI 翻译（Hermes），未删节*
----
 
 我的"模拟生活实验"快满两年了。一天天过去，它越来越不像一场实验，更像一种新的日常。我曾试图通过写作，挖出我在这样做之前的日常生活是什么样子，想做个对比——但说实话，我现在对时间、对我在这个世界上所处位置的理解已经变得太多，几乎不可能真正理解从前的自己。也许我不该试图去比较或解释我的成长，而是把如今我在这世界上消磨时间的方式摊开给你看，你或许就能明白，分岔是从哪里开始的。
 

@@ -1,23 +1,18 @@
 ---
 title: 'Reid Hoffman：相信可能性'
-description: '作者：Reid Hoffman（里德·霍夫曼） 来源：Theory of the Game(https://reidhoffman.substack.com/p/faith-in-the-possible) 日期：2026年4月20日 存档日期：2026年4月25日'
+description: '硅谷有上帝情结。批评者们说得没错。只是他们弄错了是哪个上帝。'
 pubDate: '2026-11-05'
 category: 'Health'
 archived: false
 route_category: 'health'
 route_slug: 'reid-hoffman'
 source: notion
+origin_author: 'Reid Hoffman（里德·霍夫曼）'
+origin_url: 'https://reidhoffman.substack.com/p/faith-in-the-possible'
+origin_publication: 'Theory of the Game'
 notion_id: '40f45fd1-9f92-81a5-a9ff-fda0fb4d208c'
 notion_parent: 'Health'
-last_synced: '2026-11-05T03:12:31.323Z'
----
-
-> 💡 TL;DR：硅谷信的不是钱也不是权，是「创造本身」——相信可能性（faith in the possible）才是这场宗教运动的真正教义。
-
-# 相信可能性
-
-**作者：Reid Hoffman（里德·霍夫曼）** **来源：[Theory of the Game](https://reidhoffman.substack.com/p/faith-in-the-possible)** **日期：2026年4月20日** **存档日期：2026年4月25日**
-
+last_synced: '2026-11-09T14:08:39.337Z'
 ---
 
 硅谷有上帝情结。批评者们说得没错。只是他们弄错了是哪个上帝。

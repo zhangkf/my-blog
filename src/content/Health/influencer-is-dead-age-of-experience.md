@@ -1,6 +1,6 @@
 ---
 title: 'Dan Koe：网红已死，体验时代已来'
-description: 'Dan Koe · future/proof · 2026-10-20 · 原文(https://letters.thedankoe.com/p/the-influencer-is-dead-the-age-of)'
+description: '没有一天，我不刷到这样的故事：一位 40 多岁、完全不懂技术的妈妈，靠一个简单的数字产品，一次发售就拿到百万美元收入。'
 pubDate: '2026-10-20'
 origin_date: '2026-10-20'
 category: 'Health'
@@ -8,15 +8,12 @@ archived: false
 route_category: 'health'
 route_slug: 'influencer-is-dead-age-of-experience'
 source: notion
+origin_author: 'Dan Koe'
+origin_url: 'https://letters.thedankoe.com/p/the-influencer-is-dead-the-age-of'
+origin_publication: 'future/proof'
 notion_id: '40f45fd1-9f92-81bf-b890-eba549350382'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:54:00.264Z'
----
-
-> 💡 TL;DR：网红模式失灵，「匠人」式作品体系接棒：别再追逐流量人设，用 12 个月围绕一个话题建作品体系，让信任而非曝光替你变现。
-
-Dan Koe · future/proof · 2026-10-20 · [原文](https://letters.thedankoe.com/p/the-influencer-is-dead-the-age-of)
-
+last_synced: '2026-11-09T14:08:33.539Z'
 ---
 
 ### 网红不再有娱乐性，个人品牌不再个人化

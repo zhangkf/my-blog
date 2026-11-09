@@ -1,6 +1,6 @@
 ---
 title: 'Addy Osmani：智能体时代，如何保住批判性思考'
-description: 'Addy Osmani · X · 2026-11-03 · 原文(https://x.com/addyosmani/status/2117512471930167377)'
+description: '早年，批判性思考是这样教的：带着谦逊的好奇和适度的怀疑去接触新信息——听取不同观点，形成自己的判断。这个道理今天依然成立。但我的日常越来越逼不着我这么做了——因为太多的工作直接跑在智能体（agent）上。致那些已经全盘接受智能体工作流（agentic workflows）的人。并行开着好几个会话、笃信模型会越来越好——工程师也好，产品人也罢。我想先把话说清楚：我是这些工具的铁杆粉丝。写这篇东西，不'
 pubDate: '2026-11-03'
 origin_date: '2026-11-03'
 category: 'AI'
@@ -8,18 +8,13 @@ archived: false
 route_category: 'ai'
 route_slug: 'addy-osmani'
 source: notion
+origin_author: 'Addy Osmani'
+origin_url: 'https://x.com/addyosmani/status/2117512471930167377'
+origin_publication: 'X'
 notion_id: '40f45fd1-9f92-81ca-953a-f3e02b67a5e2'
 notion_parent: 'AI'
-last_synced: '2026-11-06T07:54:23.758Z'
+last_synced: '2026-11-09T14:08:56.026Z'
 ---
-
-> 💡 TL;DR：工作越交给智能体，越要主动建批判性思考——提问前先写假设、给智能体搭验证闭环、读懂它替你做的每个决定。活儿可以外包，责任不能。
-
-Addy Osmani · X · 2026-11-03 · [原文](https://x.com/addyosmani/status/2117512471930167377)
-
----
-
-*Addy Osmani · 2026-11-03 · X 长文（原文无标题，中文标题为译者所加）*
 
 早年，批判性思考是这样教的：带着谦逊的好奇和适度的怀疑去接触新信息——听取不同观点，形成自己的判断。这个道理今天依然成立。但我的日常越来越逼不着我这么做了——因为太多的工作直接跑在智能体（agent）上。致那些已经全盘接受智能体工作流（agentic workflows）的人。并行开着好几个会话、笃信模型会越来越好——工程师也好，产品人也罢。我想先把话说清楚：我是这些工具的铁杆粉丝。写这篇东西，不是劝你少用智能体工作流。
 

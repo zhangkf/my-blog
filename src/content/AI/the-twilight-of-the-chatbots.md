@@ -9,9 +9,13 @@ archived: false
 route_category: 'ai'
 route_slug: 'the-twilight-of-the-chatbots'
 source: notion
+origin_author: 'Ethan Mollick'
+origin_title: 'The twilight of the chatbots'
+origin_url: 'https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots'
+origin_publication: 'One Useful Thing'
 notion_id: '3f645fd1-9f92-8151-94f9-e61f0c4cb23c'
 notion_parent: 'AI'
-last_synced: '2026-11-06T07:54:19.730Z'
+last_synced: '2026-11-09T14:08:52.926Z'
 ---
 
 *原副标题：How work changes along the exponential —— 工作如何沿指数曲线变化*
@@ -51,10 +55,3 @@ last_synced: '2026-11-06T07:54:19.730Z'
 *备注：译文保留原文有价值的外链（METR、英国 AI 安全研究所、Epoch、AA-Briefcase、港口模拟试玩、新书《Co-Existence》）；原文内转引的两项研究的 Substack 跳转链接未保留原文目标；末尾的订阅/付费推广页脚未译。*
 
 ---
-
-> ✍️ **出处**
-> - 刊物：One Useful Thing
-> - 原名：The twilight of the chatbots
-> - 作者：Ethan Mollick
-> - 原文链接：[https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots](https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots)
-> - 说明：中文由好读翻译整理，版权归原作者。原文来自作者邮件通讯。

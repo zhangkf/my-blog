@@ -1,6 +1,6 @@
 ---
 title: 'David Cain：如何存在'
-description: 'David Cain · Raptitude · 2026-07-31 · 原文(https://www.raptitude.com/2026/07/how-to-exist/)'
+description: '给真正的猛士准备了一个实验。'
 pubDate: '2026-07-31'
 origin_date: '2026-07-31'
 category: 'Health'
@@ -8,15 +8,12 @@ archived: false
 route_category: 'health'
 route_slug: 'david-cain'
 source: notion
+origin_author: 'David Cain'
+origin_url: 'https://www.raptitude.com/2026/07/how-to-exist/'
+origin_publication: 'Raptitude'
 notion_id: '40f45fd1-9f92-81b9-9915-ca79bd2b3a2b'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:54:07.436Z'
----
-
-> 💡 TL;DR：人对「存在」本身过敏——什么都不做地坐上三分钟，比想象中难得多。练习简单到离谱：一次只拥抱一口呼吸，几秒几秒地，学会无惧地存在。
-
-David Cain · Raptitude · 2026-07-31 · [原文](https://www.raptitude.com/2026/07/how-to-exist/)
-
+last_synced: '2026-11-09T14:08:40.684Z'
 ---
 
 给真正的猛士准备了一个实验。

@@ -1,6 +1,6 @@
 ---
 title: 'NYT 杂志：那个教我们如何专注的人'
-description: 'A.O. Scott, The New York Times Magazine, 2026-10-18（10月25日刊，第20页） https://www.nytimes.com/2026/10/18/magazine/john-berger-attention.html(https://www.nytimes.com/2026/10/18/magazine/john-berger-attenti'
+description: '那个教我们如何专注的人'
 pubDate: '2026-10-18'
 origin_date: '2026-10-18'
 category: 'Health'
@@ -8,96 +8,14 @@ archived: false
 route_category: 'health'
 route_slug: 'the-man-who-taught-us-focus'
 source: notion
+origin_author: 'A.O. Scott'
+origin_title: 'The Man Who Taught Us How to Pay Attention'
+origin_url: 'https://www.nytimes.com/2026/10/18/magazine/john-berger-attention.html'
+origin_publication: 'The New York Times Magazine'
 notion_id: '40f45fd1-9f92-8134-aa0b-f754c52724d8'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:55:22.949Z'
+last_synced: '2026-11-09T14:08:38.073Z'
 ---
-
-> 💡 TL;DR：影评人 A.O. Scott 重读约翰·伯格：在注意力被明码标价的时代，伯格教的「观看之道」反而是最实用的生存技能。
-
-# The Man Who Taught Us How to Pay Attention
-
-A.O. Scott, The New York Times Magazine, 2026-10-18（10月25日刊，第20页） [https://www.nytimes.com/2026/10/18/magazine/john-berger-attention.html](https://www.nytimes.com/2026/10/18/magazine/john-berger-attention.html)
-
-> 说明：中文为全文翻译；标 ★ 的段落是三联生活周刊引用的那一段。
-
----
-
-## 原文
-
-As a critic, which is to say someone whose job is to pay attention to things, and as a reader of criticism, which means someone who pays attention to the ways attention is paid, I've been fixated recently on the works of John Berger.
-
-Berger, a British art critic, novelist and political polemicist who died in 2017, devoted much of his writing life to the theory and practice of looking — at paintings, at animals, at the natural world. This wasn't merely an aesthetic preoccupation. "You can't talk about aesthetics," he wrote, "without talking about the principle of hope and the existence of evil." Attention, for him, was a matter of life and death, or at least of their cultural equivalents, remembering and forgetting.
-
-One of my favorite Berger essays, first published in 1973, is called "Between Two Colmars." It recounts his experience of going to see a renaissance altarpiece near that Alsatian cathedral town in 1963, and again 10 years later.
-
-I've never been to Colmar, and there's no picture of the altarpiece, which was painted by the German master Matthias Grunewald, in the edition of "About Looking" that I'm consulting. I could search online, of course (something I couldn't have done when the piece first appeared or when I first read it a decade or so later), to see what Berger was talking about. But I don't think I've ever done that, because even though he describes the altarpiece in careful detail — "It was painted on hinged panels of wood. When these were shut, those before the altar saw the Crucifixion, flanked by St. Anthony and St. Sebastian. When the panels were opened, they saw a Concert of Angels and a Madonna and Child, flanked by an Annunciation and Resurrection" — what matters to me more is his experiences of looking at it.
-
-An artifact of early-16th-century Europe — an era experienced by many, according to Berger, as "a time of damnation" — that depicts scenes of biblical history strikes Berger as brutal and despairing when he sees it first in 1963, and as hopeful and compassionate when he revisits it. Those impressions are the mirror images of his own state of mind at the beginning and end of a period that started in personal and political optimism and ended in disorientation and defeat. The hope of the early '60s gave him the security to embrace gloom, while the desolation of the '70s left him in need of solace. A single work of art answered to both needs. "In a period of revolutionary expectation," Berger concludes, "I saw a work of art which had survived as evidence of the past's despair; in a period which has to be endured, I see the same work miraculously offering a narrow pass across despair."
-
-I find that sentence moving enough that I may never need to see the altarpiece for myself. The idea that art can offer a measure of hope in bad times is a commonplace these days and can easily slide toward sentimentality and escapism. But for Berger art offers not a refuge so much as a way of living in history, of grasping the complexity of the past and the individual's changing relationship to it. The altarpiece, anchored in the facts of its own epoch — wars of religion; rapid technological change; plague and paranoia — reaches across the centuries as a reminder of the kind of meaning only art can provide.
-
-Similarly, "Between Two Colmars" can remind a 21st-century reader of the urgency and complexity of looking at art. Right now, we're in the midst of an attention crisis, individually and collectively snared in an infinite scroll of disruption and distraction. Berger saw this crisis coming and foresaw its consequences. In 1978, writing about photography and its impact on the modern world, he argued that the dominance of images "creates an eternal present of immediate expectation: Memory ceases to be necessary or desirable. With the loss of memory, the continuities of meaning and judgment are also lost to us." That diagnosis seems even truer today, as the functions of remembering, judging and interpreting are increasingly offloaded from human minds and communities into the ether of social media feeds and artificial intelligence. We're in danger of forgetting how to look.
-
-Berger's centennial will arrive on Nov. 5. Almost 10 years after his death, his presence is still felt in pockets of the culture. His best-known book, "Ways of Seeing," has been a staple of art-history classes and a fixture on the bookshelves of critically minded young people for more than half a century. New York Review Books has been steadily reissuing his fiction and criticism, including, earlier this fall, the 1980 collection "About Looking," which includes the essay I just quoted. A new biography, by Tom Overton, has just been published, the second in a decade.
-
-On the internet, in addition to finding his four-part BBC series "Ways of Seeing," you can stream "The Seasons in Quincy," a meditative documentary from 2015 in which Berger participates in a public conversation with Ben Lerner, peels apples with Tilda Swinton and offers motorcycle lessons to her daughter, Honor Swinton Byrne. Berger appears in the film as an elfin, grandfatherly figure with a mop of silver curls and piercing blue eyes — charismatic in a way that feels a little old-fashioned.
-
-His persona on the page is not quite as playful but just as magnetic. Berger liked to think of himself as a storyteller. His fourth novel, "G." — an earthy, experimental picaresque that often reads like "Tristram Shandy" by way of Thomas Pynchon — won the Booker Prize in 1972. He spent much of the 1970s and '80s toiling on "Into Their Labors," a sweeping trilogy of novels about the history and fate of European peasantry. Other books of his are hybrids — documentary, polemical, lyrical, personal — exploring history, ecology and political and economic injustice.
-
-But it's his essays about art and artists that matter most to me now. Reading them, you often feel you're standing next to him in the museum or even looking through his eyes at a painting or a sculpture. You pay attention to his attention.
-
-Berger trained as a painter before shifting to criticism. For him, attention was not a passive, individual state but rather an action. We don't just see what's in front of our eyes. We interpret it, looking for patterns and meanings and associations. How we do this depends on where we are, who we're with and how we see ourselves.
-
-This, in the abstract, was the argument of "Ways of Seeing," both the book and the broadcast.
-
-Berger's mop of curls was brown in those days, his eyes no less alive. Speaking in an accent that is educated but not posh, with a tendency to melt his R's into W's, he zigzags through the history of art, focusing not on masterpieces and movements but on — the title sums it up.
-
-In the excitable, democratic manner of a hip young professor (Berger never held a full-time academic post), he begins by pointing out how works of art change when they're reproduced on postcards, merchandise and television screens. This wasn't an entirely original observation. Berger acknowledged the influence of the essay "The Work of Art in the Age of Mechanical Reproduction," by the prewar German-Jewish critic Walter Benjamin, which would become a staple of the cultural studies syllabus in subsequent decades, partly thanks to the influence of "Ways of Seeing."
-
-The second episode, which featured a panel of feminist critics and writers, did the same for the idea of the "male gaze." (In Berger's summary: "Men look at women. Women watch themselves being looked at.") A later installment proposed a link between the popularity of oil painting in early modern Europe and the rise of capitalism. ("Oil paintings often depict things," he says. "Things which in reality are buyable. To have a thing painted and put on a canvas is not unlike buying it and putting it in your house. If you buy a painting, you buy also the look of the thing it represents.")
-
-"Ways of Seeing" popularized an approach to art — and to culture more generally — that has since become ubiquitous. Rather than focusing on the achievement of individual artists or on the traditions that connect them, this approach insists on context: the social forces that shape artists and schools; the relationships among art, money and power; the ways that making and appreciating are mediated by history, ideology and institutions.
-
-By now the frisson of new awareness that greeted the first viewers of "Ways of Seeing" has been experienced by several generations of readers. The notion that art is socially embedded is such a piece of conventional wisdom that it can be hard to imagine what the alternative view might have been. And there is a facile, debunking version of the argument, one that promises an easy kind of mastery, an ability to see through art instead of seeing it, a substitution of knowingness for aesthetic experience. Reams of criticism have been written exposing the complicity of countless artists and artworks with colonialism, capitalism, patriarchy and every other system of domination. Berger is never not aware of those connections — and does not hesitate to judge the political and moral failings of artists — but he always puts the experience of making and viewing the art first.
-
-★ For him, the act of looking — the artist's and the spectator's — carries primal human impulses of curiosity, pleasure and awe. While art doesn't exist in a vacuum, neither is it reducible to politics or commerce or anything else. An oil painting may be an object, a commodity in the marketplace, but it's never only that. It is also the expression of the painter's subjectivity, the work of hands that reach across time and geography to find receptive eyes. And to communicate a utopian possibility: "Art," he wrote, "supposes that beauty is not an exception — is not in despite of — but is the basis for an order."
-
-Even as the world of commodities is ruled by equivalence, part of the allure of a painting lies in its uniqueness. A Caravaggio is not the same as a Courbet. You can't swap Picasso for Francis Bacon. What that means is that art — even art that is anonymously made or consumed en masse — is personal. Somebody made it. Somebody sees it.
-
-This idealism — often described, by him and others, as humanism — is what separates Berger from the postmodernist strain of critical thought that "Ways of Seeing" in other ways anticipates. It's also what gives his art criticism moral force and political relevance.
-
-Like many other British intellectuals of his background and generation, Berger, a child of the London middle class with some Jewish ancestry, gravitated leftward during and after World War II. He never joined the British Communist Party; his Marxism provided less a body of doctrine than a set of prompts and hunches. He was biased in favor of realism and suspicious of abstraction; he found traces of class struggle in every corner of the history of art; he mined the lives of painters for clues about the social implications of their work. When he won the Booker Prize in 1972, he made headlines (and enemies) by donating half the prize money to the British Black Panthers — to draw attention to the prize funders' role in colonialism and the slave trade.
-
-But in the second half of his career, Berger's leftist principles — his hatred of inequality, his reverence for labor, his conviction that a more human alternative to capitalism was possible — were increasingly filtered through a sensibility tinted with conservatism. He grew skeptical of modernity and acutely aware of the costs of technological progress, which brings in its wake dispossession, alienation and amnesia along with efficiency, speed and convenience. While he would remain engaged in a familiar array of leftist causes until the end of his life, his center of gravity shifted radically in the '70s and '80s because of his intensifying connection to rural life.
-
-While working on a documentary project about migrant laborers with the Swiss photographer Jean Mohr, Berger discovered that most of the people he interviewed had been small farmers or agricultural workers uprooted from land where their families lived for generations. He realized that he had no way to understand that background, even though it was shared by (in his estimate) hundreds of millions of people around the world.
-
-He had spent time in the French countryside before, but in the mid-'70s, he relocated permanently to Haute-Savoie in the French Alps, settling in Quincy, a remote hamlet, and making his life among the peasants there.
-
-Plenty of writers move to the country, seeking refuge or respite from the swirl of metropolitan literary life. Berger's rustication was a more serious and sustained project. After moving to Quincy, he would devote much of his creative and critical energy to witnessing and trying to explain to himself and his readers the contours of a mode of existence in the process of vanishing, and to understanding why that vanishing mattered. He came to believe that an essential piece of human experience was disappearing from memory.
-
-Go back far enough in your family tree, and you are likely to find people who can be classified as peasants. Small-scale farming, supplemented by cottage industry, handicraft, hunting and foraging, has organized much of human life for most of our history as a species. From his neighbors in Quincy, Berger extrapolated the intellectual, aesthetic and spiritual dimensions of the peasant world — its distinctive understanding of a person's relationships with animals, family, nature and the dead.
-
-To the extent that Berger's point of view is contradictory, a perspective that ties the desire for a better future with a stubborn attachment to the past, it's summed up in the figure of the peasant, a human type that is both ubiquitous and nearly invisible for much of human recorded history. "Very few peasants become artists," he noted. "This is not a question of talent, but of opportunity and free time." As a result, "the peasant's soul is as unfamiliar or unknown to most urban people as is his physical endurance and the material conditions of his labor."
-
-In the European literature and art Berger knew best, people who work the land, if they are present at all, tend to be subjected to mockery, pity or sentimental idealization, all of which are forms of condescension. This isn't just a matter of metropolitan prejudice or bourgeois elitism. The 19th-century French realist Jean-François Millet was for Berger a "unique" artist: "No other European painter had treated rural labor as the central theme of his art." But he was nonetheless a failure "because the language of traditional oil painting could not accommodate the subject he brought with him." That is because landscape painting and rural portraiture are based on observational detachment. In this tradition, Millet found "no formula for representing the close, harsh, patient physicality of a peasant's labor on, instead of in front of, the land."
-
-Berger's own essays, which approach the question of peasant experience more abstractly and obliquely, may come closer to capturing its importance. Exploring the question "Why look at animals?" (in an essay of the same title collected in "About Looking"), Berger zeros in on an essential aspect of the human connection to other species by observing that "a peasant becomes fond of his pig and is glad to salt away its pork. What is significant, and is so difficult for the urban stranger to understand, is that the two statements in that sentence are connected by an and and not by a but."
-
-Berger had a romantic streak, but he didn't sentimentalize life on the land or paint a nostalgic picture of an existence defined by grueling labor, frequent hardship and particular vulnerability to natural and economic disaster. The question he asked — of the migrants and displaced rural people he encountered in Europe, Africa and the Middle East and of modern civilization as a whole — was: What happens when that continuity is disrupted, when that sense of place, of home, of animals as a source of companionship and labor and food, is lost?
-
-The answer goes back to his criticism. The peasant's survival depends on attention: to the weather; to customs and traditions; to a host of practical considerations that are also aesthetic and ethical choices. How do you plant a field? Build a chair? Raise a child? Mourn the dead?
-
-The knowledge that provides answers to those questions is acquired by paying attention, in a way that is not qualitatively different from what a painter brings to a landscape or a critic to a painting.
-
-That is what we are at risk of losing. Or what, Berger might say, is being stolen from us, not least by the technologies that offer us endless novelty and seem to fulfill desires we never even knew we had. The loss is a foreclosure of memory, of the knowledge that we exist in history. It's not abstract: The rage that defines so much modern politics, in the developed world and the global South, on the right as well as on the left, can be understood as a reaction to the feeling that something we once had is gone. Grief manifests itself as grievance.
-
-Art — and art criticism, for that matter — suggest a fragile, conditional alternative. As Berger put it: "We live in a world of suffering in which evil is rampant, a world whose events do not confirm our Being, a world that has to be resisted. It is in this situation that the aesthetic moment offers hope."
-
----
-
-## 中文全文
 
 **那个教我们如何专注的人**
 
