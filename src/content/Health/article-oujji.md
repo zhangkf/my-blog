@@ -11,10 +11,11 @@ route_slug: 'article-oujji'
 source: notion
 origin_author: 'Oliver Burkeman'
 origin_title: 'The freewriting way of life'
+origin_url: 'https://ckarchive.com/b/wvu2hghkm7066h9r552rqtnq2okxxs8hq2g6w'
 origin_publication: 'The Imperfectionist'
 notion_id: '3f045fd1-9f92-81d7-8a75-f98d23c27f85'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:53:54.459Z'
+last_synced: '2026-11-09T14:49:13.184Z'
 ---
 
 自由书写，顾名思义，就是定个计时器，打开文档或笔记本，然后把脑子里冒出来的东西一股脑写下来，哪怕看起来完全是垃圾。它在我梳理、表达想法的过程中已经陪了我很久，尽管它几乎挑战了我那完美主义、控制欲极强的灵魂的每一个部分。最近，我开始把它看作一种更广义的生存方式的缩影。因为我相信，自由书写的原则里，藏着一整套让生活变得有意义、鲜活、高产的哲学——哪怕你根本不是作家，也从来不用这个技巧。

@@ -11,10 +11,11 @@ route_slug: 'article-a66l9e'
 source: notion
 origin_author: 'Oliver Burkeman'
 origin_title: 'A string of beads'
+origin_url: 'https://ckarchive.com/b/75u7h8h699kkzb6rgg7rlawl85666tnhordn0'
 origin_publication: 'The Imperfectionist'
 notion_id: '3f145fd1-9f92-815c-8ea6-e1523e35b2c8'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:53:55.146Z'
+last_synced: '2026-11-09T14:49:13.876Z'
 ---
 
 不用我说你也知道，这是黑暗、不安、近乎末世的年月。我在英美朋友圈里，人人都不安：查理·柯克遇刺，以及随后美国对言论的打压；英国本土主义和反移民情绪回潮；再叠加加沙的惨剧、气候动荡，还有 AI 可能灭绝人类的阴影。

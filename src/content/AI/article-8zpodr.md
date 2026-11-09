@@ -11,10 +11,11 @@ route_slug: 'article-8zpodr'
 source: notion
 origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
 origin_title: 'A big-tent or small-tent AI safety movement?'
+origin_url: 'https://www.normaltech.ai/p/a-big-tent-or-small-tent-ai-safety'
 origin_publication: 'AI as Normal Technology'
 notion_id: '3ee45fd1-9f92-8133-b2f6-effbf4ed7800'
 notion_parent: 'AI'
-last_synced: '2026-11-06T07:54:13.073Z'
+last_synced: '2026-11-09T14:49:31.700Z'
 ---
 
 最近几周，关于 AI 安全冒出两种叙事。要么：AI 末日风险真实且迫在眉睫。要么：AI 领袖和吹哨人这么说，言不由衷。是一场“心理战”，或者炒作，或者某种变了形的监管俘获。

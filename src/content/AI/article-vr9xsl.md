@@ -11,10 +11,11 @@ route_slug: 'article-vr9xsl'
 source: notion
 origin_author: 'Arvind Narayanan 与 Sayash Kapoor'
 origin_title: 'Why AI hasn''t replaced software engineers, and won''t'
+origin_url: 'https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers'
 origin_publication: 'AI as Normal Technology'
 notion_id: '3ef45fd1-9f92-8151-b321-ebfa7e1bd698'
 notion_parent: 'AI'
-last_synced: '2026-11-06T07:54:14.316Z'
+last_synced: '2026-11-09T14:49:33.047Z'
 ---
 
 人们对 AI 取代工作，充满焦虑和不确定。怎么越过含糊的警告和夸张的预言，让数据来说话？一个很好的切入点，是去看 AI 能力走得最远、采用又异常快的职业：软件工程。

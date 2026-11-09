@@ -11,10 +11,11 @@ route_slug: 'the-power-of-immediacy'
 source: notion
 origin_author: 'Oliver Burkeman'
 origin_title: 'The power of immediacy'
+origin_url: 'https://ckarchive.com/b/r8u8hoh3qpe9wu48nng83sden4n66h7hwx834'
 origin_publication: 'The Imperfectionist'
 notion_id: '3f345fd1-9f92-81f1-8a63-c82baa438f34'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:53:56.516Z'
+last_synced: '2026-11-09T14:49:15.247Z'
 ---
 
 如果你最近总觉得卡住了，那些真正重要的事一件也没推进——也许，你的生活里缺的不是方法，而是一点"即时性"。

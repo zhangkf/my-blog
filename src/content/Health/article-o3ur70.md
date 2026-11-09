@@ -11,10 +11,11 @@ route_slug: 'article-o3ur70'
 source: notion
 origin_author: 'Oliver Burkeman'
 origin_title: 'Do what you want'
+origin_url: 'https://ckarchive.com/b/4zuvhehpl42rrb6ovveola6m5z04rt5hm4own'
 origin_publication: 'The Imperfectionist'
 notion_id: '3ef45fd1-9f92-8189-97f2-c5aa42b5a7aa'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:53:53.776Z'
+last_synced: '2026-11-09T14:49:12.508Z'
 ---
 
 如果你被一种感觉淹没了：世界正在崩坏。或者，只是被待办清单淹没。或者，卡在某种人生低谷里动不了。有个办法大概率对你有用：把生活调个方向。**调到你真正想做的事上，而不是调到你觉得自己应该怎么活上。**

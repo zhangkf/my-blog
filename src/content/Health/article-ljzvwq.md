@@ -10,10 +10,11 @@ route_slug: 'article-ljzvwq'
 source: notion
 origin_author: '帕姆·英格尔斯'
 origin_title: '维系联络的艺术'
+origin_url: 'https://velvetnoise.substack.com/p/the-art-of-staying-in-touch'
 origin_publication: 'Substack（英文原名待考）'
 notion_id: '3c445fd1-9f92-8031-bf0e-cef9b8dead9a'
 notion_parent: 'Health'
-last_synced: '2026-10-09T02:41:32.889Z'
+last_synced: '2026-11-09T14:49:09.121Z'
 ---
 
 > 💡

@@ -11,10 +11,11 @@ route_slug: 'ai-agents-cant-yet-do-open-ended-ai-research'
 source: notion
 origin_author: 'Sayash Kapoor 与 Arvind Narayanan'
 origin_title: 'AI agents can''t yet do open-ended AI research'
+origin_url: 'https://www.normaltech.ai/p/ai-agents-cant-yet-do-open-ended'
 origin_publication: 'AI as Normal Technology'
 notion_id: '3f545fd1-9f92-81c5-afa8-f4a04861617b'
 notion_parent: 'AI'
-last_synced: '2026-11-09T14:08:51.900Z'
+last_synced: '2026-11-09T14:49:37.458Z'
 ---
 
 顶尖 AI 实验室的目标，是递归自我改进（RSI）：用 AI 智能体把 AI 研究本身自动化。RSI 也是"AI 进步会爆发式加速"这类预测的地基。我们离这个里程碑还有多远，怎么判断？

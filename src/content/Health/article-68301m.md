@@ -9,10 +9,11 @@ route_slug: 'article-68301m'
 source: notion
 origin_author: 'Oliver Burkeman'
 origin_title: 'Nobody''s ever ready'
+origin_url: 'https://ckarchive.com/b/k0umh6h5rwz88a6n33wn4aorrer77f8hgxwdn'
 origin_publication: 'The Imperfectionist'
 notion_id: '3ed45fd1-9f92-8163-aa49-cfa80d32dcf8'
 notion_parent: 'Health'
-last_synced: '2026-10-09T02:41:33.333Z'
+last_synced: '2026-11-09T14:49:09.810Z'
 ---
 
 这期《不完美主义者》其实不是讲 AI 的。我保证。但它确实从 AI 说起。因为现在有种病，正在 AI 圈里集中爆发：胃里发紧的焦虑。世界变得太快，你拼尽全力才跟得上。几乎每天都有新的病毒式警告刷屏：大事要发生了，大多数人还没准备好。再不学习新技能，只剩 18 个月就过时了。言外之意都一样：这一步走错，你就被永远甩在后面，人生完蛋。

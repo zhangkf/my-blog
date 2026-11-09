@@ -11,10 +11,11 @@ route_slug: 'article-y0sn02'
 source: notion
 origin_author: 'Oliver Burkeman'
 origin_title: 'You have to do the living yourself'
+origin_url: 'https://ckarchive.com/b/k0umh6h56x947t6n33wn4aokxz577h8hgxwdn'
 origin_publication: 'The Imperfectionist'
 notion_id: '3ee45fd1-9f92-8103-873b-edbc451c6f1d'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:53:53.116Z'
+last_synced: '2026-11-09T14:49:11.821Z'
 ---
 
 这些年，我上过很多播客。主持人快结束时，总爱问同一个问题：“听众今天能做哪一件事，把你这套想法用起来？”

@@ -10,10 +10,11 @@ route_slug: 'article-7vn6r7'
 source: notion
 origin_author: 'Oliver Burkeman'
 origin_title: 'Let''s stop talking about A.I.'
+origin_url: 'https://ckarchive.com/b/38uphkh2pkl07i37xxl75f455oo0da7hrz054'
 origin_publication: 'The Imperfectionist'
 notion_id: '3ba45fd1-9f92-806c-bf7e-e60747f8ff57'
 notion_parent: 'Health'
-last_synced: '2026-10-09T02:41:32.124Z'
+last_synced: '2026-11-09T14:49:07.741Z'
 ---
 
 如果你对冥想稍有涉猎，很可能听过这样一个故事：两位和尚长途步行，途中遇到一条湍急的河流。岸边有位女子无法过河，他们便违背了不近女色的戒律，将她背了过去。走了数里之后，一位和尚仍为破戒而耿耿于怀。“师兄，”另一位和尚对他说，“我早已将那女子放下，你为何还一直背着她？”

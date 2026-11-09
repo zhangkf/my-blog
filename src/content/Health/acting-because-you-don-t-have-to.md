@@ -11,10 +11,11 @@ route_slug: 'acting-because-you-don-t-have-to'
 source: notion
 origin_author: 'Oliver Burkeman'
 origin_title: 'Acting because you don''t have to'
+origin_url: 'https://ckarchive.com/b/d0ueh0ho7966vbk4xx64otzpvrq44clhn540k'
 origin_publication: 'The Imperfectionist'
 notion_id: '3f545fd1-9f92-8116-b175-e3497afdf0f6'
 notion_parent: 'Health'
-last_synced: '2026-11-06T07:53:57.880Z'
+last_synced: '2026-11-09T14:49:16.593Z'
 ---
 
 有句话听起来挺反直觉的，可我花了很长时间才真正悟到：**想让人生中更多的时间花在有意义、有回报、能带来改变的事情上，最好的办法，是打心底里感受到——这些事，你一件都不必做。**

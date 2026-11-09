@@ -11,10 +11,11 @@ route_slug: 'article-xlifx8'
 source: notion
 origin_author: 'Ethan Mollick'
 origin_title: 'Co-Existence and the End of Co-Intelligence'
+origin_url: 'https://www.oneusefulthing.org/p/co-existence-and-the-end-of-co-intelligence'
 origin_publication: 'One Useful Thing'
 notion_id: '3f145fd1-9f92-81d4-b73f-f56add62a4e7'
 notion_parent: 'AI'
-last_synced: '2026-11-06T07:54:15.647Z'
+last_synced: '2026-11-09T14:49:34.380Z'
 ---
 
 《协同智能》出版已经两年了。这本书讲 AI，成绩远超我的预期：登上《纽约时报》畅销榜，译成 25 种以上的语言，荷兰和韩国卖得最好。说它过时了，不完全准确。但它写的，是一个属于聊天机器人和早期模型的世界。在那个世界里，和 AI 共事是一种协作练习：来回跟聊天机器人打磨，带上自己的知识和质疑。人站在中心，聊天机器人是帮手。
