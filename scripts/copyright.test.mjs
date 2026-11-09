@@ -102,3 +102,14 @@ test("多段出处时取最后一段", () => {
   assert.equal(copyright.author, "新作者");
   assert.equal(copyright.url, "https://example.com/new");
 });
+
+test("加粗包住的出处标题也要认（> ✍️ **出处**）", () => {
+  assert.equal(isCopyrightHeader("✍️ **出处**"), true);
+  const extracted = extractCopyrightFromMarkdown(
+    "正文一段。\n\n> ✍️ **出处**\n> - 刊物：One Useful Thing\n> - 原名：The twilight of the chatbots\n> - 作者：Ethan Mollick\n> - 原文链接：[https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots](https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots)\n"
+  );
+  assert.equal(extracted.copyright.author, "Ethan Mollick");
+  assert.equal(extracted.copyright.publication, "One Useful Thing");
+  assert.match(extracted.copyright.url, /oneusefulthing\.org/);
+  assert.doesNotMatch(extracted.markdown, /出处/);
+});

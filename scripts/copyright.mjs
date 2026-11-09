@@ -20,7 +20,12 @@ const NEXT_FIELD =
   "(?:作者|文章原名|原文标题|原名|原题|原文链接|原文|链接|刊物|出版物|刊名|说明|Author|Title|URL|Link|Publication)\\s*[：:]";
 
 function stripLeadingEmoji(text) {
-  return String(text || "").replace(EMOJI_RE, "").trim();
+  return String(text || "")
+    .replace(EMOJI_RE, "")
+    // 「**出处**」这类被 markdown 加粗包住的标题也要认：去掉首尾的强调符
+    .replace(/^[*_~\s]+/, "")
+    .replace(/[*_~\s]+$/, "")
+    .trim();
 }
 
 function cleanValue(value) {

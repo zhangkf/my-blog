@@ -13,7 +13,8 @@
     "sync": "node scripts/sync-notion.mjs",
     "test:copyright": "node --test scripts/copyright.test.mjs",
     "test:e2e": "playwright test",
-    "test:e2e:headed": "playwright test --headed"
+    "test:e2e:headed": "playwright test --headed",
+    "test:normalize": "node --test scripts/normalize-body.test.mjs"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.15",

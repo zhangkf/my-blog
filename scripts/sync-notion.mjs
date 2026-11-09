@@ -21,6 +21,10 @@ import {
   extractCopyrightFromMarkdown,
   parseCopyrightText,
 } from "./copyright.mjs";
+import {
+  firstParagraphText,
+  normalizeArticleBody,
+} from "./normalize-body.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
@@ -153,6 +157,22 @@ function loadOriginDateMap() {
 }
 
 const ORIGIN_DATE_MAP = loadOriginDateMap();
+
+// ── Origin URL Map: Notion page ID → original article URL ───────────
+// Older pages'「出处」callouts predate the rule that they must carry the
+// original link, so their origin_url comes out empty. URLs recovered
+// from the source newsletters live here (same pattern as the date map).
+const ORIGIN_URL_MAP_PATH = path.join(__dirname, "origin-url-map.json");
+
+function loadOriginUrlMap() {
+  try {
+    return JSON.parse(fs.readFileSync(ORIGIN_URL_MAP_PATH, "utf-8"));
+  } catch {
+    return {};
+  }
+}
+
+const ORIGIN_URL_MAP = loadOriginUrlMap();
 
 /**
  * Newer articles open with a byline like
@@ -544,11 +564,13 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
     copyrightCtx.copyright = extracted.copyright;
   }
 
-  // Extract description from first meaningful paragraph
+  // First paragraph as Notion wrote it. The byline (which carries the
+  // original publication date) may live here, so keep its text for date
+  // extraction before body normalization strips it from the body.
   const firstPara = blocks.find(
     (b) => b.type === "paragraph" && b.paragraph.rich_text.length > 0
   );
-  const description = firstPara
+  const rawFirstParaText = firstPara
     ? richTextToMarkdown(firstPara.paragraph.rich_text)
         .replace(/[*_~`#\[\]]/g, "") // strip markdown formatting
         .substring(0, 200)
@@ -559,11 +581,42 @@ async function syncPage(childBlock, parentTitle, categoryDir, categorySlug, exis
   // known it replaces the Notion creation date (pages imported in a
   // batch would otherwise all share one date and sort arbitrarily).
   // Sources, in order: the curated origin-date map, then the byline.
+  // Must run before normalization: the byline is stripped from the
+  // body below.
   const originDate =
     ORIGIN_DATE_MAP[pageId] ||
-    extractBylineDate(description) ||
+    extractBylineDate(rawFirstParaText) ||
     extractBylineDate(markdown.slice(0, 600));
   if (originDate) createdTime = originDate;
+
+  // ── Body normalization ───────────────────────────────────────────
+  // Site structure: Chinese body only, source credit rendered at the
+  // end from origin_* frontmatter. Strip bilingual originals, TL;DR
+  // blocks and bylines from the body; harvest their source fields
+  // into frontmatter (callout-extracted values win per field). The
+  // Notion source pages keep the full working draft untouched.
+  const normalized = normalizeArticleBody(markdown, { title });
+  markdown = normalized.markdown;
+  const mergedCopyright = { ...normalized.fields };
+  if (copyrightCtx.copyright) {
+    for (const k of ["author", "title", "url", "publication"]) {
+      if (copyrightCtx.copyright[k]) mergedCopyright[k] = copyrightCtx.copyright[k];
+    }
+  }
+  if (!mergedCopyright.url && ORIGIN_URL_MAP[pageId]) {
+    mergedCopyright.url = ORIGIN_URL_MAP[pageId];
+  }
+  copyrightCtx.copyright = Object.keys(mergedCopyright).length
+    ? mergedCopyright
+    : null;
+  if (normalized.dropped.length) {
+    console.log(
+      `    🧹 Normalized body: removed ${normalized.dropped.length} head/original block(s)`
+    );
+  }
+
+  // Description from the normalized body's first real paragraph
+  const description = firstParagraphText(markdown) || rawFirstParaText;
 
   // ── Series ordering ──────────────────────────────────────────────
   // Titles starting with "N. " (e.g. "1. Thin Harness" or "7. Complexity")
