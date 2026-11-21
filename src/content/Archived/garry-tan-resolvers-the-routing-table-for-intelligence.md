@@ -10,12 +10,12 @@ route_slug: 'garry-tan-resolvers-the-routing-table-for-intelligence'
 source: notion
 notion_id: '36245fd1-9f92-80d9-9026-f54d1cfc315e'
 notion_parent: 'Archived'
-last_synced: '2026-08-14T02:27:52.539Z'
+last_synced: '2026-11-21T02:58:39.246Z'
 ---
 
 在《薄 Harness，胖 Skills》中，我介绍了构建真正有效的 Agent 系统的五个核心定义。Skills 获得了最多的关注，人们收藏了“Skill-as-method-call”模式、Diarization 概念以及薄 Harness 架构。很好，这些确实很重要。
 
-但几乎没人注意到的那个定义，其实才是最重要的——**Resolvers**。它们被忽略的原因，正是它们如此重要的原因：**正常工作时隐形，失效时灾难性**。
+但几乎没人注意到的那个定义，其实才是最重要的——**Resolvers**。它们被忽略的原因，正是它们如此重要的原因：** 正常工作时隐形，失效时灾难性**。
 
 **Resolver 是一个上下文路由表**。当出现 X 类型任务时，优先加载 Y 文档。就这么简单，一句话。但这一句话，就是“能持续复合智能的 Agent”和“慢慢忘记自己知道什么的 Agent”之间的区别。
 
