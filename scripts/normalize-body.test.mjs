@@ -101,6 +101,18 @@ test("播客式署名（主持×嘉宾 · 刊物 · 节目名 · 年月）+ 纯�
   assert.ok(markdown.includes("正文第一段"));
 });
 
+test("说话人标签：**名字：**正文 在闭合 ** 后补空格", () => {
+  const md = [
+    "**大卫·布鲁克斯：**眼下的美国，至少有三件大事在同时发生。",
+    "普通一段，**编者按**：冒号在加粗外面的不受影响。",
+    "**菲尔·克雷：** 我先讲一个故事。",
+  ].join("\n\n");
+  const { markdown } = normalizeArticleBody(md, {});
+  assert.ok(markdown.includes("**大卫·布鲁克斯：** 眼下的美国"));
+  assert.ok(markdown.includes("**编者按**：冒号在加粗外面的不受影响。"));
+  assert.ok(markdown.includes("**菲尔·克雷：** 我先讲一个故事。"));
+});
+
 test("干净正文不被误伤：英文引用与代码块保留", () => {
   const md = [
     "第一段中文正文，讲一个概念。",

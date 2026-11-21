@@ -293,8 +293,17 @@ export function normalizeArticleBody(markdown, { title = "" } = {}) {
     kept.push(block);
   });
 
+  // ── 3) 说话人标签的加粗修复 ────────────────────────────────────
+  // 「**名字：**正文」：闭合 ** 前是冒号（标点）、后紧跟汉字时，
+  // micromark 的 flanking 规则下加粗不成立，页面会露出 ** 原样。
+  // 在闭合 ** 后补一个空格即可正常渲染（2026-11-21 用户指出）。
+  const fixed = kept
+    .join("\n\n")
+    .trim()
+    .replace(/\*\*([^*\n]+[：:])\*\*(?=[^\s*])/g, "**$1** ");
+
   return {
-    markdown: kept.join("\n\n").trim(),
+    markdown: fixed,
     fields,
     dropped,
   };
