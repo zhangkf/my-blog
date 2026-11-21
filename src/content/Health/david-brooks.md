@@ -1,26 +1,23 @@
 ---
 title: 'David Brooks：什么是男性美德？'
-description: 'David Brooks（主持）× Phil Klay（嘉宾） · The Atlantic · The Permanent Questions 播客 · 2026-11 · 原文'
+description: '编者按：特朗普总统似乎最欣赏他那位四面楚歌的国防部长的一点，就是皮特·赫格塞斯（Pete Hegseth）的「战士男性气质」愿景——他试图把这套愿景强加给军队：解职合格的高阶女性军官、贬损行之已久的交战规则，甚至提议筛查官兵的睾酮水平。这一切正发生在许多美国年轻男性面临真实危机的时刻，但它们似乎并没有打动目标受众：30 岁以下的男性选民在中期选举中向民主党摆动了 40 个百分点，是本次选举中最大的'
 pubDate: '2026-11-21'
 category: 'Health'
 archived: false
 route_category: 'health'
 route_slug: 'david-brooks'
 source: notion
+origin_author: 'David Brooks（主持）× Phil Klay（嘉宾）'
+origin_url: 'https://www.theatlantic.com/podcasts/2026/11/what-are-masculine-virtues/689379/'
+origin_publication: 'The Atlantic'
 notion_id: '41f45fd1-9f92-814b-a1ca-cb7a046254f8'
 notion_parent: 'Health'
-last_synced: '2026-11-21T02:49:33.320Z'
----
-
-David Brooks（主持）× Phil Klay（嘉宾） · The Atlantic · The Permanent Questions 播客 · 2026-11 · [原文](https://www.theatlantic.com/podcasts/2026/11/what-are-masculine-virtues/689379/)
-
+last_synced: '2026-11-21T02:52:46.255Z'
 ---
 
 **编者按**：特朗普总统似乎最欣赏他那位四面楚歌的国防部长的一点，就是皮特·赫格塞斯（Pete Hegseth）的「战士男性气质」愿景——他试图把这套愿景强加给军队：解职合格的高阶女性军官、贬损行之已久的交战规则，甚至提议筛查官兵的睾酮水平。这一切正发生在许多美国年轻男性面临真实危机的时刻，但它们似乎并没有打动目标受众：30 岁以下的男性选民在中期选举中向民主党摆动了 40 个百分点，是本次选举中最大的人口群体漂移之一。
 
 本期《永恒之问》（*The Permanent Questions*），大卫·布鲁克斯与菲尔·克雷（Phil Klay）对谈。克雷是海军陆战队老兵、美国国家图书奖得主小说家，也是 21 世纪战争对美国士兵影响的长期观察者。他解释了为什么赫格塞斯版本的男子气概对男人（以及对军队）有害，为什么战争永远无法被剥离道德含义，以及为什么爱是最大的男性美德。
-
-💡 TL;DR：布鲁克斯与克雷对谈「男性美德」：从阿喀琉斯、廷臣、绅士到牛仔，历史上的男性理想本是多元的谱系；如今被特朗普和赫格塞斯压缩成一种卡通式的「战士气概」。克雷的替代方案：荣誉依附于角色与制度，战争永远无法剥离道德含义，而爱——是最大的男性美德。
 
 ---
 
