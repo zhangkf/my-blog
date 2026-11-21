@@ -83,6 +83,24 @@ test("列表式署名（katie lowe）：发布于与原文链接分开", () => {
   assert.equal(fields.url, "https://ktklp.substack.com/p/do-you-really-want-a-slow-life");
 });
 
+test("播客式署名（主持×嘉宾 · 刊物 · 节目名 · 年月）+ 纯段落 TL;DR", () => {
+  const md = [
+    "David Brooks（主持）× Phil Klay（嘉宾） · The Atlantic · The Permanent Questions 播客 · 2026-11 · [原文](https://www.theatlantic.com/podcasts/2026/11/what-are-masculine-virtues/689379/)",
+    "---",
+    "**编者按**：特朗普总统似乎最欣赏他那位国防部长的一点。",
+    "💡 TL;DR：布鲁克斯与克雷对谈「男性美德」。",
+    "---",
+    "正文第一段，从这里开始是对谈实录。",
+  ].join("\n\n");
+  const { markdown, fields } = normalizeArticleBody(md, {});
+  assert.equal(fields.author, "David Brooks（主持）× Phil Klay（嘉宾）");
+  assert.equal(fields.publication, "The Atlantic");
+  assert.match(fields.url, /masculine-virtues/);
+  assert.ok(markdown.startsWith("**编者按**"));
+  assert.ok(!markdown.includes("TL;DR"));
+  assert.ok(markdown.includes("正文第一段"));
+});
+
 test("干净正文不被误伤：英文引用与代码块保留", () => {
   const md = [
     "第一段中文正文，讲一个概念。",

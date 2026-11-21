@@ -149,11 +149,16 @@ export function parseBylineFields(rawText) {
   if (publication) fields.publication = trimPubDate(publication);
 
   // 2) 行内式：Name · Pub · DATE · [原文](url)
+  //    日期不一定紧跟刊物（中间可隔节目名等段），且可能只有年月（2026-11）；
+  //    只要第 3 段起有一段是日期，就按首段=作者、次段=刊物抽取。
   if (!fields.author || !fields.publication) {
     const line = text.split("\n").find((l) => l.includes("·"));
     if (line) {
       const segs = line.split("·").map((s) => s.trim());
-      if (segs.length >= 3 && /20\d{2}-\d{2}-\d{2}/.test(segs[2])) {
+      const dateIdx = segs.findIndex(
+        (s, i) => i >= 2 && /^20\d{2}-\d{2}(-\d{2})?\b/.test(s)
+      );
+      if (segs.length >= 3 && dateIdx >= 2) {
         if (!fields.author) fields.author = cleanValue(segs[0]);
         if (!fields.publication) fields.publication = cleanValue(segs[1]);
       }
@@ -182,7 +187,9 @@ function splitBlocks(markdown) {
 }
 
 function isTldrBlock(block) {
-  return block.startsWith(">") && block.includes("TL;DR");
+  if (block.startsWith(">")) return block.includes("TL;DR");
+  // 纯段落式 TL;DR（播客稿常见）：「💡 TL;DR：……」单独成段、非引用块
+  return !block.includes("\n") && /^[^\p{L}\p{N}]*TL;DR\s*[：:]/u.test(block);
 }
 
 function isNoteQuoteBlock(block) {
