@@ -18,5 +18,10 @@
     "dir": "Archived",
     "slug": "archived",
     "published": false
+  },
+  {
+    "dir": "第二大脑",
+    "slug": "第二大脑",
+    "published": true
   }
 ]
