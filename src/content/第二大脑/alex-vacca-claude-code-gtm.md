@@ -3,17 +3,17 @@ title: 'Alex Vacca：用 Claude Code 给公司建一颗大脑：GTM 十步完整
 description: '译者注：文中提示词和示例文件已译为中文，可直接粘贴给 Claude 使用；Shell 命令、文件路径与状态键名（exclude / hold / suppress / proceed）保留英文。截图为原文远程链接。'
 pubDate: '2026-11-23'
 origin_date: '2026-11-23'
-category: 'AI'
+category: '第二大脑'
 archived: false
-route_category: 'ai'
+route_category: '第二大脑'
 route_slug: 'alex-vacca-claude-code-gtm'
 source: notion
 origin_author: '*Alex Vacca'
 origin_url: 'https://x.com/itsalexvacca/status/2124958066215153831'
 origin_publication: 'X Article'
 notion_id: '42245fd1-9f92-8145-a965-d2021ae2132a'
-notion_parent: 'AI'
-last_synced: '2026-11-24T05:17:18.117Z'
+notion_parent: '第二大脑'
+last_synced: '2026-11-24T06:17:57.441Z'
 ---
 
 *译者注：文中提示词和示例文件已译为中文，可直接粘贴给 Claude 使用；Shell 命令、文件路径与状态键名（exclude / hold / suppress / proceed）保留英文。截图为原文远程链接。*
